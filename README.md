@@ -1,11 +1,21 @@
+# China Travel Website
 
-  # Tourist Website Design
+An interactive China travel guide with a clickable province map.
 
-  This is a code bundle for Tourist Website Design. The original project is available at https://www.figma.com/design/E9NT5d150u7d3SbFobWFyw/Tourist-Website-Design.
+## Features
 
-  ## Running the code
+- Interactive SVG map of China with province highlighting
+- Province pages with featured cities and travel content
+- City detail pages with photos, highlights, and travel tips
+- Fully localized GeoJSON data (no external API dependency)
 
-  Run `npm i` to install the dependencies.
+## Tech Stack
 
-  Run `npm run dev` to start the development server.
-  
+React 18 · TypeScript · Vite · Tailwind CSS v4 · React Router v7
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
