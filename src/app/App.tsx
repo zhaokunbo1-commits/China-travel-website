@@ -147,7 +147,7 @@ function HomePage() {
             <div className="flex items-center justify-between mb-5">
               <div>
                 <p className="font-['DM_Mono'] text-primary text-[11px] tracking-[0.3em] uppercase mb-1">热门目的地</p>
-                <h2 className="font-['Instrument_Serif'] text-2xl sm:text-3xl text-foreground">外国旅客最爱的城市</h2>
+                <h2 className="font-['Instrument_Serif'] text-2xl sm:text-3xl text-foreground">Top Hits</h2>
               </div>
             </div>
 

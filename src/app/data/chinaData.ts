@@ -332,9 +332,9 @@ export const CITIES: Record<string, CityInfo> = {
     description:
       "A UNESCO World Heritage city perched at 2,400m in the foothills of Jade Dragon Snow Mountain. The cobbled streets of the Old Town are the best-preserved example of Naxi minority architecture, and the surrounding scenery is simply extraordinary.",
     image:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&h=460&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1677922069750-944be2b9ad20?w=700&h=460&fit=crop&auto=format",
     heroImage:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1677922069750-944be2b9ad20?w=1200&h=600&fit=crop&auto=format",
     attractions: [
       { name: "丽江古城", nameEn: "Lijiang Old Town", tag: "UNESCO Heritage", description: "A maze of cobbled streets, wooden Naxi houses, and clear mountain streams flowing through the town. Most beautiful at dawn and dusk when the day-trippers have gone.", tip: "Stay inside the old town — the experience at night (lanterns glowing, music from the bars) is completely different from day visits." },
       { name: "玉龙雪山", nameEn: "Jade Dragon Snow Mountain", tag: "Mountain", description: "The sacred mountain of the Naxi rises to 5,596m. The cable car takes you to 4,506m — expect cold, thin air, and extraordinary views.", tip: "Buy cable car tickets online the night before — they sell out early. Bring warm clothes even in summer." },
@@ -617,9 +617,9 @@ export const CITIES: Record<string, CityInfo> = {
     description:
       "If there is one city in China where food is the entire reason to visit, it is Guangzhou. Dim sum (yum cha) as a daily institution, roast meats hanging in every window, and an enthusiasm for eating that is unmatched anywhere else.",
     image:
-      "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=700&h=460&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1693304396147-5d8bffcaf6fa?w=700&h=460&fit=crop&auto=format",
     heroImage:
-      "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=1200&h=600&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1693304396147-5d8bffcaf6fa?w=1200&h=600&fit=crop&auto=format",
     attractions: [
       { name: "广州塔", nameEn: "Canton Tower", tag: "Iconic Landmark", description: "The striking 600m TV tower with observation decks and a sky walk at the top — good views over the entire Pearl River Delta.", tip: "The view from the ground around Haixin Sha Island at night is just as dramatic as the view from the tower, and it's free." },
       { name: "陈家祠", nameEn: "Chen Clan Ancestral Hall", tag: "Architecture", description: "A stunning 1890s complex of 19 buildings covered in intricate Guangdong folk art — sculpted rooflines, woodwork, and ceramic friezes.", tip: "Allow 2 hours. The ceramics and stone carvings on the roof are extraordinary up close — look for the miniature landscapes." },
@@ -719,4 +719,4 @@ export const CITIES: Record<string, CityInfo> = {
 export const PROVINCE_LIST = Object.values(PROVINCES);
 
 // Hot cities for homepage (shown below the map)
-export const HOT_CITIES = ["xiamen", "chengdu", "lijiang", "guilin", "xian", "beijing_city", "shanghai_city", "hangzhou"];
+export const HOT_CITIES = ["beijing_city", "shanghai_city", "guangzhou", "shenzhen", "chengdu", "xian", "lijiang", "guilin"];
