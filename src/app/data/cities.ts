@@ -2026,6 +2026,1030 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       },
     ],
   },
+
+  // ── SHANDONG ─────────────────────────────────────────────────────────────────
+
+  qingdao: {
+    id: "qingdao",
+    nameZh: "青岛",
+    nameEn: "Qingdao",
+    province: "shandong",
+    provinceZh: "山东省",
+    tagline: "Germany's legacy on the Yellow Sea",
+    description:
+      "Once a German colonial port, Qingdao is one of China's most architecturally distinctive cities — red-roofed villas, Gothic churches, and cobblestone streets climbing the hills above a stunning bay. It is also the home of Tsingtao Beer, brewed here since 1903 with German methods and local spring water. Add world-class seafood, two of northern China's best beaches, and excellent rail connections, and you have the most liveable city on China's eastern seaboard.",
+    image: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["German colonial architecture", "Tsingtao Beer birthplace", "Yellow Sea beaches", "Fresh seafood", "Laoshan mountain coast"],
+    attractions: [
+      {
+        name: "Zhanqiao Pier (栈桥)",
+        description: "Qingdao's most iconic landmark — a 440m iron pier extending into the bay, built in 1891 and later extended with a pavilion at its tip. The view back toward the red rooftops and green hills of the old German city is the definitive Qingdao image. Best photographed at sunrise from the beach.",
+        category: "Historic Landmark",
+      },
+      {
+        name: "German Colonial Quarter (八大关 & 老城区)",
+        description: "Two adjoining areas of exceptional colonial architecture. The Eight Passes (八大关) villa district has European summer houses from a dozen different national styles — German, British, French, Russian — set among pine and maple trees. The adjacent old town has Gothic churches, consulate buildings, and the Governor's Residence (now a museum).",
+        category: "Historic District",
+      },
+      {
+        name: "Tsingtao Brewery Museum (青岛啤酒博物馆)",
+        description: "The original 1903 brewery converted into a museum tracing the full history of China's most famous beer. The tour ends in an underground tasting room with fresh draught beer from the original copper vats. Book tickets online; weekend queues can be long.",
+        category: "Museum",
+      },
+      {
+        name: "Laoshan Scenic Area (崂山风景区)",
+        description: "A dramatic coastal mountain rising directly from the Yellow Sea — the highest peak on China's eastern seaboard at sea level. Taoist temples cling to the granite cliffs; spring water here is bottled and used in the local baijiu. The East Water Village trail has the best combination of sea views and ancient temples.",
+        category: "Nature",
+      },
+      {
+        name: "Fushan Bay Beaches (第一、第二海水浴场)",
+        description: "Qingdao's First and Second Beaches are two of the best urban beaches in northern China — clean yellow sand, calm water, and mountain backdrops. The First Beach is larger and more famous; the Second is quieter. Both are free to enter and open from May to October.",
+        category: "Beach",
+      },
+    ],
+    food: [
+      {
+        name: "Qingdao Draught Beer (扎啤)",
+        nameZh: "青岛扎啤",
+        description: "Fresh, unfiltered Tsingtao draught beer served in clear plastic bags (a Qingdao tradition) or large pitchers at sidewalk seafood restaurants. Incomparably fresher than the bottled version sold elsewhere. Pair with grilled clams at any beach-adjacent restaurant.",
+        must: true,
+      },
+      {
+        name: "Grilled Shellfish (烤海鲜)",
+        nameZh: "烤海鲜",
+        description: "Qingdao's seafood night market culture centres on grilled razor clams, scallops with garlic and glass noodles, sea snails, and oysters — eaten at outdoor tables with cold beer. The Liuting Seafood Market and the streets behind the First Beach are the best hunting grounds.",
+        must: true,
+      },
+      {
+        name: "Qingdao Sea Cucumber (海参捞饭)",
+        nameZh: "海参捞饭",
+        description: "Yellow Sea sea cucumbers braised in a rich soy and oyster sauce, served over white rice. A Shandong luxury ingredient — sea cucumbers from this coast are considered the finest in China. Available at mid-range and upscale restaurants in the old city.",
+        must: false,
+      },
+      {
+        name: "Jiaodong Dumplings (胶东水饺)",
+        nameZh: "胶东水饺",
+        description: "Qingdao-style dumplings stuffed with fresh seafood — shrimp and pork, crab meat, or yellow croaker. The skins are thinner than Beijing-style jiaozi and the filling is noticeably juicier. A Shandong Peninsula speciality worth seeking out.",
+        must: false,
+      },
+    ],
+    bestSeason: "May–June and September–October are ideal — cool sea breezes, blue skies, and lower tourist volume. July–August is peak beach season but extremely crowded and expensive. The International Beer Festival runs in August. Winters are cold but the city is beautiful under snow, with virtually no tourists.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail",
+        details: "Beijing South to Qingdao: ~4.5 hours. Shanghai Hongqiao to Qingdao: ~4 hours. Jinan to Qingdao: ~1.5 hours. Qingdao North Station is the main HSR hub.",
+      },
+      {
+        mode: "✈️ Qingdao Jiaodong International Airport (TAO)",
+        details: "Opened 2021, 55km from the city centre. Metro Line 8 connects to the city in ~1 hour. International flights to Korea, Japan, and Southeast Asia.",
+      },
+      {
+        mode: "🚇 City transport",
+        details: "Metro Lines 2, 3, 11, and 13 cover the main tourist areas. The old German district and beaches are best explored on foot. Line 11 runs along the coast to Laoshan.",
+      },
+    ],
+    accommodation: "The old German quarter (Shinan District near Zhanqiao and the First Beach) is the most atmospheric location — boutique hotels in converted colonial villas (¥400–1,500/night). Mid-range options cluster near Qingdao Station (¥200–500/night). For beaches, hotels along Fushan Bay are convenient. Avoid the airport area unless you have an early flight.",
+    travelTips: [
+      "The best Qingdao beer experience is not the Tsingtao Museum — it is sitting at a plastic table outside a seafood shack near the First Beach with a bag of draught beer and a pile of grilled clams. The museum is interesting, but prioritise the real thing.",
+      "Laoshan requires a full day and the cable cars are essential — hiking all the way down is very tiring. Buy the combination ticket (¥130–160) that includes both the scenic area and the main cable car.",
+      "The German Quarter's streets are best explored without a map — simply walk uphill from Zhanqiao and get lost in the red-roofed residential lanes. The Governor's Residence Museum (¥15) is excellent.",
+      "Seafood prices near major tourist sites are significantly higher than at local restaurants just a few streets away. Walk two streets back from the beach to find local prices.",
+    ],
+    dayTrips: [
+      {
+        name: "Mount Tai (Tai'an)",
+        nameZh: "泰山（泰安）",
+        distance: "~2.5h west by high-speed rail",
+        description: "China's most sacred mountain and the first peak emperors climbed to announce Heaven's mandate. The sunrise from the summit is one of China's great natural spectacles.",
+        whyGo: "The most culturally significant mountain in China, and an easy rail trip from Qingdao.",
+      },
+    ],
+  },
+
+  taishan: {
+    id: "taishan",
+    nameZh: "泰山",
+    nameEn: "Mount Tai",
+    province: "shandong",
+    provinceZh: "山东省",
+    tagline: "The mountain that defines China's soul",
+    description:
+      "For 3,000 years, emperors climbed Mount Tai to announce their mandate from Heaven. Confucius climbed it and declared the world small. Today millions of ordinary people make the same ascent — on foot through 6,293 ancient stone steps, or by cable car — to watch the sunrise from the summit. Mount Tai is not the highest mountain in China, nor the most dramatic, but it is the most sacred, and standing on the summit at dawn, you understand exactly why.",
+    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["China's most sacred mountain", "6,293 ancient stone steps", "Emperor worship site", "UNESCO World Heritage", "Sunrise above the clouds"],
+    attractions: [
+      {
+        name: "Sunrise from the Summit (日出)",
+        description: "The definitive Mount Tai experience — watching the sun rise above the clouds from the 1,545m Jade Emperor Peak. To see it, you must either hike through the night (starting from the Red Gate at midnight) or stay overnight at the summit. The colour progression from deep purple to gold is extraordinary.",
+        category: "Natural Spectacle",
+      },
+      {
+        name: "The Stone Steps (十八盘)",
+        description: "The final 1,827 steps of the central route, carved directly up a near-vertical cliff face — the most dramatic section of the ascent. Known as the Eighteen Bends (十八盘), they are steep enough that porters use shoulder poles to carry supplies for summit hotels. Allow 2–3 hours for this section.",
+        category: "Historic Trail",
+      },
+      {
+        name: "Dai Temple (岱庙)",
+        description: "The main imperial temple at the mountain's base — the largest Taoist temple complex in China and one of the best-preserved examples of ancient Chinese palace architecture. Emperors conducted elaborate rituals here before beginning the ascent. The ancient cypresses in the courtyard are over 2,000 years old.",
+        category: "Temple",
+      },
+      {
+        name: "Red Gate Palace (红门宫)",
+        description: "The traditional starting point of the central ascent route — a Ming dynasty temple marking the beginning of the stone steps. The 1,500+ stone steps from the Red Gate to the Zhongtian Gate mid-mountain station take 2–3 hours at a steady pace.",
+        category: "Historic Site",
+      },
+      {
+        name: "Jade Emperor Temple (玉皇顶)",
+        description: "The summit temple — the holiest point on the mountain and the symbolic centre of Chinese cosmology. Stone inscriptions carved into the rock face nearby record imperial visits spanning 2,000 years. The views on a clear day extend to the Yellow Sea.",
+        category: "Temple",
+      },
+    ],
+    food: [
+      {
+        name: "Tai'an Tofu (泰安豆腐)",
+        nameZh: "泰安豆腐",
+        description: "Tai'an's spring water produces exceptionally silky tofu — a local saying puts it alongside the mountain and the river as the three wonders of Tai'an. Braised tofu with local herbs is the essential dish at restaurants in the city below the mountain.",
+        must: true,
+      },
+      {
+        name: "Shandong Pancake (煎饼)",
+        nameZh: "煎饼",
+        description: "The Shandong staple — a large, thin, crispy buckwheat or millet crepe spread with fermented bean paste and filled with green onion. Porters on the mountain eat them for energy; hikers eat them at trail-side stalls. More substantial and complex than it looks.",
+        must: true,
+      },
+      {
+        name: "Summit Instant Noodles (山顶泡面)",
+        nameZh: "山顶泡面",
+        description: "A Mount Tai rite of passage — instant noodles at a summit teahouse at 3am, after the overnight climb and before the sunrise. The extreme markup (¥30–50 for a cup) is forgiven because nothing has ever tasted so good after 6,000 steps.",
+        must: false,
+      },
+      {
+        name: "Red Dates (泰山红枣)",
+        nameZh: "泰山红枣",
+        description: "Dried red dates from the Tai'an area — sold in bags at every level of the mountain ascent. Sweet, chewy, and a traditional energy food for pilgrims. Buy from vendors at the Dai Temple rather than at the summit where prices double.",
+        must: false,
+      },
+    ],
+    bestSeason: "Autumn (September–November) for the clearest skies and the best chance of a cloud-sea sunrise. Spring (April–May) for pleasant temperatures and fewer crowds. Summer is the most popular but cloud cover frequently obscures the sunrise. Winter ascents are dramatic but the steps become icy — crampons available for rent.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail to Tai'an",
+        details: "Beijing South to Tai'an: ~2 hours (¥180–250). Shanghai Hongqiao to Tai'an: ~3.5 hours. Jinan to Tai'an: ~30 minutes. Tai'an Station is 3km from the mountain base — taxi ¥15–20.",
+      },
+      {
+        mode: "🚡 Mountain cable cars",
+        details: "Three cable cars operate: Zhongtian Gate to the summit (¥100 one-way, recommended for descent); Taohua Valley cable car (east route, ¥100); and Tianzhu Peak cable car. Buy online to avoid queues.",
+      },
+      {
+        mode: "🥾 On foot",
+        details: "The central route (Red Gate → summit) takes 4–5 hours ascending, 3–4 hours descending. The overnight ascent (midnight start) for sunrise requires a head torch and warm layers even in summer. The Taohua Valley east route is less crowded.",
+      },
+    ],
+    accommodation: "Summit hotels (¥400–1,500/night) are the key to seeing the sunrise without a midnight hike — but book 4–6 weeks ahead for weekends and peak autumn season. The Shenqi Hotel and Zhongtian Gate hotels are the main options. Tai'an city has comfortable mid-range hotels (¥200–500/night) for those doing the midnight ascent.",
+    travelTips: [
+      "To see the sunrise without hiking through the night: take the last afternoon cable car up, check into a summit hotel, and watch the sunrise comfortably in the morning. This is the approach most Chinese visitors use.",
+      "The overnight hike is genuinely atmospheric — thousands of people with head torches ascending in darkness, arriving at the summit in the cold before dawn. Bring layers: summit temperatures in autumn are 10–15°C colder than the base.",
+      "The central route is always the most crowded. The Taohua Valley east route and the west route are significantly quieter and have more natural scenery. Both converge at the summit.",
+      "Tai'an city below the mountain has excellent accommodation and the Dai Temple — worth an afternoon before or after the ascent. The old city lanes near the Dai Temple have the best local restaurants.",
+    ],
+    dayTrips: [
+      {
+        name: "Qufu — Confucius Hometown",
+        nameZh: "曲阜",
+        distance: "~30min south by high-speed rail",
+        description: "The birthplace of Confucius and the spiritual home of Chinese civilisation — the Temple, Cemetery, and Mansion are a UNESCO World Heritage complex of extraordinary scale.",
+        whyGo: "Mount Tai and Qufu are the two most historically significant sites in Shandong — combining them in one trip is the obvious itinerary.",
+      },
+    ],
+  },
+
+  qufu: {
+    id: "qufu",
+    nameZh: "曲阜",
+    nameEn: "Qufu",
+    province: "shandong",
+    provinceZh: "山东省",
+    tagline: "Birthplace of Confucius, cradle of Chinese thought",
+    description:
+      "For 2,500 years, Qufu has been the spiritual home of Chinese civilisation. The Temple of Confucius is one of the most architecturally impressive complexes in China — second in scale only to the Forbidden City. The adjacent Confucius Mansion housed 77 generations of his direct descendants, making it the longest-running aristocratic family home in world history. The Confucius Cemetery, where the sage and his descendants are buried across 200 hectares of ancient forest, is one of the most peaceful and moving places in China.",
+    image: "https://images.unsplash.com/photo-1531219432768-9f540ce91ef3?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1531219432768-9f540ce91ef3?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Temple of Confucius (UNESCO)", "77 generations of descendants", "Confucius Cemetery ancient forest", "Chinese civilisation's epicentre", "Kong family cuisine"],
+    attractions: [
+      {
+        name: "Temple of Confucius (孔庙)",
+        description: "Built on the site of Confucius's home after his death in 479 BC and expanded over 2,500 years into a 22-hectare complex of 466 rooms across nine courtyards. The Dacheng Hall rivals the Forbidden City's Taihe Hall in scale and grandeur. Over 2,100 ancient stone stelae record imperial edicts and memorials. Allow 3 hours.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Confucius Cemetery (孔林)",
+        description: "A 200-hectare ancient cemetery containing the graves of Confucius, his son, and over 100,000 of his descendants — making it the world's largest continuously used cemetery. The sacred forest of ancient cypress and pine trees, some over 1,000 years old, creates an atmosphere of deep tranquility. Confucius's tomb is marked simply with a low earthen mound.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Confucius Mansion (孔府)",
+        description: "The official residence of the Duke of Yansheng — the eldest male descendant of Confucius in each generation. 77 generations of the Kong family lived here from the Song dynasty until the Republic era. Over 480 rooms preserve the living conditions of China's most privileged scholarly family. The private garden is particularly fine.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Confucius Research Institute",
+        description: "A modern museum dedicated to the life, teachings, and global influence of Confucius. Well-curated English-language exhibits make this the best starting point for visitors unfamiliar with Confucian thought before entering the historic complex.",
+        category: "Museum",
+      },
+    ],
+    food: [
+      {
+        name: "Kong Family Cuisine (孔府菜)",
+        nameZh: "孔府菜",
+        description: "One of China's eight regional cuisines, developed over centuries to serve imperial visitors to the Confucius Temple. Elegant, refined, and mild — braised shark's fin soup, oven-roasted duck, and delicate vegetable preparations. Queli Hotel and Confucius Restaurant serve the most authentic versions.",
+        must: true,
+      },
+      {
+        name: "Shandong Pancake with Spring Onion (大葱煎饼)",
+        nameZh: "大葱煎饼",
+        description: "A Shandong classic — thin buckwheat crepe spread with sweet bean paste and wrapped around a large segment of raw spring onion. The Shandong spring onion is famously pungent and sweet. Available from street vendors near the main temple gate.",
+        must: true,
+      },
+      {
+        name: "Braised Intestines (九转大肠)",
+        nameZh: "九转大肠",
+        description: "A Shandong classic — pork intestines braised in nine-stage process with soy, vinegar, and aromatics until silky and intensely flavoured. One of the most famous dishes in Chinese regional cooking, and much better than it sounds.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (April–May) and Autumn (September–November) — the ancient forest in the Cemetery is particularly beautiful with autumn foliage. The Confucius Cultural Festival in late September draws large crowds but is a unique cultural event. Summer is hot; winter is cold but the complex is empty.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail",
+        details: "Qufu East Station: Beijing South ~2 hours, Shanghai ~3.5 hours, Tai'an ~30 minutes. Qufu East is 15km from the city centre — shuttle buses and taxis run to the historic core (¥15–25).",
+      },
+      {
+        mode: "🚌 Local transport",
+        details: "The three main heritage sites (Temple, Mansion, Cemetery) are within walking distance of each other. Electric golf carts serve the Cemetery's internal paths. Qufu is a very compact city — most visitors walk everywhere.",
+      },
+    ],
+    accommodation: "Hotels cluster near the South Gate of the Confucius Temple (¥250–700/night). The Queli Hotel, in a courtyard adjacent to the Temple complex, is the most atmospheric option. Qufu is manageable as a day trip from Jinan or Tai'an, but a night allows you to experience the atmospheric dawn at the Cemetery.",
+    travelTips: [
+      "Buy the combined three-site ticket (孔庙孔府孔林联票, ¥150) rather than individual tickets. Visit the Cemetery last — it is the most emotionally resonant site and benefits from the context of the Temple and Mansion.",
+      "The Cemetery closes at sunset and is at its most beautiful in the early morning light filtering through the ancient trees. If you stay overnight in Qufu, visit at 7am before any tour groups arrive.",
+      "The Temple complex is vast — a guided tour (available in English, ¥100–200) dramatically improves the experience by identifying the key halls and explaining the significance of the stelae inscriptions.",
+      "Qufu's rickshaw drivers outside the main gate will offer tours — agree the price before getting in, and confirm that the Cemetery is included (some drivers charge separately for the 2km ride there).",
+    ],
+    dayTrips: [
+      {
+        name: "Mount Tai",
+        nameZh: "泰山",
+        distance: "~30min north by high-speed rail",
+        description: "China's most sacred mountain, where emperors announced their mandate from Heaven. The sunrise from the 1,545m summit is the great natural spectacle of Shandong.",
+        whyGo: "Qufu and Mount Tai are the spiritual heart of Shandong — covering both in one trip is essential.",
+      },
+    ],
+  },
+
+  jinan: {
+    id: "jinan",
+    nameZh: "济南",
+    nameEn: "Jinan",
+    province: "shandong",
+    provinceZh: "山东省",
+    tagline: "The City of Springs",
+    description:
+      "Jinan has been called the City of Springs for 2,700 years — 72 named springs bubble up through the limestone beneath the city, and the largest, Baotu Spring, has been flowing since at least the 7th century BC. The natural spring water feeds a network of canals and lakes that give Jinan its distinctive character: willow trees trailing over clear spring-fed pools, ancient stone bridges, and the unexpected serenity of a provincial capital that most foreign visitors bypass entirely.",
+    image: "https://images.unsplash.com/photo-1576788369575-6c610b7a33fb?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1576788369575-6c610b7a33fb?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["72 named artesian springs", "Baotu Spring — flowing since 700 BC", "Daming Lake classical gardens", "Shandong provincial capital", "Gateway to Mount Tai and Qufu"],
+    attractions: [
+      {
+        name: "Baotu Spring Park (趵突泉公园)",
+        description: "The most famous spring in China and Jinan's defining landmark — three bubbling jets of water rising from a pool that has been flowing continuously for at least 2,700 years. The surrounding park contains 30+ more springs, classical pavilions, and the Fan Zhongyan Memorial. Beautiful in every season, exceptional in winter when steam rises from the warm water.",
+        category: "Natural Landmark",
+      },
+      {
+        name: "Daming Lake (大明湖)",
+        description: "A large natural lake fed by Jinan's spring water, ringed by willow trees, classical pavilions, and lotus gardens. The historic district around the lake's north shore has been meticulously restored and includes the North Water Gate — an ancient sluice that once regulated water flow from the lake to the Grand Canal.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Five Dragon Pool (五龙潭公园)",
+        description: "A cluster of five large springs in a classical garden setting — less visited than Baotu but more atmospheric. The springs here are particularly active after heavy rain, and the garden has some of the finest stone bridges in the city.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Thousand Buddha Mountain (千佛山)",
+        description: "A hill on Jinan's southern edge with rock-carved Buddhist figures dating to the Sui dynasty (581–618 AD). The climb to the summit takes about an hour and offers panoramic views over the city's spring-fed plain. The cable car makes it accessible for all ages.",
+        category: "Historic Site",
+      },
+    ],
+    food: [
+      {
+        name: "Jinan Braised Intestines (济南九转大肠)",
+        nameZh: "九转大肠",
+        description: "The definitive Shandong dish, invented in Jinan — pork intestines cleaned, boiled, then braised through nine stages with soy, vinegar, sugar, and five-spice until caramelised and deeply savoury. A national classic that must be tried at its source.",
+        must: true,
+      },
+      {
+        name: "Cong Shao Haimian (葱烧海参)",
+        nameZh: "葱烧海参",
+        description: "Shandong's most prestigious dish — sea cucumber braised with Shandong spring onions in a rich, dark sauce. A luxury preparation that showcases the central role of the spring onion in Shandong cooking. Available at upscale Lu cuisine restaurants.",
+        must: false,
+      },
+      {
+        name: "Sugar-Crisp Lotus Root (糖醋藕)",
+        nameZh: "糖醋藕",
+        description: "Daming Lake lotus roots cooked in a sweet-and-sour glaze — a seasonal Jinan speciality available in summer and autumn when the lake's lotus harvest is at its peak. Light, crunchy, and delicate.",
+        must: true,
+      },
+      {
+        name: "Jinan Baozi (济南包子)",
+        nameZh: "济南包子",
+        description: "Steamed buns filled with pork and spring onion, characterised by the use of Jinan spring water in the dough — producing an unusually soft, pillowy texture. Available at breakfast stalls throughout the city from 6am.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (March–May) and Autumn (September–November) are ideal. The springs are most spectacular after summer rains (August–September) when flow rates reach their peak. Winter is beautiful — steam rising from the warm springs in cold air creates an ethereal atmosphere.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail hub",
+        details: "Jinan West is one of the busiest HSR hubs in eastern China: Beijing South ~1.5 hours, Shanghai ~3 hours, Qingdao ~1.5 hours, Tai'an ~30 minutes. An excellent base for exploring all of Shandong.",
+      },
+      {
+        mode: "🚇 Jinan Metro",
+        details: "Lines 1–4 cover the main tourist areas. Baotu Spring is served by Line 3 (Wuying Shan Station). Daming Lake is a 10-minute walk from the old city metro stops.",
+      },
+    ],
+    accommodation: "The old city area near Baotu Spring and Daming Lake is the most atmospheric location (¥250–700/night). Mid-range business hotels cluster near Jinan West Station (¥200–450/night). Jinan is an excellent overnight base for day trips to Mount Tai (30 min) and Qufu (45 min).",
+    travelTips: [
+      "Baotu Spring is best visited at opening time (6:30am) — in the early morning the park is filled with locals doing tai chi beside the bubbling water, creating the most authentic Jinan experience.",
+      "The spring flow rate varies significantly with rainfall. The springs are most impressive from August to October after summer rains; in severe drought years some springs may slow to a trickle.",
+      "Jinan's spring water has a distinctive sweet mineral taste — buy a bottle from a local shop rather than standard commercial brands to notice the difference.",
+      "Use Jinan as a base for Shandong's highlights: Mount Tai (30 min), Qufu (45 min), and Qingdao (1.5 hours) are all within HSR day-trip range.",
+    ],
+    dayTrips: [
+      {
+        name: "Mount Tai",
+        nameZh: "泰山",
+        distance: "~30min south by high-speed rail",
+        description: "China's most sacred mountain, with 6,293 ancient stone steps leading to a summit where emperors announced their heavenly mandate for 3,000 years.",
+        whyGo: "The most important day trip from Jinan — China's holiest mountain is practically next door.",
+      },
+      {
+        name: "Qufu",
+        nameZh: "曲阜",
+        distance: "~45min south by high-speed rail",
+        description: "The birthplace of Confucius — a UNESCO-listed complex of temple, mansion, and cemetery spanning 2,500 years of Chinese civilisation.",
+        whyGo: "The spiritual counterpart to Mount Tai, and a natural complement to any visit to Shandong.",
+      },
+    ],
+  },
+
+  // ── HENAN ────────────────────────────────────────────────────────────────────
+
+  luoyang: {
+    id: "luoyang",
+    nameZh: "洛阳",
+    nameEn: "Luoyang",
+    province: "henan",
+    provinceZh: "河南省",
+    tagline: "Thirteen dynasties, one city",
+    description:
+      "For most of Chinese history, Luoyang was the capital of the world. Thirteen dynasties ruled from here over 1,500 years, including the Han, Wei, Sui, and Tang. The legacy is extraordinary: the Longmen Grottoes are one of China's three great Buddhist cave temple complexes, the White Horse Temple is the oldest Buddhist temple in China, and the city's peony culture — cultivated for the imperial court since the Tang dynasty — produces the most spectacular flower festival in the country every April.",
+    image: "https://images.unsplash.com/photo-1584646098378-0e4e9b671fbf?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1584646098378-0e4e9b671fbf?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Longmen Grottoes (UNESCO)", "China's oldest Buddhist temple", "Peony Festival capital", "13 dynasty capital city", "Luoyang water banquet cuisine"],
+    attractions: [
+      {
+        name: "Longmen Grottoes (龙门石窟)",
+        description: "Over 100,000 Buddhist figures carved into limestone cliffs along the Yi River — begun in 493 AD and continued for 400 years across 2,345 caves. The centrepiece is the 17m Vairocana Buddha in the Fengxian Temple, commissioned by Empress Wu Zetian and considered the masterpiece of Tang dynasty sculpture. The evening light on the river-facing cliff is exceptional. Book tickets online.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "White Horse Temple (白马寺)",
+        description: "Founded in 68 AD, the White Horse Temple is the oldest Buddhist temple in China — built to house the two Indian monks who arrived on white horses carrying the first Buddhist sutras to reach China. The mix of Han dynasty architecture and modern international Buddhist halls (Indian, Burmese, Thai pavilions added later) makes it historically fascinating.",
+        category: "Temple",
+      },
+      {
+        name: "Luoyang Museum (洛阳博物馆)",
+        description: "One of the finest provincial museums in China — 400,000 artefacts spanning the full 5,000-year span of Luoyang's history, including extraordinary Tang dynasty tri-colour glazed pottery (唐三彩), jade burial suits, and bronze ceremonial vessels. The Tang and Han dynasty galleries alone justify the visit.",
+        category: "Museum",
+      },
+      {
+        name: "Old Town & Lijingmen (洛阳老城 & 丽景门)",
+        description: "The Song dynasty-era old town around Zhongzhou Middle Road preserves the street grid and some architecture of medieval Luoyang. The Lijingmen gate complex (reconstructed) marks the western entrance to the historic core. The antique market and night food street in the old town are excellent.",
+        category: "Historic District",
+      },
+      {
+        name: "National Peony Garden (国家牡丹园)",
+        description: "Home to over 1,000 cultivars of peony covering 70 hectares — the finest peony garden in China and the centrepiece of the Luoyang Peony Festival (mid-April to early May). Outside festival season the garden is open year-round; the trees are particularly beautiful in late summer.",
+        category: "Garden",
+      },
+    ],
+    food: [
+      {
+        name: "Luoyang Water Banquet (洛阳水席)",
+        nameZh: "洛阳水席",
+        description: "China's oldest surviving banquet format — 24 dishes served in a precise sequence, with a soup or liquid component in every dish. Dating from the Tang dynasty and associated with Empress Wu Zetian, it is the most historically significant meal in Luoyang. Try it at Zhenbutong Restaurant (真不同, est. 1895).",
+        must: true,
+      },
+      {
+        name: "Luoyang Toasted Bun Soup (不翻汤)",
+        nameZh: "不翻汤",
+        description: "A Luoyang breakfast staple for over 200 years — a thin millet pancake that is not flipped (不翻) floated in a fragrant broth with vermicelli, wood ear mushroom, and dried shrimp. Found at street stalls throughout the old town from early morning.",
+        must: true,
+      },
+      {
+        name: "Mutton Soup (羊肉汤)",
+        nameZh: "洛阳羊肉汤",
+        description: "Milky-white mutton bone broth, simmered for 8+ hours until the collagen creates a rich, creamy consistency. Served with sliced mutton and a flat bread for dipping. A Luoyang breakfast tradition — locals say a bowl at dawn sets you up for the whole day.",
+        must: false,
+      },
+      {
+        name: "Tang Tri-colour Candy (唐三彩糕)",
+        nameZh: "唐三彩糕",
+        description: "A novelty souvenir food modelled on the famous Tang dynasty tri-colour pottery glaze — layered sweet rice cakes in the three classic colours (green, amber, white). More interesting as a cultural reference than a great food, but worth trying.",
+        must: false,
+      },
+    ],
+    bestSeason: "Mid-April to early May for the Peony Festival — Luoyang transforms into a city of flowers, with peonies in bloom at every park, temple, and street corner. This is the most popular and most expensive time. Autumn (October–November) is excellent for the Longmen Grottoes without the crowds. Spring and autumn are both far better than summer.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail",
+        details: "Zhengzhou East to Luoyang Longmen: ~45 minutes. Beijing West to Luoyang Longmen: ~2.5 hours. Xi'an North to Luoyang Longmen: ~1.5 hours. The Longmen HSR station is 7km from the grottoes — taxi ¥20.",
+      },
+      {
+        mode: "🚌 Local buses",
+        details: "Bus 81 connects the main rail station to the Longmen Grottoes. Bus 56 runs to the White Horse Temple. The old town is best explored on foot or by shared electric bike.",
+      },
+    ],
+    accommodation: "The old town area near Lijingmen is the most atmospheric base (¥250–700/night). Mid-range hotels cluster near Luoyang Train Station (¥150–400/night). During the Peony Festival, accommodation prices triple — book 2–3 months ahead. Luoyang is a good base for day trips to the Shaolin Temple (1.5 hours).",
+    travelTips: [
+      "Book Longmen Grottoes tickets online at the official website (¥100). Arrive at opening (8am) — by 10am tour groups dominate the narrow cliff-side path. The south bank walk takes about 2 hours; add 1 hour for the main cave complex.",
+      "Luoyang Water Banquet at a good restaurant takes 2+ hours — book in advance and do not rush it. The sequence of dishes is intentional and part of the experience.",
+      "The Peony Festival (mid-April to early May) is extraordinary but accommodation prices triple and the city is at maximum capacity. Visit on a weekday if possible and book flights and hotels months ahead.",
+      "The evening light on the Longmen cliff face across the Yi River (from the east bank pavilion) is the best photography opportunity — golden hour turns the limestone sculptures into something magical.",
+    ],
+    dayTrips: [
+      {
+        name: "Shaolin Temple",
+        nameZh: "少林寺",
+        distance: "~1.5h east by bus or car",
+        description: "The birthplace of Chan (Zen) Buddhism and Chinese kung fu — a monastery complex in the Song Mountains that has trained warrior monks for 1,500 years. Live kung fu demonstrations run daily.",
+        whyGo: "The most famous temple in China, and close enough for a comfortable day trip from Luoyang.",
+        adminNote: "Located in Dengfeng, Zhengzhou's jurisdiction — about 80km east of Luoyang.",
+      },
+    ],
+  },
+
+  kaifeng: {
+    id: "kaifeng",
+    nameZh: "开封",
+    nameEn: "Kaifeng",
+    province: "henan",
+    provinceZh: "河南省",
+    tagline: "The Song dynasty city that never left",
+    description:
+      "In the 11th century, Kaifeng was the largest city on earth — the capital of the Northern Song dynasty, a metropolis of a million people with the world's first paper money, first gunpowder weapons, and first moveable-type printing press. The famous painting Along the River During the Qingming Festival depicts this city at its peak. Today Kaifeng is a quiet provincial city, but its historic core and extraordinary street food culture preserve the flavour of dynastic China more authentically than almost anywhere else.",
+    image: "https://images.unsplash.com/photo-1572704728900-2f6bf04e2f57?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1572704728900-2f6bf04e2f57?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Northern Song dynasty capital", "Night market culture", "Iron Pagoda (Song dynasty)", "Millennium City theme park", "Jewish heritage site"],
+    attractions: [
+      {
+        name: "Millennium City Cultural Park (清明上河园)",
+        description: "A large-scale recreation of the Song dynasty cityscape depicted in the Qingming Festival scroll — the most ambitious historical theme park in China. Daily performances of Song-era court music, acrobatics, jousting, and market life. Best visited in the late afternoon when evening performances begin. More authentic than most Chinese theme parks.",
+        category: "Cultural Park",
+      },
+      {
+        name: "Iron Pagoda (铁塔)",
+        description: "An 11th-century Song dynasty pagoda clad in brown-glazed tiles that give it the appearance of cast iron. One of the best-preserved structures from the Northern Song period, standing 54m tall with a spectacular interior staircase. The 13-storey pagoda leans slightly from centuries of soil subsidence — part of its character.",
+        category: "Historic Monument",
+      },
+      {
+        name: "Kaifeng Night Market (夜市)",
+        description: "One of the greatest street food markets in China — operating every night in the old city, with hundreds of stalls selling Henan specialities alongside Song dynasty-inspired preparations. The busiest section runs along Sihou Street and Gulou Night Market. Arrive hungry at 7pm.",
+        category: "Market",
+      },
+      {
+        name: "Xiangguosi Temple (相国寺)",
+        description: "A Tang dynasty Buddhist temple that was the largest in China during the Northern Song period. Rebuilt multiple times, the current structure dates to the Qing dynasty but preserves the enormous scale of the original. The octagonal glazed tile hall houses a 1,000-arm Guanyin carved from a single gingko tree.",
+        category: "Temple",
+      },
+      {
+        name: "Kaifeng Jewish Heritage Site (犹太人遗址)",
+        description: "Kaifeng had a Jewish community, the Kaifeng Jews, from the Northern Song dynasty onwards — one of the world's most isolated Jewish communities, now almost entirely assimilated. The site of the original synagogue (destroyed in a flood) and a small museum document their remarkable 1,000-year presence.",
+        category: "Historic Site",
+      },
+    ],
+    food: [
+      {
+        name: "Steamed Stuffed Buns (灌汤包)",
+        nameZh: "灌汤包",
+        description: "Kaifeng's most famous food — soup-filled steamed buns served in a bamboo steamer, eaten through a straw to drink the hot soup before biting in. The best version has 18 folds in the wrapper and a skin thin enough to see the soup through. Try at the Kaifeng No. 1 Guantang Baozi shop near Gulou Square.",
+        must: true,
+      },
+      {
+        name: "Kaifeng Bucket Chicken (桶子鸡)",
+        nameZh: "桶子鸡",
+        description: "A Kaifeng speciality — whole chicken marinated in soy and five-spice, then aged in a crock pot that accumulates flavour over years. The skin is golden, crackling, and intensely seasoned; the meat is tender and fragrant. Sold in portions at traditional shops near the night market.",
+        must: true,
+      },
+      {
+        name: "Lamb Bao (羊肉包子)",
+        nameZh: "羊肉包子",
+        description: "Henan-style large steamed buns filled with minced lamb and spring onion — a hearty breakfast or lunch staple. The lamb filling is spiced with cumin, a Central Asian influence that reached Henan via the ancient Silk Road trade routes.",
+        must: false,
+      },
+      {
+        name: "Cold Noodles in Sesame Sauce (凉面)",
+        nameZh: "凉面",
+        description: "Kaifeng's version of cold sesame noodles — springy wheat noodles dressed with sesame paste, chilli oil, garlic, and cucumber. A summer street food staple available at nearly every night market stall.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (April–May) for the peony season (shared with nearby Luoyang) and pleasant weather. Autumn (October–November) for clear skies and cooler temperatures ideal for the night market. Summer is hot but the evening night market culture is at its peak. Winter is cold but the city is beautifully uncrowded.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Zhengzhou",
+        details: "Zhengzhou East to Kaifeng North: ~20 minutes (¥30). From Beijing: ~2.5 hours via Zhengzhou. Kaifeng North Station is in the new city — bus or taxi to the historic core (20 min, ¥20–30).",
+      },
+      {
+        mode: "🚌 Bus from Zhengzhou",
+        details: "Frequent intercity buses from Zhengzhou to Kaifeng old city bus station (~1 hour, ¥20). More convenient than the HSR for direct access to the historic area.",
+      },
+    ],
+    accommodation: "The historic core area near Gulou Square and the night market is the most convenient and atmospheric location (¥200–500/night). Kaifeng is easily visited as a day trip from Zhengzhou (20 min) or Luoyang (1.5 hours), but staying the night allows you to experience the full night market culture properly.",
+    travelTips: [
+      "The night market is the main reason to stay overnight. Arrive at 7pm, work your way through the stalls, and plan to still be eating at 10pm. The atmosphere peaks around 8:30–9pm.",
+      "Guantang Baozi (soup dumplings) must be eaten immediately after steaming — they cool and collapse quickly. Ask the server to demonstrate the 'straw first' eating technique.",
+      "The Millennium City Park is best visited in the late afternoon (4pm entry) to catch both the daytime exhibits and the evening Song dynasty performance shows, which are the highlight.",
+      "Kaifeng has a significant Muslim community with its own mosques and halal food culture — the area around Shudian Street has excellent halal lamb dishes.",
+    ],
+    dayTrips: [
+      {
+        name: "Luoyang",
+        nameZh: "洛阳",
+        distance: "~1.5h west by high-speed rail",
+        description: "The Longmen Grottoes — 100,000 Tang dynasty Buddhist sculptures carved into riverside cliffs — are an hour and a half away. Kaifeng and Luoyang together cover 2,000 years of Chinese imperial history.",
+        whyGo: "The two greatest historical cities in Henan complement each other perfectly.",
+      },
+    ],
+  },
+
+  dengfeng: {
+    id: "dengfeng",
+    nameZh: "登封",
+    nameEn: "Dengfeng (Shaolin)",
+    province: "henan",
+    provinceZh: "河南省",
+    tagline: "Where kung fu was born",
+    description:
+      "Dengfeng sits at the foot of Song Shan — the most central of China's Five Sacred Mountains — and is home to the Shaolin Temple, birthplace of both Chan (Zen) Buddhism and Chinese martial arts. For 1,500 years, Shaolin monks have combined Buddhist meditation with a unique system of fighting techniques that spread across East Asia and, eventually, the world. The spectacle of hundreds of students in martial arts uniforms training in the mountain mist is unlike anything else in China.",
+    image: "https://images.unsplash.com/photo-1600267185393-1bdea06a2b8b?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1600267185393-1bdea06a2b8b?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Birthplace of kung fu", "Chan Buddhism origin", "Song Shan Sacred Mountain", "UNESCO World Heritage", "Live kung fu performances"],
+    attractions: [
+      {
+        name: "Shaolin Temple (少林寺)",
+        description: "Founded in 495 AD, the Shaolin Temple is the most famous Buddhist monastery in China and the origin of martial arts culture worldwide. The main complex includes the Thousand Buddha Hall with floor-worn training pits, the Pagoda Forest (the largest such collection in China), and the Dharma Cave where Bodhidharma meditated for 9 years. Live kung fu demonstrations daily at 10am and 3pm.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Pagoda Forest (塔林)",
+        description: "Over 240 stone pagodas built between the Tang and Qing dynasties as memorials to eminent Shaolin abbots — the largest and most complete collection of Buddhist pagodas in China. Each pagoda's size and style reflects the status of the monk it commemorates. Walk through early morning for the best light and atmosphere.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Song Shan Scenic Area (嵩山风景区)",
+        description: "The mountain ridge above the Shaolin Temple has excellent hiking trails through ancient forest to the 1,512m summit. The Zhongyue Temple (中岳庙) at the mountain's base is the largest Taoist temple complex in Henan. The cable car makes the summit accessible.",
+        category: "Nature & Hiking",
+      },
+      {
+        name: "Dengfeng Observatory (登封观星台)",
+        description: "Built in 1276 AD, this is the oldest surviving astronomical observatory in China — used to measure solar time with extraordinary accuracy. A UNESCO World Heritage site, it demonstrates the sophistication of Chinese scientific knowledge in the Yuan dynasty.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Kung Fu Schools",
+        description: "Dozens of private martial arts academies cluster in the valley below Shaolin — training facilities for both domestic students and international martial arts enthusiasts. Several schools accept short-term international students for 1-week to 3-month programmes. The sight of thousands of students training in unison on open-air fields is remarkable.",
+        category: "Cultural",
+      },
+    ],
+    food: [
+      {
+        name: "Shaolin Vegetarian Feast (少林素斋)",
+        nameZh: "少林素斋",
+        description: "Buddhist vegetarian cooking prepared by monastery cooks — simple, fresh, and deeply satisfying. Mock meat preparations using wheat gluten and tofu. Available at the monastery refectory or the specialist vegetarian restaurants near the temple gate.",
+        must: true,
+      },
+      {
+        name: "Song Shan Wild Mushroom (嵩山山蘑)",
+        nameZh: "嵩山山蘑",
+        description: "Wild mushrooms foraged from Song Shan's forests — stir-fried simply with garlic and ginger. The earthy, intense flavour of mountain mushrooms in season (September–October) is far superior to farmed varieties.",
+        must: false,
+      },
+      {
+        name: "Henan Braised Noodles (烩面)",
+        nameZh: "烩面",
+        description: "Henan's most beloved noodle dish — thick, hand-pulled wheat noodles in a rich mutton or lamb broth with wood ear mushroom, tofu skin, and coriander. Available at noodle shops throughout Dengfeng town.",
+        must: true,
+      },
+    ],
+    bestSeason: "Spring (April–May) and Autumn (September–November) for pleasant hiking weather and the best visibility on Song Shan. Summer is green but hot; winter sees occasional snow on the mountain which is dramatic but makes hiking difficult. The Shaolin Temple itself is worth visiting year-round.",
+    transportation: [
+      {
+        mode: "🚌 Bus from Zhengzhou",
+        details: "Zhengzhou Keyun Station to Dengfeng: ~1.5 hours by direct bus (¥25–35). From Luoyang: ~1.5 hours. No direct high-speed rail to Dengfeng — bus is the standard approach.",
+      },
+      {
+        mode: "🚕 Taxi from Zhengzhou",
+        details: "A taxi or hired car from Zhengzhou to Dengfeng takes ~1 hour and costs ¥150–250 one-way — more practical for groups or those with limited time. Round-trip car hire for the day (¥300–400) is a popular option.",
+      },
+    ],
+    accommodation: "Most visitors come as a day trip from Zhengzhou or Luoyang. If staying, hotels cluster near the Shaolin Scenic Area entrance (¥150–450/night). Staying the night allows you to visit the temple at opening time (7:30am) before day-trippers arrive — the early morning atmosphere with monks and students training is exceptional.",
+    travelTips: [
+      "Buy the Shaolin Scenic Area ticket online (¥100) — it includes the main temple complex, Pagoda Forest, and Dharma Cave. The kung fu performance (¥120 extra) is worth adding — the 1-hour show runs twice daily and features genuine Shaolin monks.",
+      "The martial arts schools outside the main scenic area offer a more authentic view of Shaolin training culture than the polished performances inside — watch students training in the open fields at dawn (6–8am).",
+      "Song Shan hiking: the cable car to Junji Peak (¥75) is useful for the upper section. The full Shaolin → Zhongyue Temple route takes 5–6 hours and requires good footwear.",
+      "Dengfeng is easily combined with Luoyang (Longmen Grottoes) in a two-day Henan itinerary — Dengfeng by day trip from Luoyang or Zhengzhou.",
+    ],
+    dayTrips: [
+      {
+        name: "Luoyang & Longmen Grottoes",
+        nameZh: "洛阳龙门石窟",
+        distance: "~1.5h west by bus",
+        description: "100,000 Tang dynasty Buddhist carvings in riverside cliffs — a perfect complement to the Buddhist heritage of Shaolin on the same day trip.",
+        whyGo: "Dengfeng and Luoyang together cover 1,500 years of Buddhist heritage in Henan in a single trip.",
+      },
+    ],
+  },
+
+  // ── ANHUI ────────────────────────────────────────────────────────────────────
+
+  huangshan: {
+    id: "huangshan",
+    nameZh: "黄山",
+    nameEn: "Huangshan (Yellow Mountain)",
+    province: "anhui",
+    provinceZh: "安徽省",
+    tagline: "The mountain that taught China to paint",
+    description:
+      "Huangshan is the mountain that every Chinese ink painting is drawn from — twisted granite peaks emerging from white sea-clouds, ancient pine trees clinging to sheer cliffs, and hot springs at the base. It inspired an entire school of Chinese painting, and standing on the summit among the cloud-wrapped peaks, you see exactly why. The UNESCO listing is almost incidental: Huangshan is simply one of the most beautiful places on Earth.",
+    image: "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Sea of clouds above the peaks", "Ancient twisted pine trees", "UNESCO World Heritage", "Ink painting inspiration", "Hot springs at the base"],
+    attractions: [
+      {
+        name: "Sea of Clouds (云海)",
+        description: "Huangshan's most celebrated spectacle — a white sea of cloud filling the valleys between the granite peaks, with the summits floating above like islands. Occurs most frequently in spring and after rain. The West Sea Grand Canyon viewpoint and Bright Summit (光明顶) offer the most expansive views.",
+        category: "Natural Spectacle",
+      },
+      {
+        name: "Ying Ke Pine (迎客松)",
+        description: "The most photographed tree in China — a 1,300-year-old Huangshan pine growing horizontally from a sheer cliff face, with one branch extended as if welcoming visitors. The tree has its own dedicated guardian (changed annually) and is reproduced on everything from the Anhui province emblem to hotel wallpaper.",
+        category: "Natural Landmark",
+      },
+      {
+        name: "West Sea Grand Canyon (西海大峡谷)",
+        description: "A spectacular gorge on the western face of the mountain — a 6km loop trail descending into the canyon via a series of wooden boardwalks, suspended walkways, and stone steps carved from sheer cliffs. The canyon bottom reaches into a cloud layer separate from the summit, creating an eerie, enclosed world.",
+        category: "Hiking Trail",
+      },
+      {
+        name: "Bright Summit (光明顶)",
+        description: "The second-highest peak at 1,841m — the best panoramic viewpoint on the mountain, with views in all four directions. Reached by cable car (from Yungu Station) or by the longer Tiandu Peak trail. A meteorological station has operated here since 1955.",
+        category: "Summit",
+      },
+      {
+        name: "Huangshan Hot Springs (温泉)",
+        description: "Natural mineral springs at the mountain's base (650m altitude) — an excellent way to relax sore legs after the descent. The Peach Blossom Spring hotel complex has the most developed facilities. Water temperature is 42°C year-round.",
+        category: "Relaxation",
+      },
+    ],
+    food: [
+      {
+        name: "Huizhou Stinky Mandarin Fish (臭鳜鱼)",
+        nameZh: "臭鳜鱼",
+        description: "The signature dish of Huizhou cuisine — mandarin fish fermented for several days until it develops a distinctive pungent smell but becomes extraordinarily tender and flavourful when braised. Confronting aroma, unforgettable taste. Available at traditional Huizhou restaurants in Tunxi (the gateway city) and on the mountain.",
+        must: true,
+      },
+      {
+        name: "Mao Tofu (毛豆腐)",
+        nameZh: "毛豆腐",
+        description: "Tofu coated in a white mould (similar to brie), then pan-fried until golden and served with chilli sauce. A Huizhou village food that has become the region's most distinctive snack. Available at roadside stalls throughout the Huangshan area.",
+        must: true,
+      },
+      {
+        name: "Bamboo Shoot Braised Pork (笋干烧肉)",
+        nameZh: "笋干烧肉",
+        description: "Slow-braised pork belly with dried bamboo shoots in soy and rice wine — a Huizhou household staple. The dried bamboo absorbs the rich pork fat over the long cooking time, creating a complexity that fresh bamboo cannot match.",
+        must: false,
+      },
+      {
+        name: "Yellow Mountain Honey Tea (黄山蜜茶)",
+        nameZh: "黄山蜜茶",
+        description: "Keemun black tea from the Huangshan area, brewed strong and sweetened with local wildflower honey. The Keemun is one of China's most internationally known teas — it forms the base of many English breakfast tea blends. Buy loose-leaf directly from mountain tea shops.",
+        must: false,
+      },
+    ],
+    bestSeason: "March–April for blooming azaleas and frequent sea-of-clouds; July–August for lush greenery (but more rain and crowds); November–December for snow-capped peaks and rime ice — spectacular but requires warm gear. Spring and autumn are both excellent. Avoid the May Golden Week and October National Holiday when the mountain is at maximum capacity.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail to Huangshan North",
+        details: "Shanghai Hongqiao to Huangshan North: ~2 hours. Nanjing South to Huangshan North: ~2.5 hours. Hangzhou to Huangshan North: ~1.5 hours. Huangshan North Station is in Tunxi — the gateway city 60km from the mountain base.",
+      },
+      {
+        mode: "🚌 Shuttle from Tunxi",
+        details: "Buses run from Tunxi (Huangshan City) to the mountain scenic area entrance in ~1 hour. Taxis cost ¥80–100. The Tangkou village at the mountain base has the main cable car stations.",
+      },
+      {
+        mode: "🚡 Mountain cable cars",
+        details: "Three cable cars: Yungu (east route, ¥90 up/¥80 down), Yuping (south route, ¥90/¥80), and Taiping (north route). Buy cable car tickets online — peak season queues can be 1–2 hours without advance purchase.",
+      },
+    ],
+    accommodation: "Summit hotels are essential for seeing sea-of-clouds at dawn — Beihai Hotel and Paiyun Lou Hotel (both ~¥600–1,500/night) need to be booked 1–2 months ahead for weekends and peak season. Base village (Tangkou) has budget guesthouses (¥150–400/night). Tunxi city (60km) has the widest range of accommodation (¥200–700/night) and the Huizhou old street.",
+    travelTips: [
+      "For sea-of-clouds, stay on the summit for two nights — this doubles your chances of catching the phenomenon at dawn. The cloud sea is most frequent in spring after rain and in winter after snowfall.",
+      "The cable car queues at peak times (May, October) can exceed 2 hours — buy tickets on the official app (黄山风景区) in advance. The morning Yungu cable car is usually the least crowded.",
+      "Porters carry supplies to summit hotels on shoulder poles along trails not accessible to vehicles. Pay them respect — the weight and altitude make this extraordinary labour.",
+      "Tunxi Old Street (屯溪老街) in Huangshan City is the best place to buy Huizhou crafts, Keemun tea, and smoked meats at reasonable prices. Spend the afternoon there before or after the mountain.",
+    ],
+    dayTrips: [
+      {
+        name: "Hongcun Village",
+        nameZh: "宏村",
+        distance: "~1h northwest by bus or taxi",
+        description: "A UNESCO-listed Ming and Qing village with whitewashed walls, grey tile roofs, and a moon-shaped pond that perfectly reflects the surrounding mountains. The most photogenic village in China.",
+        whyGo: "The quintessential Huizhou village, and the natural complement to any Huangshan visit.",
+        adminNote: "Located in Yi County, Huangshan City — easy to combine with a Huangshan trip in a 2-day itinerary.",
+      },
+    ],
+  },
+
+  hongcun: {
+    id: "hongcun",
+    nameZh: "宏村",
+    nameEn: "Hongcun Village",
+    province: "anhui",
+    provinceZh: "安徽省",
+    tagline: "The ink-wash painting you can walk inside",
+    description:
+      "Hongcun is one of those rare places that actually looks exactly like its photographs. A UNESCO-listed village built entirely in Huizhou style — whitewashed walls, grey tile roofs, carved wooden screens, and a perfect half-moon pond at its centre that mirrors the surrounding mountains. Built in the 12th century by the Wang family and designed according to a bull-shaped feng shui plan, with canals as the 'veins' running through every courtyard. Walking through it before sunrise, when the mist is still on the water, is one of the great quiet pleasures of China.",
+    image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["UNESCO World Heritage village", "Moon Pond reflections", "Huizhou architecture", "Crouching Tiger filming location", "Ancient Huizhou canal system"],
+    attractions: [
+      {
+        name: "South Lake & Moon Pond (南湖 & 月沼)",
+        description: "The two water bodies that define Hongcun's character. The Moon Pond (half-moon shaped) is at the village centre — the classic Hongcun reflection photo is taken here at dawn. South Lake (弦月形) is outside the main gate and gives the widest-angle view of the village. Both are best before 8am.",
+        category: "Scenic",
+      },
+      {
+        name: "Chengzhi Hall (承志堂)",
+        description: "The grandest surviving merchant mansion in Hongcun — built in 1855 by a wealthy salt merchant. 60 rooms, 136 pillars, and extraordinary carved wood panels depicting historical scenes and auspicious motifs. The craftsmanship represents the apex of Huizhou woodcarving.",
+        category: "Historic Building",
+      },
+      {
+        name: "Jingyi Hall & Canal System",
+        description: "Hongcun's ingenious Ming dynasty water system — canals run through every household courtyard, originally carrying drinking water and providing fire prevention. The Jingyi Hall courtyard (敬义堂) shows the canal flowing directly under the living rooms.",
+        category: "Historic Engineering",
+      },
+      {
+        name: "Xidi Village (西递村)",
+        description: "Hongcun's sister UNESCO village, 10km southwest — similar Huizhou architecture but more formal in character, with memorial archways (牌坊) as its distinguishing feature. Slightly less photographed than Hongcun but equally well preserved. The two villages are usually visited together.",
+        category: "UNESCO Village",
+      },
+      {
+        name: "Art Students' Corner",
+        description: "Hongcun is the most painted village in China — art students from across the country set up easels around the Moon Pond and South Lake daily. Watching artists work while sitting by the water is one of the village's unexpected pleasures.",
+        category: "Cultural",
+      },
+    ],
+    food: [
+      {
+        name: "Stinky Mandarin Fish (臭鳜鱼)",
+        nameZh: "臭鳜鱼",
+        description: "The king of Huizhou cuisine — fermented mandarin fish braised in a thick, fragrant sauce with ginger and Shaoxing wine. Every guesthouse restaurant in Hongcun serves a version; quality varies enormously. Ask for a recommendation from your host.",
+        must: true,
+      },
+      {
+        name: "Mao Tofu (毛豆腐)",
+        nameZh: "毛豆腐",
+        description: "White-mould tofu pan-fried until golden — the most distinctive Huizhou street snack. Sold from street stalls near the village entrance at ¥5–8 per piece. The texture is like a warm, slightly tangy brie inside a crispy crust.",
+        must: true,
+      },
+      {
+        name: "Huizhou Glutinous Rice Cake (徽州粿)",
+        nameZh: "徽州粿",
+        description: "Dense rice cakes filled with savoury mixtures of pork, spring onion, and dried vegetables — a Huizhou village staple and popular breakfast food. Made fresh daily by guesthouse cooks.",
+        must: false,
+      },
+      {
+        name: "Stone-Pot Tofu (石锅豆腐)",
+        nameZh: "石锅豆腐",
+        description: "Local mountain spring water tofu cooked in a stone pot with pickled vegetables and dried mushrooms — a simple, deeply satisfying village dish. The spring water quality makes the tofu notably silky.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (March–April) for misty mornings and rapeseed flowers in the surrounding fields — the most atmospheric season. Autumn (October–November) for clear reflections in the pond and golden foliage. Avoid May and October Golden Week holidays when the village becomes severely crowded. Weekday mornings year-round are always better than weekends.",
+    transportation: [
+      {
+        mode: "🚄 + 🚌 From Shanghai/Hangzhou",
+        details: "High-speed rail to Huangshan North (2 hours from Shanghai, 1.5 hours from Hangzhou), then bus to Yi County (40 min, ¥10) and taxi/bus to Hongcun (20 min, ¥5–15). Total ~2.5–3 hours from Shanghai.",
+      },
+      {
+        mode: "🚕 Taxi from Tunxi/Huangshan City",
+        details: "Taxi from Tunxi (Huangshan City) to Hongcun: ~1 hour (¥80–120). A round-trip car hire for Hongcun + Xidi + Huangshan in 2–3 days is the most flexible option.",
+      },
+    ],
+    accommodation: "Staying inside the village in a converted Huizhou courtyard guesthouse is by far the best option (¥200–600/night). Book at least 2 weeks ahead for weekends. The Moon Pond-facing rooms are the most sought-after. Staying the night allows you to have the village entirely to yourself before 7:30am, when day-trippers arrive.",
+    travelTips: [
+      "The village is at its most magical before 7:30am — wake before sunrise and walk to the Moon Pond. The morning light on the whitewashed walls and the stillness of the water are transformative.",
+      "Village entry ticket is ¥104 (includes Xidi). Buy online. The ticket office opens at 7:30am; staying at a village guesthouse gives you free access to the paths throughout the day and evening.",
+      "Xidi and Hongcun are 10km apart — most visitors rent an electric scooter or hire a taxi (¥30 round trip) to see both in one day. Xidi is quieter and has the finest memorial archways.",
+      "Art supply shops near the village entrance sell good-quality sketch paper and watercolours — consider sketching or watercolouring the pond scene as a hands-on way to engage with the village's artistic tradition.",
+    ],
+    dayTrips: [
+      {
+        name: "Huangshan (Yellow Mountain)",
+        nameZh: "黄山",
+        distance: "~1h southeast by bus or taxi",
+        description: "The UNESCO mountain that inspired a thousand Chinese paintings — twisted peaks, sea-of-clouds, and ancient pine trees clinging to sheer cliffs.",
+        whyGo: "Hongcun and Huangshan are the natural two-day pairing in Anhui — village culture one day, mountain scenery the next.",
+      },
+    ],
+  },
+
+  hefei: {
+    id: "hefei",
+    nameZh: "合肥",
+    nameEn: "Hefei",
+    province: "anhui",
+    provinceZh: "安徽省",
+    tagline: "China's science city with an ancient heart",
+    description:
+      "Hefei is one of China's fastest-growing cities and a centre of quantum computing, AI research, and advanced manufacturing — but it also guards the tomb of Cao Cao's general Zhang Liao, preserves one of China's finest Li Hongzhang ancestral halls, and hosts Bao Gong Memorial Garden honouring China's most famous judge. The city's lakefront Chao Lake (one of China's five great freshwater lakes) and the surrounding Anhui countryside make it a useful base for the province.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Bao Gong — China's most famous judge", "Li Hongzhang ancestral hall", "Chao Lake (one of China's five great lakes)", "Quantum technology research hub", "Gateway to Huangshan and Hongcun"],
+    attractions: [
+      {
+        name: "Bao Gong Memorial Garden (包公园)",
+        description: "A large lakeside memorial complex honouring Bao Zheng (999–1062 AD) — the Northern Song official celebrated throughout Chinese culture as the paragon of honest, impartial judgement. His tomb, reconstructed memorial hall, and bronze statues are set in a classical garden on Baohe Lake. One of China's most visited memorial sites.",
+        category: "Memorial",
+      },
+      {
+        name: "Li Hongzhang Residence (李鸿章故居)",
+        description: "The preserved residence of Li Hongzhang (1823–1901), the most powerful official of the late Qing dynasty and the man who modernised China's army, navy, and diplomatic corps. The complex is beautifully maintained, with exhibits documenting his complex legacy and the turbulent final decades of the Qing.",
+        category: "Historic Site",
+      },
+      {
+        name: "Anhui Provincial Museum (安徽省博物馆)",
+        description: "An excellent museum with a strong collection of Huizhou woodcarving, ancient bronzes, and exhibits on Anhui's history from the Neolithic to the Republican era. The ceramics gallery includes fine examples of Song dynasty Ding ware and Yuan dynasty blue-and-white porcelain.",
+        category: "Museum",
+      },
+      {
+        name: "Xiaoyaojin Park (逍遥津公园)",
+        description: "A public park built on the site of the famous Battle of Xiaoyaojin (215 AD) where Zhang Liao's 800 soldiers routed Sun Quan's 100,000-strong army — one of the most celebrated victories in Chinese military history. The park preserves memorial halls and bronze statues amid a pleasant lakeside setting.",
+        category: "Historic Park",
+      },
+    ],
+    food: [
+      {
+        name: "Hefei Li Hongzhang Hodgepodge (李鸿章大杂烩)",
+        nameZh: "李鸿章大杂烩",
+        description: "A dish of legendary origin — allegedly created when Li Hongzhang hosted American guests and the chef, running low on ingredients, combined the evening's leftovers into a rich, complex stew. Now a Hefei signature dish: chicken, sea cucumber, ham, bamboo shoots, and bean curd skin in a clear broth.",
+        must: true,
+      },
+      {
+        name: "Hefei Smoked Dried Tofu (庐州烤鸭)",
+        nameZh: "庐州烤鸭",
+        description: "Luzhou (Hefei's old name) roast duck — the local alternative to Peking duck, with a crispier skin and a marinade that uses Anhui rice wine and local five-spice. Sold whole or by portion at specialist shops throughout the city.",
+        must: false,
+      },
+      {
+        name: "Anhui Braised Noodles (安徽板面)",
+        nameZh: "安徽板面",
+        description: "Hand-pulled flat noodles in a spicy lamb or pork broth — a street food beloved across Anhui and now popular throughout China. The broth is rich with chilli, fermented bean paste, and warm spices. Available at small noodle shops throughout Hefei from early morning.",
+        must: true,
+      },
+    ],
+    bestSeason: "Spring (April–May) and Autumn (October–November). Hefei is primarily a transit and business city — most travellers pass through en route to Huangshan or Hongcun. Any season works for the city's museums and parks.",
+    transportation: [
+      {
+        mode: "🚄 Major HSR hub",
+        details: "Hefei South Station: Beijing South ~3.5 hours, Shanghai Hongqiao ~2 hours, Wuhan ~1.5 hours. Hefei is an important crossroads city — all Anhui HSR routes pass through it.",
+      },
+      {
+        mode: "🚄 To Huangshan",
+        details: "Hefei to Huangshan North: ~2 hours by high-speed rail. The most convenient HSR gateway to the Huangshan area from Beijing, central China, and the northwest.",
+      },
+    ],
+    accommodation: "Hefei is primarily a transit city for most tourists. Mid-range business hotels near Hefei South Station (¥200–500/night) are the most practical. The Baohe District near Bao Gong Park has more atmospheric options.",
+    travelTips: [
+      "Hefei is best treated as a transit hub for Anhui's highlights rather than a destination in itself. Use it for the night before or after Huangshan — the HSR connection is fast and convenient.",
+      "Bao Gong Memorial Garden is free to enter and excellent. The exhibit on Song dynasty judicial culture and Bao Zheng's legendary cases is well presented and surprisingly engaging.",
+      "The Li Hongzhang Residence (¥35) is one of the finest examples of a high Qing official's private residence in China — worth 2 hours even for visitors without a specific interest in Qing history.",
+    ],
+    dayTrips: [
+      {
+        name: "Huangshan (Yellow Mountain)",
+        nameZh: "黄山",
+        distance: "~2h south by high-speed rail",
+        description: "The most famous mountain in China — twisted granite peaks emerging from sea-clouds, UNESCO-listed and breathtakingly beautiful.",
+        whyGo: "Hefei is the natural HSR gateway to Huangshan from northern China and the west.",
+      },
+      {
+        name: "Hongcun Village",
+        nameZh: "宏村",
+        distance: "~2.5h south by HSR + bus",
+        description: "The most photogenic village in China — whitewashed Huizhou courtyard houses reflected in a perfect moon-shaped pond.",
+        whyGo: "The quintessential Anhui village experience, easily combined with Huangshan in a 2-day trip.",
+      },
+    ],
+  },
+
+  wuyuan_an: {
+    id: "wuyuan_an",
+    nameZh: "婺源",
+    nameEn: "Wuyuan",
+    province: "anhui",
+    provinceZh: "安徽省",
+    tagline: "China's most beautiful countryside",
+    description:
+      "Wuyuan is repeatedly voted the most beautiful rural county in China — a patchwork of white Huizhou villages, ancient covered bridges, terraced fields, and rivers that flood yellow each spring when the rapeseed flowers bloom. Technically part of Jiangxi province administratively, Wuyuan is culturally and architecturally pure Huizhou — the same whitewashed walls and grey tile roofs as Hongcun and Xidi, but spread across an entire county of countryside rather than a single preserved village.",
+    image: "https://images.unsplash.com/photo-1509099652299-1734748ece27?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1509099652299-1734748ece27?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Spring rapeseed flower season", "Ancient covered bridges", "Huizhou village clusters", "Crested ibis bird reserve", "China's most rural beauty"],
+    attractions: [
+      {
+        name: "Jiangling Rapeseed Terraces (江岭梯田)",
+        description: "The most photographed rapeseed landscape in China — thousands of terraced fields descending a hillside, exploding in golden yellow in late March and early April. The dawn light from the Jiangling viewpoint, with villages nestled in the folds of the hill, is the defining image of spring in China.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Likeng Ancient Village (李坑)",
+        description: "One of Wuyuan's best-preserved villages — a stream running through the centre with stone bridges, waterside pavilions, and 80+ ancient residences. The resident population still uses the traditional water system. The morning atmosphere before 8am is remarkably peaceful.",
+        category: "Ancient Village",
+      },
+      {
+        name: "Qinghua Covered Bridge (清华彩虹桥)",
+        description: "A 900-year-old roofed bridge over the Zheshu River — one of the oldest and most beautiful covered bridges in China. The Song dynasty structure combines a functional river crossing with pavilions for resting travellers. The reflection in the clear river below is exceptional.",
+        category: "Historic Bridge",
+      },
+      {
+        name: "Wangkou Ancient Town (汪口古镇)",
+        description: "A well-preserved Ming dynasty village that served as a major inland port on the Le'an River. The Yu Qing Tang ancestral hall has the finest example of Huizhou woodcarving in the region — every beam and bracket is carved with scenes from classical literature.",
+        category: "Ancient Town",
+      },
+    ],
+    food: [
+      {
+        name: "Wuyuan Bun (荷包红鲤鱼)",
+        nameZh: "荷包红鲤鱼",
+        description: "A unique Wuyuan speciality — a round red carp bred only in Wuyuan's mountain streams for centuries, considered a symbol of good luck. Braised or steamed whole, the flesh is sweeter and more delicate than river carp. Served at guesthouses throughout the county.",
+        must: true,
+      },
+      {
+        name: "Stinky Tofu & Mao Tofu",
+        nameZh: "毛豆腐 & 臭豆腐",
+        description: "Both Huizhou fermented tofu varieties are excellent in Wuyuan — the village guesthouse versions are often superior to restaurant versions, made with mountain spring water and traditional methods.",
+        must: true,
+      },
+      {
+        name: "Wild Mountain Fern (野生蕨菜)",
+        nameZh: "野生蕨菜",
+        description: "Stir-fried wild fiddlehead ferns foraged from Wuyuan's forested hillsides — a seasonal spring speciality with a slightly bitter, earthy flavour. Available from March to May at local restaurants.",
+        must: false,
+      },
+    ],
+    bestSeason: "Late March to early April for the rapeseed flower season — the single most spectacular natural event in Anhui. The exact peak varies by year; check local tourism reports 2 weeks before travelling. Autumn (October–November) for clear skies and village colours. Avoid the rapeseed peak on weekends — the Jiangling viewpoint becomes impossibly crowded.",
+    transportation: [
+      {
+        mode: "🚄 + 🚌 From Huangshan",
+        details: "Huangshan North to Wuyuan Station (Jiangxi border): ~30 minutes by high-speed rail. Then bus or taxi to the main villages. Wuyuan is the best addition to a Huangshan trip.",
+      },
+      {
+        mode: "🚄 From Hangzhou/Shanghai",
+        details: "Hangzhou to Wuyuan: ~2.5 hours by high-speed rail via Huangshan. The entire Huangshan–Hongcun–Wuyuan circuit is easily done in 4–5 days from Shanghai.",
+      },
+    ],
+    accommodation: "Village guesthouses throughout the county (¥150–450/night) are the best option — staying in a converted Huizhou courtyard house rather than a hotel is the authentic Wuyuan experience. Book 2–3 weeks ahead for the rapeseed peak season. Wuyuan town has mid-range hotels (¥200–500/night) for a more conventional base.",
+    travelTips: [
+      "During rapeseed season, wake before 5am to reach the Jiangling viewpoint before sunrise — the first light is the most beautiful, and the overlook becomes crowded by 8am. Arrange transport with your guesthouse the night before.",
+      "Wuyuan is best explored by hired car (¥300–500/day) rather than public buses — the villages are spread across the county and bus connections between them are infrequent.",
+      "The rapeseed peak varies by 1–2 weeks each year depending on temperature. Follow the Wuyuan Tourism official WeChat account for real-time bloom updates.",
+      "Administratively, Wuyuan belongs to Jiangxi Province — but culturally and architecturally it is pure Huizhou (Anhui). This causes no practical inconvenience for travellers.",
+    ],
+    dayTrips: [
+      {
+        name: "Huangshan (Yellow Mountain)",
+        nameZh: "黄山",
+        distance: "~30min north by high-speed rail",
+        description: "The most famous mountain in China is just 30 minutes away. The Huangshan–Hongcun–Wuyuan circuit is the classic Anhui itinerary.",
+        whyGo: "Wuyuan and Huangshan are the perfect pairing — countryside beauty and mountain grandeur in the same trip.",
+      },
+    ],
+  },
+
 };
 
 // ── Helper exports ────────────────────────────────────────────────────────────
@@ -2040,9 +3064,10 @@ export const PRIORITY_CITIES = Object.values(CITY_DETAILS);
 
 /** City IDs grouped by region */
 export const CITIES_BY_REGION = {
-  north:     ["beijing_city"],
+  north:     ["beijing_city", "jinan", "qingdao", "taishan", "qufu"],
   east:      ["shanghai_city", "hangzhou", "ningbo", "shaoxing", "zhoushan", "nanjing", "suzhou", "yangzhou", "wuxi"],
-  central:   ["xian"],
+  central:   ["xian", "luoyang", "kaifeng", "dengfeng"],
   southwest: ["chengdu", "chongqing", "leshan", "emeishan", "jiuzhaigou"],
   south:     ["guilin", "sanya"],
+  anhui:     ["huangshan", "hongcun", "hefei", "wuyuan_an"],
 } as const;
