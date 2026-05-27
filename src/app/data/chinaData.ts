@@ -114,7 +114,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "China's most biodiverse province, home to ancient Naxi kingdoms in Lijiang, Bai architecture in Dali, and rice terraces that glow gold at sunrise. Yunnan is best explored slowly, by train and bicycle.",
     image:
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["lijiang", "dali"],
+    featuredCities: ["lijiang", "dali", "kunming", "xishuangbanna"],
     highlights: ["Lijiang Old Town", "Jade Dragon Snow Mountain", "Tiger Leaping Gorge", "Yunnan cuisine"],
   },
   sichuan: {
@@ -126,7 +126,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "Home to the Giant Panda Breeding Research Base, the river-facing Leshan Giant Buddha, and one of the world's most celebrated cuisines. Chengdu's teahouse culture slows time down.",
     image:
       "https://images.unsplash.com/photo-1526716173434-a1b560f2065d?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["chengdu"],
+    featuredCities: ["chengdu", "leshan", "emeishan", "jiuzhaigou"],
     highlights: ["Giant Pandas", "Sichuan hotpot", "Jiuzhaigou", "Leshan Giant Buddha"],
   },
   guangdong: {
@@ -138,7 +138,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "China's most economically dynamic province. Guangzhou invented dim sum as a lifestyle, while Shenzhen reinvented what a city can become in a single generation. The Pearl River Delta has more to offer than most people realise.",
     image:
       "https://images.unsplash.com/photo-1567894340315-735d7c361db0?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["guangzhou", "shenzhen"],
+    featuredCities: ["guangzhou", "shenzhen", "zhuhai", "chaozhou"],
     highlights: ["Dim sum culture", "Canton Tower", "Shenzhen tech parks", "Pearl River Delta"],
   },
   guangxi: {
@@ -150,7 +150,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "The iconic karst limestone peaks rising from the Li River make Guilin one of China's most painted landscapes. Yangshuo offers cycling through rice paddies between tower-like peaks.",
     image:
       "https://images.unsplash.com/photo-1519567770579-c2fc5436bcf7?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["guilin"],
+    featuredCities: ["guilin", "nanning", "beihai"],
     highlights: ["Li River cruise", "Yangshuo", "Reed Flute Cave", "Longji Rice Terraces"],
   },
   zhejiang: {
@@ -162,7 +162,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "Marco Polo called it the finest city in the world. West Lake in Hangzhou, the canals of Wuzhen, and Dragon Well tea plantations make Zhejiang a perennial favourite for domestic and international visitors alike.",
     image:
       "https://images.unsplash.com/photo-1567536814655-fec50bb5e69f?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["hangzhou"],
+    featuredCities: ["hangzhou", "ningbo", "shaoxing", "zhoushan"],
     highlights: ["West Lake", "Dragon Well tea", "Wuzhen Water Town", "Lingyin Temple"],
   },
   jiangsu: {
@@ -174,7 +174,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "Suzhou's UNESCO-listed classical gardens, Nanjing's Ming dynasty walls, and the Grand Canal weaving through it all. Jiangsu is China's most refined province.",
     image:
       "https://images.unsplash.com/photo-1543039717-99b47e99a6bc?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["nanjing", "suzhou"],
+    featuredCities: ["nanjing", "suzhou", "yangzhou", "wuxi"],
     highlights: ["Suzhou Classical Gardens", "Nanjing City Wall", "Grand Canal", "Suzhou cuisine"],
   },
   shaanxi: {
@@ -186,7 +186,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "The Terracotta Warriors, a beautifully preserved Tang dynasty city wall, and the vibrant Muslim Quarter make Xi'an one of the most rewarding cities for first-time visitors wanting to go deeper into Chinese history.",
     image:
       "https://images.unsplash.com/photo-1577706881850-bf7c7d8906a5?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["xian"],
+    featuredCities: ["xian", "yanan", "hanzhong"],
     highlights: ["Terracotta Warriors", "Ancient City Wall", "Muslim Quarter", "Tang Dynasty history"],
   },
   hainan: {
@@ -198,7 +198,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
       "China's southernmost province is a tropical island with beaches, palm forests, and the healing warmth of Wenchang chicken and coconut-based cuisine. Sanya is the go-to winter escape.",
     image:
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=500&fit=crop&auto=format",
-    featuredCities: ["sanya"],
+    featuredCities: ["sanya", "haikou"],
     highlights: ["Yalong Bay", "Nanshan Temple", "Tropical beaches", "Coconut cuisine"],
   },
   beijing: {
@@ -239,7 +239,7 @@ export const PROVINCES: Record<string, ProvinceInfo> = {
   hunan: { id: "hunan", nameZh: "湖南", nameEn: "Hunan", tagline: "Avatar mountains & fiery food", description: "The otherworldly sandstone pillars of Zhangjiajie inspired Avatar's Hallelujah Mountains. Changsha is one of China's most exciting food and nightlife cities.", image: "https://images.unsplash.com/photo-1555737785-3b6a6f9cd8f5?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Zhangjiajie National Park", "Fenghuang Old Town", "Hunan cuisine"] },
   guizhou: { id: "guizhou", nameZh: "贵州", nameEn: "Guizhou", tagline: "Waterfalls & minority culture", description: "Huangguoshu Waterfall, the largest in Asia, and villages of the Miao and Dong minorities with their elaborate silver headdresses and drum towers.", image: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Huangguoshu Waterfall", "Miao minority villages", "Maotai baijiu"] },
   tianjin: { id: "tianjin", nameZh: "天津", nameEn: "Tianjin", tagline: "European streets beside the Hai River", description: "An hour from Beijing by high-speed rail, Tianjin has Italian, French, and British colonial architecture alongside Goubuli steamed buns and traditional Chinese folk art.", image: "https://images.unsplash.com/photo-1568895706332-28c5e023adcc?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Wudadao European Quarter", "Ancient Culture Street", "Goubuli dumplings"] },
-  chongqing: { id: "chongqing", nameZh: "重庆", nameEn: "Chongqing", tagline: "Mountain city of fog & fire", description: "China's most dramatic city, built on cliffs above two rivers. Spicy Chongqing hotpot fuels a nightlife scene that rivals Shanghai, on a fraction of the budget.", image: "https://images.unsplash.com/photo-1558704164-ab7a0016c1f3?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Jiefangbei district", "Chongqing hotpot", "Three Gorges cruise", "Ciqikou Old Town"] },
+  chongqing: { id: "chongqing", nameZh: "重庆", nameEn: "Chongqing", tagline: "Mountain city of fog & fire", description: "China's most dramatic city, built on cliffs above two rivers. Spicy Chongqing hotpot fuels a nightlife scene that rivals Shanghai, on a fraction of the budget.", image: "https://images.unsplash.com/photo-1558704164-ab7a0016c1f3?w=800&h=500&fit=crop", featuredCities: ["chongqing"], highlights: ["Jiefangbei district", "Chongqing hotpot", "Three Gorges cruise", "Ciqikou Old Town"] },
   gansu: { id: "gansu", nameZh: "甘肃", nameEn: "Gansu", tagline: "Where the Silk Road lives", description: "The Mogao Grottoes at Dunhuang hold 1,600 years of Buddhist art, the Rainbow Mountains of Zhangye glow in the evening light, and the last section of the Great Wall watches over it all.", image: "https://images.unsplash.com/photo-1565128939960-1ec0a5e46e93?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Dunhuang Mogao Caves", "Zhangye Rainbow Mountains", "Jiayuguan Fort"] },
   qinghai: { id: "qinghai", nameZh: "青海", nameEn: "Qinghai", tagline: "The roof of China's roof", description: "Qinghai Lake is the largest lake in China, ringed by yellow rapeseed in summer. The Tibetan town of Tongren is a living centre of Tibetan Buddhist thangka painting.", image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Qinghai Lake", "Ta'er Monastery", "Tongren Tibetan art"] },
   neimenggu: { id: "neimenggu", nameZh: "内蒙古", nameEn: "Inner Mongolia", tagline: "Grasslands, yurts & starry skies", description: "Hulunbuir's grasslands are among the most pristine in the world. Sleeping in a yurt, watching the Milky Way, and riding horses at sunrise — Inner Mongolia delivers an experience China rarely talks about.", image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?w=800&h=500&fit=crop", featuredCities: [], highlights: ["Hulunbuir Grasslands", "Gegentala Sky Camp", "Resonant Sand Gorge"] },

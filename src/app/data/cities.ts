@@ -19,6 +19,15 @@ export interface TransportDetail {
   details: string;
 }
 
+export interface DayTrip {
+  name: string;
+  nameZh: string;
+  distance: string;
+  description: string;
+  whyGo: string;
+  adminNote?: string;
+}
+
 export interface CityDetail {
   id: string;
   nameZh: string;
@@ -36,6 +45,7 @@ export interface CityDetail {
   transportation: TransportDetail[];
   accommodation: string;
   travelTips: string[];
+  dayTrips?: DayTrip[];
 }
 
 export const CITY_DETAILS: Record<string, CityDetail> = {
@@ -502,6 +512,30 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       "Sanxingdui Museum is highly recommended. Book tickets in advance online and plan it as a separate day from Dujiangyan/Qingcheng — both deserve proper time.",
       "Chengdu taxis are cheap (metered from ¥8), but Didi is more convenient and more reliable in the evenings near the popular restaurant strips.",
     ],
+    dayTrips: [
+      {
+        name: "Leshan Giant Buddha",
+        nameZh: "乐山大佛",
+        distance: "~1.5h south by high-speed rail",
+        description: "The world's tallest stone Buddha (71m), carved from a cliff at the confluence of three rivers. The full scale is only visible from a boat on the water — the river cruise is essential.",
+        whyGo: "One of humanity's most extraordinary stone sculptures, and a UNESCO World Heritage site you can reach before lunch.",
+      },
+      {
+        name: "Mount Emei",
+        nameZh: "峨眉山",
+        distance: "~2h south by high-speed rail",
+        description: "One of China's four sacred Buddhist mountains — summit temples in clouds, Tibetan macaques on the trails, and sea-of-cloud views from the Golden Summit. Two days is ideal; one long day is possible by cable car.",
+        whyGo: "The combination of misty mountain scenery and 2,000-year-old Buddhist temples is unlike anything else in Sichuan.",
+      },
+      {
+        name: "Mount Siguniang",
+        nameZh: "四姑娘山",
+        distance: "~3.5h northwest by bus",
+        description: "Four-peaked alpine massif reaching 6,250m — glacial valleys, horse treks, and day hikes in Shuangqiao Valley. Scenery that looks more Swiss Alps than China.",
+        whyGo: "The most dramatic alpine scenery reachable from Chengdu without a flight.",
+        adminNote: "Located in Aba Tibetan & Qiang Autonomous Prefecture — a longer drive but absolutely worth it for mountain scenery unlike anywhere else in Sichuan.",
+      },
+    ],
   },
 
   // ── 5. Hangzhou ──────────────────────────────────────────────────────────────
@@ -614,6 +648,30 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       "Wuzhen's West Precinct (¥150 ticket, includes night access) is best experienced with an overnight stay. Check in by 3pm to settle in before the day-trippers leave.",
       "The Lingyin Temple combination ticket (temple + Feilai Feng, ¥65) is essential — the rock carvings in the gorge are the highlight. Don't buy only the temple-only ticket (¥30).",
       "Hangzhounese food tends toward sweetness. If your palate runs savoury, you can ask restaurants for 少糖 (shǎo táng — less sugar). West Lake Vinegar Fish prices vary hugely by restaurant — compare before you sit down.",
+    ],
+    dayTrips: [
+      {
+        name: "Wuzhen Water Town",
+        nameZh: "乌镇",
+        distance: "~1.5h by bus from Hangzhou North Bus Station",
+        description: "The most photogenic canal town in China — lantern-lit waterways, 1930s architecture, and a pace of life that Hangzhou abandoned a century ago. The West Precinct has ticketed entry (¥150) and is best with an overnight stay.",
+        whyGo: "The most atmospheric water town in the Yangtze Delta, and far better preserved than Zhouzhuang or Tongli.",
+      },
+      {
+        name: "Moganshan",
+        nameZh: "莫干山",
+        distance: "~1.5h northwest by bus",
+        description: "A forested ridge of colonial-era summer villas and boutique hotels in bamboo groves — the weekend escape of choice for Shanghai and Hangzhou residents since the 1920s.",
+        whyGo: "The freshest mountain air in eastern China, with some of the most charming boutique accommodation in the country.",
+      },
+      {
+        name: "Putuoshan Sacred Island",
+        nameZh: "普陀山",
+        distance: "~3h by bus to Ningbo then ferry",
+        description: "One of China's four sacred Buddhist islands — ancient sea caves, temple bells at dawn, and a monastic pace of life entirely different from the mainland. Overnight strongly recommended.",
+        whyGo: "A genuinely spiritual island experience unlike anything you'll find on the mainland.",
+        adminNote: "Located in Zhoushan, Zhejiang — a half-day journey each way, so an overnight on the island is strongly recommended.",
+      },
     ],
   },
 
@@ -728,6 +786,22 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       "Salted duck is sold vacuum-packed at most supermarkets and makes an excellent edible souvenir. For the real experience, buy it freshly sliced from a street vendor in the old city.",
       "The Qinhuai River evening cruise runs from the Confucius Temple piers and lasts about an hour (¥70–100). The view of the lit pavilions and old quarter from the water is Nanjing's most beautiful evening experience.",
     ],
+    dayTrips: [
+      {
+        name: "Yangzhou",
+        nameZh: "扬州",
+        distance: "~1h by high-speed rail",
+        description: "The most elegant of China's Grand Canal cities — Slender West Lake, classical Ge Garden, and a breakfast tea culture that is arguably the finest in the country. Start the day with a dim-sum breakfast at Fuchun Tea House.",
+        whyGo: "A slower, more refined side of Jiangsu that most visitors to Nanjing never discover.",
+      },
+      {
+        name: "Zhenjiang",
+        nameZh: "镇江",
+        distance: "~45min by high-speed rail",
+        description: "Where the Yangtze River meets the Grand Canal — Jinshan Temple rises from what was once an island in the river, and the Jiaoshan Scenic Area sits across the water. The original setting of the Legend of the White Snake.",
+        whyGo: "A compact, beautiful city where two of China's greatest waterways meet, completely free of tourist crowds.",
+      },
+    ],
   },
 
   // ── 7. Suzhou ────────────────────────────────────────────────────────────────
@@ -840,6 +914,22 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       "Suzhou silk: authenticity is hard to verify at market stalls. Buy from the Suzhou Silk Museum shop or an established brand like Wenshu Silk. Low-priced 'silk' in tourist markets is usually synthetic.",
       "Pingtan (Suzhou ballad-singing) is one of China's oldest performing arts — teahouses along Pingjiang Road hold regular evening performances (usually 7–9pm, ¥50–100). An unmissable local cultural experience.",
       "Day trips to Tongli and other water towns depart from Suzhou North Bus Station. Tongli is the best for avoiding crowds; Wuzhen is best done from Shanghai or Hangzhou directly.",
+    ],
+    dayTrips: [
+      {
+        name: "Tongli Water Town",
+        nameZh: "同里",
+        distance: "~30min by bus from Suzhou North Bus Station",
+        description: "The most intimate of the Jiangnan water towns — 49 stone bridges, quiet canal lanes, and the UNESCO-listed Tuisi Garden. Far less commercialised than Wuzhen or Zhouzhuang.",
+        whyGo: "The only water town where you can still find a quiet alley at midday — a genuine slice of old Jiangnan.",
+      },
+      {
+        name: "Zhouzhuang",
+        nameZh: "周庄",
+        distance: "~50min by bus",
+        description: "China's most famous water town — the twin bridges of Zhouzhuang are one of the most reproduced images in Chinese art. Go at first light or stay the night to experience it without the tour groups.",
+        whyGo: "The twin bridges at dawn are one of the most beautiful views in the Yangtze Delta.",
+      },
     ],
   },
 
@@ -1169,6 +1259,773 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       "Yangtze River Three Gorges cruises (Chongqing to Yichang, 3 nights/4 days) need to be booked 1–2 months ahead in peak season. Use only official cruise operators — quality varies significantly between companies.",
     ],
   },
+
+  // ── SICHUAN ──────────────────────────────────────────────────────────────────
+
+  leshan: {
+    id: "leshan",
+    nameZh: "乐山",
+    nameEn: "Leshan",
+    province: "sichuan",
+    provinceZh: "四川省",
+    tagline: "The Buddha who has watched rivers for 1,300 years",
+    description:
+      "Leshan's single claim to fame is one of humanity's most extraordinary creations — a 71-metre seated Buddha carved from a living cliff at the confluence of three rivers. But the city around him rewards lingering: a charming historic old quarter, excellent Sichuan river fish cooking, and easy access to Mount Emei make Leshan the natural base for two of Sichuan's UNESCO World Heritage sites.",
+    image: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1513415756790-2ac1db1297d0?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["World's largest stone Buddha", "Three rivers confluence", "UNESCO World Heritage", "Sichuan river fish cuisine", "Mount Emei gateway"],
+    attractions: [
+      {
+        name: "Leshan Giant Buddha (乐山大佛)",
+        description: "Carved 713–803 AD at the confluence of the Min, Qingyi, and Dadu rivers. Standing 71m tall, the Buddha is only truly comprehensible in scale from a river boat below — the boat cruise is essential. Climb the Lingyun Cliffside path for the head-level view and descend the steep staircase to river level.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "River Boat Cruise",
+        description: "The only way to see the full scale of the Giant Buddha. Both public ferries (¥70) and smaller private boats circle the statue. Aim for morning light and a clear day. The 15-minute crossing from the opposite bank offers the widest-angle view.",
+        category: "Scenic",
+      },
+      {
+        name: "Wuyou Temple (乌尤寺)",
+        description: "An ancient Buddhist monastery on a tiny island in the Min River, connected by a pedestrian bridge. Peaceful and often overlooked by day-trippers focused entirely on the Giant Buddha. The temple complex dates to the Tang dynasty and has fine river views.",
+        category: "Temple",
+      },
+      {
+        name: "Leshan Old Town (乐山老城)",
+        description: "Qing-era commercial streets near the dock with teahouses, street food stalls, and traditional architecture largely untouched by tourism. The Jiading Ancient City wall section near the confluence is particularly atmospheric in the evening.",
+        category: "Historic Quarter",
+      },
+      {
+        name: "Dafo Temple Complex",
+        description: "The cliff-side temple buildings adjacent to the Giant Buddha, best explored at opening time (7:30am) before the main crowds arrive via the south entrance. The multi-level path along the cliff face reveals different perspectives of the statue.",
+        category: "Temple",
+      },
+    ],
+    food: [
+      {
+        name: "Bowl Chicken (钵钵鸡)",
+        nameZh: "钵钵鸡",
+        description: "Leshan's signature street food — cold chicken strips, vegetables, and tofu skewers soaked in a numbing sesame-chilli broth, served in a clay bowl. Found at every street corner in the old town. The Leshan version is notably more fragrant than Chengdu's.",
+        must: true,
+      },
+      {
+        name: "Mapo Tofu (麻婆豆腐)",
+        nameZh: "麻婆豆腐",
+        description: "Leshan claims its own version of this Sichuan classic, with a slightly thicker sauce and more doubanjiang (fermented bean paste) than the Chengdu style. Eaten with white rice as a lunch staple.",
+        must: false,
+      },
+      {
+        name: "Fresh River Fish in Sichuan Bean Sauce",
+        nameZh: "豆瓣鱼",
+        description: "The three-river confluence makes Leshan famous for fresh river fish. Douban fish (thick doubanjiang sauce) and steamed grass carp are the most-ordered dishes at riverside restaurants near the old dock.",
+        must: true,
+      },
+      {
+        name: "Cold Noodles (凉面)",
+        nameZh: "凉面",
+        description: "A Leshan breakfast staple — springy noodles dressed in sesame paste, chilli oil, and peanuts. Eaten cold at room temperature. Every local noodle shop has its own version; the flavours vary significantly from stall to stall.",
+        must: false,
+      },
+    ],
+    bestSeason: "Autumn (September–November) for the clearest views of the Buddha and pleasant temperatures. Spring (March–May) for lush greenery. Avoid summer flood season (July–August) when river water levels can partially submerge the Buddha's feet — the lower viewing platforms may be closed.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Chengdu",
+        details: "Chengdu East to Leshan Station: ~1.5 hours (¥50–70). Leshan to Emeishan Station: ~30 minutes — making a combined Leshan + Mount Emei itinerary straightforward.",
+      },
+      {
+        mode: "🚌 Bus from Chengdu",
+        details: "Xinnanmen Bus Station to Leshan: ~2 hours (¥45). Several daily departures. The bus drops you closer to the Giant Buddha entrance than the train station.",
+      },
+      {
+        mode: "🚢 River access",
+        details: "Once in Leshan, the Giant Buddha is reachable by public bus (Line 13 from Leshan Bus Station) or taxi (¥20–30). The boat cruise departs from the dock below Wuyou Temple.",
+      },
+    ],
+    accommodation: "Most visitors treat Leshan as a day trip from Chengdu, but an overnight stay allows you to see the Buddha in evening light and visit Mount Emei the next morning. Hotels cluster near the Giant Buddha scenic area and in the old town (¥150–500/night). Emeishan City, 30km north, has accommodation closer to the Mount Emei cable car if that is your priority.",
+    travelTips: [
+      "Book boat cruise tickets online or at the dock early — the most popular morning departures sell out. The full circuit cruise (¥70) gives the best views; the quick crossing ferry is adequate for photos but less atmospheric.",
+      "The cliffside staircase down to the Buddha's feet has over 200 steps and is very steep — take your time descending and allow extra time going back up. The queue for the stairs can be 30–60 minutes on weekends.",
+      "Combine Leshan with Mount Emei in a two-day trip from Chengdu: Day 1 Leshan Giant Buddha + Leshan old town, Day 2 Mount Emei by cable car to the Golden Summit.",
+      "Leshan's old town teahouses are excellent for a slow afternoon. Ask for 峨眉雪芽 (Emei Snow Bud) green tea, grown on the mountain just north of the city.",
+    ],
+    dayTrips: [
+      {
+        name: "Mount Emei",
+        nameZh: "峨眉山",
+        distance: "~30min north by high-speed rail",
+        description: "One of China's four sacred Buddhist mountains with summit temples in the clouds and Tibetan macaques on the trails. The Golden Summit cable car makes it accessible in half a day.",
+        whyGo: "Leshan and Emei share a UNESCO designation — visiting both in one trip is the natural pairing.",
+      },
+    ],
+  },
+
+  emeishan: {
+    id: "emeishan",
+    nameZh: "峨眉山",
+    nameEn: "Mount Emei",
+    province: "sichuan",
+    provinceZh: "四川省",
+    tagline: "Sacred summit above the clouds",
+    description:
+      "One of China's four sacred Buddhist mountains, Mount Emei has drawn pilgrims and travellers for over 2,000 years. The Golden Summit, at 3,077m, floats above a sea of clouds most mornings. Tibetan macaques patrol the mid-mountain trails. Ancient monasteries cling to the forested slopes. Two days gives you the time to do it properly — one by cable car is also possible and spectacular.",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Sacred Buddhist mountain", "Sea of clouds at the summit", "Tibetan macaques", "Ancient mountain monasteries", "UNESCO World Heritage"],
+    attractions: [
+      {
+        name: "Golden Summit (金顶)",
+        description: "The 3,077m summit is crowned by a spectacular 48m golden Buddha statue and several ancient temples. On clear mornings the sea of clouds below is one of the great sights in China. The cable car from Leidongping takes 8 minutes and saves 3–4 hours of hiking.",
+        category: "Summit",
+      },
+      {
+        name: "Wannian Temple (万年寺)",
+        description: "The oldest and most important temple on the mountain, dating to the 4th century. Houses a magnificent bronze statue of Samantabhadra Bodhisattva on a white elephant, cast in 980 AD. A cable car connects from the park entrance.",
+        category: "Temple",
+      },
+      {
+        name: "Qingyin Pavilion (清音阁)",
+        description: "A mid-mountain pavilion at the confluence of two streams — the Black Dragon River and White Dragon River. The sound of the water against the rocks gives the pavilion its name ('Clear Sound'). A peaceful midpoint on any ascent or descent route.",
+        category: "Scenic",
+      },
+      {
+        name: "Tibetan Macaques",
+        description: "Semi-wild macaques inhabit the Hongchunping and Qingyin Pavilion areas (800–1,500m altitude). They are bold and occasionally aggressive around food — keep bags closed and do not feed them. The wildlife encounter is part of the mountain experience.",
+        category: "Wildlife",
+      },
+      {
+        name: "Baoguo Temple (报国寺)",
+        description: "The main entrance temple at the mountain's base, a Ming dynasty complex with four halls and a famous 7m tall, 62-tonne bronze bell. The starting point for all ascent routes and a calm place to acclimatise before the climb.",
+        category: "Temple",
+      },
+    ],
+    food: [
+      {
+        name: "Mount Emei Tofu",
+        nameZh: "峨眉豆腐",
+        description: "The mountain water produces exceptionally smooth tofu — a mountain monastery staple for centuries. Available in multiple preparations at guesthouses and restaurants on the mountain trails. The stinky tofu version is a popular trail snack.",
+        must: true,
+      },
+      {
+        name: "Emei Snow Bud Tea (峨眉雪芽)",
+        nameZh: "峨眉雪芽",
+        description: "Green tea grown in the misty lower slopes of Emei — delicate, slightly sweet, and one of China's premium teas. Buy directly from the mountain tea shops; tourist area prices are negotiable.",
+        must: true,
+      },
+      {
+        name: "Mountain Mushroom Hotpot",
+        nameZh: "山珍火锅",
+        description: "A milder, mushroom-heavy alternative to Chengdu hotpot, using wild fungi foraged from Emei's slopes. Guesthouses along the hiking trails serve a simple version perfect for warming up after a cold summit visit.",
+        must: false,
+      },
+      {
+        name: "Xueya Cake (雪芽糕)",
+        nameZh: "雪芽糕",
+        description: "A mountain speciality sweet made with green tea powder, glutinous rice, and red bean — shaped to resemble a tea bud. Sold at mountain temple gift shops and the Baoguo Temple area.",
+        must: false,
+      },
+    ],
+    bestSeason: "October to November for clear summit views and autumn foliage — the best combination of visibility and scenery. Spring (March–May) for wildflowers on the lower slopes. Winter (December–February) offers dramatic snow-covered temples and fewer crowds, but the Golden Summit can be icy. Summer is the most popular season but brings frequent cloud and rain at the summit.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Chengdu",
+        details: "Chengdu East to Emeishan Station: ~1.5 hours (¥55–75). From Emeishan Station, buses and taxis run to the park entrance (Baoguo Temple) in 15–20 minutes.",
+      },
+      {
+        mode: "🚄 Combined with Leshan",
+        details: "Leshan Station to Emeishan Station: ~30 minutes. The natural two-day itinerary pairs Leshan Giant Buddha (Day 1) with Mount Emei (Day 2).",
+      },
+      {
+        mode: "🚡 Mountain cable cars",
+        details: "Two cable cars operate on the mountain: Wannian Cable Car (mid-mountain, ¥65 one-way) and Jinding Cable Car (summit, ¥65 one-way). Both are essential for saving several hours of hiking. Book tickets at the base stations or online.",
+      },
+    ],
+    accommodation: "Most visitors stay at the base (Baoguo Temple area, ¥200–600/night) and take the cable car up each day. For the truly memorable experience, stay at a mid-mountain monastery guesthouse (Hongchunping or Xianfeng — ¥150–350/bed including breakfast) and wake at 5am for the summit sunrise above the clouds. Book mountain accommodation several weeks ahead for weekends and holidays.",
+    travelTips: [
+      "The Jinding (summit) cable car frequently has long queues — arrive at Leidongping cable car base before 8am or buy advance tickets online. The queue can be 1–2 hours on peak days.",
+      "Summit temperatures are 10–15°C cooler than the base even in summer. Bring a jacket regardless of the weather in Chengdu.",
+      "Do not feed the macaques. They bite and can snatch bags — keep food zipped inside your pack when walking through monkey zones (Hongchunping and Qingyin Pavilion areas).",
+      "The full hiking ascent (Wannian to Golden Summit) takes 6–8 hours each way and is only recommended for fit, experienced hikers. The cable car combination (Wannian up, Leidongping down) is the smart approach for most visitors.",
+      "Monastery guesthouse meals (斋饭, vegetarian) are included with accommodation at some mountain temples — simple but fresh, and part of the pilgrim experience.",
+    ],
+    dayTrips: [
+      {
+        name: "Leshan Giant Buddha",
+        nameZh: "乐山大佛",
+        distance: "~30min south by high-speed rail",
+        description: "The world's tallest stone Buddha, carved at the confluence of three rivers. The river boat cruise below the statue is essential for appreciating its true scale.",
+        whyGo: "Emei and Leshan share a UNESCO designation and are natural companions on the same multi-day trip.",
+      },
+    ],
+  },
+
+  jiuzhaigou: {
+    id: "jiuzhaigou",
+    nameZh: "九寨沟",
+    nameEn: "Jiuzhaigou Valley",
+    province: "sichuan",
+    provinceZh: "四川省",
+    tagline: "Where the lakes are too blue to believe",
+    description:
+      "Jiuzhaigou is one of those rare places where every photograph looks edited — because the turquoise, emerald, and sapphire lakes really are that colour. Located in a Tibetan valley in northern Sichuan, this UNESCO World Heritage valley holds 118 lakes, dozens of waterfalls, and dense forests that explode in gold and crimson each autumn. The most visually spectacular natural scenery in China.",
+    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Turquoise terraced lakes", "UNESCO World Heritage", "Tibetan minority culture", "Autumn foliage spectacle", "Remote Sichuan wilderness"],
+    attractions: [
+      {
+        name: "Five Flower Lake (五花海)",
+        description: "The most photographed lake in Jiuzhaigou — a shallow, completely transparent pool with a submerged ancient forest visible through five layers of differently-coloured algae and mineral deposits. The vivid colour ranges from turquoise to green to gold depending on the light.",
+        category: "Natural Wonder",
+      },
+      {
+        name: "Nuorilang Waterfall (诺日朗瀑布)",
+        description: "China's widest high-altitude waterfall, 270m wide and 20m tall, spanning the full width of the valley. The viewing platform puts you level with the spray. In autumn it is framed by golden larch trees; in winter it partially freezes.",
+        category: "Natural Wonder",
+      },
+      {
+        name: "Long Lake (长海)",
+        description: "The largest and highest lake in Jiuzhaigou, at 3,100m altitude. Deep blue-green and often edged with snow even in early autumn. The high altitude makes it noticeably colder than the valley floor — bring an extra layer.",
+        category: "Scenic Lake",
+      },
+      {
+        name: "Shuzheng Terraced Lakes (树正群海)",
+        description: "A series of 19 interconnected terraced lakes stepping down the valley floor, connected by wooden boardwalks. The turquoise water cascades between them in a continuous series of small falls. The most accessible section of the park, and often the most beautiful.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Zechawa Tibetan Village",
+        description: "One of the nine original Tibetan villages that give Jiuzhaigou its name (meaning Nine Village Valley). Traditional wooden houses, prayer flags, and mani stone walls. Some villages have been preserved as cultural sites within the park.",
+        category: "Cultural",
+      },
+    ],
+    food: [
+      {
+        name: "Yak Butter Tea (酥油茶)",
+        nameZh: "酥油茶",
+        description: "The essential Tibetan drink — hot tea churned with yak butter and salt. Warming and caloric at altitude. Served at Tibetan guesthouses and teahouses throughout the valley. The acquired taste is part of the cultural experience.",
+        must: true,
+      },
+      {
+        name: "Tsampa (糌粑)",
+        nameZh: "糌粑",
+        description: "Roasted barley flour — the Tibetan staple food, mixed with butter tea into a dough and eaten as a meal. Try it at a Tibetan home guesthouse for the most authentic experience.",
+        must: false,
+      },
+      {
+        name: "Tibetan Hotpot",
+        nameZh: "藏族火锅",
+        description: "A milder, yak-meat-based hotpot common in the restaurants of Jiuzhaigou township. Less fiery than Chengdu hotpot; the broth is enriched with local mushrooms and highland vegetables.",
+        must: false,
+      },
+      {
+        name: "Songpan Fried Beef",
+        nameZh: "松潘炒牛肉",
+        description: "From the Tibetan town of Songpan (near the park entrance), dry-fried yak beef with peppers and local spices. Robust and intensely flavoured — a popular lunch dish at restaurants in the Jiuzhaigou township.",
+        must: false,
+      },
+    ],
+    bestSeason: "Autumn (late September to early November) is peak season — golden and crimson foliage against the turquoise lakes creates the most spectacular scenery in China. Spring (April–May) for waterfalls swollen by snowmelt. Winter (December–February) for frozen falls and fewer crowds — the lakes remain vivid even in snow. Summer is the busiest period and can see afternoon thunderstorms.",
+    transportation: [
+      {
+        mode: "✈️ By air (recommended)",
+        details: "Jiuzhai Huanglong Airport (JZH) receives flights from Chengdu (45 min), Chongqing, Beijing, and Shanghai. The airport is at 3,448m altitude — take it slow on arrival. Shuttle buses run to the park gate (40 min, ¥45).",
+      },
+      {
+        mode: "🚌 By bus from Chengdu",
+        details: "Xinnanmen Bus Station to Jiuzhaigou: 7–9 hours by direct coach (¥200–270). An overnight sleeper bus is also available. Not recommended in winter when mountain roads may be closed.",
+      },
+      {
+        mode: "🎫 Park entry & internal transport",
+        details: "Park tickets: ¥169 (low season) to ¥220 (peak autumn). Internal shuttles cover all trail sections. The boardwalk system is mostly flat and accessible. Book tickets online at least 2–3 weeks ahead for autumn peak dates.",
+      },
+    ],
+    accommodation: "Jiuzhaigou township (just outside the park gate) has a full range of hotels (¥200–1,200/night). Staying inside the park is no longer permitted. For the best experience, arrive the afternoon before, rest to acclimatise, and enter the park at opening (8am) — the early light on the lakes is exceptional. Zhangzha Town has more budget options (¥100–300/night).",
+    travelTips: [
+      "Book park tickets weeks ahead for the autumn peak (late September to late October) — daily visitor numbers are capped and tickets frequently sell out online. The Jiuzhaigou official ticketing website is the only reliable booking channel.",
+      "Altitude is a genuine consideration: the valley floor sits at 2,000–2,500m and Long Lake is at 3,100m. Take the first day slowly; avoid strenuous hiking on arrival day if you are sensitive to altitude.",
+      "The park is large — plan your route using the official park map. The Y-shaped valley has three main branches (Shuzheng, Zechawa, Rize). Most visitors cover two branches per day. The internal shuttle buses are free with your ticket.",
+      "Autumn colour peaks in mid-October — the single best week to visit Jiuzhaigou. The park is at its most crowded but also most spectacular. Arrive on a weekday if possible.",
+      "Photography: the colours are real and need no editing. For the best reflections, visit lakes in the morning before any wind picks up. Five Flower Lake is most vivid on sunny days with high-angle light (10am–2pm).",
+    ],
+  },
+
+  // ── ZHEJIANG ─────────────────────────────────────────────────────────────────
+
+  ningbo: {
+    id: "ningbo",
+    nameZh: "宁波",
+    nameEn: "Ningbo",
+    province: "zhejiang",
+    provinceZh: "浙江省",
+    tagline: "Ancient port, modern energy",
+    description:
+      "One of China's oldest maritime cities, Ningbo has been a major trading port since the Tang dynasty. The Tianyi Library — the oldest private library in Asia — stands in the old city alongside a perfectly preserved Qing dynasty commercial street. Putuoshan Sacred Island is an easy ferry trip from the coast. And beneath the modern city, a remarkable Bronze Age culture left its mark at Hemudu — 7,000 years before Marco Polo arrived.",
+    image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Oldest private library in Asia", "Putuoshan Sacred Island gateway", "7,000-year-old Hemudu culture", "Preserved Qing dynasty streetscape", "Zhoushan seafood"],
+    attractions: [
+      {
+        name: "Tianyi Library (天一阁)",
+        description: "Built in 1561 and the oldest surviving private library in Asia, housing over 300,000 volumes including rare Ming dynasty books. The garden surrounding the library complex — with its carefully positioned rocks and water features — is one of the finest in Zhejiang. Allow 2 hours.",
+        category: "Historic Site",
+      },
+      {
+        name: "Laowaitan (老外滩)",
+        description: "Ningbo's historic bund — a riverside stretch of colonial-era buildings along the Yong River dating from the 1840s when Ningbo was one of China's five treaty ports. The buildings now house restaurants and bars; the waterfront walk at dusk is one of Ningbo's most pleasant experiences.",
+        category: "Historic District",
+      },
+      {
+        name: "Hemudu Site Museum (河姆渡遗址)",
+        description: "A 7,000-year-old Neolithic settlement discovered in 1973 that rewrote the history of Chinese civilisation — among the world's earliest evidence of rice cultivation, wooden architecture, and sophisticated pottery. The on-site museum is thoughtfully presented.",
+        category: "Museum",
+      },
+      {
+        name: "Yue Lake (月湖)",
+        description: "A scenic lake district in the heart of the old city, surrounded by classical gardens, ancestral halls, and well-preserved residential lanes. Less commercialised than comparable areas in Hangzhou or Suzhou — a genuine neighbourhood lake enjoyed by locals.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Asoka Temple (阿育王寺)",
+        description: "A famous Buddhist monastery 20km east of the city, said to contain a relic of the historical Buddha brought from India in 282 AD. One of the five great Buddhist monasteries in China — quieter and more atmospheric than the tourist-heavy temples closer to the city.",
+        category: "Temple",
+      },
+    ],
+    food: [
+      {
+        name: "Ningbo Tang Yuan (宁波汤圆)",
+        nameZh: "宁波汤圆",
+        description: "Glutinous rice balls filled with black sesame paste and lard — the original Tang Yuan, which the rest of China has been imitating for centuries. Eaten year-round but especially at the Lantern Festival. Rich, sweet, and deeply satisfying.",
+        must: true,
+      },
+      {
+        name: "Stinky Tofu with Aged Brine (臭冬瓜)",
+        nameZh: "臭冬瓜",
+        description: "Ningbo's most distinctive fermented flavour — winter melon and tofu preserved in a traditional brine that produces a very pungent but flavourful result. More complex and less harsh than Changsha stinky tofu; a local obsession.",
+        must: false,
+      },
+      {
+        name: "Zhoushan Crab (舟山大闸蟹)",
+        nameZh: "舟山螃蟹",
+        description: "The Zhoushan archipelago produces superb sea crab and hairy crab. Ningbo seafood restaurants source fresh catch daily — steamed whole crab with Zhejiang vinegar and ginger is the correct approach.",
+        must: true,
+      },
+      {
+        name: "Rice Cake (宁波年糕)",
+        nameZh: "宁波年糕",
+        description: "Ningbo claims China's finest sticky rice cake — dense, chewy, and used in both sweet and savoury preparations. Stir-fried with pork and vegetables (炒年糕) is the local comfort food; eaten for breakfast with fermented tofu (臭豆腐) on the side.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (March–May) and Autumn (September–November) are ideal — mild temperatures, lower humidity, and the best conditions for the boat crossing to Putuoshan. Summer brings Zhoushan seafood at its freshest but is hot and humid. Winter is mild by northern China standards.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Hangzhou",
+        details: "Hangzhou East to Ningbo: ~1.5 hours (¥55–80). From Shanghai Hongqiao: ~1.5 hours direct. From Nanjing South: ~2.5 hours.",
+      },
+      {
+        mode: "✈️ Ningbo Lishe International Airport (NGB)",
+        details: "Connected to all major Chinese cities and several international destinations. Metro Line 2 connects the airport to the city centre in 35 minutes.",
+      },
+      {
+        mode: "⛴️ Ferry to Putuoshan",
+        details: "Regular ferries from Ningbo Beilun Port or Zhoushan to Putuoshan island (1–2 hours, ¥80–130 depending on vessel). Check schedules online — high season sees more frequent sailings.",
+      },
+    ],
+    accommodation: "The Tianyi Square / old city area is the most convenient base (¥250–700/night). Laowaitan has a growing number of boutique hotels in converted colonial buildings (¥400–1,000/night). Budget options are available near Ningbo Station and in the university district.",
+    travelTips: [
+      "Putuoshan Sacred Island requires a separate ferry ticket and park entry fee (¥160). Plan for an overnight on the island if possible — the dawn and dusk atmosphere is incomparably more peaceful than a day trip.",
+      "Tianyi Library has a daily visitor cap — arrive early or book online. The adjacent Tianyi Square commercial district has good Ningbo breakfast options.",
+      "Ningbo Museum (designed by Wang Shu, 2008 Pritzker Prize winner) is architecturally extraordinary — the bamboo-template concrete and recycled brick facade is worth a visit even without interest in the exhibits.",
+      "The Hemudu Site Museum is in Yuyao, about 30km southwest — easiest by taxi or private car (¥60–80). Allow half a day.",
+    ],
+    dayTrips: [
+      {
+        name: "Putuoshan Sacred Island",
+        nameZh: "普陀山",
+        distance: "~2h by bus to port, then ferry",
+        description: "One of China's four sacred Buddhist islands — ancient sea caves, temple bells at dawn, and a monastic pace of life entirely different from the mainland. An overnight stay is strongly recommended.",
+        whyGo: "The most spiritually atmospheric island in China, and Ningbo is the closest major city to the ferry.",
+        adminNote: "Located in Zhoushan Municipality — a separate ferry crossing from Ningbo's port. Worth every minute of the journey.",
+      },
+    ],
+  },
+
+  shaoxing: {
+    id: "shaoxing",
+    nameZh: "绍兴",
+    nameEn: "Shaoxing",
+    province: "zhejiang",
+    provinceZh: "浙江省",
+    tagline: "Canal city of scholars and wine",
+    description:
+      "Shaoxing is the most literary city in China — birthplace of Lu Xun, greatest writer of the 20th century, and home to the Orchid Pavilion where the calligrapher Wang Xizhi composed China's most famous preface in 353 AD. The old city's black-awning canal boats, whitewashed walls, and preserved Ming and Qing architecture create the authentic Jiangnan streetscape that other cities spend millions trying to recreate. And then there is the wine — Shaoxing yellow rice wine is as fundamental to Chinese cooking as salt.",
+    image: "https://images.unsplash.com/photo-1570041423292-1ac47a9b0c19?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1570041423292-1ac47a9b0c19?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Birthplace of Lu Xun", "Ancient Orchid Pavilion", "Traditional black-awning canal boats", "Shaoxing yellow rice wine", "Preserved Ming-Qing streetscape"],
+    attractions: [
+      {
+        name: "Lu Xun's Former Residence (鲁迅故里)",
+        description: "The well-preserved birthplace and childhood neighbourhood of Lu Xun, China's most celebrated modern writer. The complex includes his family home, the Three-Flavour Study (Sanwei Shuwu) where he studied as a child, and the Hundred Grass Garden. One of the most thoughtfully presented literary heritage sites in China.",
+        category: "Historic Site",
+      },
+      {
+        name: "Orchid Pavilion (兰亭)",
+        description: "The site where Wang Xizhi wrote the Preface to the Poems of Orchid Pavilion in 353 AD — Chinese calligraphy's most sacred text. The scenic garden in the hills southwest of the city reconstructs the setting of the famous gathering. A pilgrimage site for calligraphy enthusiasts worldwide.",
+        category: "Cultural Heritage",
+      },
+      {
+        name: "Ancient Canal Boat Ride",
+        description: "Black-awning wooden boats (乌篷船) have carried people through Shaoxing's canals for centuries. A 30-minute canal ride is one of the most atmospheric ways to see the old city — book at the dock near the Lu Xun neighbourhood. Morning departures offer the calmest water.",
+        category: "Scenic",
+      },
+      {
+        name: "Cangqiao Historic District (仓桥直街)",
+        description: "A 6km preserved canal street in the old city, lined with Ming and Qing dynasty merchant houses, carved stone bridges, and wine shops. The least touristy and most authentic of Shaoxing's old areas — walk from Guangning Bridge to Bianmen in either direction.",
+        category: "Historic District",
+      },
+      {
+        name: "Dayu Mausoleum (大禹陵)",
+        description: "The legendary tomb of Yu the Great — the hero who tamed China's floods 4,000 years ago and founded the Xia dynasty. An important symbolic site in Chinese civilisation, with a vast ceremonial complex. Significant for Chinese visitors; the surrounding mountain scenery is beautiful.",
+        category: "Historic Site",
+      },
+    ],
+    food: [
+      {
+        name: "Shaoxing Yellow Rice Wine (绍兴黄酒)",
+        nameZh: "绍兴黄酒",
+        description: "The most famous cooking wine in Chinese cuisine, but also a serious drinking wine. The Jianhu water gives it a unique character — amber-coloured, mildly sweet, and earthy. Drink warm in winter, chilled in summer. Tour the Kuaiji Mountain winery for a tasting.",
+        must: true,
+      },
+      {
+        name: "Stinky Tofu (绍兴臭豆腐)",
+        nameZh: "绍兴臭豆腐",
+        description: "Shaoxing's iconic street snack — soft tofu fermented in brine until pungent, then deep-fried until crispy outside and custardy inside. Served with chilli sauce. The smell is confronting; the taste is addictive.",
+        must: true,
+      },
+      {
+        name: "Dried Tofu with Yellow Wine (腐乳)",
+        nameZh: "腐乳",
+        description: "Shaoxing red fermented tofu (腐乳) is one of the most complex preserved foods in Chinese cooking — used as a condiment, cooking ingredient, and breakfast spread on congee. The Shaoxing version is distinctly more complex than the nationally common brand.",
+        must: false,
+      },
+      {
+        name: "Brine-Cured Duck (糟鸭)",
+        nameZh: "糟鸭",
+        description: "Duck marinated in Shaoxing wine lees (酒糟) — a cooling summer dish with a rich, winey aroma. Eaten cold as an appetiser. The wine flavour penetrates deeply into the meat over the 24-hour curing process.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (March–May) for mild weather and the full green of the canal district. Autumn (September–October) is also excellent. Summer is hot and humid but the wine culture means cool indoor tastings at any time of year. Avoid major Chinese holidays when the Lu Xun area becomes very crowded.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Hangzhou",
+        details: "Hangzhou East to Shaoxing North: ~25 minutes (¥25–35). From Shanghai Hongqiao: ~1 hour. Shaoxing North Station is in the new city — take a taxi or bus to the old city (20 min, ¥20–30).",
+      },
+      {
+        mode: "🚌 Bus from Hangzhou",
+        details: "Buses run frequently between Hangzhou and Shaoxing old city bus station (~50 min, ¥20–30), dropping closer to the Lu Xun area than the HSR station.",
+      },
+    ],
+    accommodation: "The Lu Xun / Cangqiao area in the old city is the most atmospheric location — guesthouses in converted canal-front houses (¥200–600/night). The new city near Shaoxing North Station has more modern options (¥150–400/night). Shaoxing is easily done as a day trip from Hangzhou (25 min by HSR) or Shanghai (1 hour).",
+    travelTips: [
+      "Lu Xun's neighbourhood is free to enter but some interior buildings have a small fee. The whole complex takes 2–3 hours; allow time for the Three-Flavour Study and the Hundred Grass Garden separately.",
+      "Canal boat rides need to be booked at the dock on the day — arrive early at peak season as capacity is limited. The short 30-minute circuit is sufficient; the longer 90-minute tour goes through more of the old canals.",
+      "Buy Shaoxing yellow rice wine directly from a winery or established shop, not from tourist souvenir stands. Kuaiji Mountain (会稽山) and Guyue Longshan (古越龙山) are the most respected brands.",
+      "Shaoxing's old city is compact enough to explore entirely on foot or by rented bicycle. The canal paths between the Lu Xun area and Cangqiao Street are the best cycling route.",
+    ],
+    dayTrips: [
+      {
+        name: "Hangzhou",
+        nameZh: "杭州",
+        distance: "~25min by high-speed rail",
+        description: "Shaoxing and Hangzhou are natural companions — the former preserves old Jiangnan culture, the latter surrounds it with West Lake's natural beauty. Many travellers combine both in a single day or two-day trip.",
+        whyGo: "The closest major city, and a completely different but complementary Jiangnan experience.",
+      },
+    ],
+  },
+
+  zhoushan: {
+    id: "zhoushan",
+    nameZh: "舟山",
+    nameEn: "Zhoushan",
+    province: "zhejiang",
+    provinceZh: "浙江省",
+    tagline: "China's sacred island and seafood capital",
+    description:
+      "An archipelago of 1,390 islands off the Zhejiang coast, Zhoushan is most famous as the gateway to Putuoshan — one of China's four sacred Buddhist islands. But the rest of the archipelago deserves equal attention: Zhoushan is China's largest fishing port, and the seafood here is incomparably fresh. The main island's Dinghai Old Town is a well-preserved historic district that most visitors to Putuoshan never discover.",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Putuoshan Sacred Island", "China's largest fishing port", "Freshest seafood in eastern China", "Dinghai Historic District", "Island ferry network"],
+    attractions: [
+      {
+        name: "Putuoshan Sacred Island (普陀山)",
+        description: "One of China's four sacred Buddhist islands, dedicated to Guanyin (Goddess of Mercy). Ancient sea caves, centuries-old temples perched on cliff edges, and a dawn atmosphere that feels genuinely otherworldly. The Chaoyangdong Cave and Fayu Temple are the highlights. Ferries run from Zhoushan main island.",
+        category: "Sacred Island",
+      },
+      {
+        name: "Shenjiamen Fishing Harbour (沈家门渔港)",
+        description: "China's largest fishing harbour and one of Asia's greatest seafood markets — thousands of fishing boats moored along 6km of docks. The nightly seafood night market (7pm–midnight) is extraordinary: fresh catches laid out on ice, grilled on-site, with plastic tables and cheap beer. An unmissable experience.",
+        category: "Market",
+      },
+      {
+        name: "Dinghai Old Town (定海古城)",
+        description: "A largely intact Qing dynasty town on Zhoushan's main island, with traditional streets, memorial archways, and historic buildings around the Changguo Temple. Far less visited than comparable old towns on the mainland — a genuine find.",
+        category: "Historic District",
+      },
+      {
+        name: "Zhujiajian Island (朱家尖岛)",
+        description: "Connected to the main island by a bridge, Zhujiajian has excellent beaches (Nansha Beach is the finest) and is the departure point for Putuoshan ferries. The island has a laid-back character completely different from the mainand.",
+        category: "Island",
+      },
+    ],
+    food: [
+      {
+        name: "Shenjiamen Grilled Seafood",
+        nameZh: "沈家门海鲜烧烤",
+        description: "The night market at Shenjiamen harbour is the definitive Zhoushan food experience — buy fresh seafood from the stalls, hand it to a nearby grill, and eat at plastic tables on the dock. Squid, razor clams, scallops with garlic, and sea snails are the staples.",
+        must: true,
+      },
+      {
+        name: "Zhoushan Yellow Croaker (舟山黄鱼)",
+        nameZh: "舟山黄鱼",
+        description: "Large yellow croaker is Zhoushan's most prized fish — braised with soy sauce and ginger, or simply steamed. The wild-caught fish from the East China Sea have a firmer, more complex flavour than farmed versions available elsewhere.",
+        must: true,
+      },
+      {
+        name: "Sea Urchin Rice (海胆饭)",
+        nameZh: "海胆饭",
+        description: "Fresh sea urchin roe served over warm white rice — a simple preparation that showcases the briny sweetness of urchins from the Zhoushan waters. Available at dockside restaurants near Shenjiamen.",
+        must: false,
+      },
+      {
+        name: "Seafood Congee (海鲜粥)",
+        nameZh: "海鲜粥",
+        description: "A Zhoushan breakfast staple — rice porridge cooked with fresh clams, shrimp, and yellow croaker. Far more complex than mainland congee due to the quality of the seafood. Available at small breakfast stalls near the fishing harbour from 6am.",
+        must: false,
+      },
+    ],
+    bestSeason: "Autumn (September–November) is the peak fishing season and the best time for seafood. Spring (April–May) is excellent for Putuoshan with smaller crowds. Summer (June–August) is the main tourist season but typhoons can disrupt ferry services — check weather before booking. Winter sees the freshest crab.",
+    transportation: [
+      {
+        mode: "🚄 + 🚌 From Hangzhou",
+        details: "Hangzhou to Zhoushan: high-speed rail to Ningbo (~1.5h), then bus to Zhoushan (~1.5h). Total ~3 hours. Direct buses from Hangzhou also run (3.5 hours).",
+      },
+      {
+        mode: "🚌 From Ningbo",
+        details: "Frequent buses from Ningbo to Zhoushan Shenjiamen (1.5 hours, ¥35). The fastest connection from the mainland.",
+      },
+      {
+        mode: "⛴️ Ferry to Putuoshan",
+        details: "Ferries to Putuoshan depart from Zhujiajian Port on Zhoushan's main island (30 min, ¥35) and from Ningbo Beilun Port (2h, ¥80). Buy tickets online or at port — weekends and holidays sell out.",
+      },
+    ],
+    accommodation: "Shenjiamen area on the main island is the best base for the seafood experience (¥200–600/night). Putuoshan island has its own guesthouses and mid-range hotels (¥300–800/night) — staying on the island overnight is strongly recommended for the dawn atmosphere. Zhujiajian has beach resorts (¥400–1,200/night).",
+    travelTips: [
+      "The Shenjiamen night market is best on weekdays — weekends are extremely crowded. Arrive by 7:30pm to secure a good table. Prices are roughly fixed; some haggling is accepted at unfamiliar stalls.",
+      "Putuoshan ferries are cancelled during typhoons and rough weather — always have a flexible return plan. Check the ferry app (普陀山轮渡) or hotel front desk for real-time status.",
+      "Putuoshan entry ticket (¥160) includes access to all major temples but not the cable car. The island is only 12km² and walkable, but renting a golf cart (¥80–120) for half a day saves significant time.",
+      "For the freshest fish at the best prices, follow the locals to the small seafood restaurants behind the Shenjiamen market rather than eating at the prominently signed tourist-facing restaurants on the main road.",
+    ],
+    dayTrips: [
+      {
+        name: "Putuoshan Sacred Island",
+        nameZh: "普陀山",
+        distance: "30min by ferry from Zhujiajian Port",
+        description: "One of China's four sacred Buddhist islands — the main reason most people visit Zhoushan. Ancient temples, sea caves, and an atmosphere of genuine sanctity.",
+        whyGo: "Putuoshan is Zhoushan's crown jewel, and the ferry is the only way to reach it.",
+      },
+    ],
+  },
+
+  // ── JIANGSU ──────────────────────────────────────────────────────────────────
+
+  yangzhou: {
+    id: "yangzhou",
+    nameZh: "扬州",
+    nameEn: "Yangzhou",
+    province: "jiangsu",
+    provinceZh: "江苏省",
+    tagline: "The most elegant city on the Grand Canal",
+    description:
+      "Yangzhou was the wealthiest city in China during the Tang dynasty, and it still carries that refinement in everything it does. Slender West Lake is more intimate and more graceful than Hangzhou's West Lake. The breakfast culture — dim sum teahouses where meals last two hours — is unmatched anywhere in China. Ge Garden's layered stone rockeries are among the finest classical garden work in the country. And the city has given Chinese cooking some of its most subtle, nuanced dishes.",
+    image: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Slender West Lake", "China's finest breakfast culture", "Ge Garden classical rockeries", "Grand Canal history", "Huaiyang cuisine birthplace"],
+    attractions: [
+      {
+        name: "Slender West Lake (瘦西湖)",
+        description: "A narrow, winding lake connecting a series of classical pavilions, bridges, and garden islands — more intimate and perhaps more beautiful than Hangzhou's West Lake. The Five Pavilion Bridge (五亭桥) is the most photographed structure in Yangzhou. The 24-bridge promenade is especially beautiful in spring when the willows are out.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Ge Garden (个园)",
+        description: "One of the four most famous private gardens in China — celebrated for its extraordinary layered rockeries representing the four seasons in a single space. The bamboo plantings that inspired the garden's name are equally remarkable. Built in 1818 by a salt merchant, it epitomises Yangzhou's Tang and Qing dynasty wealth.",
+        category: "Classical Garden",
+      },
+      {
+        name: "He Garden (何园)",
+        description: "A late Qing dynasty garden (1883) combining Chinese classical design with Western architectural elements — double-deck corridors, European cast-iron balustrades, and a central stage that could be viewed from every angle. One of China's best-preserved Qing era private gardens.",
+        category: "Classical Garden",
+      },
+      {
+        name: "Dongguan Historic Street (东关街)",
+        description: "Yangzhou's best-preserved traditional commercial street — 1,122m of Ming and Qing dynasty shopfronts, ancient wooden facades, and heritage residences. Morning is best: breakfast shops open early and the street food culture is at its most authentic before the tour groups arrive.",
+        category: "Historic District",
+      },
+      {
+        name: "Daming Temple (大明寺)",
+        description: "A Tang dynasty temple on Shuhui Hill, famous as the monastery of the monk Jianzhen who sailed to Japan in 753 AD and established Japanese Buddhism. The Jianzheng Memorial Hall houses a replica of Jianzhen's portrait, a national treasure in both China and Japan.",
+        category: "Temple",
+      },
+    ],
+    food: [
+      {
+        name: "Yangzhou Fried Rice (扬州炒饭)",
+        nameZh: "扬州炒饭",
+        description: "The most imitated rice dish in the world. The Yangzhou original uses fresh shrimp, egg, ham, and spring onions — each ingredient cooked separately and combined at the last moment. The texture should be dry, the egg fragrant, and each grain separate. A proper version at Fuchun Tea House is a revelation compared to the global imitation.",
+        must: true,
+      },
+      {
+        name: "Fuchun Dim Sum Breakfast (富春茶社)",
+        nameZh: "富春茶社早茶",
+        description: "The Yangzhou dim sum breakfast (早茶, morning tea) is a cultural institution — delicate steamed buns, shrimp dumplings, glutinous rice, and pastries eaten over 2–3 hours in a teahouse setting. Fuchun Tea House (est. 1885) is the classic address. Book ahead; locals arrive at 6am.",
+        must: true,
+      },
+      {
+        name: "Lion's Head Meatball (清炖狮子头)",
+        nameZh: "清炖狮子头",
+        description: "Large pork meatballs braised in a clear stock with Chinese cabbage — the definitive Huaiyang dish. The meat-to-fat ratio is precise (7:3), the texture impossibly tender. Found at traditional Huaiyang restaurants throughout the old city.",
+        must: true,
+      },
+      {
+        name: "Beef and Noodle Soup (淮扬汤面)",
+        nameZh: "淮扬汤面",
+        description: "Yangzhou's noodle soups are famously refined — the broth is clear, intensely flavoured, and built over 8–12 hours from chicken and pork bone. Topping options include shredded braised beef, soft-boiled egg, and blanched greens. Available at breakfast noodle shops from 6am.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (March–May) when willows and peach blossoms frame Slender West Lake — the most photographed season in Yangzhou. Autumn (October–November) for clear skies and garden colours. The breakfast culture is excellent year-round.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Nanjing",
+        details: "Nanjing South to Yangzhou (via Zhenjiang): ~45 minutes. Direct from Shanghai Hongqiao: ~1.5 hours. Yangzhou East Station is in the new city — taxi to the old city area takes ~20 minutes (¥25–35).",
+      },
+      {
+        mode: "🚌 Bus from Nanjing",
+        details: "Buses run from Nanjing's long-distance bus stations to Yangzhou old city in ~1.5 hours. More convenient than the HSR station for accessing the historic core.",
+      },
+    ],
+    accommodation: "The Slender West Lake / Dongguan Street area is the most atmospheric location (¥300–800/night). Mid-range business hotels cluster near the city centre (¥200–500/night). Yangzhou is convenient as a day trip from Nanjing (45 min by HSR) or Shanghai (1.5 hours), but an overnight allows you to experience the legendary breakfast culture properly.",
+    travelTips: [
+      "The breakfast culture is the main reason to stay overnight in Yangzhou. Fuchun Tea House (open from 6am) has queues by 7am on weekends — book a table online if possible. The breakfast experience alone justifies the trip from Nanjing or Shanghai.",
+      "Slender West Lake is largest and most beautiful in the morning before the tour groups arrive. Buy tickets online (¥150) and enter at opening time (7:30am).",
+      "Ge Garden requires patience with the stone rockeries — find a quiet corner and sit for 20 minutes. The garden is designed to be experienced slowly, not photographed quickly.",
+      "Yangzhou cookery classes are available through some hotels and cooking schools — Huaiyang cuisine is one of China's Eight Regional Cuisines and a serious culinary tradition worth engaging with.",
+    ],
+    dayTrips: [
+      {
+        name: "Nanjing",
+        nameZh: "南京",
+        distance: "~45min by high-speed rail",
+        description: "The closest major city — Yangzhou and Nanjing make an excellent two-day pairing, with Yangzhou's refined canal culture complementing Nanjing's dynastic history.",
+        whyGo: "The natural pairing for Yangzhou: a larger, historically richer city just 45 minutes away.",
+      },
+    ],
+  },
+
+  wuxi: {
+    id: "wuxi",
+    nameZh: "无锡",
+    nameEn: "Wuxi",
+    province: "jiangsu",
+    provinceZh: "江苏省",
+    tagline: "Taihu Lake and the flavour of old Jiangnan",
+    description:
+      "Wuxi sits on the northern shore of Lake Tai — one of China's three great freshwater lakes — and has been a prosperous silk and textile centre since the Ming dynasty. The old town's canal district, the sweeping lake views from Turtle Head Isle, and the surprisingly good cuisine (Wuxi spareribs braised in sweet red sauce are a national dish) make it a thoroughly satisfying stop. And for anyone interested in classical Chinese architecture, Jichang Garden is among the finest examples in existence.",
+    image: "https://images.unsplash.com/photo-1587135991058-8816b028691f?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1587135991058-8816b028691f?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Taihu Lake panoramas", "Jichang Garden (UNESCO)", "Wuxi spareribs", "Grand Canal old town", "Jiangnan silk heritage"],
+    attractions: [
+      {
+        name: "Turtle Head Isle (鼋头渚)",
+        description: "A promontory jutting into Lake Tai with sweeping 270-degree views of the lake — dotted with cherry trees that explode in pink blossoms each spring (late March to mid-April). The scenic area also has historical gardens and an islet ferry connection. Spring blossom season is extraordinary.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Jichang Garden (寄畅园)",
+        description: "One of China's oldest surviving private gardens (Ming dynasty, 1506), widely considered the masterpiece of the Jiangnan garden tradition. The Qing emperors Kangxi and Qianlong both visited repeatedly, and Qianlong commissioned a replica for the Summer Palace in Beijing. Intimate, sophisticated, and never crowded.",
+        category: "Classical Garden",
+      },
+      {
+        name: "Nanchan Temple District (南禅寺)",
+        description: "Wuxi's old commercial and temple district — a seven-storey pagoda anchoring a complex of Ming dynasty temple buildings surrounded by traditional shopping streets and tea houses. Liangxi Road nearby is the best street for local food.",
+        category: "Historic District",
+      },
+      {
+        name: "Huishan Ancient Town (惠山古镇)",
+        description: "A Tang dynasty settlement at the foot of Huishan Hill, known for its remarkable concentration of ancestral halls (祠堂) — over 100 from various family lineages, spanning 700 years of memorial architecture. The clay figurines (惠山泥人) made here since the Ming dynasty are Wuxi's most famous craft.",
+        category: "Historic Town",
+      },
+      {
+        name: "Grand Canal Waterfront (古运河)",
+        description: "The Wuxi section of the Grand Canal, with a preserved historical promenade along the west bank. The area around Qingming Bridge (清名桥) is the most atmospheric — old warehouses, stone bridges, and traditional residences reflected in the water.",
+        category: "Scenic Area",
+      },
+    ],
+    food: [
+      {
+        name: "Wuxi Spareribs (无锡排骨)",
+        nameZh: "无锡排骨",
+        description: "Pork ribs braised in Shaoxing wine, soy sauce, rock sugar, and five-spice until they are fall-off-the-bone tender and glazed a deep mahogany red. One of China's ten most famous dishes — the original is still best at traditional restaurants in Wuxi itself.",
+        must: true,
+      },
+      {
+        name: "Taihu White Shrimp (太湖白虾)",
+        nameZh: "太湖白虾",
+        description: "Tiny, translucent freshwater shrimp from Lake Tai — blanched and eaten with vinegar, or fried with salt. Supremely fresh, with a sweetness only possible from lake-to-table cooking. Available at lakeside restaurants near Turtle Head Isle.",
+        must: true,
+      },
+      {
+        name: "Taihu Three Whites (太湖三白)",
+        nameZh: "太湖三白",
+        description: "The legendary three white foods of Taihu Lake: white shrimp, whitebait (银鱼), and white carp (白鱼). Usually ordered as a set at lakeside restaurants — each prepared simply to highlight the delicate freshness of the lake catch.",
+        must: true,
+      },
+      {
+        name: "Wuxi Small Cage Buns (无锡小笼包)",
+        nameZh: "无锡小笼包",
+        description: "Wuxi's steamed buns are sweeter than Shanghai's xiaolongbao — the pork filling uses a touch of sugar and the soup inside is noticeably richer. A small but meaningful regional variation on one of China's most beloved dim sum dishes.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (late March to mid-April) for the cherry blossom at Turtle Head Isle — one of the great seasonal spectacles of Jiangnan. Autumn (October–November) for clear Taihu Lake views. Summer brings fresh lake seafood but is hot and humid. Winter is mild and the gardens are uncrowded.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Shanghai",
+        details: "Shanghai Hongqiao to Wuxi: ~30 minutes (¥40–60). From Nanjing South: ~30 minutes. From Hangzhou: ~1 hour. One of the best-connected cities in the Yangtze Delta.",
+      },
+      {
+        mode: "🚇 Wuxi Metro",
+        details: "Lines 1 and 2 cover the main tourist areas. Turtle Head Isle is best reached by taxi (¥30–40 from Wuxi Station) or the scenic area shuttle. Huishan Ancient Town is on Metro Line 3.",
+      },
+    ],
+    accommodation: "The canal district near Nanchan Temple and Qingming Bridge is the most atmospheric location (¥300–700/night). The area near Wuxi Station has good mid-range options (¥200–500/night). Wuxi is frequently done as a day trip from Shanghai (30 min) or Nanjing, but an overnight gives you time for Taihu Lake at both sunset and sunrise.",
+    travelTips: [
+      "Cherry blossom at Turtle Head Isle (late March to mid-April) is extraordinarily popular — arrive at opening time (7:30am) and buy tickets online at least 3–5 days ahead during blossom peak. The ¥105 ticket includes a lake ferry.",
+      "Jichang Garden has a daily visitor limit and is best enjoyed on weekday mornings. The garden is small — move slowly and sit in the pavilions rather than rushing through.",
+      "Taihu Three Whites can only be guaranteed at licensed lake restaurants. Ask the restaurant to confirm the fish is from Lake Tai (太湖本地捕捞) rather than farmed elsewhere.",
+      "Huishan clay figurines are one of China's most distinctive folk crafts — the workshop area in Huishan Ancient Town has artisans demonstrating the traditional technique. Good quality pieces cost ¥80–300.",
+    ],
+    dayTrips: [
+      {
+        name: "Suzhou",
+        nameZh: "苏州",
+        distance: "~20min by high-speed rail",
+        description: "Suzhou's UNESCO gardens and Pingjiang Road canal district are just 20 minutes away — Wuxi and Suzhou make the ideal two-day Jiangsu pairing.",
+        whyGo: "Two of the Yangtze Delta's most refined cities, close enough to combine in a single trip.",
+      },
+    ],
+  },
 };
 
 // ── Helper exports ────────────────────────────────────────────────────────────
@@ -1178,14 +2035,14 @@ export function getCityDetail(id: string): CityDetail | undefined {
   return CITY_DETAILS[id];
 }
 
-/** All 10 priority cities as array */
+/** All cities as array */
 export const PRIORITY_CITIES = Object.values(CITY_DETAILS);
 
 /** City IDs grouped by region */
 export const CITIES_BY_REGION = {
   north:     ["beijing_city"],
-  east:      ["shanghai_city", "hangzhou", "nanjing", "suzhou"],
+  east:      ["shanghai_city", "hangzhou", "ningbo", "shaoxing", "zhoushan", "nanjing", "suzhou", "yangzhou", "wuxi"],
   central:   ["xian"],
-  southwest: ["chengdu", "chongqing"],
+  southwest: ["chengdu", "chongqing", "leshan", "emeishan", "jiuzhaigou"],
   south:     ["guilin", "sanya"],
 } as const;

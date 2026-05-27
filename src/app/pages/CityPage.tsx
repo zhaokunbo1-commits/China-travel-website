@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate, Link } from "react-router";
 import {
   ArrowLeft, ChevronRight, MapPin, Camera, Train,
-  Utensils, Lightbulb, CheckCircle, ArrowRight, CalendarDays, Hotel,
+  Utensils, Lightbulb, CheckCircle, ArrowRight, CalendarDays, Hotel, Compass,
 } from "lucide-react";
 import { CITY_DETAILS, type CityDetail } from "../data/cities";
 import { CITIES } from "../data/chinaData";
@@ -13,6 +13,7 @@ const TABS = [
   { id: "transport",    label: "Getting There", icon: Train },
   { id: "food",         label: "Food & Drink",  icon: Utensils },
   { id: "plan",         label: "Plan Your Trip",icon: Lightbulb },
+  { id: "daytrips",     label: "Day Trips",     icon: Compass },
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"];
@@ -328,6 +329,58 @@ export default function CityPage() {
               <div className="text-center py-16 text-muted-foreground">
                 <Lightbulb size={32} className="mx-auto mb-3 opacity-40" />
                 <p className="text-sm">Detailed travel tips coming soon.</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* DAY TRIPS */}
+        {activeTab === "daytrips" && (
+          <div>
+            <SectionHeader
+              label="Beyond the City"
+              title={`Day trips from ${city.nameEn}`}
+            />
+            {city.dayTrips && city.dayTrips.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+                {city.dayTrips.map((trip, i) => (
+                  <div
+                    key={i}
+                    className="bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/20 transition-all"
+                  >
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <div>
+                        <h3 className="font-semibold text-foreground text-base leading-snug">
+                          {trip.name}
+                        </h3>
+                        <p className="text-muted-foreground text-xs font-['DM_Mono'] mt-0.5">
+                          {trip.nameZh}
+                        </p>
+                      </div>
+                      <span className="text-[10px] font-['DM_Mono'] tracking-wide bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0">
+                        {trip.distance}
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      {trip.description}
+                    </p>
+                    <p className="text-primary text-sm font-medium italic">
+                      ✦ {trip.whyGo}
+                    </p>
+                    {trip.adminNote && (
+                      <div className="mt-3 pt-3 border-t border-border">
+                        <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 leading-relaxed">
+                          📍 {trip.adminNote}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 text-muted-foreground">
+                <Compass size={32} className="mx-auto mb-3 opacity-40" />
+                <p className="text-sm">Day trip suggestions coming soon.</p>
               </div>
             )}
           </div>
