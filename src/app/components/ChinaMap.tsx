@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router";
 import { MapPin } from "lucide-react";
 import { PROVINCE_ID_MAP, EXCLUDED_REGIONS, PROVINCES } from "../data/chinaData";
@@ -25,7 +25,6 @@ interface GeoData {
 const W = 900;
 const H = 680;
 
-// Manual Mercator projection (avoids d3-geo sphere-aware clip issues)
 const CENTER_LON = 106;
 const CENTER_LAT = 36;
 const SCALE = 750;
@@ -40,7 +39,6 @@ function projectPoint(lon: number, lat: number): [number, number] {
   return [x, y];
 }
 
-// Build SVG path string from a polygon ring (array of [lon, lat] pairs)
 function ringToPath(ring: number[][]): string {
   const pts = ring.map(([lon, lat]) => projectPoint(lon, lat));
   if (pts.length < 2) return "";
@@ -54,10 +52,8 @@ function ringToPath(ring: number[][]): string {
   return d;
 }
 
-// Build combined SVG path from a GeoJSON Polygon or MultiPolygon
 function geometryToPath(geometry: GeoFeature["geometry"]): string {
   const parts: string[] = [];
-
   if (geometry.type === "Polygon") {
     const coords = geometry.coordinates as number[][][];
     for (const ring of coords) {
@@ -73,36 +69,29 @@ function geometryToPath(geometry: GeoFeature["geometry"]): string {
       }
     }
   }
-
   return parts.join(" ");
 }
 
-// Compute centroid from projected points of all rings
 function computeCentroid(geometry: GeoFeature["geometry"]): [number, number] {
   let sumX = 0, sumY = 0, count = 0;
-
   const processRing = (ring: number[][]) => {
     for (const [lon, lat] of ring) {
       const [x, y] = projectPoint(lon, lat);
-      // Only use points within the viewbox area
       if (x >= 0 && x <= W && y >= 0 && y <= H) {
         sumX += x; sumY += y; count++;
       }
     }
   };
-
   if (geometry.type === "Polygon") {
     (geometry.coordinates as number[][][]).forEach(processRing);
   } else if (geometry.type === "MultiPolygon") {
     for (const poly of geometry.coordinates as number[][][][]) {
-      processRing(poly[0]); // only exterior ring for centroid
+      processRing(poly[0]);
     }
   }
-
   return count > 0 ? [sumX / count, sumY / count] : [0, 0];
 }
 
-// Short display name for province label
 function shortName(full: string): string {
   return full
     .replace("省", "")
@@ -113,18 +102,125 @@ function shortName(full: string): string {
     .replace("自治区", "");
 }
 
-// Whether this province has featured city content
 function hasContent(id: string | undefined): boolean {
   if (!id) return false;
   const p = PROVINCES[id];
   return !!(p && p.featuredCities.length > 0);
 }
 
+// ── Hover card ────────────────────────────────────────────────────────────────
+interface HoverCardProps {
+  provinceName: string;
+  mouseX: number;
+  mouseY: number;
+  containerW: number;
+  containerH: number;
+}
+
+function ProvinceHoverCard({
+  provinceName,
+  mouseX,
+  mouseY,
+  containerW,
+  containerH,
+}: HoverCardProps) {
+  const id = PROVINCE_ID_MAP[provinceName];
+  const province = id ? PROVINCES[id] : null;
+  if (!province) return null;
+
+  const CARD_W = 220;
+  const CARD_H = 168;
+  const GAP = 18;
+
+  // Horizontal: prefer right; flip left if overflows
+  const flipX = mouseX + GAP + CARD_W > containerW - 8;
+  const left = flipX ? mouseX - GAP - CARD_W : mouseX + GAP;
+
+  // Vertical: centre on cursor; clamp within container
+  let top = mouseY - CARD_H / 2;
+  top = Math.max(8, Math.min(top, containerH - CARD_H - 8));
+
+  const highlights = (province.highlights ?? []).slice(0, 3);
+
+  return (
+    <div
+      className="pointer-events-none absolute z-50"
+      style={{
+        left,
+        top,
+        width: CARD_W,
+        animation: "fadeSlideIn 0.18s ease forwards",
+      }}
+    >
+      {/* Card */}
+      <div
+        className="rounded-2xl overflow-hidden shadow-2xl border border-white/30"
+        style={{
+          background: "rgba(255,255,255,0.97)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+      >
+        {/* Image */}
+        <div className="relative h-24 overflow-hidden">
+          <img
+            src={province.image}
+            alt={province.nameZh}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          {/* Gradient overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.45) 100%)",
+            }}
+          />
+          {/* Province name on image */}
+          <div className="absolute bottom-2 left-3 right-3">
+            <p className="text-white font-semibold text-sm leading-tight drop-shadow">
+              {province.nameZh}
+            </p>
+            <p
+              className="text-white/80 text-[10px] leading-tight"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              {province.nameEn}
+            </p>
+          </div>
+        </div>
+
+        {/* Highlights */}
+        <div className="px-3 py-2.5">
+          <p
+            className="text-[10px] text-muted-foreground mb-1"
+            style={{ fontFamily: "'DM Mono', monospace" }}
+          >
+            ⭐ 代表景点
+          </p>
+          {highlights.length > 0 ? (
+            <p className="text-[11px] text-foreground font-medium leading-relaxed">
+              {highlights.join(" · ")}
+            </p>
+          ) : (
+            <p className="text-[11px] text-muted-foreground italic">敬请期待</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Main component ────────────────────────────────────────────────────────────
 export default function ChinaMap() {
   const [geoData, setGeoData] = useState<GeoData | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [containerSize, setContainerSize] = useState({ w: 800, h: 600 });
+  const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -143,12 +239,27 @@ export default function ChinaMap() {
       });
   }, []);
 
+  // Track container dimensions for smart card positioning
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const ro = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerSize({
+          w: entry.contentRect.width,
+          h: entry.contentRect.height,
+        });
+      }
+    });
+    ro.observe(containerRef.current);
+    return () => ro.disconnect();
+  }, []);
+
   const provinces = useMemo(() => {
     if (!geoData) return [];
     return geoData.features.filter(
       (f) =>
         !EXCLUDED_REGIONS.includes(f.properties.name) &&
-        f.properties.name !== "" // exclude unnamed (nine-dash line) feature
+        f.properties.name !== ""
     );
   }, [geoData]);
 
@@ -175,104 +286,158 @@ export default function ChinaMap() {
   }
 
   return (
-    <div className="relative w-full select-none">
-      <svg
-        viewBox={`0 0 ${W} ${H}`}
-        style={{ width: "100%", height: "auto", display: "block" }}
+    <>
+      {/* keyframe injected once */}
+      <style>{`
+        @keyframes fadeSlideIn {
+          from { opacity: 0; transform: translateY(6px) scale(0.97); }
+          to   { opacity: 1; transform: translateY(0)   scale(1);    }
+        }
+      `}</style>
+
+      <div
+        ref={containerRef}
+        className="relative w-full select-none"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          setMousePos({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top,
+          });
+        }}
       >
-        {/* Clip all map content to viewBox */}
-        <defs>
-          <clipPath id="mapClip">
-            <rect x="0" y="0" width={W} height={H} rx="16" />
-          </clipPath>
-        </defs>
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          style={{ width: "100%", height: "auto", display: "block" }}
+        >
+          <defs>
+            <clipPath id="mapClip">
+              <rect x="0" y="0" width={W} height={H} rx="16" />
+            </clipPath>
 
-        {/* Ocean background */}
-        <rect x="0" y="0" width={W} height={H} fill="#b8d4ea" rx="16" />
+            {/* Shadow filter for resting state */}
+            <filter id="shadow-rest" x="-5%" y="-5%" width="110%" height="115%">
+              <feDropShadow
+                dx="0" dy="2" stdDeviation="3"
+                floodColor="rgba(0,0,0,0.18)"
+              />
+            </filter>
 
-        {/* Province paths */}
-        <g clipPath="url(#mapClip)">
-          {provinces.map((feature) => {
-            const name = feature.properties.name;
-            const id = PROVINCE_ID_MAP[name];
-            const isHovered = hovered === name;
-            const clickable = !!id;
-            const isActive = hasContent(id);
+            {/* Deeper shadow for hovered state */}
+            <filter id="shadow-hover" x="-8%" y="-8%" width="116%" height="120%">
+              <feDropShadow
+                dx="0" dy="6" stdDeviation="8"
+                floodColor="rgba(0,0,0,0.32)"
+              />
+            </filter>
+          </defs>
 
-            const pathD = geometryToPath(feature.geometry);
-            if (!pathD) return null;
+          {/* Ocean background */}
+          <rect x="0" y="0" width={W} height={H} fill="#b8d4ea" rx="16" />
 
-            const [cx, cy] = computeCentroid(feature.geometry);
+          {/* Province paths — NOT clipped so shadows aren't cut off */}
+          <g clipPath="url(#mapClip)">
+            {provinces.map((feature) => {
+              const name = feature.properties.name;
+              const id = PROVINCE_ID_MAP[name];
+              const isHovered = hovered === name;
+              const clickable = !!id;
+              const isActive = hasContent(id);
 
-            const fill = isHovered && clickable
-              ? "#c1281b"
-              : isActive
-              ? "#c8a96e"
-              : "#e8e0d2";
+              const pathD = geometryToPath(feature.geometry);
+              if (!pathD) return null;
 
-            return (
-              <g key={name}>
-                <path
-                  d={pathD}
-                  fill={fill}
-                  stroke="white"
-                  strokeWidth={0.8}
-                  fillRule="evenodd"
+              const [cx, cy] = computeCentroid(feature.geometry);
+
+              const fill = isHovered && clickable
+                ? "#c1281b"
+                : isActive
+                ? "#c8a96e"
+                : "#e8e0d2";
+
+              return (
+                <g
+                  key={name}
                   style={{
                     cursor: clickable ? "pointer" : "default",
-                    transition: "fill 0.15s ease",
+                    // ── 3D lift on hover ──────────────────────────────────
+                    transform: isHovered && clickable
+                      ? `translateY(-4px)`
+                      : `translateY(0px)`,
+                    transformOrigin: `${cx.toFixed(1)}px ${cy.toFixed(1)}px`,
+                    // ── Drop shadow ───────────────────────────────────────
+                    filter: isHovered && clickable
+                      ? "url(#shadow-hover)"
+                      : isActive
+                      ? "url(#shadow-rest)"
+                      : "none",
+                    // ── Smooth animation ──────────────────────────────────
+                    transition: "transform 0.25s ease, filter 0.25s ease",
                   }}
                   onMouseEnter={() => clickable && setHovered(name)}
                   onMouseLeave={() => setHovered(null)}
                   onClick={() => {
                     if (id) navigate(`/province/${id}`);
                   }}
-                />
-                {/* Province label */}
-                {cx > 20 && cy > 20 && cx < W - 20 && cy < H - 20 && (
-                  <text
-                    x={cx}
-                    y={cy}
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize={isHovered ? 10 : 8.5}
-                    fontWeight={isHovered ? "600" : "400"}
-                    fill={isHovered ? "white" : "#555"}
-                    style={{
-                      pointerEvents: "none",
-                      userSelect: "none",
-                      fontFamily: "'Plus Jakarta Sans', sans-serif",
-                      transition: "all 0.15s ease",
-                    }}
-                  >
-                    {shortName(name)}
-                  </text>
-                )}
-              </g>
-            );
-          })}
-        </g>
-      </svg>
+                >
+                  <path
+                    d={pathD}
+                    fill={fill}
+                    stroke="white"
+                    strokeWidth={0.8}
+                    fillRule="evenodd"
+                    style={{ transition: "fill 0.2s ease" }}
+                  />
 
-      {/* Hover tooltip */}
-      {hovered && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-foreground text-background text-xs font-['DM_Mono'] px-3 py-1.5 rounded-full shadow-lg pointer-events-none whitespace-nowrap">
-          <span className="text-primary">→ </span>
-          {hovered.replace("省", "").replace("市", "")} · 点击查看攻略
-        </div>
-      )}
+                  {/* Province label */}
+                  {cx > 20 && cy > 20 && cx < W - 20 && cy < H - 20 && (
+                    <text
+                      x={cx}
+                      y={cy}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontSize={isHovered ? 10 : 8.5}
+                      fontWeight={isHovered ? "600" : "400"}
+                      fill={isHovered ? "white" : "#555"}
+                      style={{
+                        pointerEvents: "none",
+                        userSelect: "none",
+                        fontFamily: "'Plus Jakarta Sans', sans-serif",
+                        transition: "all 0.2s ease",
+                      }}
+                    >
+                      {shortName(name)}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+          </g>
+        </svg>
 
-      {/* Legend */}
-      <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-2 flex flex-col gap-1.5 text-[10px] font-['DM_Mono'] text-muted-foreground shadow-sm">
-        <div className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-sm bg-[#c8a96e] flex-shrink-0" />
-          有攻略
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-sm bg-[#e8e0d2] flex-shrink-0" />
-          即将上线
+        {/* ── Hover province card ───────────────────────────────────────────── */}
+        {hovered && (
+          <ProvinceHoverCard
+            provinceName={hovered}
+            mouseX={mousePos.x}
+            mouseY={mousePos.y}
+            containerW={containerSize.w}
+            containerH={containerSize.h}
+          />
+        )}
+
+        {/* ── Legend ───────────────────────────────────────────────────────── */}
+        <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-2 flex flex-col gap-1.5 text-[10px] font-['DM_Mono'] text-muted-foreground shadow-sm">
+          <div className="flex items-center gap-1.5">
+            <span className="w-3 h-3 rounded-sm bg-[#c8a96e] flex-shrink-0" />
+            有攻略
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="w-3 h-3 rounded-sm bg-[#e8e0d2] flex-shrink-0" />
+            即将上线
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
