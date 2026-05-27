@@ -3050,6 +3050,1088 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
     ],
   },
 
+  // ── HUBEI ─────────────────────────────────────────────────────────────────────
+
+  wuhan: {
+    id: "wuhan",
+    nameZh: "武汉",
+    nameEn: "Wuhan",
+    province: "hubei",
+    provinceZh: "湖北省",
+    tagline: "Where the great rivers cross",
+    description:
+      "Wuhan is the great underrated city of China — a metropolis of 12 million at the confluence of the Yangtze and Han rivers, with a street food culture that rivals any city in the country, cherry blossoms in spring that draw visitors from across Asia, and a history that includes the revolution that ended 2,000 years of imperial rule. Hot dry noodles for breakfast, Yellow Crane Tower at sunset, and a night market that runs until 3am: Wuhan rewards the traveller who arrives without expectations.",
+    image: "https://images.unsplash.com/photo-1597586124394-fbd6ef244026?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1597586124394-fbd6ef244026?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Yellow Crane Tower", "Wuchang Uprising 1911", "Cherry blossom capital", "Hot dry noodles", "Yangtze River crossing"],
+    attractions: [
+      {
+        name: "Yellow Crane Tower (黄鹤楼)",
+        description: "The most celebrated tower in China — rebuilt repeatedly over 1,700 years, the current Tang-dynasty-style structure stands on Snake Hill above the Yangtze. The view from the top deck takes in the full width of the river, the Wuhan bridges, and the skyline of three cities merging. Immortalised in a Tang dynasty poem by Cui Hao that has been memorised by every Chinese school child for 1,300 years.",
+        category: "Historic Landmark",
+      },
+      {
+        name: "Wuhan University Cherry Blossoms (武汉大学樱花)",
+        description: "The most famous cherry blossom site in China outside Japan — Wuhan University's campus has 1,000+ cherry trees planted by Japanese forces during WWII occupation, now creating one of the most beautiful spring spectacles in Asia. The two-week peak (usually mid-March) draws 500,000 visitors. Book campus entry tickets weeks in advance.",
+        category: "Seasonal Spectacle",
+      },
+      {
+        name: "Hubei Provincial Museum (湖北省博物馆)",
+        description: "One of China's ten best provincial museums — home to the extraordinary Marquis Yi of Zeng tomb collection (433 BC): a 65-piece bronze bell set (编钟) that is the most sophisticated musical instrument in the ancient world, plus lacquerware, bronze vessels, and jade of exceptional quality. The bell concert performance daily at 11am is essential.",
+        category: "Museum",
+      },
+      {
+        name: "Wuchang Uprising Site (辛亥革命武昌起义纪念馆)",
+        description: "The headquarters building of the Hubei Military Government — the site where the 1911 Wuchang Uprising began the revolution that ended the Qing dynasty and 2,000 years of imperial rule. The Red Building (红楼) is beautifully preserved as a museum documenting the most significant political event of modern Chinese history.",
+        category: "Historic Site",
+      },
+      {
+        name: "East Lake (东湖)",
+        description: "China's largest urban lake — twice the size of Hangzhou's West Lake — with 100km of shoreline, cycling paths, and classical Chinese gardens. The Moshan Botanical Garden on the lake's south shore has extraordinary seasonal displays: cherry blossoms in spring, lotus in summer, chrysanthemums in autumn.",
+        category: "Scenic Area",
+      },
+    ],
+    food: [
+      {
+        name: "Hot Dry Noodles (热干面)",
+        nameZh: "热干面",
+        description: "Wuhan's defining dish — alkaline wheat noodles blanched, drained, and dressed with sesame paste, sesame oil, soy, vinegar, and pickled radish. Eaten standing at a street stall at 7am. The noodles are chewy, the sesame paste rich and nutty, and the whole thing is consumed in under three minutes. Nothing else tastes like it.",
+        must: true,
+      },
+      {
+        name: "Duck Neck (鸭脖子)",
+        nameZh: "鸭脖子",
+        description: "Wuhan-style spiced duck neck — braised in a complex mix of Sichuan pepper, star anise, chilli, and over a dozen other spices until fall-off-the-bone tender. A night market staple eaten with cold beer. Zhou Hei Ya is the commercial brand; local shops near Jianghan Road are better.",
+        must: true,
+      },
+      {
+        name: "Four-Delicacy Soup Dumplings (四季美汤包)",
+        nameZh: "四季美汤包",
+        description: "Wuhan's version of soup dumplings — slightly larger than Shanghai's xiaolongbao, with a fuller, more gelatinous broth inside and a thicker skin. The 100-year-old Four Seasons Beauty shop near Zhongshan Avenue is the classic address.",
+        must: false,
+      },
+      {
+        name: "Bean Skin (豆皮)",
+        nameZh: "豆皮",
+        description: "A Wuhan breakfast invention — a crispy mung bean and egg crepe filled with glutinous rice, diced pork, and dried mushrooms, then pan-fried until golden. Heavy, satisfying, and uniquely Wuhan. The Lao Tongcheng restaurant near the old city is considered the benchmark.",
+        must: true,
+      },
+    ],
+    bestSeason: "Spring (March–April) for cherry blossoms — the single best reason to visit Wuhan. Autumn (October–November) for comfortable temperatures and vibrant East Lake colours. Summer is notoriously hot and humid (Wuhan is one of China's 'three furnaces'). Winter is cold but the city functions year-round.",
+    transportation: [
+      {
+        mode: "🚄 Major HSR hub",
+        details: "Wuhan Station: Beijing West ~4 hours, Shanghai Hongqiao ~5 hours, Guangzhou South ~3.5 hours, Chengdu ~4 hours, Xi'an ~3 hours. One of China's most connected HSR nodes — nearly everywhere is reachable the same day.",
+      },
+      {
+        mode: "🚇 Wuhan Metro",
+        details: "12 metro lines. Yellow Crane Tower: Line 4 (Wuchang Station). East Lake: Lines 8/11. Hubei Museum: Line 2 (Donghu Road). Wuhan University: Line 8 (Wuhan University Station). Metro covers the three urban areas (Wuchang, Hankou, Hanyang) very effectively.",
+      },
+      {
+        mode: "⛴️ Yangtze Ferry",
+        details: "Public ferries cross the Yangtze between Wuchang and Hankou (¥2). The crossing takes 15 minutes and provides the best view of the Yellow Crane Tower from the water.",
+      },
+    ],
+    accommodation: "Hankou (the north bank) has the widest hotel range and the most active nightlife (¥200–800/night). Wuchang (south bank) is closer to the Yellow Crane Tower, Hubei Museum, and Wuhan University (¥250–700/night). The Jianghan Road pedestrian area in Hankou is the best base for first-time visitors.",
+    travelTips: [
+      "Cherry blossom at Wuhan University requires advance tickets purchased on the university's WeChat booking system — the campus limits daily visitors. The gate opens at 7:30am and the light is best before 9am.",
+      "Eat hot dry noodles at a street stall, not at a sit-down restaurant. The ritual is to stand at the counter, dress the noodles yourself with the provided condiments, and eat quickly. Most stalls are open 6–10am only.",
+      "The Hubei Museum bell concert (Marquis Yi's bronze bells) runs daily at 11am and 3pm — arrive 20 minutes early. The bells produce a complete chromatic scale and were used to play Western baroque music when first tested by musicologists.",
+      "Wuhan's three towns (Wuchang, Hankou, Hanyang) each have distinct characters — Hankou for colonial history and food, Wuchang for universities and culture, Hanyang for industry and the ancient Guqin Tai site.",
+    ],
+    dayTrips: [
+      {
+        name: "Wudang Mountain",
+        nameZh: "武当山",
+        distance: "~2.5h west by high-speed rail",
+        description: "The sacred Taoist mountain where Tai Chi was born — ancient cliff-face temples, misty forest trails, and Taoist martial arts schools in an extraordinary mountain setting.",
+        whyGo: "The most spectacular Taoist mountain in China, and an easy day trip from Wuhan.",
+      },
+      {
+        name: "Three Gorges (Yichang)",
+        nameZh: "三峡（宜昌）",
+        distance: "~1.5h west by high-speed rail",
+        description: "The starting point for Three Gorges cruises and the gateway to the Yangtze's most dramatic scenery — plus the world's largest hydroelectric dam.",
+        whyGo: "The Three Gorges remain spectacular even after the dam raised water levels — a must for any Yangtze journey.",
+      },
+    ],
+  },
+
+  wudangshan: {
+    id: "wudangshan",
+    nameZh: "武当山",
+    nameEn: "Wudang Mountain",
+    province: "hubei",
+    provinceZh: "湖北省",
+    tagline: "Where Taoism meets the clouds",
+    description:
+      "Wudang Mountain is the holiest site in Chinese Taoism and the birthplace of Tai Chi — a complex of ancient cliff-face temples, misty forested peaks, and Taoist martial arts schools spread across 70km of mountain terrain. Built primarily during the Ming dynasty under the patronage of the Yongle Emperor (the same ruler who built the Forbidden City), the 72 peaks and 36 cliff-face temples form a UNESCO World Heritage landscape unlike anywhere else in China.",
+    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["UNESCO Taoist temple complex", "Birthplace of Tai Chi", "Golden Summit cliffside palace", "Ming dynasty architecture in mist", "Taoist martial arts schools"],
+    attractions: [
+      {
+        name: "Golden Summit (金顶)",
+        description: "The 1,612m summit crowned by the Golden Hall — a bronze temple gilded entirely in gold, built in 1416 by the Yongle Emperor. The hall stands on a granite cliff with 360-degree views over mist-filled valleys. The engineering feat of constructing it at this altitude in the 15th century is staggering. Best seen at dawn when cloud layers form below the peak.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Purple Cloud Temple (紫霄宫)",
+        description: "The best-preserved of Wudang's main temple complexes — a sequence of halls ascending the mountain slope, built in 1413 and still used by resident Taoist monks. The incense smoke, chanting, and mountain mist combine into an atmosphere of genuine spiritual weight. Morning prayers (5–7am) are open to visitors.",
+        category: "Temple",
+      },
+      {
+        name: "South Cliff Palace (南岩宫)",
+        description: "One of Wudang's most dramatic sites — temple buildings built directly into a sheer cliff face, accessible via a narrow path carved from the rock. The Dragon Head Rock (龙头香) is a stone incense burner projecting 2.9m from the cliff edge, where pilgrims once balanced to offer incense.",
+        category: "Temple",
+      },
+      {
+        name: "Taoist Martial Arts Demonstration",
+        description: "Several schools on the mountain offer daily demonstrations of Wudang-style Tai Chi and sword forms — more meditative and fluid than Shaolin kung fu, emphasising internal energy (qi) over external power. The Wudang Kung Fu Academy near the mountain entrance offers morning and evening classes for visitors.",
+        category: "Cultural",
+      },
+      {
+        name: "Yuzhen Palace (玉虚宫)",
+        description: "The largest temple complex at the mountain's base — partially ruined but evocative, with enormous courtyard walls and ancient cypress trees. The foundation stones give a sense of the original vast scale that made Wudang the foremost Taoist sacred site in Ming dynasty China.",
+        category: "Historic Ruins",
+      },
+    ],
+    food: [
+      {
+        name: "Wudang Vegetarian Mountain Cuisine (武当素斋)",
+        nameZh: "武当素斋",
+        description: "Taoist vegetarian cooking using only mountain-foraged ingredients — wild mushrooms, mountain ferns, bamboo shoots, and tofu prepared with minimal processing to honour the Taoist principle of natural simplicity. Available at monastery guesthouses and restaurants near the mountain temples.",
+        must: true,
+      },
+      {
+        name: "Danjiangkou Fish (丹江口鱼)",
+        nameZh: "丹江口鱼",
+        description: "Fresh fish from Danjiangkou Reservoir — the clear water of the reservoir (now part of the South-North Water Transfer Project) produces exceptionally clean-tasting fish. Braised silver carp and pan-fried perch are the local specialities at restaurants in Wudang town.",
+        must: true,
+      },
+      {
+        name: "Wild Mountain Herbs Tea (武当道茶)",
+        nameZh: "武当道茶",
+        description: "A blend of herbs foraged from Wudang's slopes — chrysanthemum, wolfberry, and various Taoist medicinal plants — brewed into a fragrant restorative tea. Served at every temple teahouse and sold in packets as a souvenir.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (March–May) for wildflowers and misty cloud-sea views. Autumn (October–November) for crystal clear summit panoramas. Winter brings snow on the temple roofs — dramatically beautiful but cable cars may suspend. Summer is the most crowded season. The morning cloud sea is most frequent in spring and early summer after overnight rain.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail to Wudangshan Station",
+        details: "Wuhan to Wudangshan: ~2.5 hours. Xi'an to Wudangshan: ~2 hours. The high-speed station is at the mountain base — taxis and shuttle buses run to the scenic area entrance (15 min, ¥15–30).",
+      },
+      {
+        mode: "🚡 Mountain cable cars",
+        details: "Two cable cars serve the upper mountain: Qiongtai cable car (mid-mountain, ¥65) and Tianmen cable car to the Golden Summit area (¥65). The full hike from base to summit takes 5–6 hours each way.",
+      },
+    ],
+    accommodation: "Wudang town at the mountain base has a range of hotels (¥150–500/night). For the summit sunrise, stay at the mid-mountain Nanyan Hotel or Taizi Po guesthouse (¥300–700/night) — book weeks ahead for peak season. Some monastery guesthouses offer simple accommodation with morning prayers included.",
+    travelTips: [
+      "The Golden Summit sunrise requires either an overnight stay on the mountain or a 3am start from the base — the cable car doesn't operate before 7am. The sunrise cloud sea is worth every effort.",
+      "Tai Chi classes at the mountain schools accept short-term students (1-day to multi-week). Morning group practice on the mountain terraces at 6am is free to observe and often open to participants.",
+      "The temple complex stretches across 70km — focus your visit on the central axis (Yuzhen Palace → Purple Cloud Temple → South Cliff → Golden Summit) and use cable cars to save energy.",
+      "Wudang's mist is part of the atmosphere but can obscure views — if the first day is overcast, the mountain often clears by afternoon or the following morning. Build flexibility into your schedule.",
+    ],
+    dayTrips: [
+      {
+        name: "Wuhan",
+        nameZh: "武汉",
+        distance: "~2.5h east by high-speed rail",
+        description: "Hubei's great city — Yellow Crane Tower, Hubei Museum's extraordinary bronze bell collection, and the best street food in central China.",
+        whyGo: "The natural base city for a Wudang trip, with world-class museums and food culture.",
+      },
+    ],
+  },
+
+  enshi: {
+    id: "enshi",
+    nameZh: "恩施",
+    nameEn: "Enshi",
+    province: "hubei",
+    provinceZh: "湖北省",
+    tagline: "The Grand Canyon of China",
+    description:
+      "Enshi is one of China's best-kept secrets — a remote Tujia and Miao minority region in western Hubei where the Qingjiang River has carved one of the most dramatic canyon landscapes in Asia. The Enshi Grand Canyon rivals anything in Zhangjiajie for sheer cliff faces and knife-edge ridges, while the Tusi Royal City ruins and traditional Tujia stilted houses (diaojiaolou) offer a window into a distinct culture that remained largely independent of the Chinese imperial system for centuries.",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Enshi Grand Canyon", "Tujia minority culture", "Stilted houses (吊脚楼)", "Tusi Royal City ruins", "One of China's greenest areas"],
+    attractions: [
+      {
+        name: "Enshi Grand Canyon (恩施大峡谷)",
+        description: "A 108km canyon system with sheer limestone walls reaching 1,000m — needle-shaped stone pillars, cave systems, and river gorges. The Qiyue Mountain section has the most dramatic scenery, with a glass-bottomed skywalk over the canyon edge. Less visited than Zhangjiajie but equally spectacular.",
+        category: "Natural Wonder",
+      },
+      {
+        name: "Tusi City Ruins (唐崖土司城址)",
+        description: "UNESCO-listed ruins of the Tang'ai Tusi (local chieftain) domain — a 400-year-old walled city demonstrating the unique governance system where ethnic minority chiefs maintained semi-independence under imperial Chinese rule. The stone archways and ceremonial structures are extraordinarily well preserved.",
+        category: "UNESCO Heritage",
+      },
+      {
+        name: "Nüer City (女儿城)",
+        description: "A reconstructed Tujia ethnic minority cultural village in Enshi town — traditional stilted wooden houses, folk performances, and excellent Tujia food. More commercial than the authentic villages further into the mountains, but a good introduction to Tujia culture.",
+        category: "Cultural Village",
+      },
+      {
+        name: "Qingjiang River Valley (清江画廊)",
+        description: "A 100km river cruise through the flooded canyon — emerald green water reflecting the forested limestone cliffs. The valley has been called China's most beautiful river landscape. Day cruises run from Enshi city.",
+        category: "Scenic Cruise",
+      },
+      {
+        name: "Xuan'en Tujia Village (宣恩伍家台贡茶村)",
+        description: "An authentic Tujia tea-farming village above Xuan'en County — traditional stilted houses on hillside terraces surrounded by tea gardens. The village produces Enshi Yulu, one of China's finest green teas, and has been designated a UNESCO Tea Route heritage village.",
+        category: "Village",
+      },
+    ],
+    food: [
+      {
+        name: "Enshi Yulu Tea (恩施玉露)",
+        nameZh: "恩施玉露",
+        description: "One of China's ten most famous green teas — a needle-shaped steamed green tea with a distinctively fresh, seaweed-like aroma. The last surviving Chinese steamed green tea, using a method that influenced Japanese tea processing. Buy directly from farmers in Xuan'en County.",
+        must: true,
+      },
+      {
+        name: "Tujia Pork Preserved in Rice Wine (土家腊肉)",
+        nameZh: "土家腊肉",
+        description: "Pork belly cured in salt, rice wine, and five-spice then smoked over hardwood for weeks — the definitive Tujia preserved meat. Eaten stir-fried with garlic shoots or dried chillies. Every family in Enshi makes its own version; the best is bought directly from mountain households.",
+        must: true,
+      },
+      {
+        name: "Mugwort Rice Cake (蒿子粑粑)",
+        nameZh: "蒿子粑粑",
+        description: "Glutinous rice cakes made with fresh mugwort (艾草) — bright green, fragrant, and slightly bitter. A Qingming Festival specialty now eaten year-round. Pan-fried until crispy outside and chewy inside.",
+        must: false,
+      },
+      {
+        name: "Tujia Sour Fish (酸鱼)",
+        nameZh: "土家酸鱼",
+        description: "Fish fermented in brine and rice for months until tangy and deeply flavoured — a traditional Tujia preservation technique. Eaten cold as an appetiser or pan-fried. An acquired taste with a genuinely complex flavour profile.",
+        must: false,
+      },
+    ],
+    bestSeason: "Spring (April–May) for lush greenery and waterfalls at peak flow. Autumn (September–October) for clear canyon views and harvest festivals in Tujia villages. Summer is green but very humid. Winter brings occasional snow that makes the canyon scenery dramatic.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Wuhan",
+        details: "Wuhan to Enshi: ~3 hours by high-speed rail. From Chongqing: ~2 hours. Enshi Station is the gateway — the Grand Canyon is 75km from the city (1.5 hours by bus or taxi).",
+      },
+      {
+        mode: "🚌 Local transport",
+        details: "Buses from Enshi city to the Grand Canyon scenic area run several times daily (¥30, ~1.5 hours). Taxis (¥150–200 one-way) are more flexible. A hired driver for the day (¥300–400) is the best option for combining multiple sites.",
+      },
+    ],
+    accommodation: "Enshi city has mid-range hotels (¥150–450/night). For the canyon experience, guesthouses in Qiyue Mountain township (¥150–350/night) allow early-morning access before day-trippers arrive. Tujia-style stilted guesthouses in traditional villages offer the most atmospheric stays.",
+    travelTips: [
+      "The Enshi Grand Canyon glass skywalk has a daily visitor cap — buy tickets online at least 3 days ahead for weekends. The best photography is in the early morning before mist clears.",
+      "Enshi Yulu tea is best bought in Xuan'en County (1.5 hours south) directly from farming households — prices are a fraction of tourist shops and quality is far higher.",
+      "Combine with Zhangjiajie for a Hubei-Hunan canyon circuit: both areas are within a few hours of each other and offer complementary scenery.",
+      "The Tusi City ruins are undervisited and absorbing — allow a full morning with an audio guide (available in English at the ticket office).",
+    ],
+    dayTrips: [
+      {
+        name: "Zhangjiajie",
+        nameZh: "张家界",
+        distance: "~3h east by bus or car",
+        description: "The Avatar sandstone pillars of Zhangjiajie National Forest Park are just three hours away — making an Enshi–Zhangjiajie circuit one of the most dramatic nature itineraries in central China.",
+        whyGo: "Two of China's most spectacular canyon landscapes, close enough to combine in a 4-day trip.",
+        adminNote: "Zhangjiajie is in Hunan Province — the route crosses the Hubei–Hunan border.",
+      },
+    ],
+  },
+
+  yichang: {
+    id: "yichang",
+    nameZh: "宜昌",
+    nameEn: "Yichang",
+    province: "hubei",
+    provinceZh: "湖北省",
+    tagline: "Gateway to the Three Gorges",
+    description:
+      "Yichang sits at the eastern entrance to the Three Gorges — where the Yangtze emerges from the mountains and spreads onto the plain. The Three Gorges Dam, the world's largest hydroelectric project, is 40km upstream. The gorges themselves — Qutang, Wu, and Xiling — remain among the most dramatic river scenery on earth despite the raised water level. Yichang is also the point where most Three Gorges cruises begin or end, and the city's own riverside scenery and Xiling Gorge views are worth a half-day.",
+    image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Three Gorges cruise start point", "Three Gorges Dam", "Xiling Gorge scenery", "Yangtze River", "Gezhouba Dam"],
+    attractions: [
+      {
+        name: "Three Gorges Dam (三峡大坝)",
+        description: "The world's largest hydroelectric dam — 2,335m wide, 185m tall, with a total capacity of 22,500 MW. The visitor centre and dam-top walkway are genuinely impressive. The ship lift (升船机), completed in 2016, raises vessels 113m in a giant water-filled tank — one of the most extraordinary pieces of engineering on earth.",
+        category: "Engineering Marvel",
+      },
+      {
+        name: "Xiling Gorge (西陵峡)",
+        description: "The easternmost and longest of the Three Gorges, beginning just west of Yichang. The gorge walls rise 200–500m from the river and remain dramatic even after the reservoir raised the water level 80m. Day boat tours operate from Yichang's Taoping Dock.",
+        category: "Scenic Gorge",
+      },
+      {
+        name: "Three Gorges Cruise Departure",
+        description: "Yichang is the eastern terminus of upstream Chongqing-to-Yichang Three Gorges cruises (3–5 days) and the starting point for downstream Yichang-to-Chongqing cruises. Several cruise operators dock here. The Victoria Cruises and Century Cruises are the most established.",
+        category: "Cruise",
+      },
+      {
+        name: "Yichang Three Gorges Museum (宜昌博物馆)",
+        description: "A well-curated museum on the cultural and natural history of the Three Gorges region — particularly valuable for understanding what was submerged when the reservoir was filled: ancient cliff face carvings, Ba kingdom bronzes, and relocating villages.",
+        category: "Museum",
+      },
+    ],
+    food: [
+      {
+        name: "Three Gorges River Fish (峡江鱼)",
+        nameZh: "峡江鱼",
+        description: "Wild Yangtze River fish prepared in the local style — braised with chilli bean paste and ginger, or steamed simply with soy and spring onion. The river fish from this stretch of the Yangtze have a particular clean flavour from the cold mountain-fed water.",
+        must: true,
+      },
+      {
+        name: "Yichang Sour-Spicy Noodles (宜昌凉面)",
+        nameZh: "宜昌凉面",
+        description: "Thin wheat noodles in a tangy sour-spicy broth with peanuts, cucumber, and fermented vegetables — a refreshing summer street food staple. Found at noodle shops throughout the old city.",
+        must: false,
+      },
+      {
+        name: "Gezhouba Crayfish (葛洲坝小龙虾)",
+        nameZh: "小龙虾",
+        description: "Yichang is famous for spiced crayfish — braised in a complex chilli-and-garlic sauce and eaten at outdoor tables along the riverside. Summer evenings along Binjiang Road are the best setting.",
+        must: true,
+      },
+    ],
+    bestSeason: "Spring (April–May) and Autumn (September–October) for the most comfortable river cruising conditions. The Three Gorges Dam is most dramatic when the reservoir is at maximum level (late spring / early summer). Summer brings increased river flow and impressive dam water discharge.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Wuhan",
+        details: "Wuhan to Yichang East: ~1.5 hours (¥100–140). From Chongqing: ~2 hours. Yichang East Station is 30km from the city — shuttle buses connect to the city centre (45 min, ¥15).",
+      },
+      {
+        mode: "🚌 To Three Gorges Dam",
+        details: "Buses from Yichang Yemingzhu Bus Station to the Three Gorges Dam scenic area: ~1 hour (¥15–20, several daily). Taxis cost ¥80–100 one-way.",
+      },
+    ],
+    accommodation: "Most visitors stay one night at most, using Yichang as a cruise start/end point. Hotels cluster near the cruise terminal and city centre (¥200–600/night). The Riverside hotels along Binjiang Road have Yangtze views.",
+    travelTips: [
+      "Book Three Gorges cruises 1–3 months ahead for peak season (May and September–October). Chongqing to Yichang (downstream, 3 days/2 nights) is more scenic than the reverse — the gorges are entered at their most dramatic when travelling downstream.",
+      "The Three Gorges Dam visit combines best with a half-day Xiling Gorge boat tour — book both on the same day trip from Yichang city.",
+      "For budget travellers, the high-speed ferry (快艇) through Xiling Gorge to Zigui County (birthplace of the poet Qu Yuan) is a cheaper alternative to a full cruise.",
+    ],
+    dayTrips: [
+      {
+        name: "Shennongjia Nature Reserve",
+        nameZh: "神农架",
+        distance: "~2.5h north by bus",
+        description: "One of China's most primeval forests — subtropical wildlife, ancient medicinal herb culture, and the mysterious legend of the Chinese Bigfoot (野人). A UNESCO World Heritage and biosphere reserve.",
+        whyGo: "China's most biodiverse forest reserve, and accessible from Yichang without a flight.",
+        adminNote: "Located in Shennongjia Forestry District — a separate administrative unit within Hubei. Requires entry permits bought in advance.",
+      },
+    ],
+  },
+
+  // ── HUNAN ─────────────────────────────────────────────────────────────────────
+
+  zhangjiajie: {
+    id: "zhangjiajie",
+    nameZh: "张家界",
+    nameEn: "Zhangjiajie",
+    province: "hunan",
+    provinceZh: "湖南省",
+    tagline: "The mountains that inspired Avatar",
+    description:
+      "Zhangjiajie is where geology became cinema. The 3,000 sandstone pillars rising from the forest floor of Wulingyuan — some over 200m tall and covered in hanging vegetation — were the direct inspiration for the floating Hallelujah Mountains in Avatar. But the reality is more impressive than the film: standing at the canyon rim at dawn, watching the mist roll through the pillar forest below, you are in the most otherworldly landscape on Earth.",
+    image: "https://images.unsplash.com/photo-1555737785-3b6a6f9cd8f5?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1555737785-3b6a6f9cd8f5?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["3,000 sandstone pillars", "Avatar filming inspiration", "World's longest cable car", "Glass Bridge & Sky Walk", "UNESCO World Heritage"],
+    attractions: [
+      {
+        name: "Avatar Hallelujah Mountain (乾坤柱)",
+        description: "The specific pillar renamed in 2010 to honour the Avatar connection — a 150m sandstone column with a pine tree growing from its summit. The Southern Sky Column viewpoint at Yuanjiajie gives the best angle for the floating mountain effect. Best photographed in the morning mist.",
+        category: "Natural Landmark",
+      },
+      {
+        name: "Tianmen Mountain & Glass Skywalk (天门山)",
+        description: "A separate mountain from Wulingyuan with three world records: the world's longest cable car (7.5km), a 100m glass walkway cantilevered over a sheer cliff, and the Heaven's Gate Arch — a natural opening in the cliff face. The mountain road of 99 hairpin bends is one of the most dramatic drives in China.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Bailong Elevator (百龙天梯)",
+        description: "The world's tallest outdoor elevator — 326m of glass-sided lift ascending a sheer cliff face in Wulingyuan. The 2-minute ride from valley floor to mid-mountain plateau is vertiginous and spectacular. Queue times can reach 2 hours on busy days — buy tickets online.",
+        category: "Engineering Attraction",
+      },
+      {
+        name: "Yuanjiajie Scenic Area (袁家界)",
+        description: "The plateau section of Wulingyuan with the best Avatar-landscape views — the cliff-edge walkway overlooking the pillar forest is the definitive Zhangjiajie experience. The Hallelujah Mountain viewpoint and the First Bridge Under Heaven (天下第一桥) connecting two pillars are here.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Zhangjiajie Grand Canyon Glass Bridge (大峡谷玻璃桥)",
+        description: "The world's highest and longest glass-bottomed bridge — 430m long, spanning a 300m-deep canyon. The bridge and canyon below have independent hiking trails. Separate from the Wulingyuan park area, 40km south of the city.",
+        category: "Engineering Attraction",
+      },
+    ],
+    food: [
+      {
+        name: "Tujia Three-Layers Meat (三下锅)",
+        nameZh: "三下锅",
+        description: "Zhangjiajie's signature dish — fatty pork belly, tripe, and blood curd cooked together in a spicy broth. A Tujia ethnic minority dish traditionally eaten at festivals. More refined than it sounds: the fat renders slowly and the textures contrast beautifully.",
+        must: true,
+      },
+      {
+        name: "Ge Powder Noodles (葛粉面条)",
+        nameZh: "葛粉面条",
+        description: "Noodles made from kudzu root starch — distinctive grey-green colour, slightly chewy texture, and a clean herbal flavour. Served in clear broth with local mushrooms and pork. A Zhangjiajie health food staple with a uniquely local character.",
+        must: true,
+      },
+      {
+        name: "Smoked Wild Boar (腊野猪肉)",
+        nameZh: "腊野猪肉",
+        description: "Wild boar from the surrounding forest, cured in salt and smoked over hardwood — a rich, gamey alternative to regular cured pork. Available at mountain guesthouses and specialty shops in the city.",
+        must: false,
+      },
+      {
+        name: "Yuanling Orange (沅陵椪柑)",
+        nameZh: "沅陵椪柑",
+        description: "The tangerines grown in the Zhangjiajie mountain valleys are among the sweetest in China — thin-skinned, extremely juicy, and available from October to March. Sold by vendors at every entrance to the scenic areas.",
+        must: false,
+      },
+    ],
+    bestSeason: "Autumn (October–November) for clear skies and peak foliage — the pillar forest in autumn colour is extraordinary. Spring (April–May) for waterfalls at maximum flow. Winter (December–February) for snow on the pillars — a completely different and equally stunning landscape. Summer is the most crowded season and has more rain but the mist adds atmosphere.",
+    transportation: [
+      {
+        mode: "✈️ Zhangjiajie Hehua Airport (DYG)",
+        details: "Direct flights from Beijing, Shanghai, Guangzhou, Chengdu, and Shenzhen. The airport is 5km from the city centre — taxi ¥15–20.",
+      },
+      {
+        mode: "🚄 High-speed rail",
+        details: "Zhangjiajie West Station: Changsha South ~2 hours, Wuhan ~3.5 hours. The new HSR connection (opened 2021) makes Zhangjiajie far more accessible than before.",
+      },
+      {
+        mode: "🎫 Park access",
+        details: "Wulingyuan scenic area ticket: ¥245 (valid 4 days, includes unlimited internal shuttle buses). Tianmen Mountain: separate ¥258 ticket includes cable car and sky walk. Buy online. The park's shuttle bus system is excellent.",
+      },
+    ],
+    accommodation: "Zhangjiajie city (Yongding District) has the widest choice (¥150–600/night). Hotels inside the Wulingyuan scenic area allow early-morning access before day visitors arrive — worth the premium for the golden-hour landscapes (¥300–800/night). The Tianmen Mountain area has its own cluster of hotels.",
+    travelTips: [
+      "The Bailong Elevator queue is worst 9am–11am and 2pm–4pm. Take the elevator up first thing in the morning and hike down via the Golden Whip Stream trail (5.7km, 2–3 hours) through the canyon floor.",
+      "Three full days minimum for Wulingyuan — one day for Yuanjiajie plateau and Hallelujah Mountain, one day for Golden Whip Stream canyon floor and Tianzi Mountain, one day for Tianmen Mountain.",
+      "The glass skywalk and glass bridge are more spectacular in person than in photos. Wear socks — shoe covers are provided over the glass panels but bare feet are not permitted.",
+      "Zhangjiajie's mist is part of the experience but can limit views. Build flexibility into your schedule — if the first day is completely socked in, reschedule your plateau visit for the second or third morning.",
+    ],
+    dayTrips: [
+      {
+        name: "Fenghuang Ancient Town",
+        nameZh: "凤凰古城",
+        distance: "~3h south by bus",
+        description: "The most beautiful ancient town in Hunan — stilted houses on the Tuojiang River, Miao minority culture, and a perfectly preserved riverside streetscape that inspired the painter Shen Congwen.",
+        whyGo: "Zhangjiajie and Fenghuang make the ideal Hunan pairing — natural spectacle and human heritage in the same trip.",
+      },
+    ],
+  },
+
+  changsha: {
+    id: "changsha",
+    nameZh: "长沙",
+    nameEn: "Changsha",
+    province: "hunan",
+    provinceZh: "湖南省",
+    tagline: "China's most delicious city",
+    description:
+      "Changsha has become the most talked-about food and nightlife city in China — a place where young people queue for two hours for a cup of dirty coffee, where the night market on Jiefang West Road runs until 4am, and where the local cuisine (fiery, funky, and fiercely proud) is considered by many food writers to be the most exciting in the country. Add Mao Zedong's birthplace, one of the world's greatest Han dynasty archaeology collections, and an island in the middle of the Xiang River, and Changsha rewards more than a single day.",
+    image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["China's food and nightlife capital", "Han dynasty Lady Dai mummy", "Mao Zedong hometown nearby", "Jiefang West Road night market", "Orange Isle"],
+    attractions: [
+      {
+        name: "Hunan Provincial Museum (湖南省博物馆)",
+        description: "Home to one of the greatest archaeological finds of the 20th century — the tomb of Lady Dai (辛追夫人, died c. 168 BC), whose body was so perfectly preserved in 2,000-year-old burial fluid that her skin was still elastic when discovered in 1972. The display of her actual body and the extraordinary lacquerware, silk garments, and food offerings buried with her is unforgettable. Free entry; reserve tickets online.",
+        category: "Museum",
+      },
+      {
+        name: "Jiefang West Road (解放西路)",
+        description: "Changsha's most famous entertainment street — a 1km strip of bars, restaurants, street food stalls, and live music venues that peaks around midnight and runs to dawn. Hunan cuisine restaurants, Taiwanese bubble tea chains with 2-hour queues, and a carnival atmosphere that has made this China's most photographed nightlife street.",
+        category: "Nightlife & Food",
+      },
+      {
+        name: "Orange Isle (橘子洲)",
+        description: "A 5km island in the middle of the Xiang River, with a 32m-tall stone sculpture of the young Mao Zedong facing north. The island's southern tip is the original site described in Mao's 1925 poem 'Changsha.' The riverside parks are pleasant for cycling and the fireworks show over the island (weekends, weather permitting) is spectacular.",
+        category: "Scenic Area",
+      },
+      {
+        name: "Yuelu Academy (岳麓书院)",
+        description: "One of China's four great ancient academies, founded in 976 AD on the forested slopes of Yuelu Mountain — still functioning as part of Hunan University. The restored lecture halls, gardens, and stone pavilions preserve the physical setting of 1,000 years of Chinese scholarly thought.",
+        category: "Historic Site",
+      },
+      {
+        name: "Tianxin Pavilion (天心阁)",
+        description: "A 1,400-year-old city watchtower preserved within Changsha's remaining section of ancient city wall — the only surviving section of the original Ming dynasty defensive walls. The elevated pavilion has sweeping views over the old city and the Xiang River.",
+        category: "Historic Landmark",
+      },
+    ],
+    food: [
+      {
+        name: "Stinky Tofu (长沙臭豆腐)",
+        nameZh: "长沙臭豆腐",
+        description: "The most famous street food in Changsha — black-brine fermented tofu, deep-fried until puffed and crispy, served in a paper cone with chilli sauce and pickled cabbage. The Huogongdian (火宫殿) restaurant near Tianxin Pavilion has the most famous version; Mao Zedong reportedly ate it here as a student.",
+        must: true,
+      },
+      {
+        name: "Steamed Fish Head with Chilli (剁椒鱼头)",
+        nameZh: "剁椒鱼头",
+        description: "The definitive Hunan dish — a large silver carp head blanketed in chopped red and green chillies, fermented black beans, and garlic, then steamed until the flesh falls from the bone. The heat level is extreme; the flavour is layered, complex, and deeply satisfying.",
+        must: true,
+      },
+      {
+        name: "Pork Ribs in Brown Sauce (糖醋排骨)",
+        nameZh: "毛氏红烧肉",
+        description: "Mao's braised pork — a Changsha classic named after the city's most famous son. Pork belly braised in Mao-style with soy, rice wine, sugar, and star anise until caramelised and glossy. Said to have been Mao Zedong's favourite dish, and available at restaurants throughout the city.",
+        must: false,
+      },
+      {
+        name: "Changsha Dirty Coffee (茶颜悦色)",
+        nameZh: "茶颜悦色",
+        description: "Changsha's homegrown tea-latte chain — cold brew tea layered with whipped cream, condensed milk, and nuts. Cha Yan Yue Se (Tea Face Pleased) has queues of 1–2 hours at popular branches and operates only in Changsha. The osmanthus oolong version is the most popular.",
+        must: true,
+      },
+    ],
+    bestSeason: "Autumn (September–November) for the most comfortable temperatures. Spring (March–April) for the Yuelu Mountain forest in fresh green. Summer is hot and very humid but the nightlife and food scene peak in the heat. Changsha rewards a visit in any season — the indoor food culture is year-round.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail hub",
+        details: "Changsha South Station: Beijing ~5 hours, Shanghai ~4.5 hours, Guangzhou South ~2 hours, Zhangjiajie ~2 hours, Guiyang ~2.5 hours. One of the most connected HSR hubs in south-central China.",
+      },
+      {
+        mode: "🚇 Changsha Metro",
+        details: "9 metro lines covering the main tourist areas. Hunan Museum: Line 4 (Shaoshan South Station). Jiefang West Road: Lines 4/5 (Wuyi Square). Orange Isle: Line 4 (Juzizhou Station).",
+      },
+    ],
+    accommodation: "The Wuyi Square / Jiefang West Road area is the epicentre of food and nightlife (¥250–800/night). The Yuelu Mountain / Hunan University area is quieter and more scenic (¥200–600/night). Book well ahead for the National Day Golden Week holiday in October.",
+    travelTips: [
+      "The Hunan Provincial Museum is free but requires online reservation 3–7 days ahead — do this before your trip. Lady Dai's display is in the basement permanent gallery; allow 2.5 hours for the full museum.",
+      "Jiefang West Road peaks after 10pm and runs until 4am. Eat dinner at a Hunan restaurant at 7pm, then come to the street at 10pm when it reaches full energy.",
+      "Cha Yan Yue Se queue strategy: avoid flagship stores in Wuyi Square and try smaller branches in the Tianxin or Furong Districts — queues of 20 minutes rather than 2 hours.",
+      "Warning: Hunan food is genuinely very spicy — more chilli-forward than Sichuan. If heat-sensitive, specify 'slightly spicy' (微辣) when ordering; 'not spicy' (不辣) at many restaurants simply means less spicy.",
+    ],
+    dayTrips: [
+      {
+        name: "Shaoshan — Mao's Birthplace",
+        nameZh: "韶山",
+        distance: "~45min by high-speed rail",
+        description: "The village where Mao Zedong was born in 1893 — his childhood home, early school, and a large memorial complex. One of China's most visited heritage sites and an insight into Chinese political culture.",
+        whyGo: "The most significant political pilgrimage site in modern China, and a fascinating cultural experience regardless of political interest.",
+      },
+      {
+        name: "Zhangjiajie",
+        nameZh: "张家界",
+        distance: "~2h by high-speed rail",
+        description: "The Avatar sandstone pillar landscape — 3,000 columns rising from the forest floor. The most otherworldly natural scenery in China.",
+        whyGo: "Changsha is the natural gateway to Zhangjiajie, making it the ideal first stop on a Hunan itinerary.",
+      },
+    ],
+  },
+
+  fenghuang: {
+    id: "fenghuang",
+    nameZh: "凤凰",
+    nameEn: "Fenghuang Ancient Town",
+    province: "hunan",
+    provinceZh: "湖南省",
+    tagline: "The most beautiful ancient town in China",
+    description:
+      "Fenghuang (Phoenix) is the most beautiful ancient town in China — and it knows it. The Tuojiang River bends through a gorge lined with centuries-old wooden stilted houses (diaojiaolou), red lanterns reflect in the dark water, and the ancient city walls rise above the riverbank as they have since the Tang dynasty. Home to the Miao and Tujia minorities and the birthplace of the great writer Shen Congwen, Fenghuang has been inspiring Chinese artists and poets for 300 years. The trick is to arrive at dawn and leave before the afternoon crowds.",
+    image: "https://images.unsplash.com/photo-1570126618953-d437176e8c79?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1570126618953-d437176e8c79?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Stilted houses over the Tuojiang River", "Miao and Tujia minority culture", "Shen Congwen's hometown", "Ancient city walls", "Red lantern river reflections"],
+    attractions: [
+      {
+        name: "Riverside Stilted Houses (吊脚楼)",
+        description: "The defining image of Fenghuang — traditional wooden houses built on stilts directly over the Tuojiang River, connected by narrow lanes and stone bridges. The stretch along the North City Wall is the most photogenic. The reflected red lanterns in the still water at dusk are one of the most photographed scenes in China.",
+        category: "Historic Architecture",
+      },
+      {
+        name: "Shen Congwen Memorial Museum (沈从文故居)",
+        description: "The childhood home of Shen Congwen (1902–1988), widely considered the greatest Chinese prose writer of the 20th century and a recurring Nobel Prize contender. His writing is deeply rooted in Fenghuang's landscape and Miao culture. The museum and his simple tomb by the river are quietly moving.",
+        category: "Literary Heritage",
+      },
+      {
+        name: "Ancient North Gate (北城门楼)",
+        description: "The best-preserved section of Fenghuang's ancient city walls — a Tang dynasty fortified tower rising directly from the river bank. The view from the top along the river and toward the stilted houses is the classic Fenghuang panorama. Best photographed at the golden hour.",
+        category: "Historic Site",
+      },
+      {
+        name: "Rainbow Bridge (虹桥)",
+        description: "A 400-year-old covered bridge across the Tuojiang — the commercial and social heart of Fenghuang for centuries. The bridge's second floor houses small shops; the lower level has the best river views.",
+        category: "Historic Bridge",
+      },
+      {
+        name: "Miao Silver Craft Workshops",
+        description: "Fenghuang's Miao minority artisans are famous for intricate silver jewellery — headdresses, necklaces, and belts used in festivals. Several working workshops in the old town allow visitors to watch the hammering, filigree, and stone-setting processes. Purchase directly from the artisan for authenticity.",
+        category: "Craft",
+      },
+    ],
+    food: [
+      {
+        name: "Fenghuang Sour Pork (酸肉)",
+        nameZh: "凤凰酸肉",
+        description: "Pork marinated in sour brine and roasted until the exterior is crispy and caramelised — a Miao festival food, now available year-round. The sourness penetrates the meat during a week-long fermentation, creating a complex tang beneath the smoky exterior.",
+        must: true,
+      },
+      {
+        name: "Rice Tofu (米豆腐)",
+        nameZh: "米豆腐",
+        description: "A unique Fenghuang street food — rice cooked into a thick paste, then cooled into firm blocks and cut into noodles. Served cold in a bowl of sour, spicy broth with pickled vegetables and chilli oil. Light, refreshing, and nothing like regular tofu.",
+        must: true,
+      },
+      {
+        name: "Miao Sour Fish Soup (苗族酸汤鱼)",
+        nameZh: "苗族酸汤鱼",
+        description: "River fish simmered in a fermented tomato and wild herb broth — the signature dish of Miao minority cooking. The broth is sour, slightly spicy, and deeply herbal. Available at Miao-run guesthouses throughout the old town.",
+        must: false,
+      },
+      {
+        name: "Blood Duck (血鸭)",
+        nameZh: "凤凰血鸭",
+        description: "Stir-fried duck finished with fresh duck blood — a Fenghuang speciality that sounds alarming but produces an extraordinarily rich, thick sauce. A genuinely local dish not found outside western Hunan.",
+        must: false,
+      },
+    ],
+    bestSeason: "Autumn (October–November) for clear skies and the most comfortable temperatures — the lantern reflections in the clear autumn river are at their best. Spring (April–May) for lush greenery and waterfall flows in the surrounding mountains. Avoid Chinese national holidays when the town is impossibly crowded. Visit on weekdays if possible — the weekend crowd overwhelms the narrow lanes.",
+    transportation: [
+      {
+        mode: "🚌 Bus from Changsha",
+        details: "Changsha South Bus Station to Fenghuang: ~4 hours (¥100). Express coaches leave regularly. A new high-speed rail connection is under construction — check current status before travelling.",
+      },
+      {
+        mode: "🚌 Bus from Zhangjiajie",
+        details: "Zhangjiajie city to Fenghuang: ~3 hours by bus (¥70–90). The natural pairing for a Hunan nature + culture itinerary.",
+      },
+      {
+        mode: "🚕 Car hire",
+        details: "Hiring a car from Changsha or Zhangjiajie for a multi-day Hunan circuit is the most flexible option — Fenghuang, Zhangjiajie, and Enshi (Hubei) form a natural triangle.",
+      },
+    ],
+    accommodation: "Staying inside the ancient town in a river-view stilted guesthouse is the essential Fenghuang experience (¥200–600/night). The best rooms hang directly over the river — the sound of the water at night is remarkable. Book 2–3 weeks ahead for weekends. Arriving the night before peak days allows the dawn experience before day-trippers arrive.",
+    travelTips: [
+      "The town entry ticket (¥148) is required to access the main historic sites — buy online. The ticket is valid for 2 days, so staying the night makes it good value.",
+      "Dawn (6–8am) is when Fenghuang is at its finest — fishermen on bamboo rafts, locals doing morning chores by the river, and no tour groups. This alone justifies an overnight stay.",
+      "River boat tours (竹筏漂流, ¥50–80) run from the old ferry dock. The 30-minute upstream paddle and drift back through the gorge gives the best angle on the stilted houses.",
+      "Miao silver jewellery is Fenghuang's finest souvenir. Distinguish real silver (纯银, 925 or 990 stamped) from the zinc alloy imitations sold at tourist stalls — real silver is heavier, has a slight warmth, and turns your skin grey when wet.",
+    ],
+    dayTrips: [
+      {
+        name: "Zhangjiajie",
+        nameZh: "张家界",
+        distance: "~3h north by bus",
+        description: "The Avatar mountain landscape — 3,000 sandstone pillars rising from the forest floor. The natural complement to Fenghuang's cultural heritage.",
+        whyGo: "Fenghuang and Zhangjiajie are the two great reasons to visit Hunan — combining them is the obvious itinerary.",
+      },
+    ],
+  },
+
+  yueyang: {
+    id: "yueyang",
+    nameZh: "岳阳",
+    nameEn: "Yueyang",
+    province: "hunan",
+    provinceZh: "湖南省",
+    tagline: "Where the Yangtze meets Dongting Lake",
+    description:
+      "Yueyang sits at the point where the Yangtze River meets Dongting Lake — China's second-largest freshwater lake and one of the great wildfowl habitats in Asia. The Yueyang Tower, built 1,700 years ago and the subject of one of the most famous essays in Chinese literature, surveys this junction from a cliff above the water. Yueyang is often bypassed en route to Changsha or Wuhan, but it rewards a half-day stop with genuine historical depth and one of China's finest lake settings.",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Yueyang Tower (1,700 years)", "Dongting Lake — China's 2nd largest", "Junshan Island silver tip tea", "Yangtze-Dongting confluence", "Wild whooper swans in winter"],
+    attractions: [
+      {
+        name: "Yueyang Tower (岳阳楼)",
+        description: "One of China's three great ancient towers, built in 220 AD and rebuilt in 1044 AD during the Northern Song dynasty. Fan Zhongyan's essay 'On Yueyang Tower' — written in 1046 and memorised by generations of Chinese school children — immortalised the view across Dongting Lake and articulated the Confucian ideal of public service over private gain. The three-storey wooden tower is one of the finest examples of ancient Chinese wooden architecture.",
+        category: "Historic Landmark",
+      },
+      {
+        name: "Dongting Lake (洞庭湖)",
+        description: "China's second-largest freshwater lake — historically the largest until extensive land reclamation reduced its area. The lake is a major stopover for migratory birds: winter brings thousands of whooper swans, geese, and cranes to the Dongting wetlands. Boat tours from Yueyang cross to Junshan Island.",
+        category: "Natural Wonder",
+      },
+      {
+        name: "Junshan Island (君山岛)",
+        description: "A small island in Dongting Lake famous as the source of Junshan Silver Tip tea — the finest yellow tea in China, produced only in tiny quantities from the island's tea bushes. The island also has ancient Taoist temples and the tomb of the legendary Emperor Shun. A 30-minute boat ride from Yueyang.",
+        category: "Island & Tea",
+      },
+    ],
+    food: [
+      {
+        name: "Junshan Silver Tip Tea (君山银针)",
+        nameZh: "君山银针",
+        description: "One of China's top ten teas and the only yellow tea on the list — buds only, harvested for just a few days each spring from Junshan Island. When brewed, the upright buds float like a forest of needles. Extraordinarily delicate and sweet. Genuine Junshan Silver Tip is rare and expensive — buy only with certification.",
+        must: true,
+      },
+      {
+        name: "Yueyang Steamed Fish (岳阳蒸鱼)",
+        nameZh: "岳阳蒸鱼",
+        description: "Freshwater fish from Dongting Lake — silver carp, mandarin fish, and bream — steamed with Hunan-style chilli and fermented black beans. The lake fish have a clean, sweet flavour distinct from sea fish or farmed freshwater species.",
+        must: true,
+      },
+    ],
+    bestSeason: "Winter (November–February) for migratory birds on Dongting Lake — tens of thousands of swans and geese create extraordinary wildlife spectacles. Spring (April–May) for the Junshan Silver Tip tea harvest (and tasting). Autumn for clear lake views.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail",
+        details: "Yueyang East Station: Changsha South ~30 minutes, Wuhan ~1 hour. Yueyang is perfectly positioned as a 3-hour stop between Changsha and Wuhan on the HSR.",
+      },
+    ],
+    accommodation: "Most visitors stop for half a day en route between Changsha and Wuhan. If staying, mid-range hotels near Yueyang Tower (¥200–500/night) have Dongting Lake views.",
+    travelTips: [
+      "Yueyang is ideal as a half-day HSR stop between Changsha and Wuhan — leave luggage at the station, take a taxi to Yueyang Tower and Junshan Island boat, then continue by HSR in the afternoon.",
+      "The Junshan Island boat (¥40 return) runs from the Nanhu dock, 10 minutes from Yueyang Tower by taxi. Allow 2 hours for the island visit.",
+    ],
+  },
+
+  // ── GUIZHOU ───────────────────────────────────────────────────────────────────
+
+  guiyang: {
+    id: "guiyang",
+    nameZh: "贵阳",
+    nameEn: "Guiyang",
+    province: "guizhou",
+    provinceZh: "贵州省",
+    tagline: "The sour and spicy capital of the southwest",
+    description:
+      "Guiyang is the capital of China's most underrated province — a cool-climate plateau city surrounded by karst mountains, with a street food culture built on sour, spicy, and funky flavours unlike anywhere else in China. The Guizhou 'four treasures' (spicy chicken, sour fish soup, fermented tofu, and maotai baijiu) are the foundation of a culinary tradition that has burst onto China's food scene in the past decade. The Qianling Mountain karst park in the city centre and the Qingyan Ancient Town 30km south make Guiyang more than just a transit hub.",
+    image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Guizhou sour-spicy cuisine", "Qianling Mountain in the city", "Qingyan Ancient Town", "Maotai baijiu culture", "Cool summer climate"],
+    attractions: [
+      {
+        name: "Qianling Mountain Park (黔灵山公园)",
+        description: "A forested karst mountain rising from the heart of the city — hiking trails through ancient banyan trees, a large lake, and the Hongfu Temple (弘福寺) founded in 1672. The resident macaques are bold and photogenic. The park is packed with locals at dawn and dusk doing tai chi and socialising.",
+        category: "Nature Park",
+      },
+      {
+        name: "Qingyan Ancient Town (青岩古镇)",
+        description: "A 600-year-old walled Ming dynasty town 30km south of Guiyang — cobblestone streets, stone archways, ancestral halls, and a remarkable mix of Buddhist, Taoist, Confucian, and Catholic religious buildings within a small area. Far less commercialised than comparable ancient towns in Yunnan or Anhui.",
+        category: "Ancient Town",
+      },
+      {
+        name: "Jiaxiu Pavilion (甲秀楼)",
+        description: "Guiyang's most iconic landmark — a Ming dynasty pavilion built on a natural rock bridge over the Nanming River. The pavilion has been the symbol of the city since 1598. The riverside walk and the carved stone bridge are pleasant for an evening stroll.",
+        category: "Historic Landmark",
+      },
+      {
+        name: "Guizhou Provincial Museum (贵州省博物馆)",
+        description: "An excellent museum focused on Guizhou's extraordinary ethnic minority heritage — Miao, Dong, Buyi, Yi, and Zhuang cultures, with displays of silver jewellery, embroidery, batik, and musical instruments. The Miao silver headdress collection is the finest in China.",
+        category: "Museum",
+      },
+    ],
+    food: [
+      {
+        name: "Guizhou Sour Soup Fish (酸汤鱼)",
+        nameZh: "酸汤鱼",
+        description: "Fish poached in a vibrant red broth made from fermented wild tomatoes, chilli, and local sour vegetables — the signature dish of Guizhou and particularly the Miao minority. The broth is simultaneously sour, spicy, and rich. Found at restaurants throughout Guiyang; the best versions use wild river fish.",
+        must: true,
+      },
+      {
+        name: "Si娃娃 Spicy Chicken (辣子鸡)",
+        nameZh: "花溪辣子鸡",
+        description: "Huaxi District spicy chicken — fried until crispy, then tossed in a mountain of dried chillies, Sichuan pepper, and garlic. The chillies are not all meant to be eaten (too hot), but the chicken pieces within are supremely flavourful. One of the dishes that put Guizhou food on China's national radar.",
+        must: true,
+      },
+      {
+        name: "Changwang Noodles (肠旺面)",
+        nameZh: "肠旺面",
+        description: "Guiyang's signature breakfast noodle — springy red noodles (coloured with chilli) in a rich pork broth, topped with pork intestine, blood curd, and crispy fried pork crackling. A confronting combination that becomes addictive after the first bowl.",
+        must: true,
+      },
+      {
+        name: "Maotai Baijiu (茅台酒)",
+        nameZh: "茅台酒",
+        description: "China's most prestigious liquor, produced in Maotai Town (仁怀市, 3 hours from Guiyang) from sorghum and local spring water through a 12-step, year-long fermentation process. Available at specialist shops throughout Guiyang at significantly lower prices than outside the province. Buy in the dedicated Maotai store rather than tourist shops.",
+        must: false,
+      },
+    ],
+    bestSeason: "Year-round — Guiyang's high-altitude plateau climate (1,100m) keeps temperatures pleasant in all seasons. Summers never exceed 28°C (vs. 40°C in Chongqing or Wuhan), making it one of China's best summer destinations. Spring (April–May) has the fullest waterfalls for day trips. Winter is mild but occasionally foggy.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail hub",
+        details: "Guiyang North Station: Changsha ~2.5 hours, Chongqing ~1.5 hours, Kunming ~2 hours, Guangzhou ~4 hours. Guizhou is now superbly connected by HSR through its famous high-bridge viaducts.",
+      },
+      {
+        mode: "✈️ Guiyang Longdongbao Airport (KWE)",
+        details: "Well-connected to all major Chinese cities. Metro Line 1 connects the airport to the city centre in 30 minutes.",
+      },
+    ],
+    accommodation: "The Guanshanhu District and Yunyan District near Jiaxiu Pavilion have the best hotel range (¥200–700/night). Guiyang is a compact city — most attractions are reachable by metro. Budget options cluster near Guiyang Station.",
+    travelTips: [
+      "Guiyang is best used as a base for Guizhou day trips: Huangguoshu Waterfall (1.5 hours), Zhenyuan Ancient Town (1.5 hours), and Kaili Miao minority region (2 hours) are all accessible by HSR or bus.",
+      "Changwang noodles are a Guiyang breakfast institution — find them at street stalls from 6–10am. The intestine and blood curd are optional toppings; the noodles and broth alone are excellent.",
+      "Qingyan Ancient Town is 30 minutes by taxi or bus from the city centre — visit on a weekday morning for the quietest experience. The tofu products and rose candy sold here are the best local souvenirs.",
+      "Guizhou's summer climate is its secret weapon — if visiting China in July–August, Guiyang is one of the few major cities where being outdoors during the day is genuinely pleasant.",
+    ],
+    dayTrips: [
+      {
+        name: "Huangguoshu Waterfall",
+        nameZh: "黄果树瀑布",
+        distance: "~1.5h south by bus or HSR",
+        description: "Asia's largest waterfall — 77m wide and 74m tall, with the unique Water Curtain Cave allowing visitors to walk behind the falls.",
+        whyGo: "The most dramatic waterfall in China, and the most-visited natural sight in Guizhou.",
+      },
+      {
+        name: "Zhenyuan Ancient Town",
+        nameZh: "镇远古镇",
+        distance: "~1.5h east by high-speed rail",
+        description: "A 2,000-year-old river town where the S-shaped Wuyang River wraps around ancient city walls and stilted Ming dynasty houses — one of China's most beautifully positioned ancient towns.",
+        whyGo: "The most architecturally striking ancient town in Guizhou, and an easy day trip from Guiyang.",
+      },
+    ],
+  },
+
+  kaili: {
+    id: "kaili",
+    nameZh: "凯里",
+    nameEn: "Kaili",
+    province: "guizhou",
+    provinceZh: "贵州省",
+    tagline: "The silver and drum towers of the Miao world",
+    description:
+      "Kaili is the gateway to Qiandongnan — the southeastern Guizhou prefecture that has the highest concentration of Miao and Dong minority villages in China. Within an hour of Kaili in any direction, you can reach villages where women still wear full traditional silver headdresses daily, where Dong drum towers and wind-rain bridges have stood for 800 years, and where festivals involving hundreds of people in full ethnic costume take place throughout the year. There is nowhere else in China with this density of living ethnic minority culture.",
+    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Miao silver headdress culture", "Dong drum towers & wind-rain bridges", "Living ethnic minority festivals", "Thousand-person rice field singing", "Batik and embroidery craft"],
+    attractions: [
+      {
+        name: "Xijiang Thousand-Family Miao Village (西江千户苗寨)",
+        description: "The largest Miao village in China — 1,300 stilted wooden houses cascading down the hillside of a mountain valley. The evening performance of Miao song and dance in the central plaza is extraordinary. Stay the night to experience the village before day-trippers arrive; the morning mist over the rooftops is magical.",
+        category: "Ethnic Village",
+      },
+      {
+        name: "Zhaoxing Dong Village (肇兴侗寨)",
+        description: "A village of 800+ families with five drum towers (鼓楼) — each representing a different clan — and five wind-rain bridges (花桥). The Dong grand choir (侗族大歌) UNESCO-listed polyphonic singing tradition is performed here regularly. The most architecturally complete Dong village accessible to visitors.",
+        category: "UNESCO Cultural Heritage",
+      },
+      {
+        name: "Langde Miao Village (朗德上寨)",
+        description: "A model heritage village 28km from Kaili — 400-year-old silver smithing workshops, rice terraces, and traditional drum-and-lusheng (bamboo pipe) music performances for visitors. Less crowded than Xijiang but more authentic in atmosphere.",
+        category: "Ethnic Village",
+      },
+      {
+        name: "Kaili Miao and Dong Museum (凯里苗侗风情博物馆)",
+        description: "The best museum in Guizhou for understanding Miao and Dong material culture — silverwork, batik fabric, embroidery panels, and musical instruments collected from villages across Qiandongnan. Excellent context before visiting the villages.",
+        category: "Museum",
+      },
+      {
+        name: "Shiqiao Handmade Paper Village (石桥古法造纸)",
+        description: "A remote village (2 hours from Kaili) preserving the 2,000-year-old craft of handmade bark paper using ancient Tang dynasty techniques. Artisans still produce decorative paper embedded with flowers and leaves using the original stone vats. One of the most extraordinary living craft traditions in China.",
+        category: "Craft Heritage",
+      },
+    ],
+    food: [
+      {
+        name: "Miao Sour Soup Fish (酸汤鱼)",
+        nameZh: "苗族酸汤鱼",
+        description: "The original Miao version — fish poached in a broth of fermented wild tomato (毛辣果) and local herbs. The sourness is more complex and less sharp than the Guiyang restaurant version. Village guesthouses in Xijiang serve the most authentic preparation.",
+        must: true,
+      },
+      {
+        name: "Glutinous Rice (糯米饭)",
+        nameZh: "苗族糯米饭",
+        description: "Miao-style sticky rice cooked in bamboo tubes or banana leaves, coloured with plant dyes in red, yellow, black, and purple. Served with pickled vegetables and fermented tofu at village festivals. Also available at Kaili market stalls daily.",
+        must: true,
+      },
+      {
+        name: "Dog Meat Hot Pot (狗肉火锅)",
+        nameZh: "狗肉火锅",
+        description: "A Kaili local speciality that divides visitors — dog meat is a traditional food in Miao culture, particularly at festivals. Available at specific restaurants in Kaili city. Not for everyone, but culturally significant to the region.",
+        must: false,
+      },
+      {
+        name: "Kaili Sour Vegetable Noodles (凯里酸汤粉)",
+        nameZh: "凯里酸汤粉",
+        description: "Rice noodles in the signature Kaili sour broth with pickled vegetables, crispy tofu, and spring onion. The ubiquitous Kaili breakfast — available at noodle shops from 6am for ¥8–12.",
+        must: false,
+      },
+    ],
+    bestSeason: "March–June for the most festivals (Miao New Year, Lusheng festivals, Sisters' Meal festival). September–October for clear skies and comfortable temperatures. The Sisters' Meal Festival (苗族姊妹节, 3rd month of the lunar calendar) is the most spectacular Miao cultural event in China — young women in full silver headdress exchange coloured sticky rice as a courtship ritual.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Guiyang",
+        details: "Guiyang North to Kaili South: ~40 minutes (¥45). The HSR line continues through to Zhenyuan and beyond — making Kaili an easy day trip or base from Guiyang.",
+      },
+      {
+        mode: "🚌 Local buses to villages",
+        details: "Buses from Kaili to Xijiang: ~1.5 hours. To Zhaoxing: ~3 hours. Hiring a private car in Kaili (¥300–500/day) covers more villages with greater flexibility.",
+      },
+    ],
+    accommodation: "Kaili city has mid-range hotels (¥150–400/night). Staying in a village guesthouse in Xijiang or Zhaoxing (¥100–350/night) is the more atmospheric option — village stays allow dawn and evening access that day-trippers miss entirely. Book ahead for festival periods.",
+    travelTips: [
+      "Festival dates follow the lunar calendar and change each year — check the Qiandongnan Tourism Bureau's annual festival calendar before booking. Attending even a small village festival is the most culturally immersive experience available in China.",
+      "Silver jewellery in Xijiang: distinguish real silver (纯银, hallmarked) from zinc alloy (白铜, copper-silver) at tourist stalls. Buy from a workshop where you can watch the artisan working, and ask for the silver purity certificate.",
+      "Zhaoxing Dong Village is more remote than Xijiang but more authentic — the five drum towers are extraordinary and the village sees fewer day-trippers. Overnight stays here are exceptional.",
+      "Hire a local guide in Kaili (available through hotels, ¥200–400/day) for village visits — Miao and Dong cultural context transforms the experience from sightseeing to understanding.",
+    ],
+    dayTrips: [
+      {
+        name: "Guiyang",
+        nameZh: "贵阳",
+        distance: "~40min by high-speed rail",
+        description: "Guizhou's capital city — great base for arriving, with good food, easy onward connections, and the Guizhou Provincial Museum's excellent Miao and Dong collection.",
+        whyGo: "Kaili and Guiyang are natural partners — the capital provides context, Kaili provides the living culture.",
+      },
+    ],
+  },
+
+  zhenyuan: {
+    id: "zhenyuan",
+    nameZh: "镇远",
+    nameEn: "Zhenyuan",
+    province: "guizhou",
+    provinceZh: "贵州省",
+    tagline: "Where the river writes the letter S",
+    description:
+      "Zhenyuan is one of China's most beautifully positioned ancient towns — a 2,000-year-old settlement where the Wuyang River makes a dramatic S-bend between two hills, with the ancient city walls and stilted houses climbing both banks. The ancient town has been continuously inhabited since the Han dynasty, and its remarkably well-preserved streets — stone paving worn smooth over centuries, traditional wooden shophouses, and Ming dynasty temple complexes — feel genuinely lived-in rather than reconstructed for tourism.",
+    image: "https://images.unsplash.com/photo-1509099652299-1734748ece27?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1509099652299-1734748ece27?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["S-shaped river through ancient walls", "2,000 years of continuous habitation", "Stilted houses over the Wuyang River", "Qinglong Cave temple complex", "Genuinely lived-in old town"],
+    attractions: [
+      {
+        name: "Qinglong Cave Complex (青龙洞古建筑群)",
+        description: "A remarkable multi-religious complex clinging to a sheer karst cliff above the Wuyang River — Buddhist, Taoist, and Confucian temples built at different levels into the cliff face over 500 years. The view of the S-bend river below from the upper pavilions is the finest in Zhenyuan.",
+        category: "Historic Temple Complex",
+      },
+      {
+        name: "Ancient Town South Street (和平街 & 卫城古城)",
+        description: "The most intact section of Zhenyuan's ancient commercial street — Ming and Qing dynasty wooden shophouses, traditional inns, and teahouses preserved in a streetscape that has changed little in 300 years. The street is still fully inhabited; laundry hangs between the eaves and locals play mahjong on the stoops.",
+        category: "Historic Street",
+      },
+      {
+        name: "Wuyang River Boat Tour (舞阳河游船)",
+        description: "A river cruise through the S-bend gorge — the Wuyang River's clear green water reflects the limestone cliffs and ancient walls above. The 2-hour cruise passes through the most dramatic section of the gorge and gives the best views of the Qinglong Cave cliff complex.",
+        category: "Scenic Cruise",
+      },
+      {
+        name: "Ancient Pontoon Bridge (浮桥)",
+        description: "A working pontoon bridge of linked boats spanning the Wuyang River — used daily by locals crossing between the north and south banks. The bounce underfoot and the river views make crossing it a minor adventure.",
+        category: "Historic Structure",
+      },
+    ],
+    food: [
+      {
+        name: "Zhenyuan Sour Soup (镇远酸汤)",
+        nameZh: "镇远酸汤",
+        description: "A local variant of the Guizhou sour broth tradition — lighter and more herbal than the Guiyang version, using the mineral-rich Wuyang River water. Fish and tofu are the standard accompaniments. Found at riverside restaurants along the south bank.",
+        must: true,
+      },
+      {
+        name: "Zhenyuan Pork Intestine Powder (猪大肠米粉)",
+        nameZh: "猪大肠米粉",
+        description: "Rice noodles in a rich pork and intestine broth — a Zhenyuan morning staple sold at stalls near the old town gates from 6am. Simple, hearty, and intensely local.",
+        must: false,
+      },
+      {
+        name: "Wuyang River Fish (舞阳河鱼)",
+        nameZh: "舞阳河鱼",
+        description: "Wild river fish from the Wuyang — braised with pickled chilli and ginger at riverside restaurants. The clean mountain water produces fish with a delicate, sweet flavour.",
+        must: true,
+      },
+    ],
+    bestSeason: "Spring (April–May) and Autumn (October–November) for clear river water and comfortable temperatures. The lantern festival on the Wuyang River (15th day of the first lunar month) is Zhenyuan's most atmospheric cultural event. Avoid national holidays when the narrow old town lanes become severely crowded.",
+    transportation: [
+      {
+        mode: "🚄 High-speed rail from Guiyang",
+        details: "Guiyang North to Zhenyuan: ~1.5 hours. From Kaili South: ~45 minutes. The station is 3km from the old town — taxi ¥10–15.",
+      },
+    ],
+    accommodation: "Staying in a riverside guesthouse inside the old town is the essential Zhenyuan experience (¥150–400/night). The best rooms overlook the Wuyang River and the Qinglong Cave cliff. Book ahead for weekends — the town is small and good rooms sell out.",
+    travelTips: [
+      "Climb to the upper pavilion of Qinglong Cave at sunset for the finest view of the S-bend river and the silhouette of the ancient walls. The climb takes 20 minutes and the view justifies every step.",
+      "Zhenyuan is best visited as an overnight stop between Guiyang and Kaili on the Guizhou HSR line — the town is small enough to see in an afternoon and morning, and the overnight atmosphere is excellent.",
+      "The pontoon bridge sways noticeably under foot traffic — cross it early in the morning when only locals are using it.",
+    ],
+    dayTrips: [
+      {
+        name: "Kaili Miao Villages",
+        nameZh: "凯里苗族村寨",
+        distance: "~45min west by high-speed rail",
+        description: "The Xijiang Thousand-Family Miao Village and surrounding ethnic minority villages — the richest concentration of living Miao culture in China.",
+        whyGo: "Zhenyuan and Kaili together cover the full spectrum of Guizhou's cultural heritage — ancient town plus living minority culture.",
+      },
+    ],
+  },
+
+  huangguoshu: {
+    id: "huangguoshu",
+    nameZh: "黄果树",
+    nameEn: "Huangguoshu",
+    province: "guizhou",
+    provinceZh: "贵州省",
+    tagline: "Asia's greatest waterfall",
+    description:
+      "Huangguoshu Waterfall is the largest waterfall in Asia — 77m wide and 74m tall, fed by the Baishui River as it drops off the Guizhou Plateau. Unlike most great waterfalls, Huangguoshu has a Water Curtain Cave (水帘洞) behind the main falls — 134m of cavern carved by millennia of erosion, allowing visitors to stand inside the waterfall and look out through the curtain of water. The surrounding area has an entire waterfall scenic zone with 18 additional falls.",
+    image: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?w=700&h=460&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?w=1200&h=600&fit=crop&auto=format",
+    highlights: ["Asia's largest waterfall", "Walk-behind Water Curtain Cave", "Baishui River cascade zone", "18 waterfalls in one scenic area", "Buyi minority villages"],
+    attractions: [
+      {
+        name: "Huangguoshu Main Falls (黄果树大瀑布)",
+        description: "The centrepiece — 77m wide, 74m tall, the largest waterfall in Asia by volume. Most dramatic during summer flood season (June–September) when the Baishui River is running at peak flow. The viewing platform puts you 50m from the main curtain of water. Rain gear is recommended — the spray soaks everything within 100m.",
+        category: "Natural Wonder",
+      },
+      {
+        name: "Water Curtain Cave (水帘洞)",
+        description: "A 134m cavern carved behind the main falls by millennia of erosion — six windows and four balconies look out through the falling water from inside. The roar and spray inside the cave are extraordinary. Included in the main ticket; the cave path is slippery — wear waterproof shoes.",
+        category: "Natural Cave",
+      },
+      {
+        name: "Doupotang Falls (斗波塘瀑布)",
+        description: "A secondary waterfall 500m downstream — only 12m tall but 105m wide, making it among the widest in China. The green pool at its base and the walking trail around the rim are excellent for photography. Often more photogenic than the main falls.",
+        category: "Waterfall",
+      },
+      {
+        name: "Buyi Minority Village (布依族村寨)",
+        description: "Several traditional Buyi minority villages dot the valley below the falls. The Buyi (or Bouyei) people have lived here for centuries — distinctive stone-slab houses, indigo-dyed batik fabric, and a unique bridge-building tradition. The village of Shitou Zhai (石头寨) is the best preserved and most accessible.",
+        category: "Ethnic Village",
+      },
+    ],
+    food: [
+      {
+        name: "Buyi Five-Colour Glutinous Rice (五色糯米饭)",
+        nameZh: "五色糯米饭",
+        description: "Sticky rice coloured in five natural colours (black, red, yellow, white, purple) using plant dyes — a Buyi festival food now sold year-round at village stalls near the waterfall. Eaten with pickled vegetables and fermented tofu.",
+        must: true,
+      },
+      {
+        name: "Grilled River Fish (炭烤溪鱼)",
+        nameZh: "炭烤溪鱼",
+        description: "Small river fish from the Baishui River, skewered and grilled over charcoal with chilli salt and cumin. Sold by Buyi vendors at the scenic area entrance. Crispy, intensely flavourful, and the ideal light meal before exploring the falls.",
+        must: true,
+      },
+      {
+        name: "Huangguoshu Goat Hotpot (黄果树羊肉火锅)",
+        nameZh: "黄果树羊肉火锅",
+        description: "Mountain-pastured goat braised in a clear broth with local herbs and chilli — available at restaurants in Huangguoshu town. The altitude and mountain pasture produce noticeably sweeter, less gamey meat than lowland goat.",
+        must: false,
+      },
+    ],
+    bestSeason: "Summer (June–September) for the waterfall at maximum volume — the most spectacular and most dramatic season. Spring (April–May) has good flow and fewer crowds. Autumn is also excellent. Winter reduces the falls significantly but the crowds disappear and the surrounding forest is serene.",
+    transportation: [
+      {
+        mode: "🚄 + 🚌 From Guiyang",
+        details: "Guiyang North to Anshun West: ~40 minutes by high-speed rail (¥40). Then bus or taxi from Anshun to Huangguoshu scenic area: ~30 minutes (¥10–15 bus, ¥50 taxi). Total ~1.5 hours from Guiyang.",
+      },
+      {
+        mode: "🚌 Direct bus from Guiyang",
+        details: "Direct buses from Guiyang Jinyang Bus Station to Huangguoshu: ~2 hours (¥45–60, several daily departures). More convenient for direct access without a transfer.",
+      },
+    ],
+    accommodation: "Most visitors come as a day trip from Guiyang. If staying, hotels in Huangguoshu town (¥150–400/night) allow early-morning access to the falls before tour groups arrive — the mist at dawn is particularly beautiful. Anshun city (30km) has a wider range of accommodation.",
+    travelTips: [
+      "Visit the main falls first thing in the morning (8am opening) before tour groups arrive at 10am. The cascade zone (18 falls walk) is best in the afternoon when day-trippers have mostly moved on.",
+      "Bring a waterproof jacket and waterproof bag — the spray from the main falls soaks visitors within 50m and the Water Curtain Cave interior is extremely wet.",
+      "The scenic area is large (walking ~5km). The electric cart service (¥25) connects the major viewpoints and saves significant time between the main falls, Doupotang, and Tianxing Bridge sections.",
+      "Combine with Anshun's Longgong Caves (龙宫, 25km east) — an underground river cave system considered one of the most beautiful in China — for a full Guizhou nature day.",
+    ],
+    dayTrips: [
+      {
+        name: "Guiyang",
+        nameZh: "贵阳",
+        distance: "~1.5h north by bus or HSR+bus",
+        description: "Guizhou's capital — the natural base for a Huangguoshu day trip, with great food, onward HSR connections, and Qingyan Ancient Town nearby.",
+        whyGo: "Guiyang is the closest major city and the most convenient base for exploring Huangguoshu.",
+      },
+    ],
+  },
+
 };
 
 // ── Helper exports ────────────────────────────────────────────────────────────
@@ -3066,8 +4148,8 @@ export const PRIORITY_CITIES = Object.values(CITY_DETAILS);
 export const CITIES_BY_REGION = {
   north:     ["beijing_city", "jinan", "qingdao", "taishan", "qufu"],
   east:      ["shanghai_city", "hangzhou", "ningbo", "shaoxing", "zhoushan", "nanjing", "suzhou", "yangzhou", "wuxi"],
-  central:   ["xian", "luoyang", "kaifeng", "dengfeng"],
-  southwest: ["chengdu", "chongqing", "leshan", "emeishan", "jiuzhaigou"],
-  south:     ["guilin", "sanya"],
+  central:   ["xian", "luoyang", "kaifeng", "dengfeng", "wuhan", "wudangshan", "enshi", "yichang"],
+  southwest: ["chengdu", "chongqing", "leshan", "emeishan", "jiuzhaigou", "guiyang", "kaili", "zhenyuan", "huangguoshu"],
+  south:     ["guilin", "sanya", "zhangjiajie", "changsha", "fenghuang", "yueyang"],
   anhui:     ["huangshan", "hongcun", "hefei", "wuyuan_an"],
 } as const;
