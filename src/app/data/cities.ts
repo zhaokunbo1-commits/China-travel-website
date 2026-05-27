@@ -6150,6 +6150,850 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
     ],
   },
 
+  // ── BATCH: ONE NEW PER PROVINCE (popular regions) ─────────────────────────
+  wuzhen: {
+    id: "wuzhen", nameZh: "乌镇", nameEn: "Wuzhen",
+    province: "zhejiang", provinceZh: "浙江",
+    tagline: "China's most perfectly preserved water town",
+    description: "Wuzhen is what all of Jiangnan's famous water towns aspire to be — two adjacent neighbourhoods of black-tile houses on still canals, where dyers hang indigo cloth and silk looms still operate inside Ming dynasty workshops. The West Zone (西栅) is especially beautiful at night when stone bridges reflect in lamplight.",
+    image: "https://images.unsplash.com/photo-1537531510192-bba6dde32453?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1537531510192-bba6dde32453?w=1600&h=900&fit=crop",
+    highlights: ["West Zone (Xizha) night scenery", "Indigo dyeing workshops", "Grand Canal connection", "Traditional silk weaving"],
+    bestSeason: "Mar–May and Sep–Nov — misty mornings and manageable crowds. June–August is peak and rainy. December–January has magical fog.",
+    attractions: [
+      { name: "Xizha West Zone", nameZh: "西栅景区", type: "Culture", duration: "4 hours", description: "The larger and more intact of Wuzhen's two zones — 1.8km of canal-side lanes, 12 stone bridges, and heritage workshops for dye, silk, and bamboo weaving. The overnight stay ticket includes the illuminated evening.", tips: "The evening light show (7–10pm) is dramatically beautiful. Buy a combined ticket (¥150) that includes both east and west zones. Staying inside the zone means experiencing it after day-trippers leave." },
+      { name: "Dongzha East Zone", nameZh: "东栅景区", type: "Culture", duration: "2 hours", description: "The original tourist zone — narrower lanes, local artisan shops, and the Mao Dun Former Residence (birthplace of the early 20th-century novelist).", tips: "Less atmospheric than Xizha but good for morning walking when the light comes in sideways over the canals." },
+    ],
+    food: [
+      { name: "White Water Fish", nameZh: "白水鱼", description: "Local canal fish steamed simply with ginger and soy — the freshwater version shows why Jiangnan cooks claim less is more.", mustTry: true, where: "Restaurants inside the West Zone" },
+      { name: "Wuzhen Rice Wine", nameZh: "乌镇黄酒", description: "Amber-coloured Shaoxing-style rice wine brewed in Wuzhen — slightly sweet, served warm in earthenware.", mustTry: false, where: "Traditional wine shops on Xizha's main canal" },
+    ],
+    transportation: [
+      { mode: "🚌 From Hangzhou or Shanghai", details: "Direct buses from Hangzhou East Bus Station (1.5h, ¥40) and Shanghai Hongqiao Transport Hub (2h, ¥65). No direct rail — the scenic area is 10km from Tongxiang HSR station (taxi ¥30)." },
+    ],
+    accommodation: "Staying inside the West Zone overnight (¥600–1,500) is strongly recommended — the price includes evening and morning access before day-trippers arrive. Budget option: guesthouses in Tongxiang city (¥150–300) plus day-ticket.",
+    travelTips: [
+      "Wuzhen hosts the World Internet Conference (October/November) — avoid those dates as prices triple and the town fills with officials.",
+      "Book accommodation inside the zone at least 2 months ahead for weekends.",
+    ],
+    dayTrips: [
+      { name: "Xitang Water Town", nameZh: "西塘古镇", distance: "40km · 45 min by bus", description: "A smaller, less commercial water town with long covered arcades (廊棚) running the entire canal length. Fewer foreign tourists than Wuzhen.", whyGo: "The most local-feeling of the Jiangnan water towns — the morning fish market and boatmen still go about their work.", adminNote: "Xitang is in Jiaxing County, Zhejiang — short distance west of Wuzhen." },
+    ],
+  },
+
+  shangrila: {
+    id: "shangrila", nameZh: "香格里拉", nameEn: "Shangri-La",
+    province: "yunnan", provinceZh: "云南",
+    tagline: "Where Tibetan highlands meet Yunnan sky",
+    description: "At 3,160m on the Tibetan plateau fringe, Shangri-La (officially Diqing Tibetan Autonomous Prefecture) is China's nearest approximation of the James Hilton utopia that inspired the name. Ganden Sumtseling Monastery gleams on a hill above the old town; the meadows of Pudacuo National Park are the finest highland grassland in Southwest China.",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1600&h=900&fit=crop",
+    highlights: ["Ganden Sumtseling Monastery", "Pudacuo National Park", "Dukezong Old Town", "Meili Snow Mountain views"],
+    bestSeason: "May–Oct — grasslands green and skies clear. April/May has wildflowers; September/October has golden light. Winter (Nov–Mar) is cold (−10°C) but crystalline and crowd-free.",
+    attractions: [
+      { name: "Ganden Sumtseling Monastery", nameZh: "噶丹松赞林寺", type: "Culture", duration: "3 hours", description: "The largest Tibetan Buddhist monastery in Yunnan — a mini-Potala of golden roofs and whitewashed halls housing 700+ monks. The main assembly hall murals are extraordinary.", tips: "Arrive by 8am to witness morning prayer sessions. Dress modestly — shoulders and knees covered. The climb to the upper terrace offers the best panorama." },
+      { name: "Pudacuo National Park", nameZh: "普达措国家公园", type: "Nature", duration: "4 hours", description: "China's first national park (2007) — alpine meadows, old-growth forests, and two pristine plateau lakes (Shudu and Bita) at 3,500–3,700m. The wooden boardwalk loops are excellent.", tips: "The shuttle bus (included in park ticket ¥258) is mandatory. The Bita Lake section in the afternoon has the best light on the pine reflections." },
+      { name: "Dukezong Old Town", nameZh: "独克宗古城", type: "Culture", duration: "2 hours", description: "The Tibetan-style old town — prayer wheel lanes, butter tea houses, and the world's largest hand-turned prayer wheel (¥1 to turn).", tips: "The old town was partly damaged by fire in 2014; the rebuilt sections are reconstructed but the atmosphere remains. Best at dawn before tour groups arrive." },
+    ],
+    food: [
+      { name: "Butter Tea (Bozha)", nameZh: "酥油茶", description: "Tibetan black tea churned with yak butter and salt — savoury, warming, and utterly unlike any other beverage. An acquired taste that becomes necessary at altitude.", mustTry: true, where: "Traditional tea houses in Dukezong Old Town" },
+      { name: "Yak Meat Hotpot", nameZh: "牦牛肉火锅", description: "Lean, grass-fed yak beef from the Tibetan plateau — distinctly flavoured, very tender. The Tibetan hotpot broth is mild and fragrant with highland herbs.", mustTry: true, where: "Old town restaurants around the central square" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Diqing Shangri-La Airport (DIG) — 5km from city centre. Flights from Kunming (45 min), Chengdu, Lijiang." },
+      { mode: "🚌 Bus from Lijiang", details: "Lijiang to Shangri-La: 4.5h by bus (¥75). Scenic mountain road — sit on the right for best views." },
+    ],
+    accommodation: "Dukezong Old Town for Tibetan atmosphere (¥300–700). Boutique lodges on the meadow edge of town (¥500–1,200). Budget guesthouses on Changzheng Road (¥100–250).",
+    travelTips: [
+      "Altitude is 3,160m — take one full day of rest before hiking. Mild headaches are normal; ibuprofen and hydration help.",
+      "The drive north to Deqin and the Meili Snow Mountain viewpoint (4h from Shangri-La) is one of the most dramatic in China — highly recommended as a 2-day extension.",
+    ],
+    dayTrips: [
+      { name: "Meili Snow Mountain", nameZh: "梅里雪山", distance: "150km north · 4h", description: "The sacred 13-peak massif on the Yunnan–Tibet border — the highest unclimbed mountain in China (6,740m). The sunrise on Kawagebo peak is one of Asia's great natural spectacles.", whyGo: "Tibetans consider this the most sacred mountain in the world — the sunrise prayer ceremony at Feilaisi lookout point is deeply moving." },
+    ],
+  },
+
+  daocheng: {
+    id: "daocheng", nameZh: "稻城亚丁", nameEn: "Daocheng Yading",
+    province: "sichuan", provinceZh: "四川",
+    tagline: "The last Shangri-La — three sacred peaks at 4,000m",
+    description: "Yading Nature Reserve in Daocheng County is one of the last primeval landscapes in Sichuan — three snow-capped Tibetan sacred peaks (Chenrezig, Jambeyang, Chanadorje) rising above alpine meadows, turquoise lakes, and boreal forest at up to 4,700m. The journey to get here is as dramatic as the destination.",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop",
+    highlights: ["Three Sacred Peaks", "Milk Lake & Five Colour Lake", "Chonggu Prairie", "Luorong牧场"],
+    bestSeason: "Late Sep–Oct — peak autumn colour (red shrubs, golden grass, blue sky). May–June is second best for flowers. July–August is peak tourist season and has some rain. Do not visit Oct–Apr: roads close.",
+    attractions: [
+      { name: "Yading Nature Reserve — Inner Zone", nameZh: "亚丁自然保护区", type: "Nature", duration: "Full day (8+ hours)", description: "A full day loop from Chonggu village — past Chonggu Prairie and monastery, up to Milk Lake (4,600m) and Five-Colour Lake (4,700m) at the foot of Chenrezig peak. The altitude gain is serious hiking.", tips: "The shuttle bus from Yading village takes you to Chonggu (¥140 round-trip). Hire a horse for ¥200–300 if altitude sickness is a concern. Start by 7am for the inner loop. Trail is 25km — physically demanding." },
+      { name: "Chonggu Prairie & Monastery", nameZh: "冲古草甸·冲古寺", type: "Nature", duration: "3 hours", description: "The easiest and most accessible part of Yading — a flat meadow with a small Tibetan monastery and straight-on views of all three sacred peaks reflected in the river.", tips: "Reachable by shuttle bus without strenuous hiking. Perfect for acclimatisation day or for less fit visitors." },
+    ],
+    food: [
+      { name: "Tibetan Tsampa", nameZh: "糌粑", description: "Roasted barley flour mixed with butter tea or water into a dough — the Tibetan staple food. Dense, nutty, and surprisingly sustaining at altitude.", mustTry: true, where: "Guesthouses and trail-side tea houses in Yading village" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Daocheng Yading Airport (DCY) — the world's highest commercial airport at 4,411m. Flights from Chengdu (~1.5h) and Chongqing. Nausea on first day is common — descend to Daocheng town (3,750m) immediately after landing." },
+      { mode: "🚌 Overland from Chengdu", details: "Chengdu → Kangding → Litang → Daocheng: 2–3 days overland. The G4318 national highway through the Tibetan highlands is one of China's most spectacular drives." },
+    ],
+    accommodation: "Daocheng town (¥150–400) for pre-acclimatisation. Yading village (inside reserve) for direct access (¥200–500). Book well ahead September–October.",
+    travelTips: [
+      "Altitude sickness is a real risk — spend at least 2 nights in Daocheng (3,750m) before entering Yading (4,000–4,700m).",
+      "October 1–7 Golden Week is massively overcrowded — avoid or book the last week of September instead.",
+    ],
+  },
+
+  zhenjiang: {
+    id: "zhenjiang", nameZh: "镇江", nameEn: "Zhenjiang",
+    province: "jiangsu", provinceZh: "江苏",
+    tagline: "Vinegar city where the Yangtze meets the Grand Canal",
+    description: "Zhenjiang is the junction city where the Grand Canal meets the Yangtze River — a pivot of Chinese commerce for 2,000 years. The city is most famous for its black Zhenjiang vinegar (镇江醋), considered the finest in China, and the forested hills of Jinshan, Beigu, and Jiaoshan rising from the Yangtze.",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600&h=900&fit=crop",
+    highlights: ["Jinshan Temple (floating pagoda)", "Beigu Mountain", "Zhenjiang Vinegar Museum", "Grand Canal heritage"],
+    bestSeason: "Apr–Jun and Sep–Nov — mild and scenic. The spring cherry blossoms on the hills are spectacular. Summer is hot and humid.",
+    attractions: [
+      { name: "Jinshan Temple", nameZh: "金山寺", type: "Culture", duration: "2 hours", description: "A temple that appears to float on the Yangtze — the white pagoda and temple halls built directly into the hillside create the illusion of a ship. The setting of the White Snake folk tale.", tips: "Climb to the top of the pagoda for sweeping Yangtze river views. Entrance ¥65. Morning light is best on the water." },
+      { name: "Beigu Mountain (Ganlu Temple)", nameZh: "北固山·甘露寺", type: "Culture", duration: "2 hours", description: "The site of the famous Three Kingdoms story where Liu Bei's mother assessed him before his marriage — a temple complex on a dramatic promontory above the Yangtze.", tips: "Free to hike the mountain; temple entrance ¥45. The panoramic view from the Iron Pagoda at the summit is the best in Zhenjiang." },
+    ],
+    food: [
+      { name: "Zhenjiang White Fish", nameZh: "镇江刀鱼", description: "Yangtze River knifefish (saury) — a spring seasonal delicacy with dozens of fine bones that reward careful eating. The roe version commands extraordinary prices.", mustTry: true, where: "Traditional restaurants in the old city — Yanchun (宴春) is the century-old institution" },
+      { name: "Zhenjiang Vinegar Cuisine", nameZh: "镇江锅盖面", description: "Lid noodles (锅盖面) — thin wheat noodles cooked in a small pot with a floating wooden lid, dressed with Zhenjiang black vinegar, pork shreds, and garlic.", mustTry: true, where: "Street noodle shops throughout the city" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Zhenjiang Station. Nanjing: 20 min. Shanghai Hongqiao: 1.5h. Suzhou: 1h." },
+    ],
+    accommodation: "City centre near the old quarter (¥180–400). Day-trip friendly from Nanjing or Suzhou.",
+    travelTips: [
+      "The Zhenjiang Vinegar Museum (¥30) inside the Hengshun Vinegar factory tours 200 years of fermentation pots — the food history is fascinating.",
+      "The Xifenjin ancient street next to Jinshan is quieter and more local than tourist zones.",
+    ],
+  },
+
+  zhuhai: {
+    id: "zhuhai", nameZh: "珠海", nameEn: "Zhuhai",
+    province: "guangdong", provinceZh: "广东",
+    tagline: "The Pearl River delta's most liveable coast",
+    description: "Zhuhai is the cleanest, most relaxed city in the Pearl River Delta — a 146km coastline of scattered islands, the iconic Lover's Road (情侣路) promenade, and the gateway to Macau via the 55km Hong Kong–Zhuhai–Macau Bridge. The Old Summer Palace replica at Yuanming New Garden and the fishing port at Doumen add cultural depth.",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=1600&h=900&fit=crop",
+    highlights: ["Lover's Road promenade", "Macau day trip", "Hong Kong–Zhuhai–Macau Bridge", "Fisher Girl Statue"],
+    bestSeason: "Oct–Mar — dry, mild, and clear. Zhuhai's climate is among the most pleasant in China year-round. Summer is hot but the seafront breezes help.",
+    attractions: [
+      { name: "Lover's Road (Qinglü Lu)", nameZh: "情侣路", type: "Nature", duration: "2 hours cycling", description: "A 28km coastal promenade connecting Hong Kong port to Zhuhai Bay — the most scenic urban seafront in South China. The Fisher Girl Statue (珠海渔女) is the city's icon.", tips: "Rent a bicycle (¥30–50/2h) from near the Fisher Girl statue and cycle the full southern loop. Sunset from the seawall is spectacular." },
+      { name: "Wai Lingding Island (外伶仃岛)", nameZh: "外伶仃岛", type: "Nature", duration: "Full day", description: "A quiet island 30km offshore — clean beaches, hiking trails up to the summit cross with Pearl River estuary views, and fresh seafood directly from fishing boats.", tips: "Ferry from Zhuhai port (1.5h, ¥100 round-trip). Only day-trip frequency on weekdays — check schedules." },
+    ],
+    food: [
+      { name: "Doumen Braised Goose", nameZh: "斗门柠檬鸭", description: "Doumen district's lemon duck — whole duck braised with green lemons, fermented black bean, and chilli. A uniquely Cantonese-Zhuang flavour combination.", mustTry: true, where: "Doumen Old Street restaurants (40 min from city centre)" },
+      { name: "Zhuhai Oysters", nameZh: "珠海生蚝", description: "Plump oysters from the estuary — grilled over charcoal with garlic and glass noodles, or raw on ice. Among the best in Guangdong.", mustTry: true, where: "Seafood wholesale market near Tang Jia Wan" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Zhuhai Jinwan Airport (ZUH) — 40km from city; bus or taxi. Direct flights from Beijing, Shanghai, Chengdu." },
+      { mode: "🚄 High-speed rail", details: "Zhuhai Station. Guangzhou South: 45 min. Shenzhen North: 1h. Direct rail connection to Macau border (Gongbei crossing) by metro Line 1." },
+    ],
+    accommodation: "Lovers Road area for sea views (¥300–700). Budget options in Gongbei near the Macau border (¥150–300). Hengqin Island for resort-style (¥500–1,500).",
+    travelTips: [
+      "The Macau border at Gongbei is 5 min by taxi from Zhuhai centre — visa-free entry to Macau for most countries (up to 30 days).",
+      "The HK-Zhuhai-Macau Bridge is accessible by shuttle bus (¥65) from the Zhuhai Border Port — 30 min to Hong Kong.",
+    ],
+    dayTrips: [
+      { name: "Macau", nameZh: "澳门", distance: "6km · 15 min ferry or 30 min bridge", description: "Portuguese colonial heritage, world-class casinos, and the best egg tarts in Greater China. The Historic Centre of Macau is UNESCO-listed.", whyGo: "One of the world's most distinctive cities — entirely different from mainland China in food, architecture, and atmosphere.", adminNote: "Macau is a Special Administrative Region — a separate passport/ID check is required at the border." },
+    ],
+  },
+
+  beihai: {
+    id: "beihai", nameZh: "北海", nameEn: "Beihai",
+    province: "guangxi", provinceZh: "广西",
+    tagline: "Silver beach & Beibu Gulf seafood",
+    description: "Beihai is Guangxi's coastal city — its Silver Beach (银滩) stretches 24km of white sand into the warm Beibu Gulf, the French colonial old street (珠海路) preserves a 19th-century mercantile streetscape, and the nearby Weizhou Island is the most southwesterly point of mainland China.",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop",
+    highlights: ["Silver Beach", "Weizhou Island", "Zhuhaiilu Old Street", "Beibu Gulf seafood"],
+    bestSeason: "Oct–Apr — dry and warm (20–28°C). Summer (Jun–Sep) is hot and typhoon season. The sea is cleanest in November–December.",
+    attractions: [
+      { name: "Silver Beach (Yintan)", nameZh: "银滩", type: "Nature", duration: "Half day", description: "24km of clean white-sand beach on the Beibu Gulf — genuinely one of South China's best beaches, not yet over-commercialised. The sand quality and water colour are significantly better than Hainan's Sanya.", tips: "The western section (老银滩) is calmer and less developed than the tourist zone. Sunrise over the Beibu Gulf is spectacular." },
+      { name: "Weizhou Island", nameZh: "涠洲岛", type: "Nature", duration: "2 days", description: "A volcanic island 67km offshore — China's largest and youngest volcanic island, with coral reefs, basalt sea cliffs, and a French colonial church. Whale shark sightings reported in summer.", tips: "Ferry from Beihai Port (1.5–2h, ¥100–130). Stay overnight to see the sunset and sunrise from the cliff tops. Diving and snorkelling are good April–October." },
+      { name: "Zhuhaiilu Old Street", nameZh: "珠海路老街", type: "Culture", duration: "1.5 hours", description: "A 1.4km colonial-era arcade street — French and British influenced shophouses from the 19th century, with ground-floor arcades protecting pedestrians. An underrated streetscape.", tips: "Best in the late afternoon when the low sun catches the colonial facades. Small local restaurants in the side alleys serve excellent cheap seafood." },
+    ],
+    food: [
+      { name: "Beibu Gulf Crab & Prawn", nameZh: "北部湾海鲜", description: "Beibu Gulf blue-swimmer crab and white-leg prawn — steamed or stir-fried with salt and pepper. The Gulf's seafood is among the cleanest and most flavourful in South China.", mustTry: true, where: "Haijiao Seafood Street (海角海鲜街) near Silver Beach" },
+      { name: "Beihai Rice Noodles", nameZh: "北海虾饼粉", description: "Local rice noodles in fresh prawn broth with fried shrimp cakes — a Beihai breakfast institution.", mustTry: false, where: "Morning markets in the old city" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Beihai Fucheng Airport (BHY) — 20km from city. Flights from Guangzhou, Guilin, Nanning, Beijing." },
+      { mode: "🚄 High-speed rail", details: "Beihai Station. Nanning: 1.5h. Guilin: 3h." },
+    ],
+    accommodation: "Silver Beach hotels (¥300–700 sea view). Old Street guesthouses (¥150–300). Weizhou Island: book guesthouses on the island directly (¥200–500).",
+    travelTips: [
+      "Book Weizhou Island accommodation and ferry 2 weeks ahead for weekends — very popular since 2020 social media coverage.",
+    ],
+  },
+
+  quanzhou: {
+    id: "quanzhou", nameZh: "泉州", nameEn: "Quanzhou",
+    province: "fujian", provinceZh: "福建",
+    tagline: "UNESCO Maritime Silk Road city",
+    description: "Marco Polo called Quanzhou 'the greatest port in the world' in the 13th century. The UNESCO World Heritage inscription (2021) recognised its extraordinary mix of Hokkien, Arab, Persian, Hindu, and Manichaean heritage — mosques, Hindu temples, Manichaean sanctuaries, and Gothic churches within a few city blocks. Quanzhou is the most cosmopolitan ancient city in China.",
+    image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=1600&h=900&fit=crop",
+    highlights: ["Qingjing Mosque (1009 AD)", "Kaiyuan Temple", "Luoyang Bridge", "Maritime Museum"],
+    bestSeason: "Oct–Apr — mild and dry. Spring (Mar–Apr) has beautiful flowering trees in the old city. Summer is hot but manageable on the coast.",
+    attractions: [
+      { name: "Qingjing Mosque", nameZh: "清净寺", type: "Culture", duration: "1.5 hours", description: "Built in 1009 AD — the oldest surviving Islamic mosque in China, modelled on the Grand Mosque in Damascus. The stone gate and main hall walls still stand despite later damage.", tips: "Entrance ¥3 (essentially free). The architectural detail on the entry arch is extraordinary — compare Arabic inscriptions with Chinese decorative motifs." },
+      { name: "Kaiyuan Temple", nameZh: "开元寺", type: "Culture", duration: "2 hours", description: "Founded in 686 AD, this vast Tang dynasty Buddhist complex has twin pagodas (East and West, built 865 AD) that appear on the Fujian 100-yuan note. The main hall's flying Apsaras columns blend Buddhist and Hindu iconography.", tips: "Free entry. The courtyard banyan trees are 800 years old. The stone relief panels on the main hall capitals are a UNESCO highlight." },
+      { name: "Luoyang Bridge", nameZh: "洛阳桥", type: "Culture", duration: "1 hour", description: "China's first sea-crossing stone bridge (1053–1059 AD) — 731m long, built by Cai Xiang using a brilliant tidal cofferdam technique. Still standing after 1,000 years.", tips: "9km from city centre; take bus #19. The stone oyster cultivation on the bridge pylons (an ancient engineering technique) is fascinating." },
+    ],
+    food: [
+      { name: "Oyster Omelette (Fujian Original)", nameZh: "蚵仔煎", description: "The original Fujian oyster omelette — fatter oysters, stickier starch, and more char than the Xiamen version. The Min Nan coastal tradition.", mustTry: true, where: "West Street (西街) food stalls near Kaiyuan Temple" },
+      { name: "Mian Xian Hu (Noodle Paste Soup)", nameZh: "面线糊", description: "A thick porridge of thin vermicelli in a gelatinous broth with assorted toppings — prawn, squid, blood curd, and pig intestine. Quanzhou's definitive breakfast.", mustTry: true, where: "Zhongshan Road morning stalls" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Quanzhou Station or Quanzhou North. Xiamen: 30 min. Fuzhou: 45 min. Guangzhou: 3h." },
+    ],
+    accommodation: "Old city near Zhongshan Road (¥200–450). Boutique hotels in the Muslim Quarter (¥250–500).",
+    travelTips: [
+      "The UNESCO heritage sites are spread across the city — hire an e-bike (¥30/day) or use the dedicated heritage bus route.",
+      "Hui'an county (30km away) has one of China's most photographed traditional costumes — the Hui'an women in floral headscarves and cropped embroidered jackets.",
+    ],
+  },
+
+  yanan: {
+    id: "yanan", nameZh: "延安", nameEn: "Yan'an",
+    province: "shaanxi", provinceZh: "陕西",
+    tagline: "The cradle of Chinese Communist revolution",
+    description: "Yan'an is the sacred revolutionary site of modern China — the cave-dwelling city where Mao Zedong and the Communist Party recovered after the Long March and planned the revolution from 1935 to 1948. The loess plateau landscapes are dramatic, and the authentic cave-dwelling (窑洞) architecture still inhabited by locals makes it one of the most distinctive urban environments in China.",
+    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1600&h=900&fit=crop",
+    highlights: ["Yangjialing Revolutionary Headquarters", "Wangjiaping & Zaoyuan", "Pagoda Mountain", "Loess plateau scenery"],
+    bestSeason: "Apr–Jun and Sep–Oct — the loess terraces are green and the weather mild. Autumn has golden light on the canyon walls. July–August is hot. January visits are busy with revolutionary tourism.",
+    attractions: [
+      { name: "Yangjialing Revolutionary Headquarters", nameZh: "杨家岭革命旧址", type: "Culture", duration: "2 hours", description: "The complex of cave offices and assembly hall where Mao and the Party Central Committee lived and worked from 1938 to 1943. The 7th Party Congress assembly hall is intact.", tips: "Free entry with ID. Hire a local guide (¥80–150) to get the full context — the cave architecture and its relation to loess geology is genuinely fascinating." },
+      { name: "Pagoda Mountain (Bao Ta Shan)", nameZh: "宝塔山", type: "Landmark", duration: "1.5 hours", description: "The 9-storey Tang dynasty pagoda on the hill above the city — the symbol of Yan'an and the icon on China's 10-yuan note. Views over the loess canyon city are striking.", tips: "Entry ¥65. Go at sunset when the canyon walls glow red-orange." },
+      { name: "Yellow River Hukou Waterfall", nameZh: "壶口瀑布", distance: "165km south of Yan'an", type: "Nature", duration: "2 hours", description: "The Yellow River funnels through a 50m-wide rock channel and falls 15m — the most powerful waterfall in China. In spring the roar is deafening and the spray soaks the viewing platforms.", tips: "Best visited in spring (Apr–May) when snowmelt maximises the flow. The Shaanxi side (Yichuan county) has better access than the Shanxi side." },
+    ],
+    food: [
+      { name: "Yan'an Lamb Noodles", nameZh: "延安羊肉面", description: "Thick hand-torn noodles in mutton and sour-cabbage broth — hearty loess plateau comfort food.", mustTry: true, where: "Noodle restaurants in the old city, especially near Zaoyuan" },
+      { name: "Steamed Bun (Mo Mo)", nameZh: "馍馍", description: "The Shaanxi staple — thick, doughy steamed wheat bun. Torn and dunked into lamb soup (羊肉泡馍) or eaten plain with vinegar.", mustTry: false, where: "Any street food stall" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Yan'an Station. Xi'an: 2h. The new Yan'an–Taiyuan HSR line reduces journey to Shanxi." },
+    ],
+    accommodation: "City centre near Pagoda Mountain (¥200–450). Cave hotel experiences (窑洞酒店) are available on the city outskirts — sleeping in a genuine loess cave (¥250–500).",
+    travelTips: [
+      "Yan'an is a major destination for mainland Chinese 'red tourism' — holiday weeks (CNY, May Day, National Day) are extremely crowded.",
+      "The Nanniwan area (南泥湾, 45km south) has beautiful terraced valley scenery alongside its revolutionary heritage.",
+    ],
+  },
+
+  wulong: {
+    id: "wulong", nameZh: "武隆", nameEn: "Wulong",
+    province: "chongqing", provinceZh: "重庆",
+    tagline: "Karst arches, sky bridges & underground rivers",
+    description: "Wulong is Chongqing's greatest natural spectacle — the UNESCO-listed Karst Landscapes contain the three Tiankeng (天坑) sinkholes, the Natural Three Bridges (天生三桥), and the Furong Cave river system. The location doubled as the 'Land of Oz' in the live-action Transformers Age of Extinction film.",
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1600&h=900&fit=crop",
+    highlights: ["Natural Three Bridges (UNESCO)", "Furong Cave", "Fairy Mountain grassland", "Tianshengsan sinkhole walk"],
+    bestSeason: "Apr–Nov — the gorge forests are lush. Autumn (Oct–Nov) has brilliant colour. Summer is cool compared to Chongqing city (average 22°C). The Fairy Mountain ski resort operates Dec–Feb.",
+    attractions: [
+      { name: "Natural Three Bridges (Tianshengsan)", nameZh: "天生三桥", type: "Nature", duration: "3 hours", description: "Three natural stone arch bridges spanning a canyon — the largest natural arch system in Asia. Qinglong Bridge spans 350m; the canyon floor 250m below is reached by cable car.", tips: "Buy the combined scenic area ticket (¥200+). The descent to the canyon floor by cable car and the walk between the bridges is the highlight — allow 3 hours minimum." },
+      { name: "Furong Cave", nameZh: "芙蓉洞", type: "Nature", duration: "2 hours", description: "A 2.7km illuminated cave system with the most diverse speleothem (stalactite and stalagmite) formations in China — 13 types catalogued, including extremely rare moonmilk deposits.", tips: "Temperature inside is a constant 11°C — bring a light jacket. The cave river section at the end is visually the most spectacular." },
+    ],
+    food: [
+      { name: "Wulong Mutton Hotpot", nameZh: "武隆羊肉格格", description: "Bamboo-steamed mutton with potato and taro — the local version of Chongqing hotpot culture adapted for the mountain climate.", mustTry: true, where: "Restaurants on Wulong old street near the bus terminal" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Wulong Station on the Zhengzhou–Chongqing HSR. Chongqing North: 1.5h. Direct shuttle buses from the station to the scenic area (¥15, 30 min)." },
+    ],
+    accommodation: "Wulong County town (¥150–350). Fairy Mountain (仙女山) resort area for cooler summer stays (¥300–700). Small guesthouses near Three Bridges entrance (¥150–280).",
+    travelTips: [
+      "The Three Bridges and Furong Cave are 15km apart — hire a taxi for the day (¥200) to cover both without tour groups.",
+    ],
+    dayTrips: [
+      { name: "Chongqing city", nameZh: "重庆", distance: "150km · 1.5h by HSR", description: "Sichuan hotpot, Jiefangbei illuminated skyline, and the cliffside Hongyadong restaurant district.", whyGo: "Base yourself in Wulong for nature, then take the fast train for a Chongqing evening — a perfect combination." },
+    ],
+  },
+
+  zhujiajiao: {
+    id: "zhujiajiao", nameZh: "朱家角", nameEn: "Zhujiajiao",
+    province: "shanghai", provinceZh: "上海",
+    tagline: "Shanghai's ancient water town on the doorstep",
+    description: "Zhujiajiao is Shanghai's own ancient water town — 1,700 years of Jiangnan canal culture within an hour of the city centre. The 36 stone bridges and 9 ancient rice-trading streets have survived relatively intact, and the Fangsheng Bridge is the grandest five-arch stone bridge in the Yangtze delta.",
+    image: "https://images.unsplash.com/photo-1537531510192-bba6dde32453?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1537531510192-bba6dde32453?w=1600&h=900&fit=crop",
+    highlights: ["Fangsheng Bridge (5-arch)", "Kezhi Garden", "Old Rice Street", "Canal boat rides"],
+    bestSeason: "Mar–May and Sep–Nov — comfortable and photogenic. Weekdays are significantly quieter than weekends. Avoid May Day and October Golden Week.",
+    attractions: [
+      { name: "Fangsheng Bridge", nameZh: "放生桥", type: "Culture", duration: "30 min", description: "A 72m five-arch stone bridge built in 1571 — the largest and most beautiful ancient bridge in the Shanghai region. The view along the canal from the apex is the defining image of Zhujiajiao.", tips: "Free to cross. Best photographed from the canal below (hire a boat, ¥60/30min) or from the embankment at the east end." },
+      { name: "Kezhi Garden", nameZh: "课植园", type: "Culture", duration: "1.5 hours", description: "A private garden estate combining Suzhou-style rockery with European-influenced architecture — built in the early Republic era by a local merchant. The most elaborate private garden in Shanghai.", tips: "Entrance ¥8 — extremely underpriced for the scale and quality. The rear courtyard rockery is the most photogenic section." },
+    ],
+    food: [
+      { name: "Braised Pork Rice Dumplings (Zongzi)", nameZh: "粽子", description: "Zhujiajiao's most famous food export — glutinous rice wrapped in bamboo leaves with fatty pork belly. The town's rice merchants have been making them for centuries.", mustTry: true, where: "Shops lining North Avenue (北大街) — buy them hot, straight from the pot" },
+      { name: "Fried Stinky Tofu", nameZh: "臭豆腐", description: "The classic Jiangnan street snack — fried fermented tofu with chilli sauce, crispy outside and creamy within. The smell is the experience.", mustTry: false, where: "Street vendors on Old Rice Street" },
+    ],
+    transportation: [
+      { mode: "🚌 From Shanghai", details: "Direct bus from Pu'an Road Coach Station or Hongqiao Transportation Hub — 1h, ¥15. Also reachable by metro Line 17 to Zhujiajiao Station (45 min) then 10-min walk." },
+    ],
+    accommodation: "Canal-view guesthouses inside the old town (¥300–600). Easy day trip from Shanghai — most visitors don't stay overnight.",
+    travelTips: [
+      "Arrive by 8:30am on weekdays to beat the tour buses which arrive from 9:30am onward.",
+      "The Dianshan Lake area adjacent to Zhujiajiao has excellent cycling paths — combine with a rented e-bike afternoon.",
+    ],
+  },
+
+  yanqing: {
+    id: "yanqing", nameZh: "延庆", nameEn: "Yanqing",
+    province: "beijing", provinceZh: "北京",
+    tagline: "Wild Great Wall, dragon valleys & ski peaks",
+    description: "Yanqing County, 75km northwest of Beijing, is the capital's cool-climate retreat — host venue for the 2022 Winter Olympics (ski and sliding events), home to the Juyongguan Pass, the Mutianyu Great Wall's wild section at Jiankou, and the Longqing Gorge ice festival each winter.",
+    image: "https://images.unsplash.com/photo-1508804052814-cd3ba865a116?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1508804052814-cd3ba865a116?w=1600&h=900&fit=crop",
+    highlights: ["Jiankou Wild Great Wall", "Longqing Gorge", "Yanqing Olympic Park", "Gubei Water Town"],
+    bestSeason: "Apr–Jun for wildflower valleys; Oct–Nov for Great Wall autumn foliage; Dec–Mar for skiing. Summer (Jun–Aug) is 8–10°C cooler than central Beijing.",
+    attractions: [
+      { name: "Jiankou Wild Great Wall", nameZh: "箭扣长城", type: "Nature", duration: "Full day", description: "The most dramatic unrestored section of the Ming Great Wall — crumbling towers and steep ridgelines with no safety railings or tourist infrastructure. Heaven's Ladder (天梯) and Eagle Flies Facing Upward (鹰飞倒仰) are the iconic sections.", tips: "Hire a local guide (¥150–250) from Xizhazi Village — essential for route-finding on the unmarked trail. Start at 6am for best light and to avoid afternoon crowds. Proper hiking boots are essential." },
+      { name: "Longqing Gorge", nameZh: "龙庆峡", type: "Nature", duration: "Half day", description: "A dam-lake gorge surrounded by cliffs — boat rides through the canyon in summer, and China's best ice lantern festival (January–February) when the entire gorge is illuminated by ice sculptures.", tips: "Summer boat ticket ¥60. Ice festival ticket ¥80–100. The festival runs roughly January 1–February 25." },
+      { name: "Yanqing Olympic Park", nameZh: "延庆奥林匹克园区", type: "Landmark", duration: "3 hours", description: "The 2022 Winter Olympic venues — the National Alpine Ski Centre (downhill), Yanqing Sliding Centre (bobsled), and the striking 'snow ring' Olympic Village architecture can be toured year-round.", tips: "Ski season (Dec–Mar) is best for activities. The Guyanbing Hall (古崖居) Qiang cliff-dwelling ruins inside the park are a 1,500-year-old surprise." },
+    ],
+    food: [
+      { name: "Yanqing Lamb Scorpion", nameZh: "延庆蝎子锅", description: "Spiced lamb spine hotpot — the collagen-rich vertebrae braise slowly with dried chilli and Sichuan pepper. A Beijing suburb winter speciality.", mustTry: true, where: "Roadside restaurants on the Yanqing old town pedestrian street" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail (S1 Line)", details: "Yanqing Station reachable from Beijing Qinghe Station in 20 min by the dedicated Olympic-built rail line (¥23). Connects to Beijing metro." },
+    ],
+    accommodation: "Yanqing town centre (¥200–450). Gubei Water Town resort complex (¥800–2,500) for Great Wall sunrise packages. Ski resort lodges at Yanqing Olympic Village (¥600–1,500).",
+    travelTips: [
+      "Gubei Water Town (古北水镇) is a private resort built inside a historic village with Simatai Great Wall access at night — expensive (¥150 entry) but the illuminated wall at night is extraordinary.",
+      "Jiankou wild wall hike is physically demanding (6–8h with significant scrambling) — not suitable for beginners or without a guide.",
+    ],
+  },
+
+  // ── BATCH 2: CENTRAL/SOUTH PROVINCES ──────────────────────────────────────
+  yantai: {
+    id: "yantai", nameZh: "烟台", nameEn: "Yantai",
+    province: "shandong", provinceZh: "山东",
+    tagline: "Apple orchards, Bohai seafood & French wine",
+    description: "Yantai is Shandong's most pleasant coastal city — a mild climate tempered by the Bohai Sea, China's oldest wine-producing region (Changyu Winery has operated since 1892), spectacular cherry blossoms in spring, and some of the freshest seafood on the north coast. Penglai, 40km west, holds the mythological island of immortals.",
+    image: "https://images.unsplash.com/photo-1562604898-a539ca4e17dd?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1562604898-a539ca4e17dd?w=1600&h=900&fit=crop",
+    highlights: ["Penglai Pavilion (Fairy Isle)", "Changyu Wine Culture Museum", "Yantai Hill Park", "Bohai seafood markets"],
+    bestSeason: "May–Oct — mild, clear, and sea-breezy. Apple and cherry harvest (Aug–Oct) adds colour to the countryside. Winter is cold but quieter.",
+    attractions: [
+      { name: "Penglai Pavilion", nameZh: "蓬莱阁", type: "Culture", duration: "3 hours", description: "One of China's Four Great Towers — an ancient pavilion complex on a sea cliff that has inspired Taoist myths of the immortals' island for 2,000 years. Mirage sightings (海市蜃楼) are recorded several times per century.", tips: "Entrance ¥70. The cliff walk around the pavilion complex gives dramatic Bohai Sea views. Combine with the Penglai Waterworld naval fortress ruins next door (free)." },
+      { name: "Changyu Wine Culture Museum", nameZh: "张裕葡萄酒文化博物馆", type: "Culture", duration: "2 hours", description: "Founded in 1892 — China's first European-style winery, built by Overseas Chinese entrepreneur Zhang Bishi with French winemakers. The underground cellar contains barrels dating back over a century.", tips: "Entrance ¥80 (includes tasting). The cobblestone European-style winery building is beautiful — very unlike the rest of Yantai." },
+    ],
+    food: [
+      { name: "Steamed Scallops with Glass Noodles", nameZh: "扇贝粉丝", description: "Shandong scallops steamed in the half-shell over glass noodles with garlic and fermented black bean — simple and extraordinary when the scallops are Bohai-fresh.", mustTry: true, where: "Seafood night market at Zhifu Island (芝罘岛) ferry port" },
+      { name: "Yantai Apple", nameZh: "烟台苹果", description: "China's finest apples — grown on the peninsula at the junction of ocean air and warm southern slopes. Season: September–November. The Fuji variety here is unmatched.", mustTry: false, where: "Roadside orchards and markets from September" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Yantai Penglai International Airport (YNT) — 55km west of city, bus to centre 1.5h or taxi ¥200." },
+      { mode: "🚄 High-speed rail", details: "Yantai Station. Qingdao: 1.5h. Jinan: 3h. A new HSR line to Beijing via Weifang is under construction." },
+      { mode: "⛴️ Ferry", details: "Overnight ferry to Dalian (Liaoning) — 5–7h. A scenic and economical way to connect Shandong and northeast China." },
+    ],
+    accommodation: "City centre (¥200–450). Penglai town for slower-paced coastal stay (¥150–350). Beach resort area at Gold Beach (黄金海岸) near Longkou (¥300–700).",
+    travelTips: [
+      "The ferry to Dalian makes Yantai a natural stop on a coastal loop between Shandong and Liaoning without backtracking to Beijing.",
+    ],
+  },
+
+  anyang: {
+    id: "anyang", nameZh: "安阳", nameEn: "Anyang",
+    province: "henan", provinceZh: "河南",
+    tagline: "Where Chinese writing was invented",
+    description: "Anyang is one of the birthplaces of Chinese civilisation — the Shang dynasty capital Yin (1300–1046 BC) was excavated here, revealing the oracle bone script from which all Chinese writing descends. The Yin Ruins (殷墟) are a UNESCO World Heritage site of unparalleled importance, and the Red Flag Canal (红旗渠) is a remarkable feat of 1960s engineering through the Taihang Mountains.",
+    image: "https://images.unsplash.com/photo-1584646098378-0e4e9b671fbf?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1584646098378-0e4e9b671fbf?w=1600&h=900&fit=crop",
+    highlights: ["Yin Ruins (UNESCO) — oracle bone origin", "Red Flag Canal", "Museum of Chinese Writing", "Fu Hao Tomb"],
+    bestSeason: "Apr–Jun and Sep–Nov — comfortable temperatures and clear skies. Summer is hot (38°C). The Red Flag Canal mountain scenery is most dramatic after autumn rain.",
+    attractions: [
+      { name: "Yin Ruins (Yinxu)", nameZh: "殷墟", type: "Culture", duration: "3 hours", description: "The archaeological site of the Shang dynasty capital — the royal tombs, foundry ruins, and sacrifice pits where oracle bones (甲骨) were first discovered in 1899. The adjacent museum holds 300,000+ oracle bones.", tips: "Entrance ¥105. The Fu Hao Tomb (妇好墓) is the only Shang royal tomb found intact — the jade and bronze artefacts are spectacular. Allow 3 hours for the museum and site." },
+      { name: "Red Flag Canal", nameZh: "红旗渠", type: "Culture", duration: "Half day", description: "An irrigation canal hand-carved through 1,500km of sheer Taihang Mountain cliff between 1960 and 1969 — 100,000 villagers worked a decade with picks and hammers, without machinery. A remarkable engineering and human achievement.", tips: "The main canal runs along a cliff ledge — the 'cliff-top path' section (¥85) includes a sky walk section over the gorge. 70km from Anyang; hire a car or join a tour." },
+    ],
+    food: [
+      { name: "Anyang Blood Sausage", nameZh: "安阳血肠", description: "Pork blood sausage boiled in broth and sliced — a street-food staple dating back to Shang dynasty meat-preserving traditions (with obvious additions since then).", mustTry: false, where: "Old city street markets" },
+      { name: "Henan Braised Noodles (Hui Mian)", nameZh: "烩面", description: "Thick chewy noodles braised in lamb bone broth with fungus, dried lily, and glass noodles — the Henan comfort classic.", mustTry: true, where: "Anyang noodle shops throughout the city" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Anyang East Station on the Beijing-Guangzhou HSR. Beijing: 2h. Zhengzhou: 45 min." },
+    ],
+    accommodation: "City centre near Jiefang Road (¥150–350). Day-trip viable from Zhengzhou (45 min by HSR).",
+    travelTips: [
+      "Anyang is often overlooked in favour of Luoyang and Kaifeng — this is precisely why it rewards the curious traveller. The Yin Ruins Museum is world-class.",
+    ],
+  },
+
+  jiuhuashan: {
+    id: "jiuhuashan", nameZh: "九华山", nameEn: "Jiuhua Mountain",
+    province: "anhui", provinceZh: "安徽",
+    tagline: "One of China's four sacred Buddhist mountains",
+    description: "Jiuhua Mountain (Nine Glories Mountain) is the earthly domain of Ksitigarbha Bodhisattva (地藏王菩萨) — the Buddha of the underworld who vowed to delay his own enlightenment until all souls were saved from hell. 99 monasteries cling to the granite peaks in dense mist, and the preserved body of a Tang dynasty monk sits in a gilded statue inside Roushen Hall.",
+    image: "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?w=1600&h=900&fit=crop",
+    highlights: ["Huacheng Temple", "Roushen Hall (mummified monk)", "Tiantai Peak summit", "99 mountain monasteries"],
+    bestSeason: "Apr–Jun and Sep–Nov — mountain mists and moderate temperatures. The summer rain creates extraordinary cloud effects. Winter snowfall on the monastery roofs is spectacular but cold.",
+    attractions: [
+      { name: "Tiantai Peak Summit", nameZh: "天台峰", type: "Nature", duration: "Full day", description: "The highest accessible peak (1,324m) — a full-day hike passing through 20+ monasteries, bamboo forests, and granite boulder fields. The Tianfu Temple at the summit serves simple vegetarian meals.", tips: "Cable car available from Tiantai Temple to the mid-mountain (¥65 one-way). The summit sunrise is exceptional — book a monastery guesthouse for the night before." },
+      { name: "Roushen Hall (Zhiyuan Temple)", nameZh: "肉身宝殿", type: "Culture", duration: "1.5 hours", description: "A remarkable sacred site — the preserved body of Korean monk Kim Gyo-gak (who died aged 99 in 794 AD and was recognised as Ksitigarbha incarnate) sits inside a gilded case. Active worship continues today.", tips: "Entrance is part of the mountain ticket (¥190). Photography is not permitted inside. The incense smoke and devotional atmosphere are intense." },
+    ],
+    food: [
+      { name: "Jiuhua Mountain Vegetarian Cuisine", nameZh: "九华山素菜", description: "Sophisticated Buddhist vegetarian cooking — tofu dishes carved to resemble meat, mushroom broths flavoured with mountain herbs. The cuisine here is considered among the finest Buddhist cooking in China.", mustTry: true, where: "Temple restaurants throughout the mountain — Zhiyuan Temple restaurant is the most well-regarded" },
+    ],
+    transportation: [
+      { mode: "🚌 Bus from Hefei or Huangshan", details: "Hefei to Jiuhuashan: 2.5h by express bus. Huangshan to Jiuhuashan: 2h. Nearest HSR: Qingyang County (40 min by taxi)." },
+    ],
+    accommodation: "Monastery guesthouses inside the scenic area (¥150–350, simple but atmospheric). Town hotels at the mountain base (¥200–450).",
+    travelTips: [
+      "Mountain entrance ticket ¥190 is separate from cable car fees. A full 2-day visit covers the major temples and the summit hike.",
+      "The Ksitigarbha culture festival (July 30 lunar calendar) draws tens of thousands of pilgrims — extraordinary spectacle but accommodation fills months in advance.",
+    ],
+  },
+
+  shennongjia: {
+    id: "shennongjia", nameZh: "神农架", nameEn: "Shennongjia",
+    province: "hubei", provinceZh: "湖北",
+    tagline: "China's primeval forest & home of the wild man",
+    description: "Shennongjia is the only UNESCO World Heritage natural site in Central China — 3,253 sq km of primeval temperate forest above 3,000m, home to the Chinese golden monkey (one of the world's rarest primates) and the enduring legend of the Yeren (野人) — China's own Bigfoot. The giant Shennong Altar marks where the mythical farmer-emperor first cultivated medicine plants.",
+    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&h=900&fit=crop",
+    highlights: ["Golden monkey research base", "Dajiu Lake alpine meadow", "Laojun Mountain summit", "Primeval forest trails"],
+    bestSeason: "May–Oct — the forest is lush and trails open. Sept–Oct has brilliant autumn foliage. Winter (Nov–Apr) closes many high-altitude roads. Spring is misty and magical.",
+    attractions: [
+      { name: "Dajiu Lake Alpine Meadow", nameZh: "大九湖湿地", type: "Nature", duration: "Half day", description: "A stunning high-altitude wetland at 1,730m — nine interlinked lakes fringed by meadows and birch forest, inhabited by migrating cranes in autumn. A boardwalk circuit offers wildlife watching.", tips: "Take the shuttle bus from the entrance (included). The early morning (6–8am) mists rising off the lakes are extraordinarily atmospheric. Warm layers essential even in summer." },
+      { name: "Golden Snub-Nosed Monkey Research Base", nameZh: "金丝猴研究中心", type: "Nature", duration: "2 hours", description: "The Chinese golden monkey is one of the world's most striking primates — electric-blue face, golden fur, upturned nose. The rescue centre at Muyu has habituated groups that can be observed at close range.", tips: "Entrance ¥100 (combined ticket). Morning feeding sessions (8–9am) are the best time for photos." },
+    ],
+    food: [
+      { name: "Tujia Wild Mountain Dishes", nameZh: "土家山野菜", description: "Wild-foraged mountain vegetables, wood-ear fungus, fern shoots, and mountain pork — the Tujia minority cuisine is simple, seasonal, and exceptional.", mustTry: true, where: "Guesthouses and farmhouse restaurants in Muyu town" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Shennongjia Airport (HPG) — near Muyu town. Flights from Wuhan (40 min), Beijing, Shanghai, and Chengdu." },
+      { mode: "🚌 Bus from Yichang", details: "Yichang to Muyu (Shennongjia gateway): 3.5h by expressway bus. Yichang is on the Wuhan HSR line (2h from Wuhan)." },
+    ],
+    accommodation: "Muyu town for comfortable base (¥200–500). Dajiu Lake area has scenic mountain hotels (¥350–700). Farmhouse guesthouses (农家乐) offer the most authentic experience (¥100–200).",
+    travelTips: [
+      "Altitude at the main scenic areas reaches 3,100m — those sensitive to altitude should take it easy on the first day.",
+      "The Shennong Altar hike (神农坛, 4h return) is one of China's finest sub-alpine hiking experiences. Trail markers are good.",
+    ],
+  },
+
+  hengshan: {
+    id: "hengshan", nameZh: "衡山", nameEn: "Hengshan",
+    province: "hunan", provinceZh: "湖南",
+    tagline: "The Southern Sacred Mountain",
+    description: "Nanyue Hengshan is the southernmost of China's five Taoist sacred mountains (五岳). Gentler and more forested than the other four, it has 72 peaks cloaked in ancient camphor trees, 200+ temples and monasteries (the highest Buddhist-Taoist density in China), and the Zhurong Peak summit at 1,300m.",
+    image: "https://images.unsplash.com/photo-1555737785-3b6a6f9cd8f5?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1555737785-3b6a6f9cd8f5?w=1600&h=900&fit=crop",
+    highlights: ["Nanyue Temple", "Zhurong Peak summit", "72 peaks forest trail", "Buddhist-Taoist dual heritage"],
+    bestSeason: "Apr–Jun and Sep–Nov — cool forest walking and clear summit views. The spring azalea bloom (April) on the slopes is glorious. Summer has clouds and occasional rain that add atmosphere.",
+    attractions: [
+      { name: "Nanyue Temple", nameZh: "南岳大庙", type: "Culture", duration: "2 hours", description: "The largest temple complex south of the Yangtze — a vast Forbidden City-style courtyard complex combining Buddhist and Taoist worship in the same precinct. Originally built in Tang dynasty, expanded in Ming and Qing.", tips: "Free entry. The incense smoke in the main courtyard at dawn is intensely atmospheric. The rear garden and the small Zen temple within the complex are tranquil escapes." },
+      { name: "Zhurong Peak Trail", nameZh: "祝融峰", type: "Nature", duration: "Full day hiking or 3h by cable car", description: "The summit at 1,300m — a 15km hike through ancient forests passing waterfalls, hermit caves, and small pavilions, or cable car to 1,100m then a 1h walk up.", tips: "Cable car ticket ¥60 (up), ¥40 (down). The trail from Nanshan Platform to the summit is forested and gradual — excellent bird watching in spring." },
+    ],
+    food: [
+      { name: "Nanyue Vegetarian Banquet", nameZh: "南岳素菜", description: "Mountain Buddhist vegetarian cooking — famous throughout Hunan for creative mock-meat dishes and extraordinary tofu preparations. Some restaurants have operated for 400 years.", mustTry: true, where: "Restaurants on Nanyue town's main street, below the mountain gate" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Hengshan West Station (新衡山西站). Changsha: 40 min. The mountain scenic area is 10km from the station — shuttle bus available." },
+    ],
+    accommodation: "Nanyue town at the mountain base (¥150–400). Summit guesthouses (¥200–500, book ahead for sunrise stays).",
+    travelTips: [
+      "The mountain has 72 named peaks — a full exploration takes 3 days. Most visitors do the Nanyue Temple + Zhurong Peak circuit in a long day.",
+      "Hengshan is notable for being simultaneously one of the most sacred Buddhist mountains and most sacred Taoist mountains — the two religions share many of the temple spaces.",
+    ],
+  },
+
+  libo: {
+    id: "libo", nameZh: "荔波", nameEn: "Libo",
+    province: "guizhou", provinceZh: "贵州",
+    tagline: "Karst jungle, jade rivers & UNESCO forests",
+    description: "Libo's South China Karst (UNESCO) is arguably the most beautiful karst landscape in the country — emerald-green rivers cutting through cone-shaped limestone hillsides completely covered in subtropical jungle. The Small Seven-Hole Scenic Area has jade-green pools and waterfalls; the Maolan National Nature Reserve protects one of Asia's finest intact karst forests.",
+    image: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?w=1600&h=900&fit=crop",
+    highlights: ["Small Seven-Hole Scenic Area", "Duobu River cascades", "Maolan Karst Forest", "Buyi minority villages"],
+    bestSeason: "Apr–Jun and Sep–Nov — the vegetation is richest and river levels ideal. Spring rain intensifies the green of the karst. Summer (Jul–Aug) is very crowded.",
+    attractions: [
+      { name: "Small Seven-Hole Scenic Area", nameZh: "小七孔景区", type: "Nature", duration: "5 hours", description: "A 10km canyon loop with 68 waterfalls, emerald-green lakes, and ancient Buyi stone bridges — the jade river colour is caused by dissolved limestone and algae in perfect balance.", tips: "Combined ticket with Big Seven-Hole ¥168. Start at the upper entrance (waterfall end) and walk downstream for the best sequence. The '68 Cascades' section in the middle is the most photogenic." },
+      { name: "Duobu River Canyon", nameZh: "大七孔·多布河", type: "Nature", duration: "3 hours", description: "The larger and wilder scenic area — an underground river emerges into a canyon, passes through Miao minority farmland, and disappears again into a cave. Bamboo raft rides available.", tips: "The bamboo raft section (¥40) is worth it for the perspective from the water level." },
+    ],
+    food: [
+      { name: "Buyi Sticky Rice", nameZh: "布依族五色糯米饭", description: "Five-colour glutinous rice dyed with natural plant extracts — pink, yellow, black, white, and purple. A Buyi festival food, now served daily to visitors.", mustTry: true, where: "Buyi minority villages and guesthouse restaurants in Libo town" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Libo Station on the Guiyang-Nanning HSR. Guiyang: 2h. Nanning: 2.5h." },
+    ],
+    accommodation: "Libo town (¥150–350). Guesthouses in Yao Yin village near the scenic area (¥100–250). Treehouse and eco-lodge style resorts (¥400–900).",
+    travelTips: [
+      "The colour of the rivers changes with light and season — overcast days actually enhance the jade-green effect more than bright sunlight.",
+    ],
+  },
+
+  longhushan: {
+    id: "longhushan", nameZh: "龙虎山", nameEn: "Longhu Mountain",
+    province: "jiangxi", provinceZh: "江西",
+    tagline: "The birthplace of Taoism & cliff coffin mystery",
+    description: "Longhu Mountain (Dragon Tiger Mountain) is the cradle of Celestial Masters Taoism — the Zhang family patriarch Zhang Daoling practised alchemy here and founded the movement in 142 AD. The mountain is notable for dramatic red sandstone scenery, the Tianshi (Heavenly Master) Residence still occupied by the Zhang family, and ancient Yue people cliff coffins suspended in canyon walls 50–300m above the river.",
+    image: "https://images.unsplash.com/photo-1562329265-95a6d7a83440?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1562329265-95a6d7a83440?w=1600&h=900&fit=crop",
+    highlights: ["Cliff coffins from bamboo raft", "Tianshi Residence (64 Taoist generations)", "Xiandu Scenic Area red cliffs", "Taoist culture living tradition"],
+    bestSeason: "Mar–Nov — the river is best in spring and autumn. Summer is hot but the Luxi River bamboo raft float is refreshing. Winter reveals the cliff structure most clearly.",
+    attractions: [
+      { name: "Luxi River Raft Float & Cliff Coffins", nameZh: "泸溪河·悬棺", type: "Culture", duration: "3 hours", description: "A bamboo raft drifts through the Luxi River canyon past dramatic red cliffs — and 200+ coffins wedged into the cliff face 50–300m above the water. The Yue people's burial tradition (2,500 years old) remains one of archaeology's great mysteries.", tips: "The raft tour (¥150) departs from Shangqing town and is the best way to see the coffins. Arrive early — afternoon light is better on the north-facing cliffs." },
+      { name: "Tianshi Residence", nameZh: "天师府", type: "Culture", duration: "2 hours", description: "The ancestral home and official residence of the Zhang family — 64 generations of Celestial Masters of Taoism have lived here since the Han dynasty. The Taoist ceremonies and architecture are incomparable.", tips: "Entry ¥60. Still inhabited by the Zhang family descendants. The garden and reception halls date to the Song dynasty." },
+    ],
+    food: [
+      { name: "Shangqing Tofu", nameZh: "上清豆腐", description: "Hand-pressed tofu from Shangqing village — silken-firm, made with mountain spring water and eaten with ginger-scallion sauce or in a fragrant broth.", mustTry: true, where: "Restaurants in Shangqing ancient town" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Longhushan Station. Nanchang: 1h. Yingtan: 15 min. Xiamen: 2.5h." },
+    ],
+    accommodation: "Shangqing village guesthouses (¥150–350). Resort hotels near the main gate (¥250–500).",
+    travelTips: [
+      "Combine Longhu Mountain with Wuyuan (2.5h north by train) for a Jiangxi cultural loop covering Taoism, ceramics, and ancient villages.",
+    ],
+  },
+
+  wenchang: {
+    id: "wenchang", nameZh: "文昌", nameEn: "Wenchang",
+    province: "hainan", provinceZh: "海南",
+    tagline: "Coconut forests, space rockets & Wenchang chicken",
+    description: "Wenchang is simultaneously the most tropical and the most high-tech place in China — coconut palms line every road, the beach at Dong Jiao Ye Lin stretches through the most beautiful coconut grove in Asia, and 50km north the Wenchang Space Launch Centre sends rockets to the moon and Mars. The original Wenchang chicken was born here.",
+    image: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1600&h=900&fit=crop",
+    highlights: ["Dong Jiao Coconut Grove", "Wenchang Space Launch Centre", "Qinglan Harbour", "Wenchang original chicken"],
+    bestSeason: "Oct–Apr — the dry season. Rocket launches happen year-round and are publicly observable from the coastal viewing area when scheduled.",
+    attractions: [
+      { name: "Dong Jiao Ye Lin Coconut Grove", nameZh: "东郊椰林", type: "Nature", duration: "Half day", description: "8,000 acres of wild coconut palms along a blue-water peninsula — the most extensive coastal coconut grove in China. Cycling paths and beach access throughout.", tips: "Rent a bicycle at the entrance (¥30/2h). The north tip of the peninsula has the widest and cleanest beach. Fresh coconut milk from fallen fruit costs ¥5–8 from vendors." },
+      { name: "Wenchang Space Launch Centre", nameZh: "文昌航天发射场", type: "Landmark", duration: "2 hours", description: "China's newest space launch facility, opened in 2016 — the only civilian-viewable launch site in the country. Long March 5 (China's heaviest rocket) and Tianhe space station modules launched from here.", tips: "A visitor education centre (¥50) is open daily. Rocket launches (5–10 per year) can be watched from Longlou town coast 8km away — check CNSA schedule online." },
+    ],
+    food: [
+      { name: "Wenchang Chicken (Original)", nameZh: "文昌鸡", description: "The original free-range Wenchang chicken — poached and served over coconut-scented rice, with ginger paste and the original soy dipping sauce. More flavourful than the Singapore version that made it famous.", mustTry: true, where: "Wenchang town restaurants on Wen Cheng Street" },
+      { name: "Coconut Crab", nameZh: "椰子蟹", description: "The world's largest land crab, fed entirely on coconut — ivory-white meat with a faint tropical sweetness. Extremely rare and prized; legally wild-caught only.", mustTry: false, where: "Upmarket seafood restaurants in Qinglan Harbour" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail (Hainan Eastern Ring)", details: "Wenchang Station. Haikou: 30 min. Sanya: 2h30min." },
+    ],
+    accommodation: "Wenchang town centre (¥150–300). Resort hotels at Qinglan Harbour (¥400–900). Dong Jiao coconut grove guesthouses (¥200–400).",
+    travelTips: [
+      "The Dong Jiao ferry crossing (¥5, 3 min) is worth taking — it gives you a view back to the palm grove from the water.",
+      "Check CNSA rocket launch schedules at cnsa.gov.cn before visiting — witnessing a Long March 5 launch from the public viewing area is an extraordinary experience.",
+    ],
+  },
+
+  jizhou: {
+    id: "jizhou", nameZh: "蓟州", nameEn: "Jizhou",
+    province: "tianjin", provinceZh: "天津",
+    tagline: "China's oldest wooden building & Panshan Mountain",
+    description: "Jizhou (historically Jixian) is Tianjin's mountain county — 90km north of the city, it holds the Dule Temple with China's oldest surviving multi-storey wooden structure (984 AD), the Five Dragons Peak scenery of Panshan Mountain, and the Panjiakou Underwater Great Wall (flooded when a reservoir was built through the Ming-era fortification).",
+    image: "https://images.unsplash.com/photo-1568895706332-28c5e023adcc?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1568895706332-28c5e023adcc?w=1600&h=900&fit=crop",
+    highlights: ["Dule Temple (984 AD, China's oldest multi-story timber building)", "Panshan Mountain", "Panjiakou Underwater Great Wall", "Xishan scenic valley"],
+    bestSeason: "Apr–Nov — spring and autumn are ideal for hiking and temple visits. The red maple season on Panshan (Oct–Nov) is spectacular.",
+    attractions: [
+      { name: "Dule Temple", nameZh: "独乐寺", type: "Culture", duration: "2 hours", description: "Two buildings survive from 984 AD — the Guanyin Pavilion and the Mountain Gate. The 16.27m clay Guanyin statue (with eleven heads) is the tallest Tang-style clay figure in China, and the original Song-dynasty building joints have not been significantly modified in 1,000 years.", tips: "Entrance ¥60. The architectural engineering of the Song-era timber joint system is staggering — the Liang Sicheng heritage notes are displayed inside." },
+      { name: "Panshan Mountain", nameZh: "盘山", type: "Nature", duration: "Half day", description: "Five peaks above 800m with Buddhist temples, cascading waterfalls, and the distinctive Five Dragon Pools valley — called the 'first mountain east of Beijing' by Qianlong Emperor who visited 32 times.", tips: "Cable car available (¥45/one-way). The ridge trail between the Upper Temple and Tiansheng Temple gives the best panoramic views." },
+    ],
+    food: [
+      { name: "Jixian Chestnut", nameZh: "蓟州板栗", description: "Hebei-style roasted chestnut — Jizhou's mountain orchards produce some of northern China's finest. Available from August roadside vendors.", mustTry: false, where: "Mountain road stalls" },
+    ],
+    transportation: [
+      { mode: "🚌 From Tianjin", details: "Direct bus from Tianjin Zhongguan Bus Station — 1.5h, ¥20. Also reachable from Beijing Dongzhimen by long-distance bus (2h, ¥35)." },
+    ],
+    accommodation: "Jizhou county town for mid-range hotels (¥200–400). Mountain guesthouses near Panshan (¥150–300).",
+    travelTips: [
+      "The Panjiakou Underwater Great Wall (80km north, in Hebei) requires a ferry over the reservoir to see the submerged fortification — one of China's most unusual heritage sites. Check boat availability ahead of visiting.",
+    ],
+    dayTrips: [
+      { name: "Chengde", nameZh: "承德", distance: "120km · 2h by road", description: "The Qing imperial summer resort with the Mountain Resort (UNESCO) and Eight Outer Temples.", whyGo: "A natural extension of the Jizhou mountain day — continue north to Chengde for a 2-day Hebei heritage loop.", adminNote: "Chengde is across the provincial boundary in Hebei." },
+    ],
+  },
+
+  // ── BATCH 3: REMOTE/NORTHWEST/NORTHEAST PROVINCES ─────────────────────────
+  zhada: {
+    id: "zhada", nameZh: "扎达", nameEn: "Zanda Earth Forest",
+    province: "xizang", provinceZh: "西藏",
+    tagline: "Alien earth forests & the ruins of Guge Kingdom",
+    description: "Zanda County in far western Tibet is one of the most remote and visually surreal places on earth — the Sutlej River has eroded a vast plateau into thousands of earth columns, spires, and mushroom formations (土林) that glow amber and ochre at sunset. Within them, the ruins of the ancient Guge Kingdom (10th–17th century) cling to a 300m mesa above the canyon.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=900&fit=crop",
+    highlights: ["Guge Kingdom Ruins", "Zanda Earth Forest (土林)", "Toling Monastery", "Sutlej River canyon"],
+    bestSeason: "Jun–Sep — the only season when the roads from Lhasa or Ali are reliably open. The earth forest is most dramatic at golden hour.",
+    attractions: [
+      { name: "Guge Kingdom Ruins", nameZh: "古格王国遗址", type: "Culture", duration: "3 hours", description: "A 300m mesa stacked with 445 rooms, 879 caves, and 58 fortress towers — the entire lost capital of the Guge Kingdom, abandoned overnight in the 17th century. The intact murals in the Red Temple and White Temple are extraordinary.", tips: "Entry ¥200. Hire a local guide at the entrance (¥100) — many rooms require a torch and the iconographic details are missed without explanation." },
+      { name: "Zanda Earth Forest", nameZh: "扎达土林", type: "Nature", duration: "2 hours", description: "Hundreds of kilometres of surreal eroded earth formations filling the entire Sutlej river valley — drive-through scenery that could be another planet. Sunset from the Zanda county road is extraordinary.", tips: "No entry fee for the main viewpoints along the county road. The vista point 3km west of Zanda town gives the best panoramic view." },
+    ],
+    food: [
+      { name: "Tsampa and Yak Broth", nameZh: "糌粑·牦牛汤", description: "At 3,650m in the remote Tibetan west, the food is simple — barley tsampa and yak bone broth. Basic, sustaining, and in context deeply satisfying.", mustTry: true, where: "The few small restaurants in Zanda county town" },
+    ],
+    transportation: [
+      { mode: "🚗 Overland (only option)", details: "From Lhasa: 2–3 days via G219 National Highway through Ali. From Kashgar: 2 days via Xinjiang-Tibet Highway. A Tibet Travel Permit and Ali Permit are required. Private car hire essential (¥2,000–4,000/day)." },
+      { mode: "✈️ Air to Ali (Shiquanhe)", details: "Flights from Lhasa to Ali Kunsha Airport (¥800–1,200) reduce the journey. Zanda is 230km from Ali — 3h by road." },
+    ],
+    accommodation: "Zanda county town has 3–4 basic guesthouses (¥80–200). All require advance reservation as occupancy is tiny.",
+    travelTips: [
+      "This is one of the most logistically challenging destinations in China — full Tibet permit + Ali region permit + police check-in at each county required.",
+      "The night sky here at 3,650m with zero light pollution is one of the finest in Asia — bring a camera with wide-angle lens.",
+    ],
+  },
+
+  kanas: {
+    id: "kanas", nameZh: "喀纳斯", nameEn: "Kanas Lake",
+    province: "xinjiang", provinceZh: "新疆",
+    tagline: "Alpine lake on the Russia-Mongolia-Kazakhstan border",
+    description: "Kanas Lake (1,374m altitude, 24km long) is a glacial jewel in the Altai Mountains on the exact border of Russia, Mongolia, and Kazakhstan. The Tuvan minority village of Hemu nearby has the most authentic log-cabin culture in China, and the Friendship Peak (友谊峰, 4,374m) glacier is visible from the viewing platform.",
+    image: "https://images.unsplash.com/photo-1567634698-89e6da2e8c6d?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1567634698-89e6da2e8c6d?w=1600&h=900&fit=crop",
+    highlights: ["Kanas Lake colour-changing water", "Hemu Tuvan village", "God's Eye viewpoint", "Autumn foliage (Sep–Oct)"],
+    bestSeason: "Late Sep–early Oct — peak autumn colour (gold birch, red shrub, blue lake). June–August is green and lush. Winter (Nov–Apr) is inaccessible — deep snow closes all roads.",
+    attractions: [
+      { name: "God's Eye Viewpoint (Shenyanshu)", nameZh: "神仙湾", type: "Nature", duration: "2 hours", description: "The famous observation deck above the lake — a bird's-eye view of the Kanas River meandering through forest before entering the lake, resembling a divine eye from above.", tips: "The walk up from the scenic area takes 45 min. Cable car available (¥80). Go at dawn before the first tour buses arrive — the mist over the lake in the first hour of daylight is extraordinary." },
+      { name: "Hemu Tuvan Village", nameZh: "禾木·图瓦人村庄", type: "Culture", duration: "Full day", description: "A village of 700 Tuvan people in the Altai highlands — log cabins, reindeer herders, and a way of life more similar to Siberia than China. The autumn misty mornings are among the most photographed scenes in Xinjiang.", tips: "Hemu is 55km from Kanas Lake — accessible by bus or taxi (¥80). Stay overnight to experience the morning mist before the day-trippers arrive." },
+    ],
+    food: [
+      { name: "Tuvan Milk Products", nameZh: "图瓦奶酪", description: "The Tuvan community makes fresh cream, sour cream, and aged cheese from their cattle — unlike anything else in China.", mustTry: true, where: "Homestay guesthouses in Hemu village" },
+    ],
+    transportation: [
+      { mode: "✈️ Air to Burqin or Kanas Airport", details: "New Kanas Airport (KJI) opened in 2018 — flights from Urumqi (1.5h), Chengdu, Xi'an. From Burqin county town: 2h bus to scenic area entrance." },
+    ],
+    accommodation: "Kanas scenic area guesthouses (¥300–700, book months ahead for October). Hemu village homestays (¥100–250) offer the most atmospheric experience.",
+    travelTips: [
+      "Kanas is one of the most heavily booked destinations in China for October Golden Week — book both transport and accommodation 3 months ahead.",
+      "The 20km hiking trail connecting Kanas Lake and Hemu village (passing White Birch Forest and Wolong Bay) is one of the finest day hikes in Xinjiang.",
+    ],
+  },
+
+  qilian: {
+    id: "qilian", nameZh: "祁连", nameEn: "Qilian",
+    province: "qinghai", provinceZh: "青海",
+    tagline: "Snow mountains, yak meadows & Silk Road passes",
+    description: "Qilian County sits in the Qilian Mountain corridor at 2,787m — snow-capped peaks above 5,000m, sweeping alpine meadows (门源百里花海 Menyuan Rapeseed Flower Sea is directly adjacent), and the ancient Silk Road pass that connected Chang'an to the northwest. One of the least-visited alpine destinations in China despite world-class scenery.",
+    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1600&h=900&fit=crop",
+    highlights: ["Qilian Mountain snow meadows", "Menyuan Rapeseed Flower Sea", "Zhuo'er Mountain ski resort", "Tibetan grassland culture"],
+    bestSeason: "Jun–Sep — the meadows are green and the sky clear. July has the Menyuan rapeseed in full flower (a sea of yellow). Winter is cold but Zhuo'er Mountain has excellent skiing (Dec–Mar).",
+    attractions: [
+      { name: "Menyuan Rapeseed Flower Sea", nameZh: "门源百里花海", distance: "50km east of Qilian", type: "Nature", duration: "Half day", description: "Every July, 533,000 acres of rapeseed flower into a wall-to-wall carpet of yellow against the blue Qilian Mountain backdrop — one of China's most spectacular seasonal landscapes.", tips: "Peak bloom: July 5–25. Take the HSR from Xining to Menyuan North (40 min), then taxi to the main viewpoints. Weekdays only — weekends are extremely crowded." },
+      { name: "Ox Heart Mountain Meadow", nameZh: "牛心山草原", type: "Nature", duration: "Half day", description: "A broad alpine meadow at 3,500m below the 4,667m Ox Heart Mountain — perfect for photography of yak herds against snow peaks and wildflower carpets.", tips: "Hire a local driver from Qilian town (¥200–300/day) to access the best meadow viewpoints above 3,000m." },
+    ],
+    food: [
+      { name: "Hand-Pulled Lamb", nameZh: "手抓羊肉", description: "Qilian mountain-grazed Tibetan lamb — boiled whole, served to the table by hand. The altitude grass diet gives it a distinctly clean flavour.", mustTry: true, where: "Tibetan restaurants in Qilian town centre" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail (new Xining-Zhangye line)", details: "Qilian Station now connected to Xining (1.5h) and Zhangye (1h) by the new Shandan-Qilian HSR completed in 2024." },
+    ],
+    accommodation: "Qilian town guesthouses (¥120–300). Yurt camp stays on the meadows (¥200–400) with meals included.",
+    travelTips: [
+      "Qilian sits on the border of Qinghai and Gansu — combine with Zhangye's Rainbow Mountains (1.5h by road) for a spectacular 3-day circuit.",
+    ],
+  },
+
+  wutaishan: {
+    id: "wutaishan", nameZh: "五台山", nameEn: "Wutai Mountain",
+    province: "shanxi", provinceZh: "山西",
+    tagline: "China's most sacred Buddhist mountain",
+    description: "Wutai Mountain is the earthly home of Manjushri Bodhisattva (文殊菩萨) — and with 53 monasteries in a single mountain basin, it has more Buddhist institutions than any other sacred mountain in China. The unique mix of Han and Tibetan Buddhist traditions makes it living religious heritage: yellow-robed Gelug monks chanting in Tibetan alongside Han monks in grey.",
+    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1600&h=900&fit=crop",
+    highlights: ["Xiantong Temple (200 BC)", "Tayuan Temple White Pagoda", "Tibetan Yellow Monastery (Pusading)", "North Terrace summit (3,058m)"],
+    bestSeason: "Jun–Sep — the high altitude makes summers cool (average 12°C) even when the plains are baking. Autumn has brilliant foliage and quiet pilgrimage crowds. April–May has late snow and fewer tourists.",
+    attractions: [
+      { name: "Tayuan Temple (White Pagoda)", nameZh: "塔院寺·大白塔", type: "Culture", duration: "1.5 hours", description: "The 56m white chorten at the centre of the mountain town — the most iconic structure at Wutai Mountain, built in the Yuan dynasty. Prayer wheel corridors surround the base.", tips: "The morning kora (circumambulation) by pilgrims around the white pagoda, usually starting at 5–6am, is deeply moving to witness." },
+      { name: "Xiantong Temple", nameZh: "显通寺", type: "Culture", duration: "2 hours", description: "The oldest and largest temple complex at Wutai Mountain — founded in the Eastern Han dynasty (68 AD), with 400+ rooms across 7 courtyards. The Bronze Hall (铜殿) and the cast-iron White Pagoda replicas are extraordinary craftsmanship.", tips: "Free entry. The rear of the temple is quieter and has the most ancient architecture. Morning prayer is at 4:30am." },
+      { name: "North Terrace Summit (Beitai Dingyue)", nameZh: "北台顶·叶斗峰", type: "Nature", duration: "Full day hike or 3h by road", description: "The highest of the five terraces at 3,058m — accessible by 4WD road or a full-day hike. The sub-alpine landscape above 2,800m is treeless and dramatic, with the other four peaks visible on clear days.", tips: "Hire a local jeep from the town (¥300–400 return, fits 4–5 people) to reach the summit. The Lingying Temple at the summit is the highest Buddhist temple in China." },
+    ],
+    food: [
+      { name: "Wutaishan Vegetarian Mushroom Dishes", nameZh: "五台山素食", description: "The mountain's cool, damp climate produces exceptional wild mushrooms. Temple restaurants serve vegetarian versions of classic Shanxi dishes using local morels, wood ear, and chanterelles.", mustTry: true, where: "Temple guesthouses and vegetarian restaurants in Taihuai town" },
+    ],
+    transportation: [
+      { mode: "🚌 Bus from Datong or Taiyuan", details: "Datong to Wutaishan: 2.5h by bus. Taiyuan to Wutaishan: 2.5h. No HSR directly — nearest station is Xinzhou North (1h by bus). Beijing: 4.5h by bus (direct from Beijing Liuliqiao)." },
+    ],
+    accommodation: "Taihuai town guesthouses and hotels (¥200–600). Temple guesthouses inside the compounds (¥80–200, simple but unmissable atmosphere). Book ahead for summer weekends.",
+    travelTips: [
+      "The mountain is cold year-round — bring a fleece and waterproof even in summer. July/August temperatures average 12–18°C.",
+      "Pilgrimage season (summer) brings intense crowds — visiting weekdays in September is the best balance of good weather and manageable numbers.",
+    ],
+  },
+
+  jiayuguan: {
+    id: "jiayuguan", nameZh: "嘉峪关", nameEn: "Jiayuguan",
+    province: "gansu", provinceZh: "甘肃",
+    tagline: "The western end of the Great Wall",
+    description: "Jiayuguan Fort is where the Great Wall ends — the westernmost fortress of the Ming dynasty, built in 1372 where the Qilian Mountains and Hei Mountains funnel into a 15km-wide corridor. Beyond this gate was 'beyond the passes' (关外) — the outer darkness of the Silk Road and the Gobi Desert. The fort is the most complete Ming military complex still standing.",
+    image: "https://images.unsplash.com/photo-1565128939960-1ec0a5e46e93?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1565128939960-1ec0a5e46e93?w=1600&h=900&fit=crop",
+    highlights: ["Jiayuguan Fort (Ming, 1372)", "First Pier of the Great Wall", "Overhanging Great Wall section", "Gobi Desert with Qilian snow backdrop"],
+    bestSeason: "Apr–Oct — the snow on Qilian Mountains behind the fort is most visible in spring and after autumn rain. Summer is hot (35°C) but the desert light is dramatic. Winter is very cold (−15°C).",
+    attractions: [
+      { name: "Jiayuguan Fort", nameZh: "嘉峪关关城", type: "Culture", duration: "2.5 hours", description: "The complete Ming military compound — three concentric walls, watchtowers, armories, and a theatre for garrison entertainment. The outer barbican gate faces west toward the Silk Road; the inner gate east toward China. The 9m-high wall circuit walk takes 45 minutes.", tips: "Combined ticket (¥120) covers the fort, Overhanging Wall, and First Pier. The sunset on the walls with Qilian Mountain backdrop is extraordinary." },
+      { name: "Overhanging Great Wall (Xuanbi Changcheng)", nameZh: "悬壁长城", type: "Culture", duration: "1.5 hours", description: "A section of Wall climbing near-vertically up the Hei Mountain cliff face — the 'Hanging Wall' for which Jiayuguan is named. The contrast of the grey stone wall against orange-red cliff is dramatic.", tips: "A 20-min climb to the top viewpoint gives the classic aerial view of the Wall meeting the cliff. Accessible by taxi from the main fort (¥20)." },
+      { name: "First Pier of the Great Wall", nameZh: "长城第一墩", type: "Culture", duration: "1 hour", description: "The southernmost anchor of the Great Wall at Jiayuguan — a single earthen pier standing in the Yellow River floodplain, marking the absolute terminus of the wall system.", tips: "The view back from the pier across the flat Gobi toward the fort silhouette is one of the most desolate and atmospheric in the northwest." },
+    ],
+    food: [
+      { name: "Gobi Lamb Rack", nameZh: "戈壁滩羊排", description: "Lamb from the Gobi Desert — grazed on sparse desert vegetation that concentrates the flavour. Grilled with cumin and chilli on an open coal grill.", mustTry: true, where: "Barbecue restaurants on Jiayuguan East Road" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Jiayuguan South Station on the Lanzhou-Xinjiang HSR. Zhangye: 40 min. Dunhuang: 1.5h. Lanzhou: 2.5h. Urumqi: 4h." },
+    ],
+    accommodation: "City centre (¥150–400). The fort area has a small cluster of guesthouses (¥180–350).",
+    travelTips: [
+      "Jiayuguan is a natural 1-night stop on the Silk Road HSR route between Zhangye and Dunhuang.",
+    ],
+  },
+
+  dandong: {
+    id: "dandong", nameZh: "丹东", nameEn: "Dandong",
+    province: "liaoning", provinceZh: "辽宁",
+    tagline: "China's border with North Korea & the Tiger Mountain Wall",
+    description: "Dandong is China's largest border city with North Korea — separated by the Yalu River. From the riverfront promenade you can see North Korean villages, factories, and occasional people with binoculars. The Tiger Mountain Great Wall is the easternmost point of the Ming Wall; the Broken Bridge (part-bombed by US forces in the Korean War) reaches halfway across the river.",
+    image: "https://images.unsplash.com/photo-1509629179375-1c38ad17e47c?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1509629179375-1c38ad17e47c?w=1600&h=900&fit=crop",
+    highlights: ["Yalu River Broken Bridge", "Tiger Mountain Great Wall (eastern end)", "North Korean border scenery", "Korean Nationality Street"],
+    bestSeason: "May–Oct — warm and green. The Yalu River is at its most scenic in autumn (Sep–Oct) with foliage on both banks. Spring cherry blossoms are excellent.",
+    attractions: [
+      { name: "Yalu River Broken Bridge", nameZh: "鸭绿江断桥", type: "Culture", duration: "1.5 hours", description: "The bridge bombed by US aircraft in November 1950 — the Chinese side still extends into the river, ending abruptly mid-span. From the walkway, North Korean border infrastructure is clearly visible.", tips: "Entry ¥30. The boat tour on the Yalu River (¥60) gets even closer to the DPRK bank — you can see the Sinuiju buildings and occasionally people going about their day." },
+      { name: "Tiger Mountain Great Wall (Hushan)", nameZh: "虎山长城", type: "Culture", duration: "2.5 hours", description: "The easternmost section of the Ming Great Wall — a restored fortress and wall segment with the Yalu River visible from every tower. The terminus pavilion looks directly across to North Korea's Wihwa Island.", tips: "Entry ¥60. The hike up the wall takes 2 hours. The museum inside explains the Great Wall's eastern terminus history." },
+    ],
+    food: [
+      { name: "Korean Cold Noodles (Naengmyeon)", nameZh: "朝鲜冷面", description: "Buckwheat noodles in ice-cold beef broth with pickled radish and egg — Dandong's large Korean-Chinese community makes the most authentic naengmyeon outside Korea.", mustTry: true, where: "Korean restaurants on Korean Nationality Street (朝鲜族风情街)" },
+      { name: "Yalu River Fish", nameZh: "鸭绿江鱼", description: "Fresh river fish — crucian carp and catfish from the Yalu, braised in soy, garlic, and dried chilli.", mustTry: false, where: "Riverside restaurants along the Jiangcheng Dajie promenade" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Dandong Station. Shenyang: 2h. Beijing: 4h. The old international train to Pyongyang (2x/week) still runs — foreigners need DPRK visa." },
+    ],
+    accommodation: "Riverside hotels with Yalu River views (¥250–600). Budget guesthouses in the old city (¥120–250).",
+    travelTips: [
+      "Photography of the North Korean side is freely permitted from Chinese territory — nobody will stop you, but pointing cameras at uniformed individuals or military is discouraged.",
+      "Boat tours on the Yalu River (1h, ¥60–100) are the most direct experience of the border reality — run daily from the Broken Bridge pier.",
+    ],
+  },
+
+  jilin_city: {
+    id: "jilin_city", nameZh: "吉林市", nameEn: "Jilin City",
+    province: "jilin", provinceZh: "吉林",
+    tagline: "Rime ice forests on the Songhua River",
+    description: "Jilin City (not to be confused with Jilin Province) is famous for one of China's rarest natural phenomena — songhua (松花) rime ice. Nuclear power plant warm water discharged into the Songhua River prevents it from freezing, and the steam freezing on riverside willows and pines in sub-zero air creates a forest of white crystal trees that glow silver in winter sunlight.",
+    image: "https://images.unsplash.com/photo-1601766994656-00d5c8b89f71?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1601766994656-00d5c8b89f71?w=1600&h=900&fit=crop",
+    highlights: ["Songhua Rime Ice trees (Jan–Feb)", "Beidahu Ski Resort", "Catholic Cathedral", "Wulashan Forest Park autumn"],
+    bestSeason: "Jan–Feb for rime ice (peak: January). Sep–Oct for spectacular autumn foliage. Skiing Nov–Mar at Beidahu (2h away).",
+    attractions: [
+      { name: "Songhua Rime Ice Viewing", nameZh: "松花江雾凇", type: "Nature", duration: "3 hours", description: "The Jiangnan Park and Linjiang Road stretch of the Songhua River — overnight the willows and pines coat themselves in white ice crystals from the river fog. The morning view (8–10am when the crystals are freshest) is extraordinary.", tips: "The phenomenon is best when temperature is −15°C or below. Jiangnan Park (江南公园) and the riverfront south of Beihua University are the best spots. Free viewing — no ticket needed." },
+      { name: "Beidahu Ski Resort", nameZh: "北大壶滑雪场", type: "Nature", duration: "Full day", description: "One of northeast China's finest ski resorts — 51 runs, Olympic-grade facilities, and the famous 'China's powder' effect of cold dry Manchurian snow.", tips: "2h from Jilin city by highway. All-inclusive packages (lift, rental, bus) available from city hotels (¥300–500/day)." },
+    ],
+    food: [
+      { name: "Korean Dog Hotpot (Boshintang)", nameZh: "狗肉火锅", description: "Traditional Korean-Chinese winter hotpot considered medicinal — a cultural speciality of the Chaoxianzu (ethnic Korean) community in Jilin.", mustTry: false, where: "Korean neighbourhood restaurants on Jilin's east side" },
+      { name: "Jilin Sour Cabbage Fish", nameZh: "酸菜炖鱼", description: "Northeast China's most beloved pairing — river fish stewed with fermented sour cabbage in a deep clay pot. The acid cuts through the fish richness perfectly.", mustTry: true, where: "Dongbei cuisine restaurants throughout the city" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Jilin Station on the Changchun-Jilin intercity HSR. Changchun: 25 min. Harbin: 1.5h via Changchun." },
+    ],
+    accommodation: "City centre riverfront hotels (¥200–500). During rime ice season, these fill months in advance — book early.",
+    travelTips: [
+      "The rime ice phenomenon is unpredictable — it requires a specific combination of temperature and wind. A 3-night stay increases the chance of witnessing a perfect morning.",
+      "Jilin city is 60km from Changchun — makes an easy day trip or overnight from the provincial capital.",
+    ],
+  },
+
+  mohe: {
+    id: "mohe", nameZh: "漠河", nameEn: "Mohe",
+    province: "heilongjiang", provinceZh: "黑龙江",
+    tagline: "China's northernmost city — Northern Lights & midnight sun",
+    description: "Mohe County (53.5°N) is the northernmost inhabited area of China — sitting on the banks of the Amur River on the Russian border. In winter, the Northern Lights (aurora borealis) are visible on clear nights; in midsummer the sun barely sets, and in January the temperature regularly drops to −50°C. The Siberian taiga here is primeval boreal forest largely unchanged since the last ice age.",
+    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1600&h=900&fit=crop",
+    highlights: ["Northern Lights viewing (Jan–Feb)", "China's Pole of Cold (−52.3°C record)", "Midnight sun (late June)", "Siberian tiger habitat"],
+    bestSeason: "Dec–Feb for Northern Lights and extreme cold experiences. Jun 21–25 for midnight sun. The summer (Jun–Aug) is surprisingly green and comfortable (+25°C).",
+    attractions: [
+      { name: "Northern Pole of China / Arctic Village", nameZh: "北极村", type: "Landmark", duration: "Half day", description: "The northernmost village in China — the Amur River marks the Russian border and the horizon reveals Siberia. A stone monument marks the 53.5°N latitude. In winter, aurora viewing tours depart from here at 10pm.", tips: "The Northern Lights are visible 30–40 nights per year between November and February. Best aurora conditions: temperature below −20°C, clear skies, new moon. A local aurora guide (¥200–300) is worth hiring." },
+      { name: "Mohe Qixing Nature Reserve", nameZh: "漠河七星峰", type: "Nature", duration: "Full day", description: "Ancient boreal forest — stands of Siberian larch, Dahurian birch, and Korean pine completely untouched since the 1987 Great Black Dragon Fire. Wolverine, lynx, and Amur leopard tracks in the snow.", tips: "Accessible only with a local guide (¥300–500/day) in winter. Summer hiking is independent. The fire lookout tower at 800m has panoramic taiga views." },
+    ],
+    food: [
+      { name: "Smoked Amur Fish", nameZh: "黑龙江熏鱼", description: "Fish from the Amur (Black Dragon) River smoked over local pine — deeply flavoured, preserved by cold. The summer fish run brings enormous catches of kaluga, carp, and perch.", mustTry: true, where: "Fish markets and restaurants in Mohe town" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Mohe Gulian Airport (OHE) — small regional airport, flights from Harbin (1.5h) and Beijing. In winter, limited frequency — check ahead." },
+      { mode: "🚌 Overland from Harbin", details: "16h by overnight bus or train — possible but very long. Air is strongly recommended." },
+    ],
+    accommodation: "Mohe town guesthouses (¥150–350). Arctic Village lodges specifically for aurora viewing (¥300–600). Warm-up rooms are essential — choose accommodation with 24-hour heating guarantees.",
+    travelTips: [
+      "The cold at Mohe in January is genuinely dangerous — proper Arctic clothing (rated to −50°C) is not optional. Rental available in Mohe town.",
+      "The midsummer midnight sun (June 21) creates 19+ hours of daylight — the sun barely dips below the horizon at midnight. A remarkable phenomenon.",
+    ],
+  },
+
+  zhongwei: {
+    id: "zhongwei", nameZh: "中卫", nameEn: "Zhongwei",
+    province: "ningxia", provinceZh: "宁夏",
+    tagline: "Where the Tengger Desert meets the Yellow River",
+    description: "Zhongwei County presents one of China's most dramatic landscape contrasts — the Tengger Desert's singing sand dunes advance directly to the bank of the Yellow River at Shapotou, where you can stand with feet in river sand and look back at a 200m dune. The region is also China's leading base for sand-control engineering: the first desert railway in the world was kept operational by local straw-checkerboard planting.",
+    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1600&h=900&fit=crop",
+    highlights: ["Shapotou Desert-meets-river scenery", "Singing sand dunes (鸣沙山)", "Yellow River sheepskin raft", "Desert geopark stargazing"],
+    bestSeason: "Apr–Oct — warm and accessible. Summer evenings in the desert are the best stargazing in Ningxia. Autumn (Sep–Oct) is ideal with cooler temperatures and clear skies.",
+    attractions: [
+      { name: "Shapotou Scenic Area", nameZh: "沙坡头旅游景区", type: "Nature", duration: "Half day", description: "The iconic landscape — the Tengger Desert dune crest rising immediately behind the Yellow River. Zip-lines from the dune top down to the river (¥80), camel rides, and sheepskin raft river crossings are the main activities.", tips: "Entry ¥80. Morning (8–10am) is best for photography — the low light on the dunes before the crowds. Avoid Saturday–Sunday in summer when the site is packed." },
+      { name: "Tengger Desert Camp", nameZh: "腾格里沙漠营地", type: "Nature", duration: "Overnight", description: "Desert camping 20km inside the Tengger — no light pollution, Milky Way overhead, absolute silence. Camel treks at sunrise reach isolated dune fields far from the tourist zone.", tips: "Several operators run 2-day desert camping trips (¥600–900/person all-inclusive) departing from Zhongwei." },
+    ],
+    food: [
+      { name: "Tan Sheep Roasted Whole", nameZh: "滩羊全席", description: "Ningxia's Tan sheep (raised on riverside grass) is considered China's finest lamb — entire roasted, served at the table by the shoulder.", mustTry: true, where: "Traditional restaurants in Zhongwei old city" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Zhongwei South Station. Yinchuan: 45 min. Lanzhou: 2.5h. Xi'an: 3h." },
+    ],
+    accommodation: "Zhongwei city centre (¥150–350). Desert eco-lodges near Shapotou (¥300–700). Desert camping operators include accommodation in their packages.",
+    travelTips: [
+      "Combine with Yinchuan on a 2-night Ningxia circuit — the Western Xia tombs and Shapotou together give an excellent overview of the region.",
+    ],
+  },
+
+  ejina: {
+    id: "ejina", nameZh: "额济纳", nameEn: "Ejina",
+    province: "neimenggu", provinceZh: "内蒙古",
+    tagline: "Poplar forests that turn gold in October",
+    description: "Ejina Banner (also called Ejinaqi) is the most remote inhabited area in Inner Mongolia — an oasis town in the Gobi Desert fed by the Heihe River, surrounded by 40,000 acres of ancient Euphrates poplar (胡杨树). In the first two weeks of October, these trees turn an extraordinary hammered-gold before dropping their leaves — one of China's most photographed seasonal spectacles.",
+    image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?w=1600&h=900&fit=crop",
+    highlights: ["Euphrates poplar (胡杨) autumn gold", "Juyan Lake (Han dynasty ruins)", "Black City (Khara-Khoto ruins)", "Gobi Desert stargazing"],
+    bestSeason: "Oct 1–20 — the poplar gold season. The peak usually runs October 5–15, but varies by year. Summer (Jun–Aug) is very hot (42°C). Spring has sandstorms.",
+    attractions: [
+      { name: "Euphrates Poplar Forest", nameZh: "胡杨林", type: "Nature", duration: "Full day", description: "Numbered zones (1号~8号) of ancient poplar groves — some trees are over 1,000 years old. In October, the entire forest glows gold against blue Gobi sky. The most dramatic zones are 2, 3, and 8.", tips: "The scenic area ticket (¥120) covers shuttle buses between zones. Zone 3 at sunrise and Zone 8 at sunset are the most photographed. October 1 Golden Week is overwhelming — visit week two of October instead." },
+      { name: "Black City (Khara-Khoto)", nameZh: "黑城遗址", type: "Culture", duration: "2 hours", description: "A 12th-century Tangut Western Xia city abandoned after Timur's forces diverted the water supply in the 14th century — the ruins are exactly as they were left, half-buried in desert sand with the city walls still standing 9m tall.", tips: "50km from Ejina town; hire a car (¥200). The late afternoon light makes the rammed-earth ruins extremely photogenic." },
+    ],
+    food: [
+      { name: "Camel Milk Tea", nameZh: "驼奶茶", description: "Bactrian camel milk churned into salted tea — the traditional beverage of Mongolian herders in the Gobi region.", mustTry: true, where: "Tea houses and guesthouses in Ejina town" },
+    ],
+    transportation: [
+      { mode: "✈️ Air", details: "Ejina Airport (EJN) — flights from Hohhot (2h), Xi'an, and Yinchuan. Only practical access for the October season." },
+      { mode: "🚂 Rail", details: "Ejina Station on the Jilantai branch line. From Hohhot: ~10h by slow train. Air is strongly preferred for October visits." },
+    ],
+    accommodation: "Ejina town guesthouses and hotels (¥200–500). October 1–20: book 3 months ahead and expect 2× normal prices. Yurt camps outside the forest (¥300–600).",
+    travelTips: [
+      "October is the only reason most people visit Ejina — the poplar gold is extraordinary and worth the remoteness.",
+      "Combine with a visit to the Badain Jaran Desert dunes (200km south, accessible by 4WD) for one of China's most otherworldly landscapes.",
+    ],
+  },
+
+  qinhuangdao: {
+    id: "qinhuangdao", nameZh: "秦皇岛", nameEn: "Qinhuangdao",
+    province: "hebei", provinceZh: "河北",
+    tagline: "Where the Great Wall meets the Bohai Sea",
+    description: "Qinhuangdao holds the most dramatic moment in all of Chinese geography — at Shanhaiguan, the eastern end of the Ming Great Wall (老龙头) descends into the Bohai Sea, its last tower rising from the surf. The city is also the gateway to Beidaihe beach, a favourite summer retreat since the Qing dynasty (Empress Dowager Cixi summered here), and a major migratory bird flyway.",
+    image: "https://images.unsplash.com/photo-1525038083052-41b3b8c91e55?w=800&h=500&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1525038083052-41b3b8c91e55?w=1600&h=900&fit=crop",
+    highlights: ["Old Dragon Head (Great Wall meets sea)", "Shanhaiguan First Pass Under Heaven", "Beidaihe bird migration", "Nandaihe Beach"],
+    bestSeason: "May–Sep — beach season and bird migration (late Apr–May for spring migration, Aug–Sep for autumn). Avoid mid-summer (July–August) when it becomes extremely crowded.",
+    attractions: [
+      { name: "Old Dragon Head (Laolongtou)", nameZh: "老龙头", type: "Culture", duration: "2 hours", description: "The terminal pier and tower of the Ming Great Wall entering the Bohai Sea — the Wall's eastern terminus, rebuilt in Ming dynasty and restored in the 1980s. The sight of crenellated battlements rising from the waves is unique in China.", tips: "Entrance ¥120 (combined with Shanhaiguan complex). High tide makes the most dramatic photos — check tide times at the ticket office." },
+      { name: "Shanhaiguan First Pass", nameZh: "山海关天下第一关", type: "Culture", duration: "2 hours", description: "The Gate Tower inscribed 'First Pass Under Heaven' (天下第一关) — the strategic gateway that divided China from the 'barbarian north' for 600 years. The town inside the walls is a preserved Ming-era settlement.", tips: "Entry ¥60. The Gate Tower interior has exhibition on the Wall's history. The walls of the town can be walked for 3km." },
+      { name: "Beidaihe Bird Watching", nameZh: "北戴河观鸟", type: "Nature", duration: "Half day", description: "One of Asia's top 10 bird migration sites — the Beidaihe Bird Ringing Station records 400+ species during spring and autumn passage, including rare raptors and waders.", tips: "The Beidaihe Ringing Station is open to visitors during migration seasons (Apr–May, Aug–Sep). The Lianfeng Mountain Forest Park is the best urban birding location." },
+    ],
+    food: [
+      { name: "Beidaihe Hairy Crab", nameZh: "北戴河梭子蟹", description: "Portunus crab from the cold Bohai waters — significantly more flavourful than Shanghai's freshwater crab. Steamed simply with vinegar-ginger dipping sauce.", mustTry: true, where: "Seafood restaurants on Beidaihe's beach strip (September–October crab season)" },
+    ],
+    transportation: [
+      { mode: "🚄 High-speed rail", details: "Qinhuangdao Station or Beidaihe Station. Beijing: 1.5h. Shenyang: 2h. Tianjin: 1h." },
+    ],
+    accommodation: "Beidaihe beach hotels (¥200–600, book 2 months ahead for August). Shanhaiguan old town guesthouses (¥150–350). Off-season (Oct–May) prices drop significantly.",
+    travelTips: [
+      "August is the most crowded month in Beidaihe's history — the town effectively doubles in population. Visit May or September for calm beaches and good weather.",
+    ],
+  },
+
 };
 
 // ── Helper exports ────────────────────────────────────────────────────────────
@@ -6164,16 +7008,16 @@ export const PRIORITY_CITIES = Object.values(CITY_DETAILS);
 
 /** City IDs grouped by region */
 export const CITIES_BY_REGION = {
-  north:        ["beijing_city", "tianjin_city", "jinan", "qingdao", "taishan", "qufu", "chengde", "datong", "pingyao"],
-  northeast:    ["shenyang", "dalian", "changbaishan", "harbin", "hulunbuir"],
-  east:         ["shanghai_city", "hangzhou", "ningbo", "shaoxing", "zhoushan", "nanjing", "suzhou", "yangzhou", "wuxi", "xiamen", "wuyishan"],
-  central:      ["xian", "luoyang", "kaifeng", "dengfeng", "wuhan", "wudangshan", "enshi", "yichang"],
-  southwest:    ["chengdu", "chongqing", "leshan", "emeishan", "jiuzhaigou", "guiyang", "kaili", "zhenyuan", "huangguoshu", "kunming", "lijiang", "dali", "xishuangbanna"],
-  south:        ["guangzhou", "shenzhen", "guilin", "yangshuo", "nanning", "sanya", "haikou", "zhangjiajie", "changsha", "fenghuang", "yueyang"],
-  anhui:        ["huangshan", "hongcun", "hefei", "wuyuan_an"],
-  jiangxi:      ["jingdezhen", "lushan", "nanchang"],
-  tibet:        ["lhasa", "shigatse", "nyingchi", "namtso"],
-  xinjiang:     ["kashgar", "urumqi", "turpan", "ili"],
-  qinghai:      ["xining", "qinghai_lake", "tongren_qh", "golmud"],
-  northwest:    ["dunhuang", "zhangye", "yinchuan", "hohhot"],
+  north:        ["beijing_city", "yanqing", "tianjin_city", "jizhou", "jinan", "qingdao", "taishan", "qufu", "yantai", "chengde", "qinhuangdao", "datong", "pingyao", "wutaishan"],
+  northeast:    ["shenyang", "dalian", "dandong", "changbaishan", "jilin_city", "harbin", "mohe", "hulunbuir", "ejina"],
+  east:         ["shanghai_city", "zhujiajiao", "hangzhou", "ningbo", "shaoxing", "zhoushan", "wuzhen", "nanjing", "suzhou", "yangzhou", "wuxi", "zhenjiang", "xiamen", "wuyishan", "quanzhou"],
+  central:      ["xian", "yanan", "luoyang", "kaifeng", "dengfeng", "anyang", "wuhan", "wudangshan", "enshi", "yichang", "shennongjia"],
+  southwest:    ["chengdu", "chongqing", "wulong", "leshan", "emeishan", "jiuzhaigou", "daocheng", "guiyang", "kaili", "zhenyuan", "huangguoshu", "libo", "kunming", "lijiang", "dali", "xishuangbanna", "shangrila"],
+  south:        ["guangzhou", "shenzhen", "zhuhai", "guilin", "yangshuo", "nanning", "beihai", "sanya", "haikou", "wenchang", "zhangjiajie", "changsha", "fenghuang", "yueyang", "hengshan"],
+  anhui:        ["huangshan", "hongcun", "hefei", "wuyuan_an", "jiuhuashan"],
+  jiangxi:      ["jingdezhen", "lushan", "nanchang", "longhushan"],
+  tibet:        ["lhasa", "shigatse", "nyingchi", "namtso", "zhada"],
+  xinjiang:     ["kashgar", "urumqi", "turpan", "ili", "kanas"],
+  qinghai:      ["xining", "qinghai_lake", "tongren_qh", "golmud", "qilian"],
+  northwest:    ["dunhuang", "zhangye", "jiayuguan", "yinchuan", "zhongwei", "hohhot"],
 } as const;
