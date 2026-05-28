@@ -1,44 +1,55 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* ── Design-system tokens ──────────────────────────────────────────── */
+  --pine:      #1F3D33;   /* primary brand — deep pine green             */
+  --gold:      #B89A5E;   /* accent — muted antique gold                 */
+  --bg:        #F7F1E8;   /* base background — warm ivory paper          */
+  --card-bg:   #FFFCF5;   /* card surfaces — lightest ivory              */
+  --ink:       #1F1A17;   /* primary text — deep ink black               */
+  --muted-ink: #7B746A;   /* secondary text — warm grey                  */
+  --line:      #E3D6C2;   /* borders / dividers — warm tan               */
+  --soft:      #EFE7D8;   /* subtle fill / secondary background          */
+
+  /* ── Tailwind semantic mappings ────────────────────────────────────── */
   --font-size: 16px;
-  --background: #F7F5F2;
-  --foreground: #18140F;
-  --card: #FFFFFF;
-  --card-foreground: #18140F;
-  --popover: #FFFFFF;
-  --popover-foreground: #18140F;
-  --primary: #3d5a3e;
-  --primary-foreground: #FFFFFF;
-  --secondary: #EDE8E2;
-  --secondary-foreground: #18140F;
-  --muted: #E5DFD8;
-  --muted-foreground: #7A6F69;
-  --accent: #18140F;
-  --accent-foreground: #F7F5F2;
-  --destructive: #CC2B1E;
-  --destructive-foreground: #FFFFFF;
-  --border: rgba(24, 20, 15, 0.09);
+  --background: #F7F1E8;
+  --foreground: #1F1A17;
+  --card: #FFFCF5;
+  --card-foreground: #1F1A17;
+  --popover: #FFFCF5;
+  --popover-foreground: #1F1A17;
+  --primary: #1F3D33;
+  --primary-foreground: #F7F1E8;
+  --secondary: #EFE7D8;
+  --secondary-foreground: #1F1A17;
+  --muted: #E3D6C2;
+  --muted-foreground: #7B746A;
+  --accent: #1F1A17;
+  --accent-foreground: #F7F1E8;
+  --destructive: #8B3A2A;
+  --destructive-foreground: #F7F1E8;
+  --border: #E3D6C2;
   --input: transparent;
-  --input-background: #F0EDE8;
-  --switch-background: #C9C1BA;
+  --input-background: #EFE7D8;
+  --switch-background: #C5B99E;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #3d5a3e;
-  --chart-1: #3d5a3e;
-  --chart-2: #D4A843;
-  --chart-3: #5A8A6A;
-  --chart-4: #4A7AAA;
-  --chart-5: #A0522D;
+  --ring: #1F3D33;
+  --chart-1: #1F3D33;
+  --chart-2: #B89A5E;
+  --chart-3: #4A7A5A;
+  --chart-4: #5A7A8A;
+  --chart-5: #8A5A3A;
   --radius: 0.75rem;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #18140F;
-  --sidebar-primary: #3d5a3e;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #EDE8E2;
-  --sidebar-accent-foreground: #18140F;
-  --sidebar-border: rgba(24, 20, 15, 0.09);
-  --sidebar-ring: #CC2B1E;
+  --sidebar: #FFFCF5;
+  --sidebar-foreground: #1F1A17;
+  --sidebar-primary: #1F3D33;
+  --sidebar-primary-foreground: #F7F1E8;
+  --sidebar-accent: #EFE7D8;
+  --sidebar-accent-foreground: #1F1A17;
+  --sidebar-border: #E3D6C2;
+  --sidebar-ring: #1F3D33;
 }
 
 .dark {
@@ -127,11 +138,6 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
 
   html {
     font-size: var(--font-size);

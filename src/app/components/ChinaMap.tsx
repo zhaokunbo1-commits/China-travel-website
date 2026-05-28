@@ -214,10 +214,10 @@ function ProvinceHoverCard({
 
 // ── Season fill colours ───────────────────────────────────────────────────────
 const SEASON_FILL: Record<string, string> = {
-  spring: "#82c46c",   // fresh green
-  summer: "#4aa8d0",   // ocean blue
-  autumn: "#d4874a",   // warm amber
-  winter: "#6a9fd4",   // icy blue
+  spring: "#4A7A5A",   // muted sage green
+  summer: "#4A7A8A",   // muted teal-slate
+  autumn: "#8A6A3A",   // warm umber
+  winter: "#5A6A7A",   // cool slate blue
 };
 
 // ── Main component ────────────────────────────────────────────────────────────
@@ -284,7 +284,7 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
 
   if (loading) {
     return (
-      <div className="w-full h-[520px] flex flex-col items-center justify-center gap-3 bg-[#f5f0e8] rounded-2xl">
+      <div className="w-full h-[520px] flex flex-col items-center justify-center gap-3 bg-[#EFE7D8] rounded-2xl">
         <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
         <p className="text-sm text-muted-foreground font-['DM_Mono'] tracking-wide">
           Loading map…
@@ -295,7 +295,7 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
 
   if (error || !geoData) {
     return (
-      <div className="w-full h-[520px] flex flex-col items-center justify-center gap-3 bg-[#f5f0e8] rounded-2xl">
+      <div className="w-full h-[520px] flex flex-col items-center justify-center gap-3 bg-[#EFE7D8] rounded-2xl">
         <MapPin size={32} className="text-muted-foreground" />
         <p className="text-sm text-muted-foreground">
           Map failed to load — please check your connection
@@ -351,8 +351,8 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
             </filter>
           </defs>
 
-          {/* Ocean background */}
-          <rect x="0" y="0" width={W} height={H} fill="#b8d4ea" rx="16" />
+          {/* Ocean background — warm muted slate, no textbook blue */}
+          <rect x="0" y="0" width={W} height={H} fill="#C8D5D8" rx="16" />
 
           {/* Province paths — NOT clipped so shadows aren't cut off */}
           <g clipPath="url(#mapClip)">
@@ -373,14 +373,14 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
               const isSeasonDimmed = !!id && !!seasonFilter && !seasonFilter.provinceIds.includes(id);
 
               const fill = isSelected
-                ? "#c1281b"
+                ? "#1F3D33"
                 : isHovered && clickable
-                ? "#c1281b"
+                ? "#1F3D33"
                 : seasonFilter
-                ? (isSeasonHighlight ? SEASON_FILL[seasonFilter.season] : "#ccc8c0")
+                ? (isSeasonHighlight ? SEASON_FILL[seasonFilter.season] : "#C8C0B4")
                 : isActive
-                ? "#c8a96e"
-                : "#e8e0d2";
+                ? "#B89A5E"
+                : "#DDD4C0";
 
               return (
                 <g
@@ -434,7 +434,7 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
                       dominantBaseline="middle"
                       fontSize={isHovered || isSelected ? 10 : 8.5}
                       fontWeight={isHovered || isSelected ? "600" : "400"}
-                      fill={isHovered || isSelected ? "white" : "#555"}
+                      fill={isHovered || isSelected ? "#F7F1E8" : "#6B6258"}
                       style={{
                         pointerEvents: "none",
                         userSelect: "none",

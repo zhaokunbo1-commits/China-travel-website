@@ -96,8 +96,8 @@ const FOUR_WAYS: ThemeWay[] = [
       "Yunnan's highland minority villages",
     ],
     image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=920&fit=crop&auto=format",
-    overlayFrom: "rgba(20,38,20,0.95)",
-    accentColor: "#8dba78",
+    overlayFrom: "rgba(15,30,20,0.94)",
+    accentColor: "#7aaa84",
   },
   {
     id: "future",
@@ -110,8 +110,8 @@ const FOUR_WAYS: ThemeWay[] = [
       "Shenzhen — a fishing village forty years ago",
     ],
     image: "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=600&h=920&fit=crop&auto=format",
-    overlayFrom: "rgba(8,18,40,0.95)",
-    accentColor: "#5ab8cc",
+    overlayFrom: "rgba(8,16,32,0.94)",
+    accentColor: "#6ab8c8",
   },
   {
     id: "classical",
@@ -124,8 +124,8 @@ const FOUR_WAYS: ThemeWay[] = [
       "Suzhou's private classical gardens",
     ],
     image: "https://images.unsplash.com/photo-1590301729964-23833732ee04?w=600&h=920&fit=crop&auto=format",
-    overlayFrom: "rgba(34,12,8,0.95)",
-    accentColor: "#c8a96e",
+    overlayFrom: "rgba(28,10,6,0.94)",
+    accentColor: "#B89A5E",
   },
   {
     id: "silkroad",
@@ -138,8 +138,8 @@ const FOUR_WAYS: ThemeWay[] = [
       "Kashgar's old city bazaar",
     ],
     image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&h=920&fit=crop&auto=format",
-    overlayFrom: "rgba(42,18,6,0.95)",
-    accentColor: "#d4a843",
+    overlayFrom: "rgba(36,16,6,0.94)",
+    accentColor: "#C8A84A",
   },
 ];
 
@@ -436,7 +436,7 @@ function HomePage() {
           </p>
           <h1 className="font-['Instrument_Serif'] text-5xl sm:text-6xl lg:text-[5.5rem] text-white leading-[1.02] tracking-tight mb-6 max-w-3xl">
             One country.<br />
-            <span style={{ color: "#c8a96e" }}>Four worlds.</span>
+            <span style={{ color: "#B89A5E" }}>Four worlds.</span>
           </h1>
           <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-xl mb-8">
             An independent guide to China's ancient capitals, mountain landscapes, future cities, and Silk Road frontier — written for first-time international visitors.
@@ -671,7 +671,7 @@ function HomePage() {
           </div>
 
           {/* Map */}
-          <div className="relative bg-[#e8e4dc] rounded-2xl overflow-hidden border border-border/40">
+          <div className="relative bg-[#EFE7D8] rounded-2xl overflow-hidden border border-border">
             <ChinaMap
               onProvinceSelect={(id) => setSelectedProvince((prev) => (prev === id ? null : id))}
               selectedProvinceId={selectedProvince}
