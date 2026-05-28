@@ -1,0 +1,84 @@
+/* ── Destination Theme System ─────────────────────────────────────────────────
+ *
+ * Apply one of these classes to the page root element to activate a sub-world.
+ * Each theme overrides --primary (so all Tailwind text-primary / bg-primary /
+ * border-primary utilities inherit it) and exposes two extra tokens:
+ *
+ *   --theme-accent   Use inline for accent badges, underlines, decorative dots
+ *   --theme-soft     Use inline for subtle tinted backgrounds, pill fills
+ *
+ * The base design-system tokens (--gold, --ink, --line, --soft, etc.) are NOT
+ * changed — they stay consistent across all themes.
+ *
+ * Rules:
+ *   - Never mix theme classes on nested elements.
+ *   - Apply at the page wrapper level only.
+ *   - Always fall back to base system when no theme applies.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+/* Default tokens (base system) — theme variables resolve to global values */
+:root {
+  --theme-primary: #1F3D33;
+  --theme-accent:  #B89A5E;
+  --theme-soft:    #EFE7D8;
+}
+
+/* ── Theme 1 · Nature China ───────────────────────────────────────────────────
+ * Guilin, Zhangjiajie, Yunnan, Huangshan, Jiuzhaigou, Guizhou, Guangxi,
+ * Sichuan mountains, Fujian, Jiangxi.
+ * Mood: mist, mountains, rivers, bamboo, highland villages, slow travel.
+ */
+.theme-nature {
+  --theme-primary: #1F3D33;
+  --theme-accent:  #B89A5E;
+  --theme-soft:    #E8EEE8;
+  /* Tailwind semantic override */
+  --primary:             #1F3D33;
+  --primary-foreground:  #F7F1E8;
+  --ring:                #1F3D33;
+}
+
+/* ── Theme 2 · Future China ───────────────────────────────────────────────────
+ * Shanghai, Shenzhen, Guangzhou, Chongqing, Hangzhou (tech).
+ * High-speed rail, digital payments, robotics, drone shows, smart cities.
+ * Mood: clean cinematic futurism — not cheap cyberpunk.
+ */
+.theme-future {
+  --theme-primary: #142033;
+  --theme-accent:  #28C4D4;
+  --theme-soft:    #E8F4F6;
+  /* Tailwind semantic override */
+  --primary:             #142033;
+  --primary-foreground:  #F7F1E8;
+  --ring:                #142033;
+}
+
+/* ── Theme 3 · Classical China ────────────────────────────────────────────────
+ * Beijing, Xi'an, Suzhou, Hangzhou (heritage), Nanjing, Luoyang, Datong.
+ * Forbidden City, Great Wall, imperial gardens, temples, tea, calligraphy.
+ * Mood: imperial, refined heritage, quiet luxury.
+ */
+.theme-classical {
+  --theme-primary: #5A1F18;
+  --theme-accent:  #C8A45D;
+  --theme-soft:    #F1E6D8;
+  /* Tailwind semantic override */
+  --primary:             #5A1F18;
+  --primary-foreground:  #F7F1E8;
+  --ring:                #5A1F18;
+}
+
+/* ── Theme 4 · Silk Road China ────────────────────────────────────────────────
+ * Dunhuang, Gansu, Xinjiang, Qinghai, Ningxia, Inner Mongolia.
+ * Mogao Caves, desert routes, oasis towns, grottoes, plateau, caravan roads.
+ * Mood: desert light, cave murals, deep turquoise, terracotta earth.
+ */
+.theme-silkroad {
+  --theme-primary: #7A3E22;
+  --theme-accent:  #1F6F78;
+  --theme-soft:    #F0E0C6;
+  /* Tailwind semantic override */
+  --primary:             #7A3E22;
+  --primary-foreground:  #F7F1E8;
+  --ring:                #7A3E22;
+}

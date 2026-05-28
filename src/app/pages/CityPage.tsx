@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { CITY_DETAILS, type CityDetail } from "../data/cities";
 import { CITIES } from "../data/chinaData";
+import { getCityTheme, themeClass } from "../utils/themes";
 
 // ── Tab config ───────────────────────────────────────────────────────────────
 const TABS = [
@@ -171,14 +172,18 @@ export default function CityPage() {
   const raw = id ? (CITY_DETAILS[id] ?? (CITIES[id] ? adaptLegacyCity(CITIES[id]) : null)) : null;
   const city: CityDetail | null = raw;
 
+  // Determine and apply the thematic sub-world for this city
+  const theme = id ? getCityTheme(id) : "base";
+  const tc = themeClass(theme);
+
   if (!city) {
     return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center gap-4">
+      <div className={`min-h-screen bg-background flex flex-col items-center justify-center gap-4 ${tc}`}>
         <MapPin size={40} className="text-muted-foreground" />
         <p className="text-muted-foreground">City information not found.</p>
         <button
           onClick={() => navigate("/")}
-          className="bg-primary text-white px-4 py-2 rounded-lg text-sm"
+          className="bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm"
         >
           Back to Home
         </button>
@@ -187,10 +192,10 @@ export default function CityPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background font-['Plus_Jakarta_Sans']">
+    <div className={`min-h-screen bg-background font-['Plus_Jakarta_Sans'] ${tc}`}>
 
       {/* ── Nav ─────────────────────────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-3">
           <button
             onClick={() => navigate(`/province/${city.province}`)}
@@ -279,7 +284,7 @@ export default function CityPage() {
       </div>
 
       {/* ── Tabs ────────────────────────────────────────────────────────── */}
-      <div className="sticky top-14 z-40 bg-white/95 backdrop-blur-md border-b border-border">
+      <div className="sticky top-14 z-40 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex gap-0 overflow-x-auto [&::-webkit-scrollbar]:hidden">
             {TABS.map((tab) => {
@@ -324,7 +329,13 @@ export default function CityPage() {
                     <h3 className="font-semibold text-foreground text-base leading-snug">
                       {a.name}
                     </h3>
-                    <span className="text-[10px] font-['DM_Mono'] tracking-wide bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0">
+                    <span
+                      className="text-[10px] font-['DM_Mono'] tracking-wide px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0"
+                      style={{
+                        background: "var(--theme-soft)",
+                        color: "var(--theme-primary)",
+                      }}
+                    >
                       {a.category}
                     </span>
                   </div>
@@ -388,7 +399,14 @@ export default function CityPage() {
                       </p>
                     </div>
                     {f.must && (
-                      <span className="text-[10px] font-['DM_Mono'] bg-amber-50 text-amber-700 border border-amber-200 px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0">
+                      <span
+                        className="text-[10px] font-['DM_Mono'] px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 border"
+                        style={{
+                          background: "var(--theme-soft)",
+                          color: "var(--theme-primary)",
+                          borderColor: "color-mix(in srgb, var(--theme-accent) 30%, transparent)",
+                        }}
+                      >
                         Must Try
                       </span>
                     )}
@@ -493,15 +511,18 @@ export default function CityPage() {
                           {trip.nameZh}
                         </p>
                       </div>
-                      <span className="text-[10px] font-['DM_Mono'] tracking-wide bg-primary/10 text-primary px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0">
+                      <span
+                        className="text-[10px] font-['DM_Mono'] tracking-wide px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0"
+                        style={{ background: "var(--theme-soft)", color: "var(--theme-primary)" }}
+                      >
                         {trip.distance}
                       </span>
                     </div>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       {trip.description}
                     </p>
-                    <p className="text-primary text-sm font-medium italic">
-                      ✦ {trip.whyGo}
+                    <p className="text-sm italic leading-relaxed" style={{ color: "var(--theme-accent)" }}>
+                      {trip.whyGo}
                     </p>
                     {trip.adminNote && (
                       <div className="mt-3 pt-3 border-t border-border">

@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router";
 import { ArrowLeft, ChevronRight, MapPin, Clock, ArrowRight } from "lucide-react";
 import { PROVINCES, CITIES, type ProvinceInfo } from "../data/chinaData";
 import { CITY_DETAILS } from "../data/cities";
+import { getProvinceTheme, themeClass } from "../utils/themes";
 
 // Minimal shape needed to render a city card (shared by CityDetail & legacy CityInfo)
 type CityCardData = {
@@ -56,14 +57,18 @@ export default function ProvincePage() {
 
   const province = id ? PROVINCES[id] : null;
 
+  // Determine the thematic sub-world for this province
+  const theme = id ? getProvinceTheme(id) : "base";
+  const tc = themeClass(theme);
+
   if (!province) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center flex-col gap-4">
+      <div className={`min-h-screen bg-background flex items-center justify-center flex-col gap-4 ${tc}`}>
         <MapPin size={40} className="text-muted-foreground" />
         <p className="text-muted-foreground">Province not found.</p>
         <button
           onClick={() => navigate("/")}
-          className="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90"
+          className="bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm hover:bg-primary/90"
         >
           Back to Home
         </button>
@@ -83,10 +88,10 @@ export default function ProvincePage() {
     .filter((c): c is CityCardData => c !== null);
 
   return (
-    <div className="min-h-screen bg-background font-['Plus_Jakarta_Sans']">
+    <div className={`min-h-screen bg-background font-['Plus_Jakarta_Sans'] ${tc}`}>
 
       {/* ── Nav ─────────────────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
           <button
             onClick={() => navigate("/")}
@@ -135,7 +140,12 @@ export default function ProvincePage() {
             {province.highlights.map((h) => (
               <span
                 key={h}
-                className="text-xs font-['DM_Mono'] bg-secondary text-muted-foreground px-3 py-1 rounded-full"
+                className="text-xs font-['DM_Mono'] px-3 py-1.5 rounded-full border"
+                style={{
+                  background: "var(--theme-soft)",
+                  color: "var(--theme-primary)",
+                  borderColor: "color-mix(in srgb, var(--theme-accent) 25%, transparent)",
+                }}
               >
                 {h}
               </span>
