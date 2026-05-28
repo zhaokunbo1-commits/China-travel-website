@@ -97,7 +97,7 @@ export default function ProvincePage() {
           <span className="text-border">|</span>
           <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
             <Link to="/" className="hover:text-foreground transition-colors">
-              China Decoder
+              China Travel Compass
             </Link>
             <ChevronRight size={13} />
             <span className="text-foreground font-medium">{province.nameEn}</span>

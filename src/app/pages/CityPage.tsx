@@ -210,7 +210,7 @@ export default function CityPage() {
             const isMunicipality = city.nameZh === provinceShort;
             return (
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                <Link to="/" className="hover:text-foreground">China Decoder</Link>
+                <Link to="/" className="hover:text-foreground">China Travel Compass</Link>
                 {!isMunicipality && (
                   <>
                     <ChevronRight size={12} />

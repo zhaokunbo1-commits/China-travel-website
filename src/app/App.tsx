@@ -9,6 +9,7 @@ import {
 import ChinaMap from "./components/ChinaMap";
 import ProvincePage from "./pages/ProvincePage";
 import CityPage from "./pages/CityPage";
+import { Logo } from "./components/Logo";
 import { CITIES, HOT_CITIES, PROVINCES } from "./data/chinaData";
 import { CITY_DETAILS } from "./data/cities";
 
@@ -265,12 +266,10 @@ function HomePage() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border" : "bg-transparent"}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
           <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
-            <span className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="font-['Instrument_Serif'] text-white text-base leading-none select-none">解</span>
-            </span>
-            <span className={`font-semibold text-base tracking-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}>
-              China Decoder
-            </span>
+            <Logo
+              variant="nav"
+              textClass={`transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}
+            />
           </a>
           <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
@@ -688,7 +687,7 @@ function HomePage() {
           <div className="max-w-xl">
             <p className="font-['DM_Mono'] text-primary text-[11px] tracking-[0.3em] uppercase mb-4">Early access</p>
             <h2 className="font-['Instrument_Serif'] text-3xl sm:text-4xl text-foreground mb-4 leading-tight">Planning your first trip to China?</h2>
-            <p className="text-muted-foreground text-base leading-relaxed mb-8">Join early access and help shape China Decoder. Be first to get new city guides, tools, and travel packs — plus a direct line to tell us what you actually need.</p>
+            <p className="text-muted-foreground text-base leading-relaxed mb-8">Join early access and help shape China Travel Compass. Be first to get new city guides, tools, and travel packs — plus a direct line to tell us what you actually need.</p>
             {submitted ? (
               <div className="flex items-center gap-3 bg-card border border-primary/20 rounded-xl px-5 py-4">
                 <div className="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"><CheckCircle size={18} className="text-primary" /></div>
@@ -717,11 +716,8 @@ function HomePage() {
       <footer className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 bg-card border-t border-border">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-            <a href="#" className="flex items-center gap-2.5">
-              <span className="w-7 h-7 bg-primary rounded-md flex items-center justify-center">
-                <span className="font-['Instrument_Serif'] text-white text-sm leading-none select-none">解</span>
-              </span>
-              <span className="font-semibold text-foreground text-sm">China Decoder</span>
+            <a href="#">
+              <Logo variant="footer" />
             </a>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               {navLinks.map((link) => (
@@ -730,7 +726,7 @@ function HomePage() {
             </div>
           </div>
           <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <p className="text-xs font-['DM_Mono'] text-muted-foreground">© 2025 China Decoder · Free to use</p>
+            <p className="text-xs font-['DM_Mono'] text-muted-foreground">© 2025 China Travel Compass · Free to use</p>
             <p className="text-xs text-muted-foreground">Information is provided for guidance only. Always verify visa and entry requirements with official sources.</p>
           </div>
         </div>
