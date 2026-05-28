@@ -256,18 +256,20 @@ function HomePage() {
             <span className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
               <span className="font-['Instrument_Serif'] text-white text-base leading-none select-none">解</span>
             </span>
-            <span className="font-semibold text-foreground text-base tracking-tight">China Decoder</span>
+            <span className={`font-semibold text-base tracking-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}>
+              China Decoder
+            </span>
           </a>
           <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{link.label}</a>
+              <a key={link.href} href={link.href} className={`text-sm transition-colors duration-300 ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"}`}>{link.label}</a>
             ))}
           </div>
-          <a href="#waitlist" className="hidden md:inline-flex items-center gap-1.5 bg-primary text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors flex-shrink-0">
+          <a href="#waitlist" className={`hidden md:inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-colors flex-shrink-0 ${scrolled ? "bg-primary text-white hover:bg-primary/90" : "bg-white/15 backdrop-blur-sm text-white border border-white/30 hover:bg-white/25"}`}>
             Join Early Access
           </a>
-          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-1.5 rounded-md hover:bg-secondary transition-colors" aria-label="Toggle navigation">
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          <button onClick={() => setMenuOpen(!menuOpen)} className={`md:hidden p-1.5 rounded-md transition-colors ${scrolled ? "hover:bg-secondary" : "hover:bg-white/10"}`} aria-label="Toggle navigation">
+            {menuOpen ? <X size={20} className={scrolled ? "" : "text-white"} /> : <Menu size={20} className={scrolled ? "" : "text-white"} />}
           </button>
         </div>
         {menuOpen && (
@@ -285,20 +287,86 @@ function HomePage() {
         )}
       </nav>
 
-      {/* ── Hero + Map ─────────────────────────────────────────────── */}
-      <section id="map" className="pt-20 pb-6 px-4 sm:px-6 lg:px-8">
+      {/* ── Hero ───────────────────────────────────────────────────── */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        {/* Background image */}
+        <img
+          src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1920&h=1080&fit=crop&auto=format"
+          alt="China landscape"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Layered gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/45 to-black/70" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center gap-7 mt-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-['DM_Mono'] tracking-[0.2em] uppercase px-4 py-2 rounded-full border border-white/20">
+            <Sparkles size={10} />
+            For first-time visitors to China
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-['Instrument_Serif'] text-5xl sm:text-6xl lg:text-[5rem] text-white leading-[1.05] tracking-tight">
+            Decode China<br />
+            <em className="not-italic" style={{ color: "rgb(220,160,100)" }}>Before You Land</em>
+          </h1>
+
+          {/* Sub-copy */}
+          <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg">
+            A first-time travel guide to China — cities, culture, trains, payments, food, safety, and local tips.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center gap-3 mt-1">
+            <a
+              href="#map"
+              className="inline-flex items-center gap-2 bg-primary text-white font-semibold text-sm px-7 py-3.5 rounded-xl hover:bg-primary/90 transition-colors shadow-lg"
+            >
+              Explore Destinations <ArrowRight size={15} />
+            </a>
+            <a
+              href="#essentials"
+              className="inline-flex items-center gap-2 bg-white/12 backdrop-blur-sm text-white font-medium text-sm px-7 py-3.5 rounded-xl border border-white/30 hover:bg-white/22 transition-colors"
+            >
+              First-Time China Guide
+            </a>
+          </div>
+
+          {/* Trust points */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-3 text-white/65 text-[11px] font-['DM_Mono'] tracking-wide">
+            <span className="flex items-center gap-1.5">
+              <CheckCircle size={12} className="text-primary/80" /> Visa-free tips
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle size={12} className="text-primary/80" /> High-speed rail guide
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle size={12} className="text-primary/80" /> Alipay &amp; WeChat Pay
+            </span>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <span className="text-white/35 text-[9px] font-['DM_Mono'] tracking-[0.25em] uppercase">Scroll</span>
+          <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent" />
+        </div>
+      </section>
+
+      {/* ── Interactive Map ─────────────────────────────────────────── */}
+      <section id="map" className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-primary/8 text-primary text-xs font-['DM_Mono'] tracking-wider px-3 py-1.5 rounded-full mb-4 border border-primary/12">
-              <Sparkles size={11} />
-              点击省份探索旅行攻略
-            </div>
-            <h1 className="font-['Instrument_Serif'] text-[2.6rem] sm:text-5xl lg:text-6xl text-foreground leading-[1.1] mb-3">
-              探索<em className="text-primary not-italic">中国</em>的每一个角落
-            </h1>
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-              点击地图上的省份，获取当地旅行攻略 — 景点、交通、美食，一应俱全。
+            <p className="font-['DM_Mono'] text-primary text-[11px] tracking-[0.3em] uppercase mb-3">
+              Travel destinations
+            </p>
+            <h2 className="font-['Instrument_Serif'] text-3xl sm:text-4xl lg:text-5xl text-foreground leading-tight mb-3">
+              Explore China by Region
+            </h2>
+            <p className="text-muted-foreground text-base max-w-lg mx-auto">
+              Click a province to discover cities, routes, food, and travel tips.
             </p>
           </div>
 
