@@ -265,11 +265,8 @@ function HomePage() {
       {/* ── Navigation ─────────────────────────────────────────────── */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-border" : "bg-transparent"}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-          <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
-            <Logo
-              variant="nav"
-              textClass={`transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}
-            />
+          <a href="#" className="flex-shrink-0">
+            <Logo variant="nav" />
           </a>
           <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
