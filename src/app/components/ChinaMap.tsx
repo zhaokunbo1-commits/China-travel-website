@@ -197,14 +197,14 @@ function ProvinceHoverCard({
             className="text-[10px] text-muted-foreground mb-1"
             style={{ fontFamily: "'DM Mono', monospace" }}
           >
-            ⭐ 代表景点
+            Highlights
           </p>
           {highlights.length > 0 ? (
             <p className="text-[11px] text-foreground font-medium leading-relaxed">
               {highlights.join(" · ")}
             </p>
           ) : (
-            <p className="text-[11px] text-muted-foreground italic">敬请期待</p>
+            <p className="text-[11px] text-muted-foreground italic">Coming soon</p>
           )}
         </div>
       </div>
@@ -287,7 +287,7 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
       <div className="w-full h-[520px] flex flex-col items-center justify-center gap-3 bg-[#f5f0e8] rounded-2xl">
         <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
         <p className="text-sm text-muted-foreground font-['DM_Mono'] tracking-wide">
-          加载地图中…
+          Loading map…
         </p>
       </div>
     );
@@ -298,7 +298,7 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
       <div className="w-full h-[520px] flex flex-col items-center justify-center gap-3 bg-[#f5f0e8] rounded-2xl">
         <MapPin size={32} className="text-muted-foreground" />
         <p className="text-sm text-muted-foreground">
-          地图加载失败，请检查网络连接
+          Map failed to load — please check your connection
         </p>
       </div>
     );
@@ -462,17 +462,6 @@ export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonF
           />
         )}
 
-        {/* ── Legend ───────────────────────────────────────────────────────── */}
-        <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-2 flex flex-col gap-1.5 text-[10px] font-['DM_Mono'] text-muted-foreground shadow-sm">
-          <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 rounded-sm bg-[#c8a96e] flex-shrink-0" />
-            有攻略
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 rounded-sm bg-[#e8e0d2] flex-shrink-0" />
-            即将上线
-          </div>
-        </div>
       </div>
     </>
   );

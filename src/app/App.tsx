@@ -70,19 +70,19 @@ interface SeasonMeta {
 
 const SEASONS: SeasonMeta[] = [
   {
-    id: "spring", label: "春季", emoji: "🌸", subtitle: "春季最美省份",
+    id: "spring", label: "Spring", emoji: "🌸", subtitle: "Best in spring",
     provinceIds: ["yunnan", "sichuan", "zhejiang", "jiangxi", "anhui", "guizhou", "guangxi", "fujian", "hunan", "jiangsu"],
   },
   {
-    id: "summer", label: "夏季", emoji: "🌊", subtitle: "夏季推荐省份",
+    id: "summer", label: "Summer", emoji: "🌊", subtitle: "Best in summer",
     provinceIds: ["heilongjiang", "neimenggu", "xinjiang", "qinghai", "xizang", "jilin", "liaoning", "shandong", "zhejiang", "fujian"],
   },
   {
-    id: "autumn", label: "秋季", emoji: "🍂", subtitle: "秋季最美省份",
+    id: "autumn", label: "Autumn", emoji: "🍂", subtitle: "Best in autumn",
     provinceIds: ["beijing", "xinjiang", "neimenggu", "sichuan", "xizang", "shanxi", "jilin", "heilongjiang", "yunnan", "hebei", "gansu"],
   },
   {
-    id: "winter", label: "冬季", emoji: "❄️", subtitle: "冬季推荐省份",
+    id: "winter", label: "Winter", emoji: "❄️", subtitle: "Best in winter",
     provinceIds: ["heilongjiang", "yunnan", "hainan", "guangdong", "fujian", "guangxi", "chongqing", "yunnan"],
   },
 ];
@@ -91,14 +91,14 @@ const SEASONS: SeasonMeta[] = [
 
 function categoryTag(cat: string): string {
   const c = cat.toLowerCase();
-  if (c.includes("natur") || c.includes("mountain") || c.includes("lake") || c.includes("forest") || c.includes("scenic")) return "自然";
-  if (c.includes("cultur") || c.includes("histor") || c.includes("heritage") || c.includes("temple") || c.includes("ancient")) return "文化";
-  return "体验";
+  if (c.includes("natur") || c.includes("mountain") || c.includes("lake") || c.includes("forest") || c.includes("scenic")) return "Nature";
+  if (c.includes("cultur") || c.includes("histor") || c.includes("heritage") || c.includes("temple") || c.includes("ancient")) return "Culture";
+  return "Experience";
 }
 
 function tagColor(tag: string) {
-  if (tag === "自然") return "bg-emerald-50 text-emerald-700";
-  if (tag === "文化") return "bg-amber-50 text-amber-700";
+  if (tag === "Nature") return "bg-emerald-50 text-emerald-700";
+  if (tag === "Culture") return "bg-amber-50 text-amber-700";
   return "bg-blue-50 text-blue-700";
 }
 
@@ -167,7 +167,7 @@ function ProvincePanel({ provinceId, onClose }: ProvincePanelProps) {
         {/* Content */}
         <div className="flex-1 overflow-y-auto px-3 py-3">
           <p className="text-[10px] font-['DM_Mono'] text-muted-foreground tracking-widest uppercase mb-2.5">
-            🔥 热门景点
+            Top Attractions
           </p>
 
           {cities.length > 0 ? (
@@ -203,7 +203,7 @@ function ProvincePanel({ provinceId, onClose }: ProvincePanelProps) {
               })}
             </div>
           ) : (
-            <p className="text-[11px] text-muted-foreground italic text-center py-4">敬请期待</p>
+            <p className="text-[11px] text-muted-foreground italic text-center py-4">Coming soon</p>
           )}
         </div>
 
@@ -213,13 +213,25 @@ function ProvincePanel({ provinceId, onClose }: ProvincePanelProps) {
             onClick={() => navigate(`/province/${provinceId}`)}
             className="w-full flex items-center justify-center gap-1.5 bg-primary text-white text-xs font-medium py-2.5 rounded-xl hover:bg-primary/90 transition-colors"
           >
-            查看全部攻略 <ArrowRight size={12} />
+            Full Province Guide <ArrowRight size={12} />
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+// ── Hot-city travel metadata (shown on homepage cards) ───────────────────────
+const HOT_CITY_META: Record<string, { bestFor: string; duration: string }> = {
+  beijing_city: { bestFor: "First-time visitors", duration: "3–5 days" },
+  shanghai_city: { bestFor: "City & culture lovers", duration: "3–4 days" },
+  guangzhou:     { bestFor: "Food enthusiasts",       duration: "2–3 days" },
+  shenzhen:      { bestFor: "Tech & urban explorers", duration: "2–3 days" },
+  chengdu:       { bestFor: "Nature & food lovers",   duration: "4–6 days" },
+  xian:          { bestFor: "History enthusiasts",    duration: "2–3 days" },
+  lijiang:       { bestFor: "Scenery & heritage",     duration: "3–4 days" },
+  guilin:        { bestFor: "Landscape lovers",       duration: "3–4 days" },
+};
 
 // ── Home page ────────────────────────────────────────────────────────────────
 
@@ -380,24 +392,22 @@ function HomePage() {
                 className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
                   activeSeason === null
                     ? "bg-foreground text-background border-foreground shadow-sm"
-                    : "bg-white text-foreground border-border hover:border-foreground/30"
+                    : "bg-white text-muted-foreground border-border hover:border-foreground/40 hover:text-foreground"
                 }`}
               >
-                🗺️ 全部
+                All
               </button>
               {SEASONS.map((s) => {
                 const isActive = activeSeason === s.id;
-                const colorMap: Record<string, string> = {
-                  spring: isActive ? "bg-emerald-500 text-white border-emerald-500" : "bg-white text-foreground border-border hover:border-emerald-300",
-                  summer: isActive ? "bg-sky-500 text-white border-sky-500" : "bg-white text-foreground border-border hover:border-sky-300",
-                  autumn: isActive ? "bg-orange-500 text-white border-orange-500" : "bg-white text-foreground border-border hover:border-orange-300",
-                  winter: isActive ? "bg-blue-500 text-white border-blue-500" : "bg-white text-foreground border-border hover:border-blue-300",
-                };
                 return (
                   <button
                     key={s.id}
                     onClick={() => setActiveSeason((prev) => (prev === s.id ? null : s.id))}
-                    className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border shadow-sm transition-all duration-200 ${colorMap[s.id]}`}
+                    className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
+                      isActive
+                        ? "bg-foreground text-background border-foreground shadow-sm"
+                        : "bg-white text-muted-foreground border-border hover:border-foreground/40 hover:text-foreground"
+                    }`}
                   >
                     {s.emoji} {s.label}
                   </button>
@@ -416,35 +426,26 @@ function HomePage() {
                   .map((id) => {
                     const prov = PROVINCES[id];
                     if (!prov) return null;
-                    const pillColorMap: Record<string, string> = {
-                      spring: "bg-emerald-50 text-emerald-700 border-emerald-200",
-                      summer: "bg-sky-50 text-sky-700 border-sky-200",
-                      autumn: "bg-orange-50 text-orange-700 border-orange-200",
-                      winter: "bg-blue-50 text-blue-700 border-blue-200",
-                    };
                     const hasCoverage = prov.featuredCities.length > 0;
                     return (
                       <span
                         key={id}
                         className={`text-xs px-2.5 py-1 rounded-full border font-medium ${
                           hasCoverage
-                            ? pillColorMap[activeSeasonMeta.id]
+                            ? "bg-secondary text-foreground border-foreground/20"
                             : "bg-secondary text-muted-foreground border-border"
                         }`}
                       >
-                        {prov.nameZh}
+                        {prov.nameEn}
                       </span>
                     );
                   })}
-                <span className="text-[10px] text-muted-foreground font-['DM_Mono']">
-                  地图上高亮 = 推荐；灰色 = 非最佳时机
-                </span>
               </div>
             )}
           </div>
 
           {/* Interactive map */}
-          <div className="relative bg-[#ddeeff] rounded-2xl overflow-hidden shadow-sm border border-border/50 mb-2">
+          <div className="relative bg-[#e8e4dc] rounded-2xl overflow-hidden shadow-sm border border-border/50 mb-2">
             <ChinaMap
               onProvinceSelect={(id) => setSelectedProvince((prev) => (prev === id ? null : id))}
               selectedProvinceId={selectedProvince}
@@ -457,37 +458,53 @@ function HomePage() {
               />
             )}
           </div>
-          <p className="text-center text-xs font-['DM_Mono'] text-muted-foreground mt-2 mb-8">
-            深色省份已有完整攻略 · 点击省份预览，再次点击进入完整攻略
-          </p>
 
           {/* ── Hot cities ─────────────────────────────────────────── */}
           <div className="mb-4">
             <div className="flex items-center justify-between mb-5">
               <div>
-                <p className="font-['DM_Mono'] text-primary text-[11px] tracking-[0.3em] uppercase mb-1">热门目的地</p>
-                <h2 className="font-['Instrument_Serif'] text-2xl sm:text-3xl text-foreground">Top Hits</h2>
+                <p className="font-['DM_Mono'] text-primary text-[11px] tracking-[0.3em] uppercase mb-1">Featured destinations</p>
+                <h2 className="font-['Instrument_Serif'] text-2xl sm:text-3xl text-foreground">Top Destinations</h2>
               </div>
             </div>
 
             <div className="flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: "none" }}>
-              {hotCities.map((city) => (
-                <a
-                  key={city.id}
-                  href={`/city/${city.id}`}
-                  onClick={(e) => { e.preventDefault(); window.location.href = `/city/${city.id}`; }}
-                  className="flex-shrink-0 snap-start w-[72vw] sm:w-[44vw] lg:w-[22%] rounded-xl overflow-hidden relative bg-muted block group"
-                >
-                  <div className="aspect-[4/3] relative overflow-hidden">
-                    <img src={city.image} alt={city.nameEn} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                    <div className="absolute bottom-3 left-3">
-                      <p className="font-['Instrument_Serif'] text-white text-lg leading-tight">{city.nameZh}</p>
-                      <p className="text-white/60 text-[10px] font-['DM_Mono'] tracking-wider mt-0.5">{city.nameEn} · {city.provinceZh.replace("省","").replace("市","")}</p>
+              {hotCities.map((city) => {
+                const meta = HOT_CITY_META[city.id];
+                return (
+                  <a
+                    key={city.id}
+                    href={`/city/${city.id}`}
+                    onClick={(e) => { e.preventDefault(); window.location.href = `/city/${city.id}`; }}
+                    className="flex-shrink-0 snap-start w-[72vw] sm:w-[44vw] lg:w-[22%] rounded-xl overflow-hidden bg-card border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300 block group"
+                  >
+                    {/* Image */}
+                    <div className="aspect-[4/3] relative overflow-hidden">
+                      <img src={city.image} alt={city.nameEn} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                      {/* Chinese name badge top-left */}
+                      <div className="absolute top-3 left-3">
+                        <span className="font-['DM_Mono'] text-white/70 text-[10px] tracking-wider">{city.nameZh}</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              ))}
+                    {/* Content */}
+                    <div className="p-4">
+                      <p className="font-['Instrument_Serif'] text-foreground text-xl leading-tight mb-1">{city.nameEn}</p>
+                      <p className="text-muted-foreground text-[12px] leading-relaxed line-clamp-2 mb-3">{city.tagline}</p>
+                      {meta && (
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="text-[10px] font-['DM_Mono'] text-primary bg-primary/8 px-2 py-0.5 rounded-full">
+                            Best for: {meta.bestFor}
+                          </span>
+                          <span className="text-[10px] font-['DM_Mono'] text-muted-foreground">
+                            {meta.duration}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
