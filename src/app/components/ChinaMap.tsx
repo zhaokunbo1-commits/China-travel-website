@@ -212,8 +212,27 @@ function ProvinceHoverCard({
   );
 }
 
+// ── Season fill colours ───────────────────────────────────────────────────────
+const SEASON_FILL: Record<string, string> = {
+  spring: "#82c46c",   // fresh green
+  summer: "#4aa8d0",   // ocean blue
+  autumn: "#d4874a",   // warm amber
+  winter: "#6a9fd4",   // icy blue
+};
+
 // ── Main component ────────────────────────────────────────────────────────────
-export default function ChinaMap() {
+interface SeasonFilter {
+  season: string;
+  provinceIds: string[];
+}
+
+interface ChinaMapProps {
+  onProvinceSelect?: (id: string) => void;
+  selectedProvinceId?: string | null;
+  seasonFilter?: SeasonFilter | null;
+}
+
+export default function ChinaMap({ onProvinceSelect, selectedProvinceId, seasonFilter }: ChinaMapProps = {}) {
   const [geoData, setGeoData] = useState<GeoData | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -349,8 +368,16 @@ export default function ChinaMap() {
 
               const [cx, cy] = computeCentroid(feature.geometry);
 
-              const fill = isHovered && clickable
+              const isSelected = !!id && id === selectedProvinceId;
+              const isSeasonHighlight = !!id && !!seasonFilter && seasonFilter.provinceIds.includes(id);
+              const isSeasonDimmed = !!id && !!seasonFilter && !seasonFilter.provinceIds.includes(id);
+
+              const fill = isSelected
                 ? "#c1281b"
+                : isHovered && clickable
+                ? "#c1281b"
+                : seasonFilter
+                ? (isSeasonHighlight ? SEASON_FILL[seasonFilter.season] : "#ccc8c0")
                 : isActive
                 ? "#c8a96e"
                 : "#e8e0d2";
@@ -361,13 +388,17 @@ export default function ChinaMap() {
                   style={{
                     cursor: clickable ? "pointer" : "default",
                     // ── 3D lift on hover ──────────────────────────────────
-                    transform: isHovered && clickable
+                    transform: (isHovered || isSelected) && clickable
                       ? `translateY(-4px)`
                       : `translateY(0px)`,
                     transformOrigin: `${cx.toFixed(1)}px ${cy.toFixed(1)}px`,
                     // ── Drop shadow ───────────────────────────────────────
-                    filter: isHovered && clickable
+                    filter: (isHovered || isSelected) && clickable
                       ? "url(#shadow-hover)"
+                      : isSeasonHighlight
+                      ? "url(#shadow-rest)"
+                      : isSeasonDimmed
+                      ? "none"
                       : isActive
                       ? "url(#shadow-rest)"
                       : "none",
@@ -377,7 +408,12 @@ export default function ChinaMap() {
                   onMouseEnter={() => clickable && setHovered(name)}
                   onMouseLeave={() => setHovered(null)}
                   onClick={() => {
-                    if (id) navigate(`/province/${id}`);
+                    if (!id) return;
+                    if (onProvinceSelect) {
+                      onProvinceSelect(id);
+                    } else {
+                      navigate(`/province/${id}`);
+                    }
                   }}
                 >
                   <path
@@ -396,9 +432,9 @@ export default function ChinaMap() {
                       y={cy}
                       textAnchor="middle"
                       dominantBaseline="middle"
-                      fontSize={isHovered ? 10 : 8.5}
-                      fontWeight={isHovered ? "600" : "400"}
-                      fill={isHovered ? "white" : "#555"}
+                      fontSize={isHovered || isSelected ? 10 : 8.5}
+                      fontWeight={isHovered || isSelected ? "600" : "400"}
+                      fill={isHovered || isSelected ? "white" : "#555"}
                       style={{
                         pointerEvents: "none",
                         userSelect: "none",

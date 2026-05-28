@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useParams, useNavigate, Link } from "react-router";
 import {
   ArrowLeft, ChevronRight, MapPin, Camera, Train,
@@ -49,6 +49,118 @@ function adaptLegacyCity(city: (typeof CITIES)[string]): CityDetail {
   };
 }
 
+// ── HeroMedia ────────────────────────────────────────────────────────────────
+// Layer order (bottom → top):
+//   0. heroImage  — always visible, acts as seamless placeholder while video buffers
+//   1. video(s)   — fade in over the image once canplay fires; crossfade between clips
+//   2. gradient + text (managed by parent, zIndex 10/11)
+type VideoPhase = "v1" | "crossfade" | "v2";
+
+const FADE_IN  = "opacity 0.8s cubic-bezier(0.4,0,0.2,1)";
+const FADE_X   = "opacity 1.4s cubic-bezier(0.4,0,0.2,1)";
+
+function HeroMedia({ city }: { city: CityDetail }) {
+  const videos = city.heroVideos ?? [];
+
+  // Whether video 1 has buffered enough to show
+  const [v1Ready, setV1Ready] = useState(false);
+  // Whether video 2 has buffered enough to show
+  const [v2Ready, setV2Ready] = useState(false);
+  // Sequence phase
+  const [phase, setPhase] = useState<VideoPhase>("v1");
+
+  const vid1Ref = useRef<HTMLVideoElement>(null);
+  const vid2Ref = useRef<HTMLVideoElement>(null);
+
+  // v1 finished → crossfade to v2
+  const handleV1Ended = useCallback(() => {
+    if (videos.length < 2) return;
+    const v2 = vid2Ref.current;
+    if (v2) { v2.currentTime = 0; v2.play().catch(() => {}); }
+    setPhase("crossfade");
+    setTimeout(() => setPhase("v2"), 1400);
+  }, [videos.length]);
+
+  // Base image is always the bottom layer
+  const baseImage = (
+    <img
+      src={city.heroImage}
+      alt={city.nameEn}
+      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0 }}
+    />
+  );
+
+  // ── No video ──────────────────────────────────────────────────────────────
+  if (videos.length === 0) return baseImage;
+
+  // ── Single video ──────────────────────────────────────────────────────────
+  if (videos.length === 1) {
+    return (
+      <>
+        {baseImage}
+        <video
+          src={videos[0]}
+          autoPlay loop muted playsInline
+          preload="auto"
+          onCanPlay={() => setV1Ready(true)}
+          style={{
+            position: "absolute", inset: 0, width: "100%", height: "100%",
+            objectFit: "cover",
+            opacity: v1Ready ? 1 : 0,
+            transition: v1Ready ? FADE_IN : "none",
+            zIndex: 1,
+          }}
+        />
+      </>
+    );
+  }
+
+  // ── Multi-video crossfade sequence ────────────────────────────────────────
+  return (
+    <>
+      {baseImage}
+
+      {/* Video 1 — plays once, fades in on canplay, fades out at end */}
+      <video
+        ref={vid1Ref}
+        src={videos[0]}
+        autoPlay muted playsInline
+        preload="auto"
+        onCanPlay={() => setV1Ready(true)}
+        onEnded={handleV1Ended}
+        style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%",
+          objectFit: "cover",
+          // fade-in when ready; fade-out during crossfade
+          opacity: !v1Ready ? 0 : phase === "v2" ? 0 : 1,
+          transition: !v1Ready
+            ? "none"
+            : phase === "crossfade"
+            ? FADE_X
+            : FADE_IN,
+          zIndex: 1,
+        }}
+      />
+
+      {/* Video 2 — pre-loaded silently; fades in during crossfade, then loops */}
+      <video
+        ref={vid2Ref}
+        src={videos[1]}
+        muted playsInline loop
+        preload="auto"
+        onCanPlay={() => setV2Ready(true)}
+        style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%",
+          objectFit: "cover",
+          opacity: phase === "v1" || !v2Ready ? 0 : 1,
+          transition: phase === "crossfade" ? FADE_X : "none",
+          zIndex: phase === "v2" ? 2 : 1,
+        }}
+      />
+    </>
+  );
+}
+
 // ── Component ────────────────────────────────────────────────────────────────
 export default function CityPage() {
   const { id } = useParams<{ id: string }>();
@@ -88,28 +200,52 @@ export default function CityPage() {
             {city.provinceZh}
           </button>
           <span className="text-border">|</span>
-          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            <Link to="/" className="hover:text-foreground">China Decoder</Link>
-            <ChevronRight size={12} />
-            <Link to={`/province/${city.province}`} className="hover:text-foreground">
-              {city.provinceZh.replace("省", "").replace("市", "").replace("自治区", "")}
-            </Link>
-            <ChevronRight size={12} />
-            <span className="text-foreground font-medium">{city.nameEn}</span>
-          </div>
+          {(() => {
+            // Strip suffixes to get the bare province name (e.g. "北京市" → "北京")
+            const provinceShort = city.provinceZh
+              .replace("省", "").replace("市", "")
+              .replace("壮族自治区", "").replace("维吾尔自治区", "")
+              .replace("回族自治区", "").replace("自治区", "");
+            // For municipalities the city IS the province — skip the duplicate middle level
+            const isMunicipality = city.nameZh === provinceShort;
+            return (
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                <Link to="/" className="hover:text-foreground">China Decoder</Link>
+                {!isMunicipality && (
+                  <>
+                    <ChevronRight size={12} />
+                    <Link to={`/province/${city.province}`} className="hover:text-foreground">
+                      {provinceShort}
+                    </Link>
+                  </>
+                )}
+                <ChevronRight size={12} />
+                <span className="text-foreground font-medium">
+                  {city.nameZh}{isMunicipality ? "" : ` · ${city.nameEn}`}
+                </span>
+              </div>
+            );
+          })()}
         </div>
       </nav>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
       <div className="pt-14">
         <div className="h-[340px] sm:h-[420px] relative overflow-hidden">
-          <img
-            src={city.heroImage}
-            alt={city.nameEn}
-            className="w-full h-full object-cover"
+          {/* Video / image layer */}
+          <HeroMedia city={city} />
+
+          {/* Gradient overlay — sits above video(s) */}
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"
+            style={{ zIndex: 10 }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-          <div className="absolute bottom-8 left-0 right-0 max-w-6xl mx-auto px-4 sm:px-6">
+
+          {/* Text — sits above gradient */}
+          <div
+            className="absolute bottom-8 left-0 right-0 max-w-6xl mx-auto px-4 sm:px-6"
+            style={{ zIndex: 11 }}
+          >
             <p className="font-['DM_Mono'] text-white/60 text-[11px] tracking-[0.3em] uppercase mb-2">
               {city.nameEn} · {city.provinceZh}
             </p>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router";
 import {
   Menu, X, ArrowRight, Shield, CreditCard, Train, Smartphone,
   Wifi, FileText, Utensils, MessageSquare, BookOpen, Users, Bot,
@@ -9,7 +9,8 @@ import {
 import ChinaMap from "./components/ChinaMap";
 import ProvincePage from "./pages/ProvincePage";
 import CityPage from "./pages/CityPage";
-import { CITIES, HOT_CITIES } from "./data/chinaData";
+import { CITIES, HOT_CITIES, PROVINCES } from "./data/chinaData";
+import { CITY_DETAILS } from "./data/cities";
 
 // ── Static data ──────────────────────────────────────────────────────────────
 
@@ -57,6 +58,169 @@ const navLinks = [
   { label: "Packs", href: "#packs" },
 ];
 
+// ── Season filter data ───────────────────────────────────────────────────────
+
+interface SeasonMeta {
+  id: string;
+  label: string;
+  emoji: string;
+  subtitle: string;
+  provinceIds: string[];
+}
+
+const SEASONS: SeasonMeta[] = [
+  {
+    id: "spring", label: "春季", emoji: "🌸", subtitle: "春季最美省份",
+    provinceIds: ["yunnan", "sichuan", "zhejiang", "jiangxi", "anhui", "guizhou", "guangxi", "fujian", "hunan", "jiangsu"],
+  },
+  {
+    id: "summer", label: "夏季", emoji: "🌊", subtitle: "夏季推荐省份",
+    provinceIds: ["heilongjiang", "neimenggu", "xinjiang", "qinghai", "xizang", "jilin", "liaoning", "shandong", "zhejiang", "fujian"],
+  },
+  {
+    id: "autumn", label: "秋季", emoji: "🍂", subtitle: "秋季最美省份",
+    provinceIds: ["beijing", "xinjiang", "neimenggu", "sichuan", "xizang", "shanxi", "jilin", "heilongjiang", "yunnan", "hebei", "gansu"],
+  },
+  {
+    id: "winter", label: "冬季", emoji: "❄️", subtitle: "冬季推荐省份",
+    provinceIds: ["heilongjiang", "yunnan", "hainan", "guangdong", "fujian", "guangxi", "chongqing", "yunnan"],
+  },
+];
+
+// ── Province side panel ──────────────────────────────────────────────────────
+
+function categoryTag(cat: string): string {
+  const c = cat.toLowerCase();
+  if (c.includes("natur") || c.includes("mountain") || c.includes("lake") || c.includes("forest") || c.includes("scenic")) return "自然";
+  if (c.includes("cultur") || c.includes("histor") || c.includes("heritage") || c.includes("temple") || c.includes("ancient")) return "文化";
+  return "体验";
+}
+
+function tagColor(tag: string) {
+  if (tag === "自然") return "bg-emerald-50 text-emerald-700";
+  if (tag === "文化") return "bg-amber-50 text-amber-700";
+  return "bg-blue-50 text-blue-700";
+}
+
+interface ProvincePanelProps {
+  provinceId: string;
+  onClose: () => void;
+}
+
+function ProvincePanel({ provinceId, onClose }: ProvincePanelProps) {
+  const navigate = useNavigate();
+  const province = PROVINCES[provinceId];
+  if (!province) return null;
+
+  const cities = province.featuredCities
+    .map((id) => CITY_DETAILS[id])
+    .filter(Boolean);
+
+  return (
+    <div
+      className="absolute right-0 top-0 h-full z-30 flex flex-col"
+      style={{
+        width: "clamp(260px, 32%, 320px)",
+        animation: "panelSlideIn 0.28s cubic-bezier(0.22,1,0.36,1) forwards",
+      }}
+    >
+      <style>{`
+        @keyframes panelSlideIn {
+          from { opacity: 0; transform: translateX(32px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+      `}</style>
+
+      <div
+        className="flex-1 flex flex-col rounded-2xl overflow-hidden shadow-2xl border border-white/40"
+        style={{
+          background: "rgba(255,255,255,0.97)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
+        }}
+      >
+        {/* Hero image + close */}
+        <div className="relative h-28 flex-shrink-0 overflow-hidden">
+          <img
+            src={province.image}
+            alt={province.nameZh}
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.55) 100%)" }}
+          />
+          {/* Close button */}
+          <button
+            onClick={onClose}
+            className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/30 hover:bg-black/50 transition-colors flex items-center justify-center"
+          >
+            <X size={13} className="text-white" />
+          </button>
+          {/* Province name */}
+          <div className="absolute bottom-2.5 left-3 right-10">
+            <p className="text-white font-semibold text-sm leading-tight drop-shadow">{province.nameZh}</p>
+            <p className="text-white/75 text-[10px] font-['DM_Mono']">{province.nameEn}</p>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 overflow-y-auto px-3 py-3">
+          <p className="text-[10px] font-['DM_Mono'] text-muted-foreground tracking-widest uppercase mb-2.5">
+            🔥 热门景点
+          </p>
+
+          {cities.length > 0 ? (
+            <div className="flex flex-col gap-2">
+              {cities.map((city) => {
+                const firstCat = city.attractions?.[0]?.category ?? "";
+                const tag = categoryTag(firstCat);
+                return (
+                  <button
+                    key={city.id}
+                    onClick={() => navigate(`/city/${city.id}`)}
+                    className="flex items-center gap-2.5 w-full text-left rounded-xl overflow-hidden bg-secondary/50 hover:bg-secondary transition-colors group p-2"
+                  >
+                    {/* Thumbnail */}
+                    <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                      <img
+                        src={city.image}
+                        alt={city.nameZh}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    {/* Info */}
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-foreground text-[12px] leading-tight truncate">{city.nameZh}</p>
+                      <p className="text-muted-foreground text-[10px] font-['DM_Mono'] truncate">{city.nameEn}</p>
+                      <span className={`inline-block mt-1 text-[9px] font-['DM_Mono'] px-1.5 py-0.5 rounded-full ${tagColor(tag)}`}>
+                        {tag}
+                      </span>
+                    </div>
+                    <ChevronRight size={13} className="text-muted-foreground flex-shrink-0 group-hover:text-primary transition-colors" />
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <p className="text-[11px] text-muted-foreground italic text-center py-4">敬请期待</p>
+          )}
+        </div>
+
+        {/* Footer CTA */}
+        <div className="px-3 pb-3 pt-1 flex-shrink-0">
+          <button
+            onClick={() => navigate(`/province/${provinceId}`)}
+            className="w-full flex items-center justify-center gap-1.5 bg-primary text-white text-xs font-medium py-2.5 rounded-xl hover:bg-primary/90 transition-colors"
+          >
+            查看全部攻略 <ArrowRight size={12} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Home page ────────────────────────────────────────────────────────────────
 
 function HomePage() {
@@ -64,6 +228,10 @@ function HomePage() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
+  const [activeSeason, setActiveSeason] = useState<string | null>(null);
+
+  const activeSeasonMeta = SEASONS.find((s) => s.id === activeSeason) ?? null;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -134,12 +302,95 @@ function HomePage() {
             </p>
           </div>
 
+          {/* ── Season filter ────────────────────────────────────────── */}
+          <div className="mb-4 space-y-3">
+            {/* Buttons row */}
+            <div className="flex flex-wrap gap-2">
+              {/* "All" pill */}
+              <button
+                onClick={() => setActiveSeason(null)}
+                className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
+                  activeSeason === null
+                    ? "bg-foreground text-background border-foreground shadow-sm"
+                    : "bg-white text-foreground border-border hover:border-foreground/30"
+                }`}
+              >
+                🗺️ 全部
+              </button>
+              {SEASONS.map((s) => {
+                const isActive = activeSeason === s.id;
+                const colorMap: Record<string, string> = {
+                  spring: isActive ? "bg-emerald-500 text-white border-emerald-500" : "bg-white text-foreground border-border hover:border-emerald-300",
+                  summer: isActive ? "bg-sky-500 text-white border-sky-500" : "bg-white text-foreground border-border hover:border-sky-300",
+                  autumn: isActive ? "bg-orange-500 text-white border-orange-500" : "bg-white text-foreground border-border hover:border-orange-300",
+                  winter: isActive ? "bg-blue-500 text-white border-blue-500" : "bg-white text-foreground border-border hover:border-blue-300",
+                };
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => setActiveSeason((prev) => (prev === s.id ? null : s.id))}
+                    className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border shadow-sm transition-all duration-200 ${colorMap[s.id]}`}
+                  >
+                    {s.emoji} {s.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Highlighted province pills */}
+            {activeSeasonMeta && (
+              <div className="flex items-center gap-2 flex-wrap animate-in fade-in duration-200">
+                <span className="text-sm text-muted-foreground font-['DM_Mono'] whitespace-nowrap">
+                  {activeSeasonMeta.subtitle} →
+                </span>
+                {activeSeasonMeta.provinceIds
+                  .filter((id, i, arr) => arr.indexOf(id) === i) // dedupe
+                  .map((id) => {
+                    const prov = PROVINCES[id];
+                    if (!prov) return null;
+                    const pillColorMap: Record<string, string> = {
+                      spring: "bg-emerald-50 text-emerald-700 border-emerald-200",
+                      summer: "bg-sky-50 text-sky-700 border-sky-200",
+                      autumn: "bg-orange-50 text-orange-700 border-orange-200",
+                      winter: "bg-blue-50 text-blue-700 border-blue-200",
+                    };
+                    const hasCoverage = prov.featuredCities.length > 0;
+                    return (
+                      <span
+                        key={id}
+                        className={`text-xs px-2.5 py-1 rounded-full border font-medium ${
+                          hasCoverage
+                            ? pillColorMap[activeSeasonMeta.id]
+                            : "bg-secondary text-muted-foreground border-border"
+                        }`}
+                      >
+                        {prov.nameZh}
+                      </span>
+                    );
+                  })}
+                <span className="text-[10px] text-muted-foreground font-['DM_Mono']">
+                  地图上高亮 = 推荐；灰色 = 非最佳时机
+                </span>
+              </div>
+            )}
+          </div>
+
           {/* Interactive map */}
-          <div className="bg-[#ddeeff] rounded-2xl overflow-hidden shadow-sm border border-border/50 mb-2">
-            <ChinaMap />
+          <div className="relative bg-[#ddeeff] rounded-2xl overflow-hidden shadow-sm border border-border/50 mb-2">
+            <ChinaMap
+              onProvinceSelect={(id) => setSelectedProvince((prev) => (prev === id ? null : id))}
+              selectedProvinceId={selectedProvince}
+              seasonFilter={activeSeasonMeta ? { season: activeSeasonMeta.id, provinceIds: activeSeasonMeta.provinceIds } : null}
+            />
+            {selectedProvince && (
+              <ProvincePanel
+                provinceId={selectedProvince}
+                onClose={() => setSelectedProvince(null)}
+              />
+            )}
           </div>
           <p className="text-center text-xs font-['DM_Mono'] text-muted-foreground mt-2 mb-8">
-            深色省份已有完整攻略 · 点击即可查看
+            深色省份已有完整攻略 · 点击省份预览，再次点击进入完整攻略
           </p>
 
           {/* ── Hot cities ─────────────────────────────────────────── */}

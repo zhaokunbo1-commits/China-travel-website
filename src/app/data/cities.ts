@@ -38,6 +38,9 @@ export interface CityDetail {
   description: string;
   image: string;
   heroImage: string;
+  /** Optional video sequence. First item plays once; last item loops indefinitely.
+   *  Multiple items crossfade between each other. */
+  heroVideos?: string[];
   highlights: string[];
   attractions: AttractionDetail[];
   food: FoodDetail[];
@@ -183,6 +186,10 @@ export const CITY_DETAILS: Record<string, CityDetail> = {
       "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=700&h=460&fit=crop&auto=format",
     heroImage:
       "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1200&h=600&fit=crop&auto=format",
+    heroVideos: [
+      "https://videos.pexels.com/video-files/31776600/13536901_2560_1440_30fps.mp4",
+      "https://videos.pexels.com/video-files/34048014/14440639_2560_1440_60fps.mp4",
+    ],
     highlights: ["Art Deco Bund waterfront", "Soup dumplings (xiaolongbao)", "French Concession tree-lined streets", "Lujiazui skyline", "World-class contemporary art"],
     attractions: [
       {

@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useParams, useNavigate, Link } from "react-router";
 import { ArrowLeft, ChevronRight, MapPin, Clock, ArrowRight } from "lucide-react";
-import { PROVINCES, CITIES } from "../data/chinaData";
+import { PROVINCES, CITIES, type ProvinceInfo } from "../data/chinaData";
 import { CITY_DETAILS } from "../data/cities";
 
 // Minimal shape needed to render a city card (shared by CityDetail & legacy CityInfo)
@@ -12,6 +13,42 @@ type CityCardData = {
   description: string;
   image: string;
 };
+
+// ── Province hero: static image base + video fade-in on ready ────────────────
+function ProvinceHeroMedia({ province }: { province: ProvinceInfo }) {
+  const [videoReady, setVideoReady] = useState(false);
+  const FADE = "opacity 1s cubic-bezier(0.4,0,0.2,1)";
+
+  return (
+    <>
+      {/* Base image — always visible instantly */}
+      <img
+        src={province.image}
+        alt={province.nameEn}
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0 }}
+      />
+      {/* Video — fades in once buffered */}
+      {province.heroVideo && (
+        <video
+          src={province.heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          onCanPlay={() => setVideoReady(true)}
+          style={{
+            position: "absolute", inset: 0, width: "100%", height: "100%",
+            objectFit: "cover",
+            opacity: videoReady ? 1 : 0,
+            transition: videoReady ? FADE : "none",
+            zIndex: 1,
+          }}
+        />
+      )}
+    </>
+  );
+}
 
 export default function ProvincePage() {
   const { id } = useParams<{ id: string }>();
@@ -70,14 +107,10 @@ export default function ProvincePage() {
 
       {/* ── Hero ────────────────────────────────────────────────── */}
       <div className="pt-14 relative overflow-hidden">
-        <div className="h-[320px] sm:h-[400px] relative">
-          <img
-            src={province.image}
-            alt={province.nameEn}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <div className="absolute bottom-8 left-0 right-0 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="h-[320px] sm:h-[400px] relative overflow-hidden">
+          <ProvinceHeroMedia province={province} />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" style={{ zIndex: 10 }} />
+          <div className="absolute bottom-8 left-0 right-0 max-w-6xl mx-auto px-4 sm:px-6" style={{ zIndex: 11 }}>
             <p className="font-['DM_Mono'] text-white/60 text-[11px] tracking-[0.3em] uppercase mb-2">
               {province.nameEn} · China
             </p>
@@ -135,11 +168,14 @@ export default function ProvincePage() {
                       alt={city.nameEn}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-3 left-4">
-                      <span className="font-['Instrument_Serif'] text-white text-xl">
+                      <p className="font-['Instrument_Serif'] text-white text-xl leading-tight">
+                        {city.nameZh}
+                      </p>
+                      <p className="text-white/65 text-[11px] font-['DM_Mono'] tracking-wide mt-0.5">
                         {city.nameEn}
-                      </span>
+                      </p>
                     </div>
                   </div>
                   <div className="p-5">
